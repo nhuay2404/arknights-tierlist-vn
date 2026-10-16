@@ -221,7 +221,10 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 .op .st{font-size:0.75rem}
 @media (max-width:760px){.controls{position:static}
   /* chip gọn hơn trên màn hẹp, vẫn giữ cao 44px để dễ bấm */
-  .chip{padding:0 9px;letter-spacing:.02em;gap:4px}.chips{gap:4px}}
+  .chip{padding:0 9px;letter-spacing:.02em;gap:4px}.chips{gap:4px}
+  /* header hồ sơ operator gọn lại trên điện thoại */
+  .mh{gap:12px;padding:12px 14px}.mh .av{width:52px;height:52px;font-size:1rem}
+  .mh h2{font-size:1.0625rem;line-height:1.25}.mh h2+div{font-size:.75rem!important;margin-top:2px!important}}
 /* dark mode: theo hệ thống, hoặc chọn tay qua nút ◐ ở rail (lưu localStorage) */
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1013;--panel:#17181c;--panel2:#1f2126;--line:#2e3138;--text:#ecebe4;--mute:#a6a59d;--ink:#ecebe4;--bg-a:rgba(15,16,19,.92);--grid:rgba(255,255,255,.04);--stripe:#262830;--link:#7cc4ff;--r6:#ff8a3d;--r5:#f0c419;--r4:#c084fc;--b6:linear-gradient(120deg,#f2cf63,#d9a521 55%,#e8bb3c);--b5:linear-gradient(120deg,#efe6bf,#ddd09a);--b4:linear-gradient(120deg,#dcc6ff,#b994f5);--b3:linear-gradient(120deg,#c4e8ff,#8fcff5);--b2:linear-gradient(120deg,#ecff9a,#c3ec2a);--b1:linear-gradient(120deg,#d9d9d5,#b9b9b4)}}
 :root[data-theme=dark]{--bg:#0f1013;--panel:#17181c;--panel2:#1f2126;--line:#2e3138;--text:#ecebe4;--mute:#a6a59d;--ink:#ecebe4;--bg-a:rgba(15,16,19,.92);--grid:rgba(255,255,255,.04);--stripe:#262830;--link:#7cc4ff;--r6:#ff8a3d;--r5:#f0c419;--r4:#c084fc;--b6:linear-gradient(120deg,#f2cf63,#d9a521 55%,#e8bb3c);--b5:linear-gradient(120deg,#efe6bf,#ddd09a);--b4:linear-gradient(120deg,#dcc6ff,#b994f5);--b3:linear-gradient(120deg,#c4e8ff,#8fcff5);--b2:linear-gradient(120deg,#ecff9a,#c3ec2a);--b1:linear-gradient(120deg,#d9d9d5,#b9b9b4)}
@@ -527,7 +530,8 @@ function openOp(i){
     <button class="x" aria-label="Đóng" onclick="dlg.close()">✕</button></div><div id="tip" role="tooltip" hidden></div>
     <div class="mb">${detail(o)}<div class="sec">Đánh giá từ tier list</div>${o.notes.length?o.notes.map(n=>`<div class="note"><small>${esc(n.u)} · Tier ban đầu: <b>${esc(gv(n.g))}</b></small><p>${esc(n.vi||n.x)}</p>${n.vi?`<details><summary style="cursor:pointer;color:var(--mute);font-size:0.8125rem;margin-top:6px">Xem bản gốc (EN)</summary><p>${esc(n.x)}</p></details>`:''}</div>`).join('')
       :'<p style="color:var(--mute)">Chưa có nhận xét chi tiết cho operator này.</p>'}</div>`;
-  if(!dlg.open)dlg.showModal();else dlg.scrollTop=0;
+  if(!dlg.open)dlg.showModal();
+  dlg.scrollTop=0;
 }
 // ←/→: operator trước/sau theo thứ tự đang hiển thị (đã lọc)
 dlg.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight'].includes(e.key))return;
