@@ -94,7 +94,7 @@ body{overflow-anchor:none}
 .op{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;padding:5px 12px 5px 5px;background:var(--rb,none),var(--panel2);color:#111;--r6:#c2410c;--r5:#8a6d00;--r4:#7e22ce;border:1px solid transparent;transition:.12s;max-width:100%}
 .op:hover{border-color:var(--ink);box-shadow:3px 3px 0 var(--accent)}
 .av{flex:none;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:0.875rem;color:#000;background:#e4e4de;position:relative;border:2px solid var(--panel)}
-.av:after{content:"";position:absolute;inset:-5px;border-radius:50%;background:repeating-conic-gradient(#fff200 0 14deg,#111 14deg 26deg);-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 3.5px),#000 calc(100% - 3px));mask:radial-gradient(farthest-side,transparent calc(100% - 3.5px),#000 calc(100% - 3px));filter:drop-shadow(0 0 1px #0009);animation:spin 14s linear infinite;pointer-events:none}
+.av:after{content:"";position:absolute;inset:-5px;border-radius:50%;background:conic-gradient(from 0deg,transparent 0 250deg,#fff200 300deg,#fff200 345deg,transparent 360deg),#fff;-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 3.5px),#000 calc(100% - 3px));mask:radial-gradient(farthest-side,transparent calc(100% - 3.5px),#000 calc(100% - 3px));filter:drop-shadow(0 0 1px #0009);animation:spin 2.4s linear infinite;pointer-events:none}
 @keyframes spin{to{transform:rotate(1turn)}}
 .av img{position:absolute;inset:0;width:100%;height:100%;border-radius:50%;object-fit:cover;background:#e4e4de}
 .op .nm{font-weight:700;font-size:0.875rem;line-height:1.2;white-space:nowrap;display:flex;align-items:center;gap:5px}
