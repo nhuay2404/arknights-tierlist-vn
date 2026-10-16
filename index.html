@@ -17,8 +17,16 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 "Be Vietnam Pro",system-ui,sans-serif;min-height:100vh;padding-left:76px;
-  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:48px 48px}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 "Be Vietnam Pro",system-ui,sans-serif;min-height:100vh;padding-left:76px}
+/* nền chạy: lưới trôi chéo + vạch quét dọc, nằm cố định sau nội dung */
+body:before,body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none}
+body:before{background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px),radial-gradient(color-mix(in srgb,var(--ink) 18%,transparent) 1.5px,transparent 2px);
+  background-size:48px 48px,48px 48px,192px 192px;background-position:0 0,0 0,-1px -1px;animation:drift 40s linear infinite;
+  -webkit-mask:radial-gradient(ellipse at 70% 20%,#000 30%,transparent 85%);mask:radial-gradient(ellipse at 70% 20%,#000 30%,transparent 85%)}
+body:after{background:linear-gradient(transparent,color-mix(in srgb,var(--accent) 14%,transparent) 48%,color-mix(in srgb,var(--accent) 40%,transparent) 50%,transparent 50.2%);
+  background-size:100% 260px;background-repeat:no-repeat;animation:scan 9s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes drift{to{background-position:48px 48px,48px 48px,191px 191px}}
+@keyframes scan{from{background-position:0 -260px}to{background-position:0 calc(100vh + 260px)}}
 a{color:var(--ink);text-decoration-color:var(--accent);text-decoration-thickness:3px}
 ::selection{background:var(--accent)}
 .wrap{max-width:1400px;margin:0 auto;padding:0 24px}
