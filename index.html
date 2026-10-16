@@ -72,7 +72,12 @@ h1 span{display:inline-block;background:var(--accent);color:#111;padding:0 .15em
 .row+.row{margin-top:10px}
 .grp{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .lbl{font:600 0.75rem var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
-.chip{color:var(--text)}
+.chip{color:var(--text);gap:6px}
+#subrow[hidden]{display:none}
+/* icon class/subclass: ảnh trắng trong suốt dùng làm mask, tô bằng currentColor nên theo theme */
+.ico{display:inline-block;width:1.25em;height:1.25em;flex:none;background:currentColor;-webkit-mask:var(--ico) center/contain no-repeat;mask:var(--ico) center/contain no-repeat;vertical-align:-.3em}
+.op .meta{min-width:0;white-space:nowrap}
+.op .meta .sb{display:inline-flex;align-items:center;gap:3px;min-width:0;overflow:hidden;text-overflow:ellipsis}
 /* tiers */
 .tier{display:grid;grid-template-columns:96px 1fr;background:var(--panel);border:1px solid var(--line);margin-bottom:10px}
 .tier:hover{border-color:var(--ink)}
@@ -273,6 +278,7 @@ dialog[open]::backdrop{animation:fade .3s ease both}
         <div class="grp" role="group" aria-labelledby="l-view"><span class="lbl" id="l-view">Kiểu xem</span><div class="chips" id="view"></div></div>
       </div>
       <div class="row"><div class="grp" role="group" aria-labelledby="l-cls"><span class="lbl" id="l-cls">Class</span><div class="chips" id="cls"></div></div></div>
+      <div class="row" id="subrow" hidden><div class="grp" role="group" aria-labelledby="l-sub"><span class="lbl" id="l-sub">Subclass</span><div class="chips" id="sub"></div></div></div>
     </div>
     <div id="board"></div>
   </section>
@@ -388,15 +394,24 @@ const gv=g=>g.replace(/^up to /i,'Lên ').replace(/^down to /i,'Xuống ').repla
 const tv=t=>t.replace('NOT AVAILABLE THIS BANNER','không có trong banner này').replace('moved to kernel soon','sắp chuyển sang Kernel');
 const badge=t=>`<span class="badge" style="background:${TC[t]||'#555'}">${esc(t)}</span>`;
 
-let S={q:'',cls:new Set(),rar:new Set(),view:'tier'};
+// icon class/subclass trong game, từ PuppiizSunniiz/Arknight-Images
+const ICO='https://raw.githubusercontent.com/PuppiizSunniiz/Arknight-Images/main/';
+// shortcut: bảng tên → id subclass lấy từ uniequip_table; subclass mới chưa có ở đây thì không hiện icon — thêm id vào khi cập nhật dữ liệu
+const SUBID={"Pioneer":"pioneer","Charger":"charger","Tactician":"tactician","Standard Bearer":"bearer","Centurion":"centurion","Fighter":"fighter","Arts Fighter":"artsfghter","Instructor":"instructor","Lord":"lord","Swordmaster":"sword","Soloblade":"musha","Dreadnought":"fearless","Reaper":"reaper","Liberator":"librator","Protector":"protector","Guardian":"guardian","Juggernaut":"unyield","Arts Protector":"artsprotector","Duelist":"duelist","Fortress":"fortress","Marksman":"fastshot","Heavyshooter":"closerange","Artilleryman":"aoesniper","Deadeye":"longrange","Spreadshooter":"reaperrange","Besieger":"siegesniper","Flinger":"bombarder","Core Caster":"corecaster","Splash Caster":"splashcaster","Mech-accord Caster":"funnel","Phalanx Caster":"phalanx","Mystic Caster":"mystic","Chain Caster":"chain","Blast Caster":"blastcaster","Medic":"physician","Multi-target Medic":"ringhealer","Therapist":"healer","Wandering Medic":"wandermedic","Decel Binder":"slower","Hexer":"underminer","Bard":"bard","Abjurer":"blessing","Summoner":"summoner","Artificer":"craftsman","Executor":"executor","Push Stroker":"pusher","Ambusher":"stalker","Hookmaster":"hookmaster","Geek":"geek","Merchant":"merchant","Trapmaster":"traper","Dollkeeper":"dollkeeper","Incantation Medic":"incantationmedic","Agent":"agent","Sentry Protector":"shotprotector","Chain Medic":"chainhealer","Crusher":"crusher","Ritualist":"ritualist","Hunter":"hunter","Primal Caster":"primcaster","Loopshooter":"loopshooter","Earthshaker":"hammer","Alchemist":"alchemist","Primal Protector":"primprotector","Skyranger":"skywalker","Shaper Caster":"soulcaster","Primal Guard":"primguard","Strategist":"counsellor","Mercenary":"mercenary","Skybreaker":"skybreaker","Watchman":"watchman"};
+const subOf=o=>(AKD[o.n]||AKD[o.n.replace(/\s*\(.*?\)/g,'')]||{}).sub||'';
+const ico=u=>`<i class="ico" style="--ico:url(${ICO}${u})" aria-hidden="true"></i>`;
+const cIco=c=>ico(`classes/class_${c.slice(0,-1).toLowerCase()}.png`);
+const sIco=s=>SUBID[s]?ico(`ui/subclass/sub_${SUBID[s]}_icon.png`):'';
+let S={q:'',cls:new Set(),sub:new Set(),rar:new Set(),view:'tier'};
 try{const v=localStorage.getItem('ak-view');if(v)S.view=v}catch(e){}
 // đọc bộ lọc từ URL (?q=&cls=&r=&view=) để link chia sẻ giữ đúng trạng thái
 {const p=new URLSearchParams(location.search);
   if(p.get('q'))S.q=p.get('q');
   (p.get('cls')||'').split(',').map(c=>c.endsWith('s')?c:c+'s').filter(c=>CLSVI[c]).forEach(c=>S.cls.add(c));
+  (p.get('sub')||'').split(',').filter(Boolean).forEach(x=>S.sub.add(x));
   (p.get('r')||'').split(',').map(Number).filter(r=>[4,5,6].includes(r)).forEach(r=>S.rar.add(r));
   if(['tier','matrix'].includes(p.get('view')))S.view=p.get('view');}
-function saveURL(){const p=new URLSearchParams();if(S.q.trim())p.set('q',S.q.trim());if(S.cls.size)p.set('cls',[...S.cls].map(c=>c.slice(0,-1)).join(','));if(S.rar.size)p.set('r',[...S.rar].join(','));if(S.view!=='tier')p.set('view',S.view);
+function saveURL(){const p=new URLSearchParams();if(S.q.trim())p.set('q',S.q.trim());if(S.cls.size)p.set('cls',[...S.cls].map(c=>c.slice(0,-1)).join(','));if(S.sub.size)p.set('sub',[...S.sub].join(','));if(S.rar.size)p.set('r',[...S.rar].join(','));if(S.view!=='tier')p.set('view',S.view);
   history.replaceState(null,'',(p.toString()?'?'+p:location.pathname)+location.hash)}
 // 9: operator có nhận xét trong bản cập nhật mới nhất
 const LATEST=OPS.flatMap(o=>o.notes.map(n=>n.u)).sort().pop();
@@ -406,11 +421,11 @@ function opBtn(o,i){
   return `<button class="op" style="--rc:${RC[o.r]}" data-i="${i}" title="${esc(o.n)}">
     ${av(o,initials(base))}
     <span style="min-width:0"><div class="nm">${esc(base)}</div>
-    <div class="meta"><span class="st">${'★'.repeat(o.r)}</span>${S.view==='tier'?esc(CLSVI[o.c]):''}${v?`<span class="tag ${v==='General'?'gen':''}">${v}</span>`:''}${o.notes.some(n=>n.u===LATEST)?'<span class="new" title="Có trong bản cập nhật mới nhất">MỚI</span>':''}${o.notes.length?'<span class="dot" title="Có nhận xét"></span>':''}</div></span></button>`;
+    <div class="meta"><span class="st">${'★'.repeat(o.r)}</span>${S.view==='tier'?cIco(o.c):''}<span class="sb" title="${esc(CLSVI[o.c]+' · '+subOf(o))}">${sIco(subOf(o))}${esc(subOf(o))}</span>${v?`<span class="tag ${v==='General'?'gen':''}">${v}</span>`:''}${o.notes.some(n=>n.u===LATEST)?'<span class="new" title="Có trong bản cập nhật mới nhất">MỚI</span>':''}${o.notes.length?'<span class="dot" title="Có nhận xét"></span>':''}</div></span></button>`;
 }
 function filtered(){
   const q=norm(S.q.trim());
-  return OPS.map((o,i)=>[o,i]).filter(([o])=>(!q||norm(o.n).includes(q))&&(!S.cls.size||S.cls.has(o.c))&&(!S.rar.size||S.rar.has(o.r)));
+  return OPS.map((o,i)=>[o,i]).filter(([o])=>(!q||norm(o.n).includes(q))&&(!S.cls.size||S.cls.has(o.c))&&(!S.sub.size||S.sub.has(subOf(o)))&&(!S.rar.size||S.rar.has(o.r)));
 }
 // hiện dần từng tier khi cuộn tới
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.replace('rv','in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
@@ -425,7 +440,7 @@ function render(){
     b.querySelectorAll('.tier').forEach(r=>{r.querySelectorAll('.op').forEach((o,k)=>o.style.setProperty('--i',Math.min(k,24)));io.observe(r)});
   }else{
     const cols=CLS.filter(([c])=>!S.cls.size||S.cls.has(c));
-    b.innerHTML=`<div class="matrix"><table><thead><tr><th></th>${cols.map(([,v])=>`<th>${v}</th>`).join('')}</tr></thead><tbody>${
+    b.innerHTML=`<div class="matrix"><table><thead><tr><th></th>${cols.map(([c,v])=>`<th>${cIco(c)} ${v}</th>`).join('')}</tr></thead><tbody>${
       TIERS.map(t=>{const l=by(t);if(!l.length)return'';
         return `<tr><td class="tl" style="background:${TC[t]}">${t}</td>${cols.map(([c])=>`<td>${l.filter(([o])=>o.c===c).map(([o,i])=>opBtn(o,i)).join('')}</td>`).join('')}</tr>`}).join('')}</tbody></table></div>`;
   }
@@ -436,7 +451,15 @@ function chips(el,items,isOn,toggle){
   el.onclick=e=>{const c=e.target.closest('.chip');if(!c)return;toggle(c.dataset.k);sync();render()};sync();
 }
 const tog=(set,k)=>set.has(k)?set.delete(k):set.add(k);
-chips($('#cls'),[['all','Tất cả'],...CLS],k=>k==='all'?!S.cls.size:S.cls.has(k),k=>k==='all'?S.cls.clear():tog(S.cls,k));
+// subclass chỉ hiện cho các class đang chọn
+function buildSub(){
+  const subs=[...new Set(OPS.filter(o=>S.cls.has(o.c)).map(subOf).filter(Boolean))].sort();
+  [...S.sub].forEach(x=>subs.includes(x)||S.sub.delete(x));
+  $('#subrow').hidden=!subs.length;
+  chips($('#sub'),subs.map(x=>[x,sIco(x)+esc(x)]),k=>S.sub.has(k),k=>tog(S.sub,k));
+}
+chips($('#cls'),[['all','Tất cả'],...CLS.map(([k,l])=>[k,cIco(k)+l])],k=>k==='all'?!S.cls.size:S.cls.has(k),k=>{k==='all'?S.cls.clear():tog(S.cls,k);buildSub()});
+buildSub();
 chips($('#rar'),[['6','6★'],['5','5★'],['4','4★']],k=>S.rar.has(+k),k=>tog(S.rar,+k));
 chips($('#view'),[['tier','Theo tier'],['matrix','Theo class']],k=>S.view===k,k=>{S.view=k;try{localStorage.setItem('ak-view',k)}catch(e){}});
 $('#q').value=S.q;
@@ -474,7 +497,7 @@ function detail(o){
   const d=AKD[o.n];if(!d)return'';
   const st=d.stats;
   return `<div class="prof"><div>
-    <dl class="kv"><dt>Archetype</dt><dd>${esc(d.sub)}</dd><dt>Vị trí</dt><dd>${d.pos==='MELEE'?'Melee':'Ranged'}</dd>
+    <dl class="kv"><dt>Archetype</dt><dd>${sIco(d.sub)} ${esc(d.sub)}</dd><dt>Vị trí</dt><dd>${d.pos==='MELEE'?'Melee':'Ranged'}</dd>
     ${d.fac.length?`<dt>Phe phái</dt><dd>${d.fac.map(esc).join(' · ')}</dd>`:''}
     ${d.tags.length?`<dt>Tag</dt><dd>${d.tags.map(t=>`<span class="pill">${esc(t)}</span>`).join('')}</dd>`:''}</dl>
     <div class="trait"><small style="font:600 0.625rem var(--mono);letter-spacing:.14em;color:var(--accent)">TRAIT</small><br>${rt(d.trait)}</div>
@@ -491,7 +514,7 @@ let CUR=-1;
 function openOp(i){
   const o=OPS[i];CUR=i;
   dlg.innerHTML=`<div class="mh" style="--rc:${RC[o.r]}">${av(o,initials(o.n.replace(/\(.*?\)/g,'')))}
-    <div><h2>${esc(o.n)}</h2><div style="color:var(--mute);font-size:0.875rem;margin-top:4px">${badge(o.t)} &nbsp;<span style="color:${RC[o.r]}">${'★'.repeat(o.r)}</span> · ${esc(CLSVI[o.c])}${o.notes[0]?.ty?' · '+esc(tv(o.notes[0].ty)):''}</div></div>
+    <div><h2>${esc(o.n)}</h2><div style="color:var(--mute);font-size:0.875rem;margin-top:4px">${badge(o.t)} &nbsp;<span style="color:${RC[o.r]}">${'★'.repeat(o.r)}</span> · ${cIco(o.c)} ${esc(CLSVI[o.c])}${o.notes[0]?.ty?' · '+esc(tv(o.notes[0].ty)):''}</div></div>
     <button class="x" aria-label="Đóng" onclick="dlg.close()">✕</button></div><div id="tip" role="tooltip" hidden></div>
     <div class="mb">${detail(o)}<div class="sec">Đánh giá từ tier list</div>${o.notes.length?o.notes.map(n=>`<div class="note"><small>${esc(n.u)} · Tier ban đầu: <b>${esc(gv(n.g))}</b></small><p>${esc(n.vi||n.x)}</p>${n.vi?`<details><summary style="cursor:pointer;color:var(--mute);font-size:0.8125rem;margin-top:6px">Xem bản gốc (EN)</summary><p>${esc(n.x)}</p></details>`:''}</div>`).join('')
       :'<p style="color:var(--mute)">Chưa có nhận xét chi tiết cho operator này.</p>'}</div>`;
