@@ -1,0 +1,8 @@
+# dữ liệu game tải về (~90MB) — tải lại bằng lệnh trong README
+_build/*.json
+!_build/ids.json
+_build/tx/
+_build/tx2/
+# bản đóng gói để kéo thả lên Netlify
+deploy/
+.claude/

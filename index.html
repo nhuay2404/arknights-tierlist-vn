@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arknights Tier List VN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=Chakra+Petch:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Phong cách Arknights: Endfield — nền trắng ngà, vàng acid + đen, rail dọc trái, chữ sọc chéo khổng lồ, nhãn HUD [ ] */
+:root{
+  --bg:#efefea;--panel:#fff;--panel2:#f6f6f2;--line:#d6d6cf;--text:#111;--mute:#5c5c57;--bg-a:rgba(239,239,234,.92);--grid:rgba(0,0,0,.035);--stripe:#d6d6ce;--link:#0b5cad;
+  --accent:#fff200;--ink:#111;--accent2:#111;
+  --r6:#e8650a;--r5:#a88700;--r4:#9333ea;
+  --mono:"Chakra Petch",ui-monospace,monospace;
+  --hatch:repeating-linear-gradient(-45deg,rgba(0,0,0,.09) 0 2px,transparent 2px 7px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 "Be Vietnam Pro",system-ui,sans-serif;min-height:100vh;padding-left:76px;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:48px 48px}
+a{color:var(--ink);text-decoration-color:var(--accent);text-decoration-thickness:3px}
+::selection{background:var(--accent)}
+.wrap{max-width:1400px;margin:0 auto;padding:0 24px}
+/* rail dọc trái */
+header{position:fixed;inset:0 auto 0 0;width:76px;z-index:30;background:var(--panel);border-right:1px solid var(--line)}
+header:after{content:"";position:absolute;right:-1px;top:0;width:3px;height:120px;background:var(--accent)}
+.bar{display:flex;flex-direction:column;align-items:center;gap:28px;height:100%;padding:18px 0}
+.logo{display:flex;flex-direction:column;align-items:center;gap:6px;font:700 10px/1 var(--mono);letter-spacing:.2em}
+.logo i{width:40px;height:40px;display:grid;place-items:center;background:var(--ink);color:var(--accent);font:700 15px var(--mono);font-style:normal;clip-path:polygon(0 0,100% 0,100% 72%,72% 100%,0 100%)}
+.logo span{writing-mode:vertical-rl;transform:rotate(180deg);margin-top:8px;color:var(--mute)}
+nav{display:flex;flex-direction:column;gap:6px;width:100%}
+nav button{all:unset;cursor:pointer;writing-mode:vertical-rl;transform:rotate(180deg);padding:14px 0;text-align:center;font:600 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);position:relative}
+nav button:hover{color:var(--ink)}
+nav button.on{color:#111;background:var(--accent)}
+nav button.on:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--ink)}
+/* hero */
+.hero{position:relative;padding:64px 0 40px;isolation:isolate}
+.hero:before{content:"TIER";position:absolute;right:0;top:0;font:900 clamp(120px,22vw,360px)/.85 "Be Vietnam Pro";letter-spacing:-.04em;color:transparent;
+  background:repeating-linear-gradient(-45deg,var(--stripe) 0 3px,transparent 3px 9px);-webkit-background-clip:text;background-clip:text;-webkit-text-stroke:2px var(--stripe);pointer-events:none;z-index:-1}
+.kicker{display:inline-flex;gap:10px;align-items:center;font:600 12px var(--mono);letter-spacing:.2em;text-transform:uppercase;background:var(--ink);color:var(--accent);padding:6px 12px}
+.kicker:before{content:"";width:8px;height:8px;background:var(--accent);clip-path:polygon(0 0,100% 50%,0 100%)}
+h1{font-size:clamp(40px,7vw,96px);line-height:.95;margin:20px 0 16px;font-weight:900;letter-spacing:-.03em;text-transform:uppercase}
+h1 span{display:inline-block;background:var(--accent);color:#111;padding:0 .15em;margin-top:.1em;box-shadow:8px 8px 0 var(--ink)}
+.sub{color:var(--mute);max-width:640px;margin:0;border-left:3px solid var(--ink);padding-left:14px}
+.stats{display:flex;flex-wrap:wrap;margin-top:32px;border:1px solid var(--ink);width:max-content;max-width:100%;background:var(--panel)}
+.stat{padding:12px 22px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font:700 28px/1.1 var(--mono)}
+.stat small{font:600 11px var(--mono);letter-spacing:.15em;text-transform:uppercase;color:var(--mute)}
+/* controls */
+.controls{position:sticky;top:0;z-index:10;background:var(--bg-a);backdrop-filter:blur(10px);padding:14px 0;border-bottom:2px solid var(--ink);margin-bottom:28px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.search{flex:1 1 240px;position:relative}
+.search input{width:100%;background:var(--panel);border:1px solid var(--ink);color:var(--text);border-radius:0;padding:11px 14px 11px 40px;font:inherit;outline:none}
+.search input:focus{box-shadow:4px 4px 0 var(--accent)}
+.search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%)}
+.chips{display:flex;gap:4px;flex-wrap:wrap}
+.chip{all:unset;cursor:pointer;font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:8px 12px;background:var(--panel);border:1px solid var(--line);color:var(--mute);transition:.12s}
+.chip:hover{color:var(--ink);border-color:var(--ink)}
+.chip.on{background:var(--ink);color:var(--accent);border-color:var(--ink)}
+.chip:focus-visible,nav button:focus-visible,.op:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.row+.row{margin-top:10px}
+/* tiers */
+.tier{display:grid;grid-template-columns:96px 1fr;background:var(--panel);border:1px solid var(--line);margin-bottom:10px}
+.tier:hover{border-color:var(--ink)}
+.tl{display:grid;place-items:center;font:700 34px var(--mono);color:#0b0b0b;position:relative;overflow:hidden}
+.tl:after{content:"";position:absolute;inset:0;background:var(--hatch)}
+.tl small{position:absolute;bottom:8px;font:600 10px var(--mono);letter-spacing:.1em;text-transform:uppercase;opacity:.75;z-index:1}
+.ops{display:flex;flex-wrap:wrap;gap:6px;padding:12px}
+.op{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;padding:5px 12px 5px 5px;background:var(--panel2);border:1px solid transparent;transition:.12s;max-width:100%}
+.op:hover{background:var(--panel);border-color:var(--ink);box-shadow:3px 3px 0 var(--accent)}
+.av{flex:none;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:14px;color:#000;background:#e4e4de;position:relative;overflow:hidden;border:2px solid var(--panel);outline:1.5px dashed var(--rc);outline-offset:1px}
+.av img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#e4e4de}
+.op .nm{font-weight:700;font-size:14px;line-height:1.2;overflow:hidden;text-overflow:ellipsis}
+.op .meta{font:500 11px var(--mono);color:var(--mute);display:flex;gap:6px;align-items:center;text-transform:uppercase;letter-spacing:.04em}
+.op .st{color:var(--rc);letter-spacing:-1px}
+.tag{font:700 10px var(--mono);padding:1px 6px;background:var(--ink);color:var(--accent)}
+.tag.gen{background:#e4e4de;color:var(--mute)}
+.dot{width:7px;height:7px;background:var(--ink);transform:rotate(45deg);flex:none}
+.empty{color:var(--mute);text-align:center;padding:60px 0;font-family:var(--mono)}
+/* matrix */
+.matrix{overflow-x:auto;border:1px solid var(--ink);background:var(--panel)}
+.matrix table{border-collapse:collapse;min-width:1100px;width:100%}
+.matrix th{background:var(--ink);color:var(--accent);font:600 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;padding:10px;text-align:left}
+.matrix td{vertical-align:top;padding:8px;border-bottom:1px solid var(--line);border-left:1px solid var(--line)}
+.matrix td.tl{font-size:22px;border-left:0;width:64px}
+.matrix .op{display:flex;margin-bottom:4px;padding:3px 8px 3px 3px}
+.matrix .av{width:28px;height:28px;font-size:11px}
+.matrix .op .nm{font-size:12px}
+/* sections */
+section[hidden]{display:none}
+.card{background:var(--panel);border:1px solid var(--line);padding:24px;margin-bottom:14px;position:relative}
+.card:before{content:"";position:absolute;left:-1px;top:-1px;width:24px;height:24px;border-left:3px solid var(--ink);border-top:3px solid var(--ink)}
+.card h3{margin:0 0 10px;font:700 20px var(--mono);text-transform:uppercase;letter-spacing:.04em}
+.card h3:before{content:"[ "}.card h3:after{content:" ]"}
+.card p{margin:.5em 0}
+.card ul{margin:0;padding-left:20px}
+.card li{margin:6px 0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+.upd{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:10px}
+.upd .av{width:56px;height:56px}
+.upd h4{margin:2px 0;font-size:17px;font-weight:800}
+.badge{font:700 13px var(--mono);padding:4px 10px;color:#000;border:1px solid var(--ink);white-space:nowrap}
+.timeline{border-left:2px solid var(--ink);margin-left:6px;padding-left:24px}
+.ev{position:relative;margin-bottom:20px}
+.ev:before{content:"";position:absolute;left:-32px;top:5px;width:12px;height:12px;background:var(--accent);border:2px solid var(--ink);transform:rotate(45deg)}
+.ev time{font:700 12px var(--mono);letter-spacing:.1em;background:var(--ink);color:var(--accent);padding:2px 8px}
+.ev p{margin:6px 0 0}
+.clamp{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;color:var(--text);font-size:14px}
+/* modal */
+dialog{border:1px solid var(--ink);background:var(--panel);color:var(--text);border-radius:0;padding:0;width:min(1040px,calc(100% - 32px));max-height:85vh;box-shadow:10px 10px 0 var(--accent)}
+dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
+.mh{display:flex;gap:18px;align-items:center;padding:24px;border-bottom:2px solid var(--ink);position:sticky;top:0;background:var(--panel) var(--hatch);z-index:1}
+.mh .av{width:76px;height:76px;font-size:22px}
+.mh h2{margin:0;font:700 26px var(--mono);text-transform:uppercase}
+.mh h2:before{content:"[ "}.mh h2:after{content:" ]"}
+.mh .x{all:unset;cursor:pointer;margin-left:auto;align-self:flex-start;font-size:18px;padding:4px 10px;background:var(--ink);color:var(--accent)}
+.mb{padding:24px}
+.prof{display:grid;grid-template-columns:1fr 340px;gap:24px;margin-bottom:28px}
+.art{position:relative;background:var(--panel2) var(--hatch);border:1px solid var(--line);min-height:380px;overflow:hidden}
+.art:before{content:attr(data-n);position:absolute;left:8px;top:4px;font:900 64px/1 "Be Vietnam Pro";color:transparent;-webkit-text-stroke:1px #cfcfc7;text-transform:uppercase;word-break:break-all}
+.art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 15%;animation:fade .8s ease both}
+.kv{display:grid;grid-template-columns:110px 1fr;gap:6px 12px;font-size:14px;margin:0 0 14px}
+.kv dt{font:600 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);padding-top:3px}
+.kv dd{margin:0}
+.pill{display:inline-block;font:600 11px var(--mono);border:1px solid var(--ink);padding:1px 7px;margin:0 4px 4px 0;text-transform:uppercase}
+.trait{background:var(--ink);color:#fff;padding:12px 14px;font-size:14px;margin-bottom:14px}
+.trait b,.sk p b,.tal b{background:var(--accent);color:var(--ink);padding:0 3px;font-weight:700}
+.trait b{color:var(--ink)}
+.stg{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--ink)}
+.stg div{padding:8px 10px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stg div:nth-child(4n){border-right:0}.stg div:nth-last-child(-n+4){border-bottom:0}
+.stg small{display:block;font:600 10px var(--mono);letter-spacing:.12em;color:var(--mute)}
+.stg b{font:700 18px var(--mono)}
+.sec{font:700 14px var(--mono);letter-spacing:.14em;text-transform:uppercase;margin:26px 0 12px;display:flex;align-items:center;gap:10px}
+.sec:before{content:"";width:10px;height:10px;background:var(--accent);border:2px solid var(--ink);transform:rotate(45deg)}
+.sec:after{content:"";flex:1;height:1px;background:var(--line)}
+.sk{display:grid;grid-template-columns:56px 1fr;gap:14px;padding:14px;border:1px solid var(--line);margin-bottom:8px}
+.sk img{width:56px;height:56px;background:#222}
+.sk h4{margin:0;font-size:16px}
+.sk .spi{font:500 11px var(--mono);color:var(--mute);text-transform:uppercase;letter-spacing:.06em;margin:2px 0 6px}
+.sk p,.tal p{margin:0;font-size:14px;white-space:pre-line}
+.tal{padding:10px 14px;border-left:4px solid var(--ink);background:var(--panel2);margin-bottom:8px}
+.tal h4{margin:0 0 4px;font-size:15px}
+.kw{text-decoration:underline solid 1.5px;text-underline-offset:3px;cursor:help;color:inherit}
+.kw:hover,.kw:focus{color:var(--link)}
+#tip{position:fixed;z-index:50;background:#2b2f36;color:#e9ebf2;padding:14px 16px;font-size:14px;line-height:1.55;box-shadow:0 10px 30px rgba(0,0,0,.35);border-left:4px solid var(--accent);pointer-events:none;animation:fade .15s ease}
+#tip b{display:block;font:700 15px var(--mono);margin-bottom:4px;color:#fff}
+.quote{font-style:italic;color:var(--mute);border-left:3px solid var(--accent);padding-left:12px}
+.note{border-left:4px solid var(--accent);padding:4px 0 4px 14px;margin-bottom:22px}
+.note small{color:var(--mute);font-family:var(--mono)}
+.note p{white-space:pre-line;margin:6px 0 0}
+footer{font:500 12px var(--mono);letter-spacing:.06em;padding:28px 0;margin-top:48px;background:var(--accent);border-top:2px solid var(--ink)}
+/* chuyển động */
+:root{--ease:cubic-bezier(.22,1,.36,1)}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes wipe{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes slide{from{background-position:0 0}to{background-position:40px 0}}
+@keyframes pop{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.hero>*{animation:rise .8s var(--ease) both}
+.hero>:nth-child(2){animation-delay:.08s}.hero>:nth-child(3){animation-delay:.16s}.hero>:nth-child(4){animation-delay:.24s}
+.hero:before{animation:fade 1.4s ease both,slide 6s linear infinite}
+h1 span{animation:wipe .9s .35s var(--ease) both}
+.tier.rv{opacity:0}
+.tier.in{animation:rise .7s var(--ease) backwards}
+.tier.in .tl{animation:wipe .6s .1s var(--ease) both}
+.tier.in .op{animation:rise .5s var(--ease) backwards;animation-delay:calc(var(--i)*22ms + .15s)}
+.tl:after{transition:background-position .6s var(--ease)}
+.tier:hover .tl:after{background-position:30px 0}
+.op{transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s,border-color .25s}
+.op:hover{transform:translate(-2px,-2px)}
+.op .av img{transition:transform .4s var(--ease)}
+.op:hover .av img{transform:scale(1.12)}
+.chip,nav button{transition:all .25s var(--ease)}
+section:not([hidden]){animation:rise .5s var(--ease) backwards}
+dialog[open]{animation:pop .45s var(--ease) backwards}
+dialog[open]::backdrop{animation:fade .3s ease both}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after,::backdrop{animation:none!important;transition:none!important}.tier.rv{opacity:1}}
+@media (max-width:760px){
+  .prof{grid-template-columns:1fr}.art{min-height:300px;order:-1}.stg{grid-template-columns:repeat(2,1fr)}
+  .stg div:nth-child(4n){border-right:1px solid var(--line)}.stg div:nth-child(2n){border-right:0}
+  body{padding-left:0;padding-top:56px}
+  header{inset:0 0 auto 0;width:auto;height:56px;border-right:0;border-bottom:1px solid var(--line)}
+  header:after{display:none}
+  .bar{flex-direction:row;gap:12px;padding:0 12px}
+  .logo span{display:none}
+  nav{flex-direction:row;overflow-x:auto;scrollbar-width:none}
+  nav button{writing-mode:horizontal-tb;transform:none;padding:8px 10px;white-space:nowrap}
+  nav button.on:before{left:0;right:0;top:auto;bottom:0;width:auto;height:3px}
+  .controls{top:56px}
+  .wrap{padding:0 16px}
+  .tier{grid-template-columns:56px 1fr}.tl{font-size:22px}
+  .op{flex:1 1 calc(50% - 6px);min-width:0}
+  .stat{padding:10px 14px}
+}
+.kw:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+/* UX fixes: touch target ≥44px, chữ ≥12px */
+.chip{min-height:44px;display:inline-flex;align-items:center;padding:0 14px}
+.mh .x{min-width:44px;min-height:44px;display:grid;place-items:center;padding:0}
+.tag,.tl small,.stat small,.stg small,.op .meta,.kv dt,.sk .spi,.trait small{font-size:12px!important}
+.op .st{font-size:12px}
+@media (max-width:760px){.controls{position:static}}
+/* dark mode: theo hệ thống, hoặc chọn tay qua nút ◐ ở rail (lưu localStorage) */
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1013;--panel:#17181c;--panel2:#1f2126;--line:#2e3138;--text:#ecebe4;--mute:#a6a59d;--ink:#ecebe4;--bg-a:rgba(15,16,19,.92);--grid:rgba(255,255,255,.04);--stripe:#262830;--link:#7cc4ff;--r6:#ff8a3d;--r5:#f0c419;--r4:#c084fc}}
+:root[data-theme=dark]{--bg:#0f1013;--panel:#17181c;--panel2:#1f2126;--line:#2e3138;--text:#ecebe4;--mute:#a6a59d;--ink:#ecebe4;--bg-a:rgba(15,16,19,.92);--grid:rgba(255,255,255,.04);--stripe:#262830;--link:#7cc4ff;--r6:#ff8a3d;--r5:#f0c419;--r4:#c084fc}
+.dk :is(.kicker,.chip.on,.tag:not(.gen),.matrix th,.ev time,.mh .x,.logo i,.trait,#fab,#totop){background:#000;color:var(--accent)}
+.dk .trait{color:#ecebe4}
+.trait b,.sk p b,.tal b{color:#111!important}
+.dk .chip.on{border-color:#000}
+/* 9: nhãn MỚI */
+.new{font:700 10px var(--mono);letter-spacing:.06em;background:var(--accent);color:#111;padding:1px 5px;border:1px solid #111}
+/* 6: lưới range */
+.rng{display:inline-grid;gap:3px;margin:14px 0 4px}
+.rng i{width:16px;height:16px;border:1.5px solid var(--line)}
+.rng i.on{background:var(--accent);border-color:var(--ink)}
+.rng i.me{background:var(--ink);border-color:var(--ink)}
+/* 4 + 12: nút nổi */
+#fab,#totop{position:fixed;right:16px;z-index:46;min-width:48px;height:48px;border:0;background:var(--ink);color:var(--accent);font:700 13px var(--mono);letter-spacing:.08em;cursor:pointer;box-shadow:4px 4px 0 var(--accent)}
+#totop{bottom:16px}
+#totop[hidden],#fab[hidden]{display:none!important}
+#fab{display:none;bottom:16px;padding:0 18px}
+#theme{all:unset;cursor:pointer;margin-top:auto;width:44px;height:44px;display:grid;place-items:center;font-size:18px}
+#theme:focus-visible{outline:2px solid var(--ink)}
+@media (max-width:760px){
+  #fab{display:block}
+  #totop{bottom:76px}
+  #theme{margin:0 0 0 auto}
+  .controls.sheet{position:fixed;left:0;right:0;bottom:0;top:auto;z-index:45;max-height:75vh;overflow:auto;padding:16px 16px 80px;border-top:2px solid var(--ink);border-bottom:0;box-shadow:0 -12px 40px rgba(0,0,0,.25);margin:0}
+}
+</style>
+<script>try{const t=localStorage.getItem('ak-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<header><div class="bar">
+  <div class="logo"><i>AK</i><span>TIER LIST // VN</span></div>
+  <nav id="nav">
+    <button data-tab="list" class="on">Xếp hạng</button>
+    <button data-tab="new">Mới</button>
+    <button data-tab="log">Lịch sử</button>
+    <button data-tab="about">Giới thiệu</button>
+  </nav>
+  <button id="theme" aria-label="Đổi giao diện sáng/tối" title="Đổi giao diện sáng/tối">◐</button>
+</div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <div class="kicker">Cập nhật 12/10/2026 · Server Global</div>
+    <h1>Bảng xếp hạng<br><span>Operator</span></h1>
+    <p class="sub">Phiên bản tiếng Việt của Arknights Operator Tier List (trước đây trên Gamepress). Đánh giá dựa trên đầu tư tối đa: E2 max, Potential, Mastery và Module.</p>
+    <div class="stats" id="stats"></div>
+  </div>
+
+  <section id="list">
+    <div class="controls" id="ctl">
+      <div class="row">
+        <label class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="q" type="search" placeholder="Tìm operator… (vd: Ines, Mon3tr)" aria-label="Tìm operator"></label>
+        <div class="chips" id="rar" aria-label="Độ hiếm"></div>
+        <div class="chips" id="view" aria-label="Kiểu xem"></div>
+      </div>
+      <div class="row"><div class="chips" id="cls" aria-label="Class"></div></div>
+    </div>
+    <div id="board"></div>
+  </section>
+
+  <section id="new" hidden><div class="grid2" id="newGrid"></div></section>
+  <section id="log" hidden><div class="card"><div class="timeline" id="timeline"></div></div></section>
+  <section id="about" hidden>
+    <div class="card">
+      <h3>Giả định chung</h3>
+      <ul>
+        <li>Danh sách giả định <b>đầu tư tối đa</b>: E2 cấp tối đa, Potential, Mastery và Module. <b>Không</b> nên dùng làm danh sách cho người mới.</li>
+        <li><b>Không</b> tính đến chi phí. Operator 4★ không được cộng điểm chỉ vì rẻ hơn.</li>
+        <li>Xếp hạng trong Arknights hầu như không bao giờ tuyệt đối mà phụ thuộc góc nhìn người lập: người chơi CC risk cao, người chơi niche hay người chơi IS đều nhìn khác nhau. Góc nhìn ở đây là <b>ceiling cao nhất cho người chơi phổ thông</b> có quan tâm đến mọi chế độ.</li>
+        <li>Ceiling được coi trọng hơn độ dễ dùng, nhưng cả hai đều được xem xét.</li>
+        <li>Giá trị riêng theo chế độ chơi có được xét, nhưng điểm phải phản ánh toàn bộ trò chơi. Chỉ mạnh ở một chế độ là chưa đủ.</li>
+        <li>Module ISW-α (riêng cho IS) rất mạnh và IS là chế độ lớn, nên operator có chênh lệch giá trị lớn sẽ được ghi <b>hai lần</b>: bản <span class="tag">IS</span> và bản <span class="tag gen">General</span>. (Kal'tsit đủ mạnh nên không có tier riêng.)</li>
+        <li>Giá trị trong challenge clear hay "niche" có thể được xét, nhưng giá trị chung được coi trọng hơn nhiều.</li>
+        <li>Danh sách phản ánh <b>server Global</b>.</li>
+        <li>Arknights là game PvE! Meta chỉ cần đến một mức nào đó. Đừng quá ám ảnh với thứ hạng — hãy chơi waifu của bạn dù cô ấy không được xếp cao như bạn muốn!</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Thay đổi so với danh sách cũ</h3>
+      <ul>
+        <li>Robot, operator 2★ và 3★ đã bị loại: không thể lên E2 và chỉ có kỹ năng cơ bản nên giá trị kém xa từ 4★ trở lên.</li>
+        <li>Khoảng xếp hạng cho 6★ được mở rộng: trước đây phần lớn nằm từ S+ đến A+, nay từ S+ đến B+. Bị "hạ hạng" không có nghĩa là operator yếu đi mà để xếp hạng chi tiết hơn.</li>
+        <li><b>B+</b> là "ngưỡng cắt": 6★ dưới mức này phải thực sự tệ; 4★/5★ trên mức này phải thực sự xuất sắc.</li>
+        <li><b>C-</b> là "sàn" cho hầu hết operator. Như ở trường, dưới mức này coi như "trượt".</li>
+        <li>Phần giữa và dưới được nén lại: khác biệt giữa Degenbrecher và Irene quan trọng hơn nhiều so với giữa Bibeak và Cutter.</li>
+      </ul>
+    </div>
+    <div class="card" id="general"></div>
+    <div class="card">
+      <h3>Nguồn &amp; tác giả</h3>
+      <p>Dữ liệu từ <a href="https://docs.google.com/spreadsheets/d/1E7HmgKWiV8pKpJpvpVzziYxnaQTP01Vtw_PXEdL7XPA/" target="_blank" rel="noopener">An Arknights Operator Tier List</a>. Theo dõi: <a href="https://x.com/AKTierList" target="_blank" rel="noopener">X/Twitter</a> · <a href="https://bsky.app/profile/aktierlist.bsky.social" target="_blank" rel="noopener">Bluesky</a>.</p>
+      <p>Đóng góp: TacticalBreakfast, Mal, Idyll, PlatypusGod, Delta, Alyeska, Holly, Mei of May, Windgesang.</p>
+    </div>
+  </section>
+</main>
+
+<button id="fab" aria-expanded="false" aria-controls="ctl">LỌC</button>
+<button id="totop" aria-label="Lên đầu trang" title="Lên đầu trang" hidden>↑</button>
+<footer><div class="wrap">Bản dịch tiếng Việt không chính thức. Mọi đánh giá thuộc về nhóm tác giả AK Tier List. Arknights © Hypergryph / Yostar.</div></footer>
+
+<dialog id="dlg"></dialog>
+
+<script src="data.js"></script>
+<script src="details.js"></script>
+<script src="glossary.js"></script>
+<script>
+const {ops:OPS, general:GENERAL} = window.AK;
+const TIERS=['EX','S+','S','S-','A+','A','A-','B+','B','B-','C+','C','C-','D','F'];
+const TC={EX:'linear-gradient(135deg,#ffe066,#ff3d6e)','S+':'#ff4d6d','S':'#ff7a45','S-':'#ffa94d','A+':'#ffd43b','A':'#e3e86a','A-':'#b5e36a','B+':'#69db7c','B':'#38d9a9','B-':'#3bc9db','C+':'#4dabf7','C':'#748ffc','C-':'#9775fa','D':'#da77f2','F':'#868e96'};
+const TDESC={EX:'Đỉnh meta','B+':'Ngưỡng cắt','C-':'Sàn','F':'Trượt'};
+const CLS=[['Vanguards','Vanguard'],['Guards','Guard'],['Defenders','Defender'],['Snipers','Sniper'],['Casters','Caster'],['Medics','Medic'],['Supporters','Supporter'],['Specialists','Specialist']];
+const CLSVI=Object.fromEntries(CLS);
+const RC={6:'var(--r6)',5:'var(--r5)',4:'var(--r4)'};
+// Lịch sử thay đổi (dịch từ tab Revisions)
+const LOG=[
+['12/10/2026','Thêm Kal\'tsit·Esperanta, Closure, Crackborne và Viy. Rosmontis (IS), Nymph, Raidian và Texas the Omertosa hạ xuống S-. Mantra lên S.'],
+['14/09/2026','Thêm Zima the Raging Tide, Ukusik và Botani. Elysium hạ một tier xuống A, Matsukiri lên một tier thành A.'],
+['12/08/2026','Thêm Bellone và Ripresa.'],
+['23/07/2026','Sửa lỗi chính tả trong phần cập nhật của Irene.'],
+['13/07/2026','Thêm Wang, Ch\'en the Dawnstreak, Ju, Taraxacum. Młynar và Sakiko xuống S. Entelechia lên A. Shu xuống S+. Yu xuống S. Silence lên B. Papyrus lên C.'],
+['01/06/2026','Thêm Titi, Perfumer the Distilled và Varkáris. Reed the Flame Shadow xuống S-, Eyjafjalla the Hvít Aska xuống A+. Amiya (Guard) lên B-.'],
+['01/05/2026','Thêm Nasti, Cairn và Skybox. Philae xuống B-. Suzuran xuống S-. Bassline và Nearl lên B. Gummy lên B-. Vulcan xuống C. Lutonada xuống C-.'],
+['21/04/2026','Sửa nhãn Supporters bị mất ở lần cập nhật trước.'],
+['13/04/2026','Thêm SilverAsh the Reignfrost, Pramanix the Prerita, Astgenne the Lightchaser, Snow Hunter, Hadiya, Akkord và Gnosis (IS). Ines xuống S+, Hoshiguma the Breacher lên EX, Ho\'olheyak giữ nguyên ở IS, Lappland the Decadenza xuống S, Gitano xuống D.'],
+['06/04/2026','Sửa một số liên kết hỏng trong phần ghi công.'],
+['17/03/2026','Thêm Mantra, Vetochki và Snegurochka.'],
+['06/02/2026','Thêm Sakiko, Mutsumi, Uika, Nyamu và Umiri. Lumen xuống B+, Shining xuống B.'],
+['04/02/2026','Sửa lỗi chính tả tên Waai Fu và mốc thời gian của tháng 1.'],
+['15/01/2026','Sửa năm trong tab Mới cập nhật vẫn ghi 2025.'],
+['14/01/2026','Virtuosa xuống A+ (từ S-).'],
+['14/01/2026','Thêm Hoshiguma the Breacher, Haruka, Matsukiri, Kichisei và Swire the Elegant Wit (IS). Bỏ hàng/cột thừa, làm trang chính rộng hơn.'],
+['08/01/2026','Sửa nhãn thiếu cho Archetto và Mizuki bản không-IS.'],
+['08/12/2025','Thêm Leizi the Thunderbringer, Record Keeper và Raidian. Thêm tier D mới; mọi operator mặc định xuống một tier. Ines, Shu, Wiš\'adel, Exusiai the New Covenant và Tragodia giữ EX. Ulpianus, Yu, Lappland the Decadenza, Mon3tr và Mizuki (IS) giữ S+. Lemuen lên S+. Degenbrecher, Nymph, Reed the Flame Shadow, Suzuran và Ascalon giữ S. Saria giữ S-.'],
+['11/11/2025','Thêm Tragodia, Tippi và Miss.Christine. Yu lên S+.'],
+['10/10/2025','Thêm Exusiai the New Covenant, Lemuen, Sankta Miksaparato, Gracebearer, Archetto (IS) và Mizuki (IS). Crownslayer lên A+.'],
+['07/10/2025','Gravel lên B+, Waai Fu lên B-, Tuye xuống C+.'],
+['15/09/2025','Thêm Mon3tr, Alanna và Windscoot. Đại tu các operator cũ — mặc định thay đổi một tier trừ khi ghi chú. Hạ: Angelina (IS), Texas the Omertosa, Zuo Le, Degenbrecher (2 tier, EX → S), Nymph, Reed the Flame Shadow, Kal\'tsit, Eyjafjalla the Hvít Aska, Virtuosa, Ascalon, Bagpipe, Surtr (2 tier, S+ → S-), Horn, Pozëmka, Typhon, Ch\'en the Holungday, Eyjafjalla, Skadi the Corrupting Heart (2 tier, S+ → S-), Ling (2 tier, S+ → S-), Gladiia, Thorns the Lodestar, Vulpisfoglia, Mountain, Chongyue (2 tier, S → A+), Qiubai (2 tier, S → A+), Nearl the Radiant Knight, Executor the Ex Foedere, Pepe, Penance, Mudrock, Jessica the Liberated, Schwarz, Rosa, Gnosis, Civilight Eterna, Specter the Unchained (2 tier, S → A+), Gavial the Invincible (2 tier, S- → A), Exusiai, Fiammetta, Passenger, Lumen, Stainless, Mizuki, Lee, Blemishine, Ebenholz, Magallan, Lappland, Tequila, La Pluma, Tin Man, Perfumer, Bobbing, Fang the Fire-sharpened, Amiya (Guard), Лето. Lên: Hoederer (S-), Marcille, Greyy the Lightningbearer, Kroos the Keen Glint, Ethan, Amiya (Medic), Sussurro, Purestream, Heidi. Catherine xuống C+ cho đồng bộ với Alanna.'],
+['02/09/2025','Sửa lỗi chính tả tên Sussurro.'],
+['25/08/2025','Thêm Necrass, Wulfenite và Brigid.'],
+['06/08/2025','Thêm Entelechia và Nowell. Executor the Ex Foedere xuống S-, Whisperain xuống B-.'],
+['13/07/2025','Thêm Yu, Blaze the Igniting Spark, Surfer và Xingzhu.'],
+['02/06/2025','Thêm Thorns the Lodestar, Tecno và Rose Salt. Nâng Viviana nhờ Module Delta mới.'],
+['19/05/2025','Vermeil xuống C-, Mr. Nothing lên B+.'],
+['19/05/2025','Cân bằng lại nhóm Sniper 4-5★ vốn thấp hơn các class khác: April, Kroos the Keen Glint và Greyy the Lightningbearer lên A; Firewatch lên A-; Blue Poison và Totter lên B+.'],
+['15/05/2025','Warmy lên C+ vì nay đã có đồng đội Burn.'],
+['14/05/2025','Siege xuống B. Sắp xếp lại cột Vanguard.'],
+['13/05/2025','Hoederer lên A+, Blaze và Thorns xuống A để phản ánh khác biệt về ceiling.'],
+['11/05/2025','Tsukinogi và Verdant lên C- thay vì F: tuy yếu nhưng vẫn có chút công dụng.'],
+['19/04/2025','Thêm Lappland the Decadenza, Vulpisfoglia, Figurino, Crownslayer, Philae, Contrail, Angelina (IS) và Rosmontis (IS).'],
+['14/04/2025','Nymph lên S+ từ S.'],
+['10/04/2025','Cập nhật trang chủ vì Gamepress đã ngừng hoạt động. RIP.'],
+['10/04/2025','Surtr và Ling từ EX xuống S+. Utage lên B-.'],
+['06/04/2025','Thêm Vina Victoria, Bobbing và Catherine.'],
+['05/03/2025','Thêm Marcille, Chilchuck, Laios và Senshi.'],
+['02/02/2025','Ethan lên A+. Thêm Nymph, Mitm và Tin Man.'],
+['14/01/2025','Thêm Firewatch và Qanipalaat bị bỏ sót ở bản đầu.'],
+['09/01/2025','Phiên bản đầu tiên.'],
+];
+
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const norm=s=>s.normalize('NFKD').replace(/[̀-ͯ]/g,'').replace(/ł/g,'l').toLowerCase();
+const initials=n=>n.replace(/\(.*?\)/g,'').trim().split(/\s+/).filter(w=>!/^(the|of)$/i.test(w)).slice(0,2).map(w=>w[0]).join('').toUpperCase();
+const variant=n=>(n.match(/\((IS|General)\)/)||[])[1];
+const IMG='https://raw.githubusercontent.com/yuanyan3060/ArknightsGameResource/main/avatar/';
+// ảnh lỗi thì onerror xoá <img>, lộ ra chữ cái đầu bên dưới
+const av=(o,txt)=>`<span class="av">${esc(txt)}${o.img?`<img src="${IMG}${o.img}.png" alt="" loading="lazy" onerror="this.remove()">`:''}</span>`;
+const gv=g=>g.replace(/^up to /i,'Lên ').replace(/^down to /i,'Xuống ').replace(/^remain(s)?( at)? /i,'Giữ ').replace(/\(unchanged\)/i,'(không đổi)').replace(/^no change$/i,'Không đổi');
+const tv=t=>t.replace('NOT AVAILABLE THIS BANNER','không có trong banner này').replace('moved to kernel soon','sắp chuyển sang Kernel');
+const badge=t=>`<span class="badge" style="background:${TC[t]||'#555'}">${esc(t)}</span>`;
+
+let S={q:'',cls:new Set(),rar:new Set(),view:'tier'};
+try{const v=localStorage.getItem('ak-view');if(v)S.view=v}catch(e){}
+// đọc bộ lọc từ URL (?q=&cls=&r=&view=) để link chia sẻ giữ đúng trạng thái
+{const p=new URLSearchParams(location.search);
+  if(p.get('q'))S.q=p.get('q');
+  (p.get('cls')||'').split(',').map(c=>c.endsWith('s')?c:c+'s').filter(c=>CLSVI[c]).forEach(c=>S.cls.add(c));
+  (p.get('r')||'').split(',').map(Number).filter(r=>[4,5,6].includes(r)).forEach(r=>S.rar.add(r));
+  if(['tier','matrix'].includes(p.get('view')))S.view=p.get('view');}
+function saveURL(){const p=new URLSearchParams();if(S.q.trim())p.set('q',S.q.trim());if(S.cls.size)p.set('cls',[...S.cls].map(c=>c.slice(0,-1)).join(','));if(S.rar.size)p.set('r',[...S.rar].join(','));if(S.view!=='tier')p.set('view',S.view);
+  history.replaceState(null,'',(p.toString()?'?'+p:location.pathname)+location.hash)}
+// 9: operator có nhận xét trong bản cập nhật mới nhất
+const LATEST=OPS.flatMap(o=>o.notes.map(n=>n.u)).sort().pop();
+
+function opBtn(o,i){
+  const v=variant(o.n), base=o.n.replace(/\s*\((IS|General)\)/,'');
+  return `<button class="op" style="--rc:${RC[o.r]}" data-i="${i}" title="${esc(o.n)}">
+    ${av(o,initials(base))}
+    <span style="min-width:0"><div class="nm">${esc(base)}</div>
+    <div class="meta"><span class="st">${'★'.repeat(o.r)}</span>${S.view==='tier'?esc(CLSVI[o.c]):''}${v?`<span class="tag ${v==='General'?'gen':''}">${v}</span>`:''}${o.notes.some(n=>n.u===LATEST)?'<span class="new" title="Có trong bản cập nhật mới nhất">MỚI</span>':''}${o.notes.length?'<span class="dot" title="Có nhận xét"></span>':''}</div></span></button>`;
+}
+function filtered(){
+  const q=norm(S.q.trim());
+  return OPS.map((o,i)=>[o,i]).filter(([o])=>(!q||norm(o.n).includes(q))&&(!S.cls.size||S.cls.has(o.c))&&(!S.rar.size||S.rar.has(o.r)));
+}
+// hiện dần từng tier khi cuộn tới
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.replace('rv','in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+function render(){
+  saveURL();
+  const list=filtered(), b=$('#board');
+  if(!list.length){b.innerHTML='<div class="empty">Không tìm thấy operator nào.</div>';return}
+  const by=t=>list.filter(([o])=>o.t===t);
+  if(S.view==='tier'){
+    b.innerHTML=TIERS.map(t=>{const l=by(t);if(!l.length)return'';
+      return `<div class="tier rv"><div class="tl" style="background:${TC[t]}">${t}${TDESC[t]?`<small>${TDESC[t]}</small>`:''}</div><div class="ops">${l.map(([o,i])=>opBtn(o,i)).join('')}</div></div>`}).join('');
+    b.querySelectorAll('.tier').forEach(r=>{r.querySelectorAll('.op').forEach((o,k)=>o.style.setProperty('--i',Math.min(k,24)));io.observe(r)});
+  }else{
+    const cols=CLS.filter(([c])=>!S.cls.size||S.cls.has(c));
+    b.innerHTML=`<div class="matrix"><table><thead><tr><th></th>${cols.map(([,v])=>`<th>${v}</th>`).join('')}</tr></thead><tbody>${
+      TIERS.map(t=>{const l=by(t);if(!l.length)return'';
+        return `<tr><td class="tl" style="background:${TC[t]}">${t}</td>${cols.map(([c])=>`<td>${l.filter(([o])=>o.c===c).map(([o,i])=>opBtn(o,i)).join('')}</td>`).join('')}</tr>`}).join('')}</tbody></table></div>`;
+  }
+}
+function chips(el,items,isOn,toggle){
+  el.innerHTML=items.map(([k,l])=>`<button class="chip" data-k="${k}">${l}</button>`).join('');
+  const sync=()=>el.querySelectorAll('.chip').forEach(c=>{c.classList.toggle('on',isOn(c.dataset.k));c.setAttribute('aria-pressed',isOn(c.dataset.k))});
+  el.onclick=e=>{const c=e.target.closest('.chip');if(!c)return;toggle(c.dataset.k);sync();render()};sync();
+}
+const tog=(set,k)=>set.has(k)?set.delete(k):set.add(k);
+chips($('#cls'),[['all','Tất cả'],...CLS],k=>k==='all'?!S.cls.size:S.cls.has(k),k=>k==='all'?S.cls.clear():tog(S.cls,k));
+chips($('#rar'),[['6','6★'],['5','5★'],['4','4★']],k=>S.rar.has(+k),k=>tog(S.rar,+k));
+chips($('#view'),[['tier','Theo tier'],['matrix','Theo class']],k=>S.view===k,k=>{S.view=k;try{localStorage.setItem('ak-view',k)}catch(e){}});
+$('#q').value=S.q;
+$('#q').oninput=e=>{S.q=e.target.value;render()};
+
+// stats
+const cnt=r=>OPS.filter(o=>o.r===r).length;
+$('#stats').innerHTML=[[OPS.length,'Operator'],[cnt(6),'6★'],[cnt(5),'5★'],[cnt(4),'4★'],[OPS.filter(o=>o.t==='EX').length,'Tier EX']].map(([b,s])=>`<div class="stat"><b>${b}</b><small>${s}</small></div>`).join('');
+
+// modal
+const dlg=$('#dlg');
+// thuật ngữ trong GLOSS được gạch chân, nhấn vào để xem giải thích (khóa dài khớp trước: "Arts Fragility" trước "Arts")
+const GRE=new RegExp('(?<![\\p{L}\\d-])('+Object.keys(GLOSS).sort((a,b)=>b.length-a.length).map(k=>k.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|')+')(?![\\p{L}\\d-])','gu');
+const rt=s=>esc(s).replace(GRE,'<span class="kw" tabindex="0" role="button">$1</span>').replace(/\[\[([\s\S]*?)\]\]/g,'<b>$1</b>');
+function showTip(el){const t=$('#tip');if(!t)return;t.innerHTML=`<b>${esc(el.textContent)}</b>${esc(GLOSS[el.textContent])}`;t.hidden=false;t.style.top='0px';t.style.left='0px';
+  const r=el.getBoundingClientRect(),w=Math.min(340,innerWidth-24);t.style.width=w+'px';
+  t.style.left=Math.max(12,Math.min(r.left+r.width/2-w/2,innerWidth-w-12))+'px';
+  const h=t.getBoundingClientRect().height,below=r.bottom+8+h<innerHeight;t.style.top=(below?r.bottom+8:r.top-h-8)+'px';}
+dlg.addEventListener('click',e=>{const k=e.target.closest('.kw');if(k){e.stopPropagation();showTip(k)}else if($('#tip'))$('#tip').hidden=true});
+dlg.addEventListener('mouseover',e=>{const k=e.target.closest('.kw');if(k)showTip(k)});
+dlg.addEventListener('mouseout',e=>{if(e.target.closest('.kw')&&$('#tip'))$('#tip').hidden=true});
+dlg.addEventListener('keydown',e=>{const k=e.target.closest('.kw');if(k&&(e.key==='Enter'||e.key===' ')){e.preventDefault();showTip(k)}});
+dlg.addEventListener('scroll',()=>{if($('#tip'))$('#tip').hidden=true},true);
+const SPT={INCREASE_WITH_TIME:'Hồi SP tự động',INCREASE_WHEN_ATTACK:'Hồi SP khi tấn công',INCREASE_WHEN_TAKEN_DAMAGE:'Hồi SP khi bị đánh'};
+const ACT={AUTO:'Tự kích hoạt',MANUAL:'Kích hoạt thủ công',PASSIVE:'Bị động'};
+const RES='https://raw.githubusercontent.com/yuanyan3060/ArknightsGameResource/main/';
+function rangeGrid(g){
+  if(!g||!g.length)return'';
+  const all=[...g,[0,0]],rs=all.map(x=>x[0]),cs=all.map(x=>x[1]),r0=Math.min(...rs),c0=Math.min(...cs),R=Math.max(...rs)-r0+1,C=Math.max(...cs)-c0+1;
+  const on=new Set(g.map(([r,c])=>r+','+c));let h='';
+  for(let r=r0;r<r0+R;r++)for(let c=c0;c<c0+C;c++)h+=`<i class="${r===0&&c===0?'me':on.has(r+','+c)?'on':''}"></i>`;
+  return `<div><small style="font:600 12px var(--mono);letter-spacing:.12em;color:var(--mute)">RANGE (E2) · Ô ĐEN = OPERATOR, QUAY SANG PHẢI</small><br><div class="rng" style="grid-template-columns:repeat(${C},16px)" role="img" aria-label="Range gồm ${g.length} ô">${h}</div></div>`;
+}
+function detail(o){
+  const d=AKD[o.n];if(!d)return'';
+  const st=d.stats;
+  return `<div class="prof"><div>
+    <dl class="kv"><dt>Archetype</dt><dd>${esc(d.sub)}</dd><dt>Vị trí</dt><dd>${d.pos==='MELEE'?'Melee':'Ranged'}</dd>
+    ${d.fac.length?`<dt>Phe phái</dt><dd>${d.fac.map(esc).join(' · ')}</dd>`:''}
+    ${d.tags.length?`<dt>Tag</dt><dd>${d.tags.map(t=>`<span class="pill">${esc(t)}</span>`).join('')}</dd>`:''}</dl>
+    <div class="trait"><small style="font:600 10px var(--mono);letter-spacing:.14em;color:var(--accent)">TRAIT</small><br>${rt(d.trait)}</div>
+    <div class="stg">${[['HP',st.HP],['ATK',st.ATK],['DEF',st.DEF],['RES',st.RES],['COST',st.Cost],['BLOCK',st.Block],['REDEPLOY',st.Redeploy+'s'],['ATK INTERVAL',st.ASPD+'s']].map(([k,v])=>`<div><small>${k}</small><b>${v}</b></div>`).join('')}</div>
+    <small style="color:var(--mute);font-family:var(--mono);font-size:12px">Chỉ số E2 cấp tối đa, chưa tính Trust/Potential/Module</small>
+    ${rangeGrid(d.range)}
+    ${d.usage?`<p class="quote">${esc(d.usage)}<br>— ${esc(d.quote)}</p>`:''}
+  </div><div class="art" data-n="${esc(o.n)}"><img src="${RES}skin/${d.id}_2b.png" alt="Artwork ${esc(o.n)}" loading="lazy" onerror="this.onerror=null;this.src='${RES}skin/${d.id}_1b.png'"></div></div>
+  ${d.skills.length?`<div class="sec">Skill (M3)</div>${d.skills.map((s,k)=>`<div class="sk"><img src="${RES}skill/skill_icon_${s.id}.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><div><h4>S${k+1} · ${esc(s.name)}</h4>
+    <div class="spi">${s.auto==='PASSIVE'?ACT.PASSIVE:`${SPT[s.spType]||''} · ${ACT[s.auto]||''} · SP ${s.init}/${s.sp}${s.dur>0?` · ${s.dur} giây`:''}`}</div><p>${rt(s.desc)}</p></div></div>`).join('')}`:''}
+  ${d.talents.length?`<div class="sec">Talent</div>${d.talents.map(t=>`<div class="tal"><h4>${esc(t.name)}</h4><p>${rt(t.desc)}</p></div>`).join('')}`:''}`;
+}
+let CUR=-1;
+function openOp(i){
+  const o=OPS[i];CUR=i;
+  dlg.innerHTML=`<div class="mh" style="--rc:${RC[o.r]}">${av(o,initials(o.n.replace(/\(.*?\)/g,'')))}
+    <div><h2>${esc(o.n)}</h2><div style="color:var(--mute);font-size:14px;margin-top:4px">${badge(o.t)} &nbsp;<span style="color:${RC[o.r]}">${'★'.repeat(o.r)}</span> · ${esc(CLSVI[o.c])}${o.notes[0]?.ty?' · '+esc(tv(o.notes[0].ty)):''}</div></div>
+    <button class="x" aria-label="Đóng" onclick="dlg.close()">✕</button></div><div id="tip" role="tooltip" hidden></div>
+    <div class="mb">${detail(o)}<div class="sec">Đánh giá từ tier list</div>${o.notes.length?o.notes.map(n=>`<div class="note"><small>${esc(n.u)} · Tier ban đầu: <b>${esc(gv(n.g))}</b></small><p>${esc(n.vi||n.x)}</p>${n.vi?`<details><summary style="cursor:pointer;color:var(--mute);font-size:13px;margin-top:6px">Xem bản gốc (EN)</summary><p>${esc(n.x)}</p></details>`:''}</div>`).join('')
+      :'<p style="color:var(--mute)">Chưa có nhận xét chi tiết cho operator này.</p>'}</div>`;
+  if(!dlg.open)dlg.showModal();else dlg.scrollTop=0;
+}
+// ←/→: operator trước/sau theo thứ tự đang hiển thị (đã lọc)
+dlg.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight'].includes(e.key))return;
+  const order=filtered().sort((a,b)=>TIERS.indexOf(a[0].t)-TIERS.indexOf(b[0].t)).map(x=>x[1]),k=order.indexOf(CUR);if(k<0)return;
+  e.preventDefault();openOp(order[(k+(e.key==='ArrowRight'?1:-1)+order.length)%order.length])});
+document.addEventListener('click',e=>{const b=e.target.closest('.op');if(b)openOp(+b.dataset.i)});
+dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+
+// newest additions
+const newest=[];OPS.forEach((o,i)=>o.notes.forEach(n=>newest.push({o,i,n})));
+const months=[...new Set(newest.map(x=>x.n.u))];
+$('#newGrid').innerHTML=months.map(m=>newest.filter(x=>x.n.u===m).map(({o,i,n})=>`<div class="card" style="margin:0">
+  <div class="upd" style="--rc:${RC[o.r]}"><div style="display:flex;gap:14px;align-items:center">${av(o,initials(o.n.replace(/\(.*?\)/g,'')))}<div><small style="font-weight:700">${esc(m)}</small><h4>${esc(o.n)}</h4><small style="color:${RC[o.r]}">${'★'.repeat(o.r)}</small> <small style="color:var(--mute)">· ${esc(CLSVI[o.c])}</small></div></div>${badge(gv(n.g))}</div>
+  <div class="clamp">${esc(n.vi||n.x)}</div><button class="chip" style="margin-top:12px" onclick="openOp(${i})">Đọc thêm</button></div>`).join('')).join('');
+
+$('#timeline').innerHTML=LOG.map(([d,t])=>`<div class="ev"><time>${d}</time><p>${esc(t)}</p></div>`).join('');
+$('#general').innerHTML='<h3>Ghi chú từ nhóm tác giả</h3>'+GENERAL.map(g=>`<div class="note"><small>${esc(g.u)}</small><p>${esc(g.vi||g.x)}</p></div>`).join('');
+
+// tabs
+$('#nav').onclick=e=>{const b=e.target.closest('button');if(!b)return;
+  document.querySelectorAll('#nav button').forEach(x=>x.classList.toggle('on',x===b));
+  document.querySelectorAll('main section').forEach(s=>s.hidden=s.id!==b.dataset.tab);window.scrollTo({top:0})};
+render();
+// 4: bảng lọc nổi trên mobile
+const fab=$('#fab'),ctl=$('#ctl');
+fab.onclick=()=>{const o=ctl.classList.toggle('sheet');fab.setAttribute('aria-expanded',o);fab.textContent=o?'ĐÓNG':'LỌC'};
+// 12: lên đầu trang
+const toTop=$('#totop');addEventListener('scroll',()=>{toTop.hidden=scrollY<800},{passive:true});toTop.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+// nút LỌC chỉ có ở tab Xếp hạng
+$('#nav').addEventListener('click',()=>{fab.hidden=$('#list').hidden;ctl.classList.remove('sheet');fab.textContent='LỌC';fab.setAttribute('aria-expanded',false)});
+// 8: đổi sáng/tối
+const isDark=()=>{const t=document.documentElement.dataset.theme;return t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches};
+const applyDk=()=>document.documentElement.classList.toggle('dk',isDark());applyDk();
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change',applyDk);
+$('#theme').onclick=()=>{const t=isDark()?'light':'dark';document.documentElement.dataset.theme=t;try{localStorage.setItem('ak-theme',t)}catch(e){}applyDk()};
+</script>
+</body>
+</html>
