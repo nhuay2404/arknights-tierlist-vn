@@ -70,6 +70,9 @@ h1 span{display:inline-block;background:var(--accent);color:#111;padding:0 .15em
 .chip.on{background:var(--ink);color:var(--accent);border-color:var(--ink)}
 .chip:focus-visible,nav button:focus-visible,.op:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 .row+.row{margin-top:10px}
+.grp{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.lbl{font:600 0.75rem var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.chip{color:var(--text)}
 /* tiers */
 .tier{display:grid;grid-template-columns:96px 1fr;background:var(--panel);border:1px solid var(--line);margin-bottom:10px}
 .tier:hover{border-color:var(--ink)}
@@ -214,10 +217,10 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 /* dark mode: theo hệ thống, hoặc chọn tay qua nút ◐ ở rail (lưu localStorage) */
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1013;--panel:#17181c;--panel2:#1f2126;--line:#2e3138;--text:#ecebe4;--mute:#a6a59d;--ink:#ecebe4;--bg-a:rgba(15,16,19,.92);--grid:rgba(255,255,255,.04);--stripe:#262830;--link:#7cc4ff;--r6:#ff8a3d;--r5:#f0c419;--r4:#c084fc}}
 :root[data-theme=dark]{--bg:#0f1013;--panel:#17181c;--panel2:#1f2126;--line:#2e3138;--text:#ecebe4;--mute:#a6a59d;--ink:#ecebe4;--bg-a:rgba(15,16,19,.92);--grid:rgba(255,255,255,.04);--stripe:#262830;--link:#7cc4ff;--r6:#ff8a3d;--r5:#f0c419;--r4:#c084fc}
-.dk :is(.kicker,.chip.on,.tag:not(.gen),.matrix th,.ev time,.mh .x,.logo i,.trait,#fab,#totop){background:#000;color:var(--accent)}
+.dk :is(.kicker,.tag:not(.gen),.matrix th,.ev time,.mh .x,.logo i,.trait,#fab,#totop){background:#000;color:var(--accent)}
 .dk .trait{color:#ecebe4}
 .trait b,.sk p b,.tal b{color:#111!important}
-.dk .chip.on{border-color:#000}
+.dk .chip.on{background:var(--accent);color:#111;border-color:var(--accent)}
 /* 9: nhãn MỚI */
 .new{font:700 0.625rem var(--mono);letter-spacing:.06em;background:var(--accent);color:#111;padding:1px 5px;border:1px solid #111}
 /* 6: lưới range */
@@ -266,10 +269,10 @@ dialog[open]::backdrop{animation:fade .3s ease both}
       <div class="row">
         <label class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
           <input id="q" type="search" placeholder="Tìm operator… (vd: Ines, Mon3tr)" aria-label="Tìm operator"></label>
-        <div class="chips" id="rar" aria-label="Độ hiếm"></div>
-        <div class="chips" id="view" aria-label="Kiểu xem"></div>
+        <div class="grp" role="group" aria-labelledby="l-rar"><span class="lbl" id="l-rar">Độ hiếm</span><div class="chips" id="rar"></div></div>
+        <div class="grp" role="group" aria-labelledby="l-view"><span class="lbl" id="l-view">Kiểu xem</span><div class="chips" id="view"></div></div>
       </div>
-      <div class="row"><div class="chips" id="cls" aria-label="Class"></div></div>
+      <div class="row"><div class="grp" role="group" aria-labelledby="l-cls"><span class="lbl" id="l-cls">Class</span><div class="chips" id="cls"></div></div></div>
     </div>
     <div id="board"></div>
   </section>
