@@ -54,7 +54,8 @@ assert resolve('ATK <@ba.vup>+{atk:0%}</> for {duration} s, -{-def:0.0%}', [{'ke
 
 out, miss = {}, []
 for o in ak['ops']:
-    cid = o['img']
+    # sheet ghi chung ảnh Amiya gốc cho dạng Medic; dữ liệu thật nằm ở char_patch_table
+    cid = {'Amiya (Medic)': 'char_1037_amiya3'}.get(o['n'], o['img'])
     c, sktab, src = chars.get(cid), skills, 'en'
     if not c:
         c, sktab, src = cn_chars.get(cid), cn_skills, 'zh'

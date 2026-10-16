@@ -1,0 +1,5 @@
+{
+"s2697": "ASPD [[+75]], mỗi đòn đánh hồi HP cho mọi đồng minh xung quanh trong một phạm vi bằng [[25%]] ATK",
+"s2698": "Đánh mọi địch trong range với [[200%]] ATK, khiến mục tiêu bị ASPD [[-60]] và tốc độ di chuyển [[-60%]] trong [[10]] giây. Mỗi địch trúng đòn cho ATK [[+30%]] (tối đa [[5]] tầng); sau đó sát thương chuyển thành [[True]] và đánh [[2]] địch cùng lúc. [[Skill này chỉ dùng được một lần mỗi trận.]]",
+"s2699": "Khi deploy, mọi đồng minh được Max HP +8%; khi skill kích hoạt, mọi đồng minh mỗi giây hồi 2.5% Max HP"
+}

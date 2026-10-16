@@ -525,6 +525,10 @@ dlg.addEventListener('scroll',()=>{if($('#tip'))$('#tip').hidden=true},true);
 const SPT={INCREASE_WITH_TIME:'Hồi SP tự động',INCREASE_WHEN_ATTACK:'Hồi SP khi tấn công',INCREASE_WHEN_TAKEN_DAMAGE:'Hồi SP khi bị đánh'};
 const ACT={AUTO:'Tự kích hoạt',MANUAL:'Kích hoạt thủ công',PASSIVE:'Bị động'};
 const RES='https://raw.githubusercontent.com/yuanyan3060/ArknightsGameResource/main/';
+// art E2 lỗi mạng (raw.githubusercontent hay reset kết nối) thì thử lại 2 lần rồi mới lùi về art E1; operator không có art E2 (vd. Raidian) cũng lùi về E1
+function artErr(img,id){const n=+(img.dataset.retry||0);img.dataset.retry=n+1;
+  if(n<2)setTimeout(()=>{img.src=`${RES}skin/${id}_2b.png?r=${n+1}`},600*(n+1));
+  else{img.onerror=null;img.src=`${RES}skin/${id}_1b.png`}}
 function rangeGrid(g){
   if(!g||!g.length)return'';
   const all=[...g,[0,0]],rs=all.map(x=>x[0]),cs=all.map(x=>x[1]),r0=Math.min(...rs),c0=Math.min(...cs),R=Math.max(...rs)-r0+1,C=Math.max(...cs)-c0+1;
@@ -544,7 +548,7 @@ function detail(o){
     <small style="color:var(--mute);font-family:var(--mono);font-size:0.75rem">Chỉ số E2 cấp tối đa, chưa tính Trust/Potential/Module</small>
     ${rangeGrid(d.range)}
     ${d.usage?`<p class="quote">${esc(d.usage)}<br>— ${esc(d.quote)}</p>`:''}
-  </div><div class="art" data-n="${esc(o.n)}"><img src="${RES}skin/${d.id}_2b.png" alt="Artwork ${esc(o.n)}" loading="lazy" onerror="this.onerror=null;this.src='${RES}skin/${d.id}_1b.png'"></div></div>
+  </div><div class="art" data-n="${esc(o.n)}"><img src="${RES}skin/${d.id}_2b.png" alt="Artwork ${esc(o.n)}" loading="lazy" onerror="artErr(this,'${d.id}')"></div></div>
   ${d.skills.length?`<div class="sec">Skill (M3)</div>${d.skills.map((s,k)=>`<div class="sk"><img src="${RES}skill/skill_icon_${s.id}.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><div><h4>S${k+1} · ${esc(s.name)}</h4>
     <div class="spi">${s.auto==='PASSIVE'?ACT.PASSIVE:`${SPT[s.spType]||''} · ${ACT[s.auto]||''} · SP ${s.init}/${s.sp}${s.dur>0?` · ${s.dur} giây`:''}`}</div><p>${rt(s.desc)}</p></div></div>`).join('')}`:''}
   ${d.talents.length?`<div class="sec">Talent</div>${d.talents.map(t=>`<div class="tal"><h4>${esc(t.name)}</h4><p>${rt(t.desc)}</p></div>`).join('')}`:''}`;
