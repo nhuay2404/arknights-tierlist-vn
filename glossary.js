@@ -67,5 +67,16 @@ window.GLOSS = {
   'Arts': 'Sát thương phép, bị giảm theo RES (kháng phép) của mục tiêu.',
   'Physical': 'Sát thương vật lý, bị trừ theo DEF của mục tiêu.',
   'RES': 'Kháng phép: giảm % sát thương Arts nhận vào.',
-  'DEF': 'Phòng thủ: trừ thẳng vào sát thương Physical nhận vào.'
+  'DEF': 'Phòng thủ: trừ thẳng vào sát thương Physical nhận vào.',
+  'ATK': 'Tấn công: chỉ số quyết định lượng sát thương (hoặc lượng hồi máu với Medic) mỗi đòn.',
+  'HP': 'Máu. Max HP là lượng máu tối đa; về 0 thì operator bị rút khỏi sân.',
+  'True': 'Sát thương chuẩn (True Damage): bỏ qua cả DEF lẫn RES.',
+  'Frozen': 'Đang bị đóng băng (Freeze): không thể hành động, RES giảm 15.',
+  'Drone': 'Thiết bị bay do operator điều khiển, tự tấn công hoặc hỗ trợ theo skill/trait; không chiếm ô và không bị địch nhắm như operator thường.',
+  'Substitute': 'Thế thân: khi operator nhận sát thương chí mạng, thay vì rút lui sẽ đổi sang Substitute (block 0); sau một thời gian đổi lại bản gốc.',
+  'Move': 'Operator tự di chuyển sang ô khác trên sân mà không cần rút và deploy lại.',
+  'Weakness damage': 'Khi gây sát thương Physical hoặc Arts, tự đổi loại sát thương theo DEF và RES của mục tiêu.',
+  'Talent': 'Thiên phú: hiệu ứng bị động riêng của từng operator, mở khóa và mạnh lên theo Elite/Potential.',
+  'Trait': 'Đặc tính chung của cả subclass (ví dụ cách đánh, số block), operator cùng subclass có Trait giống nhau.',
+  'Alchemical Unit': 'Vật phẩm giả kim mà operator nhánh Alchemist ném ra sân bằng skill. Tùy skill, nó buff đồng minh hoặc tạo vùng gây hại, debuff địch quanh điểm rơi, rồi biến mất sau một khoảng thời gian.'
 };

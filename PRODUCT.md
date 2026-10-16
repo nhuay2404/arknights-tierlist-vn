@@ -11,11 +11,11 @@ web
 Two audiences, weighted equally:
 
 - Vietnamese players on the Global (English) client who are deciding which operators to pull, raise or upgrade and need the tier and the reasoning quickly.
-- Newer Vietnamese players who struggle with English and need the tier list, the authors' notes and the operator kits (Trait, E2 stats, M3 Skill, Talent, Range) explained in Vietnamese.
+- Newer Vietnamese players who struggle with English and need the tier list and the operator kits (Trait, E2 stats, M3 Skill, Talent, Range) explained in Vietnamese.
 
 ## Product Purpose
 
-An unofficial Vietnamese edition of "An Arknights Operator Tier List" (AK Tier List). It includes the tier list, the authors' notes, "Mới" (new additions), "Lịch sử" (change history) and translated per-operator details. Success means a Vietnamese reader understands where an operator sits and why, just as an English reader of the source would.
+An unofficial Vietnamese edition of "An Arknights Operator Tier List" (AK Tier List). It includes the tier list, "Mới" (new additions), "Lịch sử" (change history) and translated per-operator details. The operator detail dialog shows the kit only (Trait, stats, Skill, Talent, Range); the authors' per-operator notes are kept in `data.js` but deliberately not shown there. Success means a Vietnamese reader understands where an operator sits and why, just as an English reader of the source would.
 
 ## Positioning
 
@@ -30,6 +30,8 @@ It is a faithful translation of an established community tier list, not an indep
 ## Capabilities and Constraints
 
 - Tabs: Xếp hạng (tier list), Mới, Lịch sử, Giới thiệu. Includes search, rarity, class and view filters, an operator detail dialog with a range grid, and glossary tooltips.
+- Explanations live in place: glossary terms in kit text are underlined and open a tooltip, and class/subclass filter chips explain themselves on mouse hover or a ~450ms touch hold (subclass text = the in-game Trait from `details.js`; class text is hand-written).
+- Some operators appear twice, as an IS (Integrated Strategies) and a general-mode entry. The data keeps `(IS)` / `(General)` in names; the UI shows the general variant as **OG**, as a tag right beside the operator name.
 - Light and dark themes are both required.
 - Mobile-first layout is required.
 - The current stack is a static site (`index.html` plus data JS files, no build step). The user did not mark this as a hard constraint.
