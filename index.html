@@ -526,8 +526,11 @@ const SPT={INCREASE_WITH_TIME:'Hồi SP tự động',INCREASE_WHEN_ATTACK:'Hồ
 const ACT={AUTO:'Tự kích hoạt',MANUAL:'Kích hoạt thủ công',PASSIVE:'Bị động'};
 const RES='https://raw.githubusercontent.com/yuanyan3060/ArknightsGameResource/main/';
 // art E2 lỗi mạng (raw.githubusercontent hay reset kết nối) thì thử lại 2 lần rồi mới lùi về art E1; operator không có art E2 (vd. Raidian) cũng lùi về E1
+// shortcut: art E2 chưa có trong kho ArknightsGameResource thì lấy từ wiki.gg; xoá dòng khi kho đã có file _2b
+const ART2={char_614_acsupo:'https://arknights.wiki.gg/images/Raidian_Elite_2.png'};
+const art2=id=>ART2[id]||`${RES}skin/${id}_2b.png`;
 function artErr(img,id){const n=+(img.dataset.retry||0);img.dataset.retry=n+1;
-  if(n<2)setTimeout(()=>{img.src=`${RES}skin/${id}_2b.png?r=${n+1}`},600*(n+1));
+  if(n<2)setTimeout(()=>{img.src=`${art2(id)}?r=${n+1}`},600*(n+1));
   else{img.onerror=null;img.src=`${RES}skin/${id}_1b.png`}}
 function rangeGrid(g){
   if(!g||!g.length)return'';
@@ -548,7 +551,7 @@ function detail(o){
     <small style="color:var(--mute);font-family:var(--mono);font-size:0.75rem">Chỉ số E2 cấp tối đa, chưa tính Trust/Potential/Module</small>
     ${rangeGrid(d.range)}
     ${d.usage?`<p class="quote">${esc(d.usage)}<br>— ${esc(d.quote)}</p>`:''}
-  </div><div class="art" data-n="${esc(o.n)}"><img src="${RES}skin/${d.id}_2b.png" alt="Artwork ${esc(o.n)}" loading="lazy" onerror="artErr(this,'${d.id}')"></div></div>
+  </div><div class="art" data-n="${esc(o.n)}"><img src="${art2(d.id)}" alt="Artwork ${esc(o.n)}" loading="lazy" onerror="artErr(this,'${d.id}')"></div></div>
   ${d.skills.length?`<div class="sec">Skill (M3)</div>${d.skills.map((s,k)=>`<div class="sk"><img src="${RES}skill/skill_icon_${s.id}.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><div><h4>S${k+1} · ${esc(s.name)}</h4>
     <div class="spi">${s.auto==='PASSIVE'?ACT.PASSIVE:`${SPT[s.spType]||''} · ${ACT[s.auto]||''} · SP ${s.init}/${s.sp}${s.dur>0?` · ${s.dur} giây`:''}`}</div><p>${rt(s.desc)}</p></div></div>`).join('')}`:''}
   ${d.talents.length?`<div class="sec">Talent</div>${d.talents.map(t=>`<div class="tal"><h4>${esc(t.name)}</h4><p>${rt(t.desc)}</p></div>`).join('')}`:''}`;
