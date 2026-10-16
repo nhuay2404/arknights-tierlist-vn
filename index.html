@@ -70,6 +70,7 @@ h1 span{display:inline-block;background:var(--accent);color:#111;padding:0 .15em
 .lbl{font:600 0.75rem var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
 .chip{color:var(--text);gap:6px}
 #subrow[hidden]{display:none}
+.mh h2 .fac{width:1.8em;height:1.8em;margin:-.3em 0 -.3em .2em;vertical-align:-.5em}
 #sub .chip{padding:4px 8px;font-size:0.6875rem;letter-spacing:.04em}
 /* kéo xuống: thanh lọc dính trên cùng chỉ giữ hàng đầu, bấm CLASS để mở lại hàng class/subclass */
 #more{display:none}
@@ -429,6 +430,9 @@ const SUBID={"Pioneer":"pioneer","Charger":"charger","Tactician":"tactician","St
 const subOf=o=>(AKD[o.n]||AKD[o.n.replace(/\s*\(.*?\)/g,'')]||{}).sub||'';
 const ico=u=>`<i class="ico" style="--ico:url(${ICO}${u})" aria-hidden="true"></i>`;
 const cIco=c=>ico(`classes/class_${c.slice(0,-1).toLowerCase()}.png`);
+// logo phe phái: tên trong details.js → powerId trong handbook_team_table (gamedata EN)
+const FACID={"Yan-Lungmen":"lungmen","Lungmen Guard Department":"lgd","Babel":"babel","Rhodes Island":"rhodes","Victoria":"victoria","Penguin Logistics":"penguin","Yan":"yan","Yan-Sui":"sui","Kjerag":"kjerag","Ægir":"egir","Abyssal Hunters":"abyssal","Laterano":"laterano","Rhodes Island-Elite Operator":"elite","Op Team A4":"action4","Team Rainbow":"rainbow","Higashi":"higashi","Kazimierz":"kazimierz","Ave Mujica":"mujica","Rim Billiton":"rim","Siracusa":"siracusa","Karlan Trade CO., LTD":"karlan","S.W.E.E.P.":"sweep","Columbia":"columbia","Rhine Lab":"rhine","Ursus":"ursus","Ursus Student Self-government Group":"student","Sargon":"sargon","Tara":"tara","Iberia":"iberia","Sami":"sami","Leithanien":"leithanien","Blacksteel Worldwide":"blacksteel","Siesta":"siesta","Laios's Party":"laios","Followers":"followers","Lee's Detective Agency":"lee","Pinus Sylvestris":"pinus","Bolívar":"bolivar","Minos":"minos","Glasgow":"glasgow","Chiave Gang":"chiave"};
+const fIco=f=>FACID[f]?`<i class="ico fac" style="--ico:url(${ICO}factions/logo_${FACID[f]}.png)" role="img" aria-label="${esc(f)}" title="${esc(f)}"></i>`:'';
 const sIco=s=>SUBID[s]?ico(`ui/subclass/sub_${SUBID[s]}_icon.png`):'';
 let S={q:'',cls:new Set(),sub:new Set(),rar:new Set(),view:'tier'};
 try{const v=localStorage.getItem('ak-view');if(v)S.view=v}catch(e){}
@@ -548,7 +552,7 @@ let CUR=-1;
 function openOp(i){
   const o=OPS[i];CUR=i;
   dlg.innerHTML=`<div class="mh" style="--rc:${RC[o.r]}">${av(o,initials(o.n.replace(/\(.*?\)/g,'')))}
-    <div><h2>${esc(o.n.replace('(General)','(OG)'))}</h2><div style="color:var(--mute);font-size:0.875rem;margin-top:4px">${badge(o.t)} &nbsp;<span style="color:${RC[o.r]}">${'★'.repeat(o.r)}</span> · ${cIco(o.c)} ${esc(CLSVI[o.c])}${o.notes[0]?.ty?' · '+esc(tv(o.notes[0].ty)):''}</div></div>
+    <div><h2>${esc(o.n.replace('(General)','(OG)'))}${((AKD[o.n]||AKD[o.n.replace(/\s*\(.*?\)/g,'')]||{}).fac||[]).map(fIco).join('')}</h2><div style="color:var(--mute);font-size:0.875rem;margin-top:4px">${badge(o.t)} &nbsp;<span style="color:${RC[o.r]}">${'★'.repeat(o.r)}</span> · ${cIco(o.c)} ${esc(CLSVI[o.c])}${o.notes[0]?.ty?' · '+esc(tv(o.notes[0].ty)):''}</div></div>
     <button class="x" aria-label="Đóng" onclick="dlg.close()">✕</button></div><div id="tip" role="tooltip" hidden></div>
     <div class="mb">${detail(o)}</div>`;
   if(!dlg.open)dlg.showModal();
