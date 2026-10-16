@@ -70,8 +70,6 @@ h1 span{display:inline-block;background:var(--accent);color:#111;padding:0 .15em
 .lbl{font:600 0.75rem var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
 .chip{color:var(--text);gap:6px}
 #subrow[hidden]{display:none}
-/* logo phe phái cao bằng khối tên + hàng tier/sao */
-.mh .facs{align-self:stretch;display:flex;gap:6px}.mh .facs:empty{display:none}.mh .facs .fac{width:auto;height:100%;aspect-ratio:1;transform:scale(1.25)}
 #sub .chip{padding:4px 8px;font-size:0.6875rem;letter-spacing:.04em}
 /* kéo xuống: thanh lọc dính trên cùng chỉ giữ hàng đầu, bấm CLASS để mở lại hàng class/subclass */
 #more{display:none}
@@ -259,8 +257,7 @@ h1:after{content:"";display:inline-block;width:.14em;height:.72em;margin-left:.1
   /* header hồ sơ operator gọn lại trên điện thoại */
   .mh{gap:12px;padding:12px 14px}.mh .av{width:52px;height:52px;font-size:1rem}
   .mh h2{font-size:1.0625rem;line-height:1.25}.mh h2+div{font-size:.75rem!important;margin-top:2px!important}
-  .mh .badge{font-size:.6875rem;padding:1px 5px}
-  .mh .facs{display:none}}
+  .mh .badge{font-size:.6875rem;padding:1px 5px}}
 /* dark mode: theo hệ thống, hoặc chọn tay qua nút ◐ ở rail (lưu localStorage) */
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1013;--panel:#17181c;--panel2:#1f2126;--line:#2e3138;--text:#ecebe4;--mute:#a6a59d;--ink:#ecebe4;--bg-a:rgba(15,16,19,.92);--grid:rgba(255,255,255,.04);--stripe:#262830;--link:#7cc4ff;--r6:#ff8a3d;--r5:#f0c419;--r4:#c084fc;--b6:linear-gradient(120deg,#f2cf63,#d9a521 55%,#e8bb3c);--b5:linear-gradient(120deg,#efe6bf,#ddd09a);--b4:linear-gradient(120deg,#dcc6ff,#b994f5);--b3:linear-gradient(120deg,#c4e8ff,#8fcff5);--b2:linear-gradient(120deg,#ecff9a,#c3ec2a);--b1:linear-gradient(120deg,#d9d9d5,#b9b9b4)}}
 :root[data-theme=dark]{--bg:#0f1013;--panel:#17181c;--panel2:#1f2126;--line:#2e3138;--text:#ecebe4;--mute:#a6a59d;--ink:#ecebe4;--bg-a:rgba(15,16,19,.92);--grid:rgba(255,255,255,.04);--stripe:#262830;--link:#7cc4ff;--r6:#ff8a3d;--r5:#f0c419;--r4:#c084fc;--b6:linear-gradient(120deg,#f2cf63,#d9a521 55%,#e8bb3c);--b5:linear-gradient(120deg,#efe6bf,#ddd09a);--b4:linear-gradient(120deg,#dcc6ff,#b994f5);--b3:linear-gradient(120deg,#c4e8ff,#8fcff5);--b2:linear-gradient(120deg,#ecff9a,#c3ec2a);--b1:linear-gradient(120deg,#d9d9d5,#b9b9b4)}
@@ -575,7 +572,7 @@ let CUR=-1;
 function openOp(i){
   const o=OPS[i];CUR=i;
   dlg.innerHTML=`<div class="mh" style="--rc:${RC[o.r]}">${av(o,initials(o.n.replace(/\(.*?\)/g,'')))}
-    <div><h2>${esc(o.n.replace('(General)','(OG)'))}</h2><div style="color:var(--mute);font-size:0.875rem;margin-top:4px">${badge(o.t)} &nbsp;<span style="color:${RC[o.r]}">${'★'.repeat(o.r)}</span> · ${cIco(o.c)} ${esc(CLSVI[o.c])}${o.notes[0]?.ty?' · '+esc(tv(o.notes[0].ty)):''}</div></div><span class="facs">${((AKD[o.n]||AKD[o.n.replace(/\s*\(.*?\)/g,'')]||{}).fac||[]).map(fIco).join('')}</span>
+    <div><h2>${esc(o.n.replace('(General)','(OG)'))}</h2><div style="color:var(--mute);font-size:0.875rem;margin-top:4px">${badge(o.t)} &nbsp;<span style="color:${RC[o.r]}">${'★'.repeat(o.r)}</span> · ${cIco(o.c)} ${esc(CLSVI[o.c])}${o.notes[0]?.ty?' · '+esc(tv(o.notes[0].ty)):''}</div></div>
     <button class="x" aria-label="Đóng" onclick="dlg.close()">✕</button></div><div id="tip" role="tooltip" hidden></div>
     <div class="mb">${detail(o)}</div>`;
   if(!dlg.open)dlg.showModal();
