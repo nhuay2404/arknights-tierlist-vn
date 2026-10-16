@@ -507,11 +507,19 @@ $('#q').oninput=e=>{S.q=e.target.value;render()};
 {let d=null,eat=false;
   const b=$('#board');
   b.addEventListener('dragstart',e=>{if(e.target.closest('.matrix'))e.preventDefault()});
-  b.addEventListener('pointerdown',e=>{const m=e.target.closest('.matrix');if(m&&e.pointerType==='mouse'&&!e.button)d={m,x:e.clientX,y:e.clientY,l:m.scrollLeft,t:scrollY,moved:false}});
+  // cuộn tức thời khi kéo (html đang để scroll-behavior:smooth sẽ làm giật), thả tay thì trôi tiếp theo quán tính
+  const jump=(m,l,t)=>{m.scrollLeft=l;scrollTo({top:t,behavior:'instant'})};let raf=0;
+  b.addEventListener('pointerdown',e=>{const m=e.target.closest('.matrix');cancelAnimationFrame(raf);if(m&&e.pointerType==='mouse'&&!e.button)d={m,x:e.clientX,y:e.clientY,l:m.scrollLeft,t:scrollY,moved:false,vx:0,vy:0,px:e.clientX,py:e.clientY,pt:performance.now()}});
   addEventListener('pointermove',e=>{if(!d)return;const dx=e.clientX-d.x,dy=e.clientY-d.y;
     if(!d.moved&&Math.hypot(dx,dy)<6)return;
-    d.moved=true;d.m.classList.add('drag');d.m.scrollLeft=d.l-dx;scrollTo(0,d.t-dy)});
-  addEventListener('pointerup',()=>{if(d?.moved){d.m.classList.remove('drag');eat=true;setTimeout(()=>eat=false)}d=null});
+    d.moved=true;d.m.classList.add('drag');jump(d.m,d.l-dx,d.t-dy);
+    const now=performance.now(),dt=Math.max(1,now-d.pt);d.vx=.8*(e.clientX-d.px)/dt+.2*d.vx;d.vy=.8*(e.clientY-d.py)/dt+.2*d.vy;d.px=e.clientX;d.py=e.clientY;d.pt=now});
+  addEventListener('pointerup',()=>{if(d?.moved){d.m.classList.remove('drag');eat=true;setTimeout(()=>eat=false);
+      const m=d.m;let vx=d.vx,vy=d.vy,last=performance.now();if(performance.now()-d.pt>80)vx=vy=0;
+      if(!matchMedia('(prefers-reduced-motion:reduce)').matches){const glide=t=>{const dt=t-last;last=t;const k=Math.pow(.995,dt);vx*=k;vy*=k;
+        jump(m,m.scrollLeft-vx*dt,scrollY-vy*dt);if(Math.abs(vx)+Math.abs(vy)>.02)raf=requestAnimationFrame(glide)};raf=requestAnimationFrame(glide)}}
+    d=null});
+  addEventListener('wheel',()=>cancelAnimationFrame(raf),{passive:true});
   // vừa kéo xong thì bỏ cú click, để không mở nhầm operator
   addEventListener('click',e=>{if(eat){e.stopPropagation();e.preventDefault();eat=false}},true);}
 
