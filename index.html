@@ -93,8 +93,10 @@ body{overflow-anchor:none}
 .ops{display:grid;grid-template-columns:repeat(auto-fill,minmax(12rem,1fr));gap:6px;padding:12px}
 .op{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;padding:5px 12px 5px 5px;background:var(--rb,none),var(--panel2);color:#111;--r6:#c2410c;--r5:#8a6d00;--r4:#7e22ce;border:1px solid transparent;transition:.12s;max-width:100%}
 .op:hover{border-color:var(--ink);box-shadow:3px 3px 0 var(--accent)}
-.av{flex:none;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:0.875rem;color:#000;background:#e4e4de;position:relative;overflow:hidden;border:2px solid var(--panel);outline:1.5px dashed var(--rc);outline-offset:1px}
-.av img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#e4e4de}
+.av{flex:none;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:0.875rem;color:#000;background:#e4e4de;position:relative;border:2px solid var(--panel)}
+.av:after{content:"";position:absolute;inset:-5px;border-radius:50%;background:repeating-conic-gradient(#fff200 0 14deg,#111 14deg 26deg);-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 3.5px),#000 calc(100% - 3px));mask:radial-gradient(farthest-side,transparent calc(100% - 3.5px),#000 calc(100% - 3px));filter:drop-shadow(0 0 1px #0009);animation:spin 14s linear infinite;pointer-events:none}
+@keyframes spin{to{transform:rotate(1turn)}}
+.av img{position:absolute;inset:0;width:100%;height:100%;border-radius:50%;object-fit:cover;background:#e4e4de}
 .op .nm{font-weight:700;font-size:0.875rem;line-height:1.2;white-space:nowrap;display:flex;align-items:center;gap:5px}
 .op .nm>span:first-child{overflow:hidden;text-overflow:ellipsis}.op .nm .tag{flex-shrink:0}
 .op .meta{font:500 0.6875rem var(--mono);color:var(--mute);display:flex;gap:6px;align-items:center;text-transform:uppercase;letter-spacing:.04em}
@@ -145,7 +147,7 @@ dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
 .mh .x{all:unset;cursor:pointer;margin-left:auto;align-self:flex-start;font-size:1.125rem;padding:4px 10px;background:var(--ink);color:var(--accent)}
 .mb{padding:24px;max-width:1040px;margin:0 auto}
 .prof{display:grid;grid-template-columns:1fr 340px;gap:24px;margin-bottom:28px}
-.art{position:relative;background:var(--panel2) var(--hatch);border:1px solid var(--line);min-height:380px;overflow:hidden}
+.art{position:relative;background:var(--panel2) var(--hatch);border:1px solid var(--line);height:460px;align-self:start;overflow:hidden}
 .art:before{content:attr(data-n);position:absolute;left:8px;top:4px;font:900 4rem/1 "Be Vietnam Pro";color:transparent;-webkit-text-stroke:1px #cfcfc7;text-transform:uppercase;word-break:break-all}
 .facdd{display:flex;flex-wrap:wrap;gap:6px 14px}.facdd span{display:inline-flex;align-items:center;gap:6px}.facdd .fac{width:32px;height:32px}
 .art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 15%;animation:fade .8s ease both}
@@ -201,14 +203,17 @@ h1 span{animation:wipe .9s .35s var(--ease) both}
 .tier:hover .tl:after{background-position:30px 0}
 .op{transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s,border-color .25s}
 .op:hover{transform:translate(-2px,-2px)}
-.op .av img{transition:transform .4s var(--ease)}
-.op:hover .av img{transform:scale(1.12)}
+.op .av img{transition:filter .3s}
+.op:hover .av img{filter:brightness(1.1) saturate(1.15)}
 .chip,nav button{transition:all .25s var(--ease)}
 section:not([hidden]){animation:rise .5s var(--ease) backwards}
 dialog[open]{animation:pop .45s var(--ease) backwards}
 dialog[open]::backdrop{animation:fade .3s ease both}
 /* hiệu ứng HUD: góc ngắm khi rê lên thẻ, vạch dữ liệu chạy dưới thanh lọc, con trỏ nhấp nháy sau tiêu đề, giải mã chữ lúc tải trang */
-.op{position:relative}
+.op{position:relative}.op>*{position:relative;z-index:1}
+.op>.eye{position:absolute;inset:0;z-index:0;background:var(--eye,none) 92% 55%/60% auto no-repeat;opacity:0;transition:opacity .35s;-webkit-mask:linear-gradient(90deg,transparent 30%,#000 60%);mask:linear-gradient(90deg,transparent 30%,#000 60%);pointer-events:none}
+.op:hover>.eye{opacity:1}
+.op .av:after{content:none}
 .op:before,.op:after{content:"";position:absolute;width:10px;height:10px;border:2px solid var(--ink);opacity:0;transition:opacity .2s,transform .3s var(--ease);pointer-events:none}
 .op:before{top:-4px;left:-4px;border-right:0;border-bottom:0;transform:translate(-4px,-4px)}
 .op:after{bottom:-4px;right:-4px;border-left:0;border-top:0;transform:translate(4px,4px)}
@@ -220,7 +225,7 @@ h1:after{content:"";display:inline-block;width:.14em;height:.72em;margin-left:.1
 .kicker.dec{font-variant-numeric:tabular-nums}
 @media (prefers-reduced-motion:reduce){*,*:before,*:after,::backdrop{animation:none!important;transition:none!important}.tier.rv{opacity:1}}
 @media (max-width:760px){
-  .prof{grid-template-columns:1fr}.art{min-height:300px;order:-1}.stg{grid-template-columns:repeat(2,1fr)}
+  .prof{grid-template-columns:1fr}.art{height:340px;order:-1}.stg{grid-template-columns:repeat(2,1fr)}
   .stg div:nth-child(4n){border-right:1px solid var(--line)}.stg div:nth-child(2n){border-right:0}
   body{padding-left:0;padding-top:56px}
   header{inset:0 0 auto 0;width:auto;height:56px;border-right:0;border-bottom:1px solid var(--line)}
@@ -452,7 +457,7 @@ function saveURL(){const p=new URLSearchParams();if(S.q.trim())p.set('q',S.q.tri
 
 function opBtn(o,i){
   const v=variant(o.n), base=o.n.replace(/\s*\((IS|General)\)/,'');
-  return `<button class="op" style="--rc:${RC[o.r]};--rb:var(--b${o.r})" data-i="${i}" title="${esc(o.n)}">
+  return `<button class="op" style="--rc:${RC[o.r]};--rb:var(--b${o.r})" data-i="${i}" title="${esc(o.n)}"><span class="eye" aria-hidden="true"${o.img?` style="--eye:url('${IMG}${o.img}.png')"`:''}></span>
     ${av(o,initials(base))}
     <span style="min-width:0"><div class="nm"><span>${esc(base)}</span>${v?`<span class="tag ${v==='General'?'gen':''}">${v==='General'?'OG':v}</span>`:''}</div>
     <div class="meta"><span class="st">${'★'.repeat(o.r)}</span><span class="sb" role="img" aria-label="${esc(CLSVI[o.c]+' · '+subOf(o))}" title="${esc(CLSVI[o.c]+' · '+subOf(o))}">${S.view==='tier'?cIco(o.c):''}${sIco(subOf(o))}</span></div></span></button>`;
@@ -540,7 +545,7 @@ function rangeGrid(g){
   const all=[...g,[0,0]],rs=all.map(x=>x[0]),cs=all.map(x=>x[1]),r0=Math.min(...rs),c0=Math.min(...cs),R=Math.max(...rs)-r0+1,C=Math.max(...cs)-c0+1;
   const on=new Set(g.map(([r,c])=>r+','+c));let h='';
   for(let r=r0;r<r0+R;r++)for(let c=c0;c<c0+C;c++)h+=`<i class="${r===0&&c===0?'me':on.has(r+','+c)?'on':''}"></i>`;
-  return `<div><small style="font:600 0.75rem var(--mono);letter-spacing:.12em;color:var(--mute)">RANGE (E2) · Ô ĐEN = OPERATOR, QUAY SANG PHẢI</small><br><div class="rng" style="grid-template-columns:repeat(${C},16px)" role="img" aria-label="Range gồm ${g.length} ô">${h}</div></div>`;
+  return `<div><div class="rng" style="grid-template-columns:repeat(${C},16px)" role="img" aria-label="Range gồm ${g.length} ô">${h}</div></div>`;
 }
 function detail(o){
   const d=AKD[o.n];if(!d)return'';
@@ -551,7 +556,6 @@ function detail(o){
     ${d.tags.length?`<dt>Tag</dt><dd>${d.tags.map(t=>`<span class="pill">${esc(t)}</span>`).join('')}</dd>`:''}</dl>
     <div class="trait"><small style="font:600 0.625rem var(--mono);letter-spacing:.14em;color:var(--accent)">TRAIT</small><br>${rt(d.trait)}</div>
     <div class="stg">${[['HP',st.HP],['ATK',st.ATK],['DEF',st.DEF],['RES',st.RES],['COST',st.Cost],['BLOCK',st.Block],['REDEPLOY',st.Redeploy+'s'],['ATK INTERVAL',st.ASPD+'s']].map(([k,v])=>`<div><small>${k}</small><b>${v}</b></div>`).join('')}</div>
-    <small style="color:var(--mute);font-family:var(--mono);font-size:0.75rem">Chỉ số E2 cấp tối đa, chưa tính Trust/Potential/Module</small>
     ${rangeGrid(d.range)}
     ${d.usage?`<p class="quote">${esc(d.usage)}<br>— ${esc(d.quote)}</p>`:''}
   </div><div class="art" data-n="${esc(o.n)}"><img src="${art2(d.id)}" alt="Artwork ${esc(o.n)}" loading="lazy" onerror="artErr(this,'${d.id}')"></div></div>
