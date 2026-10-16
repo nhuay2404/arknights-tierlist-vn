@@ -145,10 +145,13 @@ dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
 .mh .x{all:unset;cursor:pointer;margin-left:auto;align-self:flex-start;font-size:1.125rem;padding:4px 10px;background:var(--ink);color:var(--accent)}
 .mb{padding:24px;max-width:1040px;margin:0 auto}
 .prof{display:grid;grid-template-columns:1fr 340px;gap:24px;margin-bottom:28px}
-.art{position:relative;background:var(--panel2) var(--hatch);border:1px solid var(--line);height:460px;align-self:start;overflow:hidden}
+.art{position:relative;background:var(--panel2) var(--hatch);border:1px solid var(--line);height:460px;align-self:start;overflow:hidden;isolation:isolate}
 .art:before{content:attr(data-n);position:absolute;left:8px;top:4px;font:900 4rem/1 "Be Vietnam Pro";color:transparent;-webkit-text-stroke:1px #cfcfc7;text-transform:uppercase;word-break:break-all}
 .facdd{display:flex;flex-wrap:wrap;gap:6px 14px}.facdd span{display:inline-flex;align-items:center;gap:6px}.facdd .fac{width:32px;height:32px}
 .art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 15%;animation:fade .8s ease both}
+/* mở hồ sơ: màn sọc vàng–đen quét qua khung art rồi lộ ra ảnh */
+.art:after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:repeating-linear-gradient(-45deg,var(--accent) 0 7px,#111 7px 14px);box-shadow:inset -3px 0 0 var(--accent);animation:artscan .85s .1s cubic-bezier(.7,0,.2,1) both}
+@keyframes artscan{from{clip-path:inset(0 0 0 0)}to{clip-path:inset(0 0 0 100%)}}
 .kv{display:grid;grid-template-columns:110px 1fr;gap:6px 12px;font-size:0.875rem;margin:0 0 14px}
 .kv dt{font:600 0.6875rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);padding-top:3px}
 .kv dd{margin:0}
@@ -163,7 +166,7 @@ dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
 .stg b{font:700 1.125rem var(--mono)}
 .sec{font:700 0.875rem var(--mono);letter-spacing:.14em;text-transform:uppercase;margin:26px 0 12px;display:flex;align-items:center;gap:10px}
 .sec:before{content:"";width:10px;height:10px;background:var(--accent);border:2px solid var(--ink);transform:rotate(45deg)}
-.sec:after{content:"";flex:1;height:1px;background:var(--line)}
+.sec:after{content:"";flex:1;height:10px;background:repeating-linear-gradient(-45deg,color-mix(in srgb,var(--ink) 30%,transparent) 0 2px,transparent 2px 6px);-webkit-mask:linear-gradient(90deg,#000 60%,transparent);mask:linear-gradient(90deg,#000 60%,transparent)}
 .sk{display:grid;grid-template-columns:56px 1fr;gap:14px;padding:14px;border:1px solid var(--line);margin-bottom:8px}
 .sk img{width:56px;height:56px;background:#222}
 .sk h4{margin:0;font-size:1rem}
@@ -211,6 +214,11 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 .op{position:relative}.op>*{position:relative;z-index:1}
 .op>.eye{position:absolute;inset:0;z-index:0;background:var(--eye,none) 92% 55%/60% auto no-repeat;opacity:0;transition:opacity .35s;-webkit-mask:linear-gradient(90deg,transparent 30%,#000 60%);mask:linear-gradient(90deg,transparent 30%,#000 60%);pointer-events:none}
 .op:hover>.eye{opacity:1}
+/* hover thẻ: một dải sọc chéo lướt qua thẻ một lần */
+.op>.sw{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;background:repeating-linear-gradient(-45deg,color-mix(in srgb,#111 22%,transparent) 0 2px,transparent 2px 7px);
+  -webkit-mask:linear-gradient(100deg,transparent 35%,#000 45%,#000 55%,transparent 65%) 120% 0/300% 100% no-repeat;mask:linear-gradient(100deg,transparent 35%,#000 45%,#000 55%,transparent 65%) 120% 0/300% 100% no-repeat}
+.op:hover>.sw{animation:sweep .7s cubic-bezier(.4,0,.2,1) both}
+@keyframes sweep{from{opacity:1;-webkit-mask-position:-20% 0;mask-position:-20% 0}to{opacity:1;-webkit-mask-position:120% 0;mask-position:120% 0}}
 .op .av:after{content:none}
 .op:before,.op:after{content:"";position:absolute;width:10px;height:10px;border:2px solid var(--ink);opacity:0;transition:opacity .2s,transform .3s var(--ease);pointer-events:none}
 .op:before{top:-4px;left:-4px;border-right:0;border-bottom:0;transform:translate(-4px,-4px)}
@@ -454,7 +462,7 @@ function saveURL(){const p=new URLSearchParams();if(S.q.trim())p.set('q',S.q.tri
 
 function opBtn(o,i){
   const v=variant(o.n), base=o.n.replace(/\s*\((IS|General)\)/,'');
-  return `<button class="op" style="--rc:${RC[o.r]};--rb:var(--b${o.r})" data-i="${i}" title="${esc(o.n)}"><span class="eye" aria-hidden="true"${o.img?` style="--eye:url('${IMG}${o.img}.png')"`:''}></span>
+  return `<button class="op" style="--rc:${RC[o.r]};--rb:var(--b${o.r})" data-i="${i}" title="${esc(o.n)}"><span class="sw" aria-hidden="true"></span><span class="eye" aria-hidden="true"${o.img?` style="--eye:url('${IMG}${o.img}.png')"`:''}></span>
     ${av(o,initials(base))}
     <span style="min-width:0"><div class="nm"><span>${esc(base)}</span>${v?`<span class="tag ${v==='General'?'gen':''}">${v==='General'?'OG':v}</span>`:''}</div>
     <div class="meta"><span class="st">${'★'.repeat(o.r)}</span><span class="sb" role="img" aria-label="${esc(CLSVI[o.c]+' · '+subOf(o))}" title="${esc(CLSVI[o.c]+' · '+subOf(o))}">${S.view==='tier'?cIco(o.c):''}${sIco(subOf(o))}</span></div></span></button>`;
