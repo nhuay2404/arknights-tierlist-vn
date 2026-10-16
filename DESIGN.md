@@ -170,6 +170,8 @@ An industrial two-tone of acid yellow and ink on warm ivory paper, with data col
 - **Label** (Chakra Petch 600, 12px, 0.08–0.2em, uppercase): tabs, chips, stat captions, meta lines, tags and `dt` keys.
 - **Tier mark** (Chakra Petch 700, 34px on desktop, 22px on mobile and in the matrix): the tier letter.
 
+**Fluid scale:** every font size is set in `rem`, and the root size scales with the viewport (`clamp(16px, 14.5px + .4vw, 18px)`). Phones get the px values listed here, and wide screens get up to 12.5% more. New font sizes must use `rem` (px ÷ 16).
+
 ### Named Rules
 **The 12px Floor Rule.** No text below 12px. Small labels are forced to 12px.
 
