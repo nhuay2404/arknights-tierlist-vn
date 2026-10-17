@@ -1,6 +1,6 @@
 """Danh sách toàn bộ operator (kể cả bản chưa ra Global) -> roster.js cho tab Operator.
 Dùng: python _build/build_roster.py <character_table CN> <character_table EN>
-  (cùng thư mục CN cần thêm item_table, uniequip_table, handbook_info_table để tính thứ tự ra mắt)
+  (cùng thư mục EN cần thêm item_table, uniequip_table, handbook_info_table, gacha_table để tính thứ tự ra mắt Global)
   CN: yuanyan3060/ArknightsGameResource/gamedata/excel/character_table.json
   EN: ArknightsAssets/ArknightsGamedata/en/gamedata/excel/character_table.json"""
 import json, sys
@@ -29,22 +29,29 @@ for k, v in cn.items():
     g = k in en
     # tên: bản Global dùng tên EN, bản chưa ra dùng appellation (tên Latin trong data CN)
     out.append([k, (en[k]['name'] if g else v['appellation']).strip(), rar(v), CLS[v['profession']], v['subProfessionId'], int(g)] + ([] if g else [0]))
-# thứ tự ra mắt (CN, Global đi theo cùng thứ tự): data không có ngày ra operator nên ước lượng
+# thứ tự ra mắt Global: data không ghi ngày ra operator nên ước lượng từ data EN
 # - trong cùng độ hiếm: sortId của Token tiềm năng p_<id> tăng đúng theo thứ tự ra
-# - mốc thời gian: ngày ra module mặc định (uniequip_001) và hồ sơ operator record; cả hai chỉ có thể
-#   muộn hơn ngày ra nên lấy min dồn từ operator mới hơn về, operator thiếu mốc thì nội suy giữa 2 mốc gần nhất
-D = lambda f: json.load(open(sys.argv[1].replace('character_table', f), encoding='utf-8'))
-anc = {e['charId']: e['uniEquipGetTime'] for e in D('uniequip_table')['equipDict'].values() if e['uniEquipId'].startswith('uniequip_001')}
-for k, v in D('handbook_info_table')['handbookDict'].items():
+# - mốc thời gian (Global): banner limited (limitedCharId, ngày chính xác), ngày ra module mặc định (uniequip_001)
+#   và operator record; module/record có thể ra muộn hơn operator nên mốc nào muộn hơn mốc của operator ra sau thì bỏ,
+#   operator thiếu mốc thì nội suy giữa 2 mốc gần nhất cùng độ hiếm
+E = lambda f: json.load(open(sys.argv[2].replace('character_table', f), encoding='utf-8'))
+anc = {e['charId']: e['uniEquipGetTime'] for e in E('uniequip_table')['equipDict'].values() if e['uniEquipId'].startswith('uniequip_001')}
+for k, v in E('handbook_info_table')['handbookDict'].items():
     if v.get('handbookAvgList'):
         t = min(a['storyGetTime'] for a in v['handbookAvgList']); anc[k] = min(t, anc.get(k, t))
+for p in E('gacha_table')['gachaPoolClient']:
+    k = (p.get('limitParam') or {}).get('limitedCharId')
+    if k: anc[k] = min(p['openTime'], anc.get(k, p['openTime']))
+eitems = E('item_table')['items']
 seqs, T = {}, {}
-for k in cn:
-    if 'p_' + k in items: seqs.setdefault(items['p_' + k]['sortId'] // 100000, []).append((items['p_' + k]['sortId'], k))
+for k in en:
+    if 'p_' + k in eitems: seqs.setdefault(eitems['p_' + k]['sortId'] // 100000, []).append((eitems['p_' + k]['sortId'], k))
 for l in seqs.values():
     ks = [k for _, k in sorted(l)]; t = [anc.get(k) for k in ks]; m = None
     for i in range(len(t) - 1, -1, -1):
-        if t[i] is not None: m = t[i] if m is None else min(m, t[i]); t[i] = m
+        if t[i] is None: continue
+        if m is not None and t[i] > m: t[i] = None  # mốc muộn hơn operator ra sau -> module/record bổ sung sau, bỏ, nội suy
+        else: m = t[i]
     idx = [i for i, x in enumerate(t) if x is not None]
     for i, k in enumerate(ks):
         a = max((j for j in idx if j <= i), default=None); b = min((j for j in idx if j >= i), default=None)
@@ -55,9 +62,8 @@ cn_only = sorted((o for o in out if not o[5]), key=lambda o: BORD.get(o[0], (len
 for n, o in enumerate(cn_only, 1):
     o[6] = BORD.get(o[0], (len(BANNERS) + n,))[0] + 1
 # cột cuối: hạng ra mắt (lớn = mới hơn); bản CN theo BANNERS, đứng sau mọi operator Global
-# robot 1★ hay có record ra muộn hơn bản thân nên không cho vượt operator Global mới nhất (bậc 2★+)
-cap = max(T[o[0]][0] for o in out if o[5] and o[2] > 1 and o[0] in T)
-glo = sorted((o for o in out if o[5]), key=lambda o: (min(T.get(o[0], (0, 0))[0], cap), o[2], T.get(o[0], (0, 0))[1]))
+# cùng ngày ra: 6★ trước, rồi theo thứ tự Token
+glo = sorted((o for o in out if o[5]), key=lambda o: (T.get(o[0], (0, 0))[0], o[2], T.get(o[0], (0, 0))[1]))
 for n, o in enumerate(glo + sorted(cn_only, key=lambda o: (o[6], o[2])), 1):
     o.append(n)
 open('roster.js', 'w', encoding='utf-8').write('window.AKR=' + json.dumps(out, ensure_ascii=False, separators=(',', ':')) + ';\n')
