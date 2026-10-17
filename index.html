@@ -218,6 +218,23 @@ dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
 .fc.hit{animation:fhit 1.6s ease-out}
 @keyframes fhit{0%,30%{box-shadow:0 0 0 4px var(--accent),0 0 0 6px var(--ink)}100%{box-shadow:0 0 0 0 transparent}}
 @media (prefers-reduced-motion:reduce){.fc.hit{animation:none;outline:3px solid var(--ink)}}
+/* tab Operator: thẻ chân dung nửa người như danh sách operator trong game */
+.rctl{display:grid;gap:10px;margin-bottom:18px}
+.rctl .chips{gap:6px}.rctl .chip{min-height:40px}
+.rcls .chip{min-width:44px;justify-content:center}.rcls .chip .ico{width:22px;height:22px}
+.rrow{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}.rcount{margin-left:auto;font:700 0.8125rem var(--mono);color:var(--mute);letter-spacing:.06em}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.rc{all:unset;box-sizing:border-box;position:relative;display:block;aspect-ratio:180/250;overflow:hidden;background:linear-gradient(180deg,#d9d9d9,#8c8c8c 70%,var(--rr));border:1px solid #0006;cursor:default;isolation:isolate}
+.rc.go{cursor:pointer}.rc.go:hover,.rc.go:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.rc img{position:absolute;inset:0;width:100%;height:auto;min-height:100%;object-fit:cover;object-position:50% 0;z-index:-1}
+.rc .nm{position:absolute;left:0;right:0;top:0;padding:4px 7px 14px;color:#fff;font:700 0.9375rem/1.2 "Be Vietnam Pro",system-ui,sans-serif;background:linear-gradient(#000b,#0000);text-shadow:0 1px 2px #000;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rc .bt{position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--rr)}
+.rc .st{position:absolute;left:6px;bottom:9px;color:var(--rr);font-size:0.75rem;letter-spacing:-1px;text-shadow:0 0 2px #000,0 0 2px #000}
+.rc .ci{position:absolute;right:4px;bottom:9px;width:30px;height:30px;display:grid;place-items:center;background:#000a}.rc .ci .ico{width:24px;height:24px;filter:invert(1)}
+.rc .cn{position:absolute;right:0;top:0;padding:2px 6px;background:#ff7a1a;color:#111;font:800 0.6875rem var(--mono);letter-spacing:.06em}
+.rc.cn-only .nm{padding-right:34px}
+@media (max-width:760px){.rgrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.rc .nm{font-size:0.75rem;padding:3px 5px 10px}.rc .ci{width:24px;height:24px}.rc .ci .ico{width:19px;height:19px}.rc .st{font-size:0.625rem;bottom:8px;left:4px}
+  .rctl .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.rctl .chips::-webkit-scrollbar{display:none}.rctl .chip{flex:none}.rcount{margin-left:0}}
 .fmore{display:none;width:100%;margin-top:8px;min-height:44px;border:1px dashed var(--line);background:none;color:var(--ink);font:700 0.8125rem var(--mono);letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
 .fmore:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 @media (max-width:760px){.fc.sub{margin-left:12px}.fch .fac{width:44px;height:44px}.fch{flex-wrap:wrap}.fch .fn{margin-left:0;flex-basis:100%}
@@ -387,7 +404,8 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 <header><div class="bar">
   <div class="logo"><i>AK</i><span>TIER LIST // VN</span></div>
   <nav id="nav">
-    <button data-tab="list" class="on">Xếp hạng</button>
+    <button data-tab="ops" class="on">Operator</button>
+    <button data-tab="list">Xếp hạng</button>
     <button data-tab="new">Mới</button>
     <button data-tab="fac">Phe phái</button>
     <button data-tab="log">Lịch sử</button>
@@ -402,7 +420,18 @@ dialog[open]::backdrop{animation:fade .3s ease both}
     <p class="stamp">Cập nhật 12/10/2026 · Server Global</p>
   </div>
 
-  <section id="list">
+  <section id="ops">
+    <div class="rctl" id="rctl">
+      <label class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="rq" type="search" placeholder="Tìm operator… (vd: Clementia, Mon3tr)" aria-label="Tìm operator trong danh sách"></label>
+      <div class="chips" id="rrar" role="group" aria-label="Độ hiếm"></div>
+      <div class="chips rcls" id="rcls" role="group" aria-label="Class"></div>
+      <div class="rrow"><div class="chips" id="rsrv" role="group" aria-label="Server"></div><div class="chips" id="rsort" role="group" aria-label="Sắp xếp"></div><span class="rcount" id="rcount" aria-live="polite"></span></div>
+    </div>
+    <div class="rgrid" id="rgrid"></div>
+  </section>
+
+  <section id="list" hidden>
     <div class="controls" id="ctl">
       <div class="row">
         <label class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
@@ -465,6 +494,7 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 <script src="details.js"></script>
 <script src="glossary.js"></script>
 <script src="factions.js"></script>
+<script src="roster.js"></script>
 <script>
 const {ops:OPS, general:GENERAL} = window.AK;
 const TIERS=['EX','S+','S','S-','A+','A','A-','B+','B','B-','C+','C','C-','D','F'];
@@ -798,6 +828,33 @@ document.addEventListener('click',e=>{const m=e.target.closest('.fmore');if(!m)r
   m.setAttribute('aria-expanded',o);m.textContent=o?'Thu gọn':`Xem tất cả ${c.querySelectorAll('.fop').length} operator`;if(!o)c.scrollIntoView({block:'nearest'})});
 document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if(!a)return;e.preventDefault();showFac(a.dataset.fac)});
 
+// tab Operator: toàn bộ operator (roster.js, gồm cả bản chưa ra Global), ảnh nửa người portrait/<id>_1.png
+{const R=window.AKR||[],PORT='https://raw.githubusercontent.com/yuanyan3060/ArknightsGameResource/main/portrait/';
+  const RR={6:'#ff7a1a',5:'#ffcf3a',4:'#c8a6ff',3:'#4fb3ff',2:'#d8ff5a',1:'#e8e8e8'};
+  const base=n=>n.replace(/\s*\((IS|General)\)/,'');
+  const idx=Object.fromEntries(OPS.map((o,i)=>[base(o.n),i]).reverse());
+  const st={q:'',r:0,c:'',srv:'all',sort:'new'};
+  const mk=(el,items,on,set)=>{el.innerHTML=items.map(([k,l,t])=>`<button class="chip" data-k="${k}"${t?` title="${t}" aria-label="${t}"`:''}>${l}</button>`).join('');
+    const sync=()=>el.querySelectorAll('.chip').forEach(b=>{const o=on(b.dataset.k);b.classList.toggle('on',o);b.setAttribute('aria-pressed',o)});
+    el.onclick=e=>{const b=e.target.closest('.chip');if(!b)return;set(b.dataset.k);sync();draw()};sync()};
+  mk($('#rrar'),[['0','Tất cả'],...[6,5,4,3,2,1].map(r=>[r,r+'★'])],k=>+k===st.r,k=>st.r=+k);
+  mk($('#rcls'),[['','Tất cả'],...CLS.map(([k,l])=>[k,cIco(k),l])],k=>k===st.c,k=>st.c=st.c===k?'':k);
+  mk($('#rsrv'),[['all','Tất cả server'],['gl','Đã ra Global'],['cn','Chưa ra Global']],k=>k===st.srv,k=>st.srv=k);
+  mk($('#rsort'),[['new','Mới nhất'],['rar','Độ hiếm'],['az','Tên A–Z']],k=>k===st.sort,k=>st.sort=k);
+  $('#rq').oninput=e=>{st.q=norm(e.target.value);draw()};
+  const card=([id,n,r,c,sub,gl])=>{const i=idx[n];
+    return `<button class="rc${i!=null?' go':''}${gl?'':' cn-only'}" style="--rr:${RR[r]}"${i!=null?` data-i="${i}"`:' tabindex="-1"'} title="${esc(n)} · ${r}★ · ${esc(CLSVI[c])}${gl?'':' · chưa ra Global'}">
+      <img src="${PORT}${id}_1.png" alt="" loading="lazy" decoding="async" onerror="this.src='${IMG}${id}.png'">
+      <span class="nm">${esc(n)}</span>${gl?'':'<span class="cn">CN</span>'}<span class="st">${'★'.repeat(r)}</span><span class="ci">${ico(`ui/subclass/sub_${sub}_icon.png`)}</span><span class="bt"></span></button>`};
+  // "Mới nhất": bản chưa ra Global trước, rồi theo đợt operator được thêm vào tier list (ghi chú cũ nhất), không có thì xếp sau theo độ hiếm
+  const rel=Object.fromEntries(OPS.map(o=>[base(o.n),(o.notes||[]).map(x=>x.u||'').filter(Boolean).sort()[0]||'']));
+  const rank=o=>rel[o[1]]||'';
+  function draw(){let l=R.filter(([,n,r,c,,gl])=>(!st.r||r===st.r)&&(!st.c||c===st.c)&&(st.srv==='all'||(st.srv==='gl')===!!gl)&&(!st.q||norm(n).includes(st.q)));
+    l=l.slice().sort(st.sort==='az'?(a,b)=>a[1].localeCompare(b[1]):st.sort==='rar'?(a,b)=>b[2]-a[2]||a[1].localeCompare(b[1]):(a,b)=>a[5]-b[5]||rank(b).localeCompare(rank(a))||b[2]-a[2]||a[1].localeCompare(b[1]));
+    $('#rcount').textContent=`${l.length} / ${R.length} operator`;
+    $('#rgrid').innerHTML=l.length?l.map(card).join(''):'<div class="empty">Không tìm thấy operator nào.</div>'}
+  $('#rgrid').onclick=e=>{const b=e.target.closest('.rc.go');if(b)openOp(+b.dataset.i)};
+  draw()}
 // tabs
 $('#nav').onclick=e=>{const b=e.target.closest('button');if(!b)return;
   document.querySelectorAll('#nav button').forEach(x=>x.classList.toggle('on',x===b));
@@ -805,19 +862,19 @@ $('#nav').onclick=e=>{const b=e.target.closest('button');if(!b)return;
   if(!NAV)history.pushState({tab:b.dataset.tab},'',location.pathname+location.search);if(b.dataset.tab!=='fac')setBack(null)};
 // lịch sử trình duyệt: mỗi tab, hồ sơ operator và phe phái là một bước; NAV = đang dựng lại từ lịch sử nên không đẩy bước mới
 let NAV=false,SILENT=false;
-const curTab=()=>$('#nav button.on')?.dataset.tab||'list';
+const curTab=()=>$('#nav button.on')?.dataset.tab||'ops';
 function goTab(k){const n=NAV;NAV=true;$(`#nav [data-tab=${k}]`).click();NAV=n}
 function setBack(i){const b=$('#backbar');if(i==null||!OPS[i]){b.hidden=true;return}
   b.hidden=false;b.querySelector('span').textContent=OPS[i].n.replace(/\s*\(General\)/,'')}
-addEventListener('popstate',e=>{const st=e.state||{tab:'list'};NAV=true;
+addEventListener('popstate',e=>{const st=e.state||{tab:'ops'};NAV=true;
   if(st.tab&&st.tab!==curTab())goTab(st.tab);
   if(st.op!=null)openOp(st.op);
   else{if(dlg.open)dlg.close();if(st.fac)showFac(st.fac);else setBack(null)}
   NAV=false});
-history.replaceState(history.state||{tab:'list'},'');
+history.replaceState(history.state||{tab:'ops'},'');
 // tiêu đề và chữ nền khổng lồ đổi theo tab đang mở
-const HERO={list:['TIER','Bảng xếp hạng','Operator'],new:['NEW','Operator','mới về'],fac:['FAC','Phe phái','& vùng đất'],log:['LOG','Lịch sử','thay đổi'],about:['INFO','Giới thiệu','& nguồn']};
-function setHero(k){const [g,a,b]=HERO[k]||HERO.list,h=$('.hero');h.dataset.g=g;h.querySelector('h1').innerHTML=`${a}<br><span>${b}</span>`;typeHero();document.title=k==='list'?'Arknights Tier List VN':`${a} ${b} · Arknights Tier List VN`}
+const HERO={ops:['OPS','Danh sách','Operator'],list:['TIER','Bảng xếp hạng','Operator'],new:['NEW','Operator','mới về'],fac:['FAC','Phe phái','& vùng đất'],log:['LOG','Lịch sử','thay đổi'],about:['INFO','Giới thiệu','& nguồn']};
+function setHero(k){const [g,a,b]=HERO[k]||HERO.ops,h=$('.hero');h.dataset.g=g;h.querySelector('h1').innerHTML=`${a}<br><span>${b}</span>`;typeHero();document.title=k==='ops'?'Arknights Tier List VN':`${a} ${b} · Arknights Tier List VN`}
 render();
 // 4: bảng lọc nổi trên mobile
 const fab=$('#fab'),ctl=$('#ctl');
@@ -856,6 +913,9 @@ typeHero();
 const toTop=$('#totop');addEventListener('scroll',()=>{toTop.hidden=scrollY<800},{passive:true});toTop.onclick=()=>scrollTo({top:0,behavior:'smooth'});
 // nút LỌC chỉ có ở tab Xếp hạng
 $('#nav').addEventListener('click',()=>{fab.hidden=$('#list').hidden;sheet(false)});
+fab.hidden=$('#list').hidden;
+// link chia sẻ có bộ lọc tier list (?q=, ?view=…) thì mở thẳng tab Xếp hạng
+if(/[?&](q|cls|sub|r|view)=/.test(location.search)&&!history.state?.op){NAV=true;goTab('list');NAV=false;history.replaceState({tab:'list'},'')}
 // 8: đổi sáng/tối
 const isDark=()=>{const t=document.documentElement.dataset.theme;return t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches};
 const applyDk=()=>document.documentElement.classList.toggle('dk',isDark());applyDk();
