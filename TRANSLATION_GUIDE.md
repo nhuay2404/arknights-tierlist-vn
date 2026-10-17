@@ -128,3 +128,37 @@ Mục tiêu: đọc như game thủ Việt viết, nhưng mọi thuật ngữ ga
 3. Dịch theo bảng mục 4; gặp khái niệm mới → thêm vào bảng rồi mới dùng.
 4. Đọc lại bản dịch thành tiếng: có tự nhiên không, có sót ý không.
 5. Bản gốc tiếng Anh luôn được giữ trên site (nút "Xem bản gốc") để người đọc đối chiếu.
+
+## 7. Hồ sơ lưu trữ (File & Story)
+
+Nguồn: `_build/profiles_en/<id>.json` (`{"n": tên, "s": [{"t": tiêu đề, "x": nội dung}]}`).
+Bản dịch: `i18n/profiles/<id>.vi.json` là **một mảng JSON chuỗi**, đúng số mục và đúng thứ tự `s` của bản gốc (mục thứ k dịch `s[k].x`). Không dịch tiêu đề `t` (site tự hiển thị). Sau khi dịch chạy `python _build/build_profiles.py` để kiểm tra số mục khớp.
+
+**Giọng văn.** Đây là văn bản lưu trữ của Rhodes Island: giọng hồ sơ, điềm tĩnh, hơi trang trọng; phần truyện (Archive File) dịch như văn học, mượt và giàu cảm xúc, giữ nguyên nhịp ngắt đoạn, câu ngắn/dài của tác giả. Không thêm chú thích, không tóm tắt, không bỏ câu. Giữ nguyên các ký tự `■`, `—`, `……`, chữ in nghiêng `<i>…</i>`, và mọi dòng trống.
+
+**Xưng hô trong truyện.** Ngôi thứ ba: "cô ấy / anh ấy / cậu ấy (nhân vật trẻ) / bà ấy / ông ấy" theo tuổi và giới; lời thoại dùng xưng hô hợp quan hệ (tôi – cậu, tôi – anh, ta – ngươi khi giọng cổ/kiêu ngạo). "Doctor" giữ nguyên làm danh xưng (ví dụ: "Doctor, anh/chị…" → viết "Doctor" và tránh gán giới tính cho Doctor).
+
+**Giữ nguyên tiếng Anh**: tên người, tên operator, địa danh, quốc gia, thành phố, tổ chức, phe phái (`Rhodes Island`, `Lungmen`, `Kazimierz`, `Reunion`, `Babel`, `Lungmen Guard Department` …), chủng tộc (`Kuranta`, `Feline`, `Sarkaz`, `Liberi`, `Sankta`, `Vouivre`, `Lupo`, `Oni` …), và thuật ngữ thế giới: `Originium`, `Arts`, `Oripathy`, `Catastrophe`, `Infected` (danh từ chỉ người nhiễm bệnh, có thể viết "người Infected"), `Originium Arts`, `landship`, `nomadic city`, `Elite Operator`, `operator`, `Doctor`, `PRTS`, `Ægir`, `Seaborn`. Đơn vị đo giữ nguyên (`cm`, `u/L`).
+
+**Nhãn trong Basic Info / Physical Exam / Clinical Analysis** — dịch nhãn trong ngoặc vuông theo bảng, giữ dấu `[ ]`:
+
+| Gốc | Dịch |
+|---|---|
+| Code Name | Mật danh |
+| Gender | Giới tính |
+| Combat Experience | Kinh nghiệm chiến đấu |
+| Place of Birth | Nơi sinh |
+| Date of Birth | Ngày sinh |
+| Race | Chủng tộc |
+| Height | Chiều cao |
+| Infection Status | Tình trạng nhiễm bệnh |
+| Physical Strength | Thể lực |
+| Mobility | Cơ động |
+| Physical Resilience | Sức bền |
+| Tactical Acumen | Tư duy chiến thuật |
+| Combat Skill | Kỹ năng chiến đấu |
+| Originium Arts Assimilation / Originium Adaptability | Thích ứng Originium Arts |
+| Cell-Originium Assimilation | Tỷ lệ đồng hoá tế bào–Originium |
+| Blood Originium-Crystal Density | Mật độ tinh thể Originium trong máu |
+
+Giá trị: Male → Nam, Female → Nữ; `X Years` → `X năm`; ngày sinh `Apr 23` → `23/4`; Unknown/Undisclosed → Không rõ / Không tiết lộ. Mức đánh giá: Flawed → Kém; Normal → Bình thường; Standard → Tiêu chuẩn; Excellent → Xuất sắc; Outstanding → Vượt trội; ■■ giữ nguyên. Câu kết luận y khoa (Infection Status, Clinical Analysis) dịch đầy đủ, văn phong báo cáo y tế.
