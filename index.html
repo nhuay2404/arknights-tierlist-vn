@@ -516,13 +516,14 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 
 <dialog id="dlg"></dialog>
 
-<script src="data.js"></script>
-<script src="details.js"></script>
-<script src="glossary.js"></script>
-<script src="factions.js"></script>
-<script src="roster.js"></script>
-<script src="skins.js"></script>
-<script src="mats.js"></script>
+<!-- ?v=: đổi mỗi lần cập nhật data để trình duyệt/CDN không dùng file .js cũ lệch với index.html -->
+<script src="data.js?v=20261017e"></script>
+<script src="details.js?v=20261017e"></script>
+<script src="glossary.js?v=20261017e"></script>
+<script src="factions.js?v=20261017e"></script>
+<script src="roster.js?v=20261017e"></script>
+<script src="skins.js?v=20261017e"></script>
+<script src="mats.js?v=20261017e"></script>
 <script>
 const {ops:OPS, general:GENERAL} = window.AK;
 const TIERS=['EX','S+','S','S-','A+','A','A-','B+','B','B-','C+','C','C-','D','F'];
@@ -924,9 +925,11 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if
     return `<button class="rc go${gl?'':' cn-only'}" style="--rr:${RR[r]};--rbg:var(--b${r})" data-id="${id}" title="${esc(n)} · ${r}★ · ${esc(CLSVI[c])}${gl?'':` · chưa ra Global · banner CN thứ ${bn}`}${k>2?` · ${k} trang phục`:''}">
       <img src="${PORT}${id}_1.png" alt="" loading="lazy" decoding="async" onerror="this.src='${IMG}${id}.png'">
       <span class="nm">${esc(n)}</span>${gl?'':`<span class="cn">CN ${bn}</span>`}<span class="st">${'★'.repeat(r)}</span><span class="ci">${ico(`ui/subclass/sub_${sub}_icon.png`)}</span><span class="bt"></span></button>`};
+  // hạng ra mắt: cột sau server (Global) hoặc sau số banner (CN)
+  const rel=o=>o[o[5]?6:7]||0;
   // "Mới nhất": theo hạng ra mắt ở cột cuối roster.js (bản CN theo banner mới nhất trên cùng, rồi tới Global mới nhất)
   function draw(){let l=R.filter(([,n,r,c,,gl])=>(!st.r||r===st.r)&&(!st.c||c===st.c)&&(st.srv==='all'||(st.srv==='gl')===!!gl)&&(!st.q||norm(n).includes(st.q)));
-    l=l.slice().sort(st.sort==='az'?(a,b)=>a[1].localeCompare(b[1]):st.sort==='rar'?(a,b)=>b[2]-a[2]||a[1].localeCompare(b[1]):(a,b)=>b.at(-1)-a.at(-1));
+    l=l.slice().sort(st.sort==='az'?(a,b)=>a[1].localeCompare(b[1]):st.sort==='rar'?(a,b)=>b[2]-a[2]||a[1].localeCompare(b[1]):(a,b)=>a[5]-b[5]||rel(b)-rel(a));
     $('#rcount').textContent=`${l.length} / ${R.length} operator`;
     $('#rgrid').innerHTML=l.length?l.map(card).join(''):'<div class="empty">Không tìm thấy operator nào.</div>'}
   // bấm thẻ: mở hồ sơ operator như ở tier list; bản chưa có trong tier list (CN) mở hồ sơ rút gọn cùng khung
