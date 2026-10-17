@@ -96,12 +96,16 @@ body{overflow-anchor:none}
 .tag.gen{background:#e4e4de;color:var(--mute)}
 .empty{color:var(--mute);text-align:center;padding:60px 0;font-family:var(--mono)}
 /* matrix */
-.matrix{overflow-x:auto;border:1px solid var(--ink);background:var(--panel);cursor:grab;user-select:none}
+.matrix{overflow:auto;max-height:calc(100dvh - 40px);overscroll-behavior:contain;border:1px solid var(--ink);background:var(--panel);cursor:grab;user-select:none}
 .matrix.drag{cursor:grabbing}.matrix.drag .op{pointer-events:none}
 .matrix table{border-collapse:collapse;min-width:1100px;width:100%}
 .matrix th{background:var(--ink);color:var(--accent);font:600 0.75rem var(--mono);letter-spacing:.12em;text-transform:uppercase;padding:10px;text-align:left}
 .matrix td{vertical-align:top;padding:8px;border-bottom:1px solid var(--line);border-left:1px solid var(--line)}
 .matrix td.tl{font-size:1.375rem;border-left:0;width:64px}
+/* ghim hàng class (trên) và cột tier (trái) khi cuộn bảng */
+.matrix thead th{position:sticky;top:0;z-index:3}
+.matrix td.tl{display:table-cell;text-align:center;vertical-align:middle;position:sticky;left:0;z-index:2}
+.matrix thead th:first-child{left:0;z-index:4}
 .matrix .op{display:flex;margin-bottom:4px;padding:3px 8px 3px 3px}
 .matrix .av{width:28px;height:28px;font-size:0.6875rem}
 .matrix .op .nm{font-size:0.75rem}
@@ -297,6 +301,7 @@ h1:after{content:"";display:inline-block;width:.14em;height:.72em;margin-left:.1
   nav button.on:before{left:0;right:0;top:auto;bottom:0;width:auto;height:3px}
   .controls{top:56px}
   .wrap{padding:0 16px}
+  .matrix{max-height:calc(100dvh - 96px)}
   .tier{grid-template-columns:56px 1fr}.tl{font-size:1.375rem}
   /* điện thoại: 2 cột thẻ operator, hero và hàng số liệu gọn để bảng tier lên sớm */
   .tier{grid-template-columns:44px 1fr}.ops{grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;padding:6px}
@@ -584,8 +589,8 @@ $('#q').oninput=e=>{S.q=e.target.value;render()};
   const b=$('#board');
   b.addEventListener('dragstart',e=>{if(e.target.closest('.matrix'))e.preventDefault()});
   // cuộn tức thời khi kéo (html đang để scroll-behavior:smooth sẽ làm giật), thả tay thì trôi tiếp theo quán tính
-  const jump=(m,l,t)=>{m.scrollLeft=l;scrollTo({top:t,behavior:'instant'})};let raf=0;
-  b.addEventListener('pointerdown',e=>{const m=e.target.closest('.matrix');cancelAnimationFrame(raf);if(m&&e.pointerType==='mouse'&&!e.button)d={m,x:e.clientX,y:e.clientY,l:m.scrollLeft,t:scrollY,moved:false,vx:0,vy:0,px:e.clientX,py:e.clientY,pt:performance.now()}});
+  const jump=(m,l,t)=>{m.scrollLeft=l;m.scrollTop=t};let raf=0;
+  b.addEventListener('pointerdown',e=>{const m=e.target.closest('.matrix');cancelAnimationFrame(raf);if(m&&e.pointerType==='mouse'&&!e.button)d={m,x:e.clientX,y:e.clientY,l:m.scrollLeft,t:m.scrollTop,moved:false,vx:0,vy:0,px:e.clientX,py:e.clientY,pt:performance.now()}});
   addEventListener('pointermove',e=>{if(!d)return;const dx=e.clientX-d.x,dy=e.clientY-d.y;
     if(!d.moved&&Math.hypot(dx,dy)<6)return;
     d.moved=true;d.m.classList.add('drag');jump(d.m,d.l-dx,d.t-dy);
@@ -593,7 +598,7 @@ $('#q').oninput=e=>{S.q=e.target.value;render()};
   addEventListener('pointerup',()=>{if(d?.moved){d.m.classList.remove('drag');eat=true;setTimeout(()=>eat=false);
       const m=d.m;let vx=d.vx,vy=d.vy,last=performance.now();if(performance.now()-d.pt>80)vx=vy=0;
       if(!matchMedia('(prefers-reduced-motion:reduce)').matches){const glide=t=>{const dt=t-last;last=t;const k=Math.pow(.995,dt);vx*=k;vy*=k;
-        jump(m,m.scrollLeft-vx*dt,scrollY-vy*dt);if(Math.abs(vx)+Math.abs(vy)>.02)raf=requestAnimationFrame(glide)};raf=requestAnimationFrame(glide)}}
+        jump(m,m.scrollLeft-vx*dt,m.scrollTop-vy*dt);if(Math.abs(vx)+Math.abs(vy)>.02)raf=requestAnimationFrame(glide)};raf=requestAnimationFrame(glide)}}
     d=null});
   addEventListener('wheel',()=>cancelAnimationFrame(raf),{passive:true});
   // vừa kéo xong thì bỏ cú click, để không mở nhầm operator
