@@ -23,6 +23,10 @@ html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font:0.9375rem/1.6 "Be Vietnam Pro",system-ui,sans-serif;min-height:100vh;padding-left:76px}
 /* nền: lưới 48px tĩnh, nằm cố định sau nội dung */
 body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:48px 48px}
+/* vạch quét dọc chạy chậm sau nội dung */
+body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(transparent,color-mix(in srgb,var(--accent) 14%,transparent) 48%,color-mix(in srgb,var(--accent) 40%,transparent) 50%,transparent 50.2%);
+  background-size:100% 260px;background-repeat:no-repeat;animation:scan 9s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes scan{from{background-position:0 -260px}to{background-position:0 calc(100vh + 260px)}}
 a{color:var(--ink);text-decoration-color:var(--accent);text-decoration-thickness:3px}
 ::selection{background:var(--accent)}
 .wrap{max-width:1400px;margin:0 auto;padding:0 24px}
@@ -93,7 +97,6 @@ body{overflow-anchor:none}
 .op{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;padding:5px 12px 5px 5px;background:var(--rb,none),var(--panel2);color:#111;--r6:#c2410c;--r5:#8a6d00;--r4:#7e22ce;border:1px solid transparent;transition:.12s;max-width:100%}
 .op:hover{border-color:var(--ink);box-shadow:3px 3px 0 var(--accent)}
 .av{flex:none;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:0.875rem;color:#000;background:#e4e4de;position:relative;border:2px solid var(--panel)}
-.av:after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px dashed var(--rc,var(--line));pointer-events:none}
 .av img{position:absolute;inset:0;width:100%;height:100%;border-radius:50%;object-fit:cover;background:#e4e4de}
 .op .nm{font-weight:700;font-size:0.875rem;line-height:1.2;white-space:nowrap;display:flex;align-items:center;gap:5px}
 .op .nm>span:first-child{overflow:hidden;text-overflow:ellipsis}.op .nm .tag{flex-shrink:0}
@@ -350,6 +353,13 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 #fab .n:empty{display:none}
 #fab:before{content:"";position:absolute;inset:-2px;border:2px solid var(--accent);pointer-events:none;animation:fabping 1.6s .8s var(--ease) 2 both}
 @keyframes fabping{0%{opacity:.9;transform:none}100%{opacity:0;transform:scale(1.35,1.6)}}
+/* nút quay lại hồ sơ operator khi đi từ hồ sơ sang phe phái; dính trên cùng khi cuộn */
+#backbar{position:sticky;top:var(--stick);z-index:12;padding:8px 0;margin:-14px 0 14px;background:var(--bg)}
+#backbar[hidden]{display:none}
+.back{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px 0 10px;background:var(--ink);color:var(--accent);font:700 0.8125rem var(--mono);letter-spacing:.08em;text-transform:uppercase;box-shadow:3px 3px 0 var(--accent);transition:transform .15s var(--ease)}
+.back span{color:inherit}
+.back:hover{transform:translate(-2px,-2px)}.back:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.dk .back{background:#000}
 #scrim{position:fixed;inset:0;z-index:44;background:rgba(0,0,0,.45);animation:fade .2s ease}
 #scrim[hidden]{display:none}
 #theme{all:unset;cursor:pointer;margin-top:auto;width:44px;height:44px;display:grid;place-items:center;font-size:1.125rem}
@@ -398,7 +408,7 @@ dialog[open]::backdrop{animation:fade .3s ease both}
   </section>
 
   <section id="new" hidden><div id="newGrid"></div></section>
-  <section id="fac" hidden><div id="facBody"></div></section>
+  <section id="fac" hidden><div id="backbar" hidden><button class="back" onclick="history.back()"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><path d="M15 5l-7 7 7 7"/></svg>Quay lại hồ sơ <span></span></button></div><div id="facBody"></div></section>
   <section id="log" hidden><div class="card"><div class="timeline" id="timeline"></div></div></section>
   <section id="about" hidden>
     <div class="card">
@@ -536,7 +546,7 @@ try{const v=localStorage.getItem('ak-view');if(v)S.view=v}catch(e){}
   (p.get('r')||'').split(',').map(Number).filter(r=>[4,5,6].includes(r)).forEach(r=>S.rar.add(r));
   if(['tier','matrix'].includes(p.get('view')))S.view=p.get('view');}
 function saveURL(){const p=new URLSearchParams();if(S.q.trim())p.set('q',S.q.trim());if(S.cls.size)p.set('cls',[...S.cls].map(c=>c.slice(0,-1)).join(','));if(S.sub.size)p.set('sub',[...S.sub].join(','));if(S.rar.size)p.set('r',[...S.rar].join(','));if(S.view!=='tier')p.set('view',S.view);
-  history.replaceState(null,'',(p.toString()?'?'+p:location.pathname)+location.hash)}
+  history.replaceState(history.state,'',(p.toString()?'?'+p:location.pathname)+location.hash)}
 
 function opBtn(o,i){
   const v=variant(o.n), base=o.n.replace(/\s*\((IS|General)\)/,'');
@@ -668,6 +678,8 @@ function detail(o){
 let CUR=-1;
 function openOp(i){
   const o=OPS[i];CUR=i;
+  // mở hồ sơ là một bước trong lịch sử (nút back đóng lại); ←/→ trong hồ sơ chỉ thay bước hiện tại
+  if(!NAV){const st={tab:curTab(),op:i};if(dlg.open)history.replaceState(st,'');else history.pushState(st,'',location.pathname+location.search)}
   dlg.innerHTML=`<div class="mh" style="--rc:${RC[o.r]}">${av(o,initials(o.n.replace(/\(.*?\)/g,'')))}
     <div><h2>${esc(o.n.replace(/\s*\(General\)/,''))}</h2><div style="color:var(--mute);font-size:0.875rem;margin-top:4px">${badge(o.t)} &nbsp;<span style="color:${RC[o.r]}">${'★'.repeat(o.r)}</span> · ${cIco(o.c)} ${esc(CLSVI[o.c])}${o.notes[0]?.ty?' · '+esc(tv(o.notes[0].ty)):''}</div></div>
     <button class="x" aria-label="Đóng" onclick="dlg.close()">✕</button>
@@ -723,6 +735,8 @@ dlg.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight'].includes(e.key
   e.preventDefault();openOp(order[(k+(e.key==='ArrowRight'?1:-1)+order.length)%order.length])});
 document.addEventListener('click',e=>{const b=e.target.closest('.op,.fop');if(b)openOp(+b.dataset.i)});
 dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+// đóng hồ sơ bằng ✕, Esc hay bấm nền thì lùi một bước để nút back của trình duyệt khớp
+dlg.addEventListener('close',()=>{if(!NAV&&!SILENT&&history.state?.op!=null)history.back()});
 
 // newest additions
 const newest=[];OPS.forEach((o,i)=>o.notes.forEach(n=>newest.push({o,i,n})));
@@ -759,9 +773,13 @@ $('#general').innerHTML='<h2>Ghi chú từ nhóm tác giả</h2>'+GENERAL.map(g=
     ${gs.map(([,t,s,fs])=>`<h2 class="fgrp">${t}<small>${s}</small></h2>${fs.map(card).join('')}`).join('')}`;}
 function showFac(f){
   const id=f.startsWith('phe-')?f:'phe-'+facId(f),el=document.getElementById(id);if(!el)return;
-  if(dlg.open)dlg.close();
-  if($('#fac').hidden)$('#nav [data-tab=fac]').click();
-  history.replaceState(null,'',location.pathname+location.search+'#'+id);
+  // đi từ hồ sơ operator sang thì nhớ lại để nút "Quay lại hồ sơ" và nút back đưa về đúng hồ sơ đó
+  const from=dlg.open?CUR:NAV?history.state?.from??null:null;
+  if(dlg.open){SILENT=true;dlg.close();SILENT=false}
+  if($('#fac').hidden)goTab('fac');
+  const st={tab:'fac',fac:id,from};
+  if(NAV)history.replaceState(st,'',location.pathname+location.search+'#'+id);else history.pushState(st,'',location.pathname+location.search+'#'+id);
+  setBack(from);
   // xa quá 2 màn hình thì nhảy thẳng, cuộn mượt qua cả chục nghìn px sẽ mất vài giây
   requestAnimationFrame(()=>{const y=el.getBoundingClientRect().top+scrollY-96;
     scrollTo({top:y,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches||Math.abs(y-scrollY)>2*innerHeight?'instant':'smooth'});
@@ -771,7 +789,20 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if
 // tabs
 $('#nav').onclick=e=>{const b=e.target.closest('button');if(!b)return;
   document.querySelectorAll('#nav button').forEach(x=>x.classList.toggle('on',x===b));
-  document.querySelectorAll('main > section').forEach(s=>s.hidden=s.id!==b.dataset.tab);setHero(b.dataset.tab);window.scrollTo({top:0})};
+  document.querySelectorAll('main > section').forEach(s=>s.hidden=s.id!==b.dataset.tab);setHero(b.dataset.tab);window.scrollTo({top:0});
+  if(!NAV)history.pushState({tab:b.dataset.tab},'',location.pathname+location.search);if(b.dataset.tab!=='fac')setBack(null)};
+// lịch sử trình duyệt: mỗi tab, hồ sơ operator và phe phái là một bước; NAV = đang dựng lại từ lịch sử nên không đẩy bước mới
+let NAV=false,SILENT=false;
+const curTab=()=>$('#nav button.on')?.dataset.tab||'list';
+function goTab(k){const n=NAV;NAV=true;$(`#nav [data-tab=${k}]`).click();NAV=n}
+function setBack(i){const b=$('#backbar');if(i==null||!OPS[i]){b.hidden=true;return}
+  b.hidden=false;b.querySelector('span').textContent=OPS[i].n.replace(/\s*\(General\)/,'')}
+addEventListener('popstate',e=>{const st=e.state||{tab:'list'};NAV=true;
+  if(st.tab&&st.tab!==curTab())goTab(st.tab);
+  if(st.op!=null)openOp(st.op);
+  else{if(dlg.open)dlg.close();if(st.fac)showFac(st.fac);else setBack(null)}
+  NAV=false});
+history.replaceState(history.state||{tab:'list'},'');
 // tiêu đề và chữ nền khổng lồ đổi theo tab đang mở
 const HERO={list:['TIER','Bảng xếp hạng','Operator'],new:['NEW','Operator','mới về'],fac:['FAC','Phe phái','& vùng đất'],log:['LOG','Lịch sử','thay đổi'],about:['INFO','Giới thiệu','& nguồn']};
 function setHero(k){const [g,a,b]=HERO[k]||HERO.list,h=$('.hero');h.dataset.g=g;h.querySelector('h1').innerHTML=`${a}<br><span>${b}</span>`;typeHero();document.title=k==='list'?'Arknights Tier List VN':`${a} ${b} · Arknights Tier List VN`}
@@ -818,9 +849,8 @@ const isDark=()=>{const t=document.documentElement.dataset.theme;return t?t==='d
 const applyDk=()=>document.documentElement.classList.toggle('dk',isDark());applyDk();
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change',applyDk);
 // rời tab Phe phái thì bỏ #phe-… khỏi URL; mở trang với #phe-… thì vào thẳng phe đó
-$('#nav').addEventListener('click',e=>{const b=e.target.closest('button');if(b&&b.dataset.tab!=='fac'&&location.hash.startsWith('#phe-'))history.replaceState(null,'',location.pathname+location.search)});
 // font và logo tải xong làm các thẻ phía trên cao thêm, nên canh lại một lần khi trang load xong
-if(location.hash.startsWith('#phe-')){const h=location.hash.slice(1);showFac(h);addEventListener('load',()=>showFac(h),{once:true})}
+if(location.hash.startsWith('#phe-')){const h=location.hash.slice(1),go=()=>{NAV=true;showFac(h);NAV=false};go();addEventListener('load',go,{once:true})}
 $('#theme').onclick=()=>{const t=isDark()?'light':'dark';document.documentElement.dataset.theme=t;try{localStorage.setItem('ak-theme',t)}catch(e){}applyDk()};
 </script>
 </body>

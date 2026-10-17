@@ -144,7 +144,7 @@ An industrial two-tone of Arknights blue and ink on warm ivory paper, with data 
 - **Night set** (night-*): the dark-theme overrides for the same roles.
 
 ### Data colors
-- **Rarity** (rarity-6 orange, rarity-5 gold, rarity-4 violet): only on the avatar's dashed ring and the star glyphs. Each has a brighter dark-mode variant.
+- **Rarity** (rarity-6 orange, rarity-5 gold, rarity-4 violet): only on the star glyphs (and the left edge of faction-list tiles). Each has a brighter dark-mode variant.
 - **Tier ramp** (defined in JS as `TC`, not in CSS): a hue walk from hot to cool. EX uses a gradient (#ffe066→#ff3d6e). S+ #ff4d6d, S #ff7a45, S- #ffa94d, A+ #ffd43b, A #e3e86a, A- #b5e36a, B+ #69db7c, B #38d9a9, B- #3bc9db, C+ #4dabf7, C #748ffc, C- #9775fa, D #da77f2, F #868e96. Tier labels always sit on their tier color with near-black text (#0b0b0b) and a hatch overlay.
 
 ### Named Rules
@@ -201,7 +201,7 @@ Flat by default. Depth is printed, not lit: solid offset shadows with zero blur 
 
 ## Shapes
 
-Every surface has square corners (0 radius), including inputs, dialogs, chips and buttons. The only exception is the circular avatar with its dashed rarity ring. Angular form shows up through clip-paths and rotations: the logo tile has a cut bottom-right corner, and timeline and section markers are 45° diamonds. Cards get a 24px ink corner bracket at the top left. Borders follow a two-tier logic: a 1px hairline for structure, and 1–2px ink when an element is framed, active or hovered.
+Every surface has square corners (0 radius), including inputs, dialogs, chips and buttons. The only exception is the circular avatar. Angular form shows up through clip-paths and rotations: the logo tile has a cut bottom-right corner, and timeline and section markers are 45° diamonds. Cards get a 24px ink corner bracket at the top left. Borders follow a two-tier logic: a 1px hairline for structure, and 1–2px ink when an element is framed, active or hovered.
 
 ## Components
 
@@ -227,11 +227,14 @@ A panel with a hatched tier-color label cell (the tier letter only; descriptors 
 ### Tier jump bar
 It sits right above the board and sticks to the top edge (under the 56px top bar on mobile) while you scroll the tier list. It holds one 44px square button per tier that has operators, filled with that tier's color, with the tier letter in Chakra Petch. Pressing a button scrolls to that row. The bar is hidden in the matrix view and when only one tier is left after filtering. Inside each row, the tier letter is sticky just below the bar, so a long row never loses its label.
 
+### History and back
+Each tab change, opened dossier and faction jump is one browser history step. The browser or phone Back button closes a dossier, returns from a faction to the dossier that linked to it, and walks back through tabs. Closing a dossier with ✕, Esc or the backdrop also steps back. ←/→ inside a dossier replaces the current step rather than stacking new ones. When a faction is opened from a dossier, a sticky ink button with blue text, "← Quay lại hồ sơ <name>", sits at the top of the faction tab.
+
 ### Search shortcut
 Pressing `/` focuses the search field, unless you are typing elsewhere or a dossier is open. On desktop a small `/` key hint sits in the field and hides on focus.
 
 ### Operator Card (signature)
-A tile filled with its rarity gradient (6★ gold, 5★ pale yellow, 4★ lilac, defined as `--b6` … `--b1` with dark-mode variants; text stays #111 on it). It has a 42px round avatar with a dashed rarity ring, a bold name with an `IS` tag for Integrated Strategies entries, and a mono meta line with stars and class/subclass icons. The general-mode twin carries no tag. On hover the card lifts by −2px with a blue print shadow. A near-black (#0b0b0b) panel fills it from the right edge to the left (a `clip-path` wipe, .38s), covering the avatar, name, stars and icons. The panel shows the operator's face: the avatar image, scaled to about ¾ of the card width, anchored right and fading into black on the left. Behind the face sits the operator name in 900-weight uppercase, outlined at 22% white with no fill. It is allowed to run off the card and to be covered by the face. Cards without an image skip the effect. The gradient is a deliberate exception to Panel Recess: it answers "which rarity?" at a glance.
+A tile filled with its rarity gradient (6★ gold, 5★ pale yellow, 4★ lilac, defined as `--b6` … `--b1` with dark-mode variants; text stays #111 on it). It has a 42px round avatar, a bold name with an `IS` tag for Integrated Strategies entries, and a mono meta line with stars and class/subclass icons. The general-mode twin carries no tag. On hover the card lifts by −2px with a blue print shadow. A near-black (#0b0b0b) panel fills it from the right edge to the left (a `clip-path` wipe, .38s), covering the avatar, name, stars and icons. The panel shows the operator's face: the avatar image, scaled to about ¾ of the card width, anchored right and fading into black on the left. Behind the face sits the operator name in 900-weight uppercase, outlined at 22% white with no fill. It is allowed to run off the card and to be covered by the face. Cards without an image skip the effect. The gradient is a deliberate exception to Panel Recess: it answers "which rarity?" at a glance.
 
 ### Cards / Containers
 - **Corner Style:** square, with a 24px ink L-bracket at the top left.
@@ -270,5 +273,5 @@ A slate panel with light text, a 4px blue left edge and a Chakra Petch term head
 - **Don't** use rarity or tier colors for decoration or UI chrome.
 - **Don't** set body text or translated notes in Chakra Petch.
 - **Don't** put light text on Arknights blue. Text on blue is always #111, including the footer in dark mode.
-- **Don't** add infinite loops, decoding text, scan bars or other fake-HUD motion. The one exception, kept at the owner's request: the blue H1 word types and deletes itself in a loop, with a blinking cursor; the h1 carries an aria-label with the full title.
+- **Don't** add infinite loops, decoding text, scan bars or other fake-HUD motion. Owner-requested exceptions: the slow blue background scan band (`body:after`, 9s). The one exception, kept at the owner's request: the blue H1 word types and deletes itself in a loop, with a blinking cursor; the h1 carries an aria-label with the full title.
 - **Don't** put an eyebrow or kicker label above a heading.

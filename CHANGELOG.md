@@ -1,6 +1,8 @@
 # Changelog
 
 ## 2026-10-17
+- Nút back hoạt động: mỗi lần đổi tab, mở hồ sơ operator hay nhảy sang phe phái là một bước trong lịch sử, nút back (kể cả nút back trên điện thoại) lùi đúng bước trước. Đi từ hồ sơ sang phe phái có nút "Quay lại hồ sơ …" dính trên cùng.
+- Bỏ vòng nét đứt quanh avatar; dải quét nền chạy lại (màu xanh).
 - Bảng tier dễ theo dõi hơn: dải nút tier (EX, S+ … D) dính trên cùng, bấm để nhảy tới hàng; chữ tier dính lại khi cuộn qua hàng dài; bấm phím / để nhảy vào ô tìm operator.
 - Màu nhấn đổi từ vàng acid sang xanh dương đặc trưng của Arknights (#0098dc): tab đang chọn, khối chữ tiêu đề, chip, nút LỌC, footer, ô range, từ khoá trong Trait/Skill.
 - Hover thẻ operator: nền đen tràn ngang từ phải sang trái, che avatar, tên, sao và icon, rồi hiện mặt operator.
