@@ -194,6 +194,13 @@ dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
 .aempty{color:var(--mute);text-align:center;padding:48px 0;font-family:var(--mono)}
 @media (max-width:760px){.ptabs{margin-bottom:-12px}.ptabs button{flex:1;justify-content:center;padding:0 8px;font-size:0.75rem;letter-spacing:.06em}.atop{grid-template-columns:1fr}.ab{padding-left:0}.akv{grid-template-columns:minmax(100px,max-content) 1fr;gap:8px 12px}.aprof p{font-size:1rem}}
 .prof{display:grid;grid-template-columns:1fr 340px;gap:24px;margin-bottom:28px}
+.aw{align-self:start;min-width:0}
+.asm{margin:8px 0 0;color:var(--mute);font-size:0.8125rem}
+.athumb{display:grid;grid-auto-flow:column;grid-auto-columns:72px;gap:6px;overflow-x:auto;margin-top:8px;padding-bottom:4px;scrollbar-width:thin}
+.athumb button{all:unset;cursor:pointer;display:grid;gap:2px;border:2px solid transparent;background:var(--panel2)}
+.athumb button.on{border-color:var(--accent)}.athumb button:focus-visible{outline:2px solid var(--ink)}
+.athumb img{width:100%;aspect-ratio:180/250;object-fit:cover;object-position:50% 0}
+.athumb span{font-size:0.625rem;line-height:1.2;padding:0 3px 3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .art{position:relative;background:var(--panel2) var(--hatch);border:1px solid var(--line);height:460px;align-self:start;overflow:hidden;isolation:isolate}
 .facdd{display:flex;flex-wrap:wrap;gap:6px 14px}.facdd span,.facdd a{display:inline-flex;align-items:center;gap:6px}.facdd .fac{width:32px;height:32px}
 .facdd a{color:inherit;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:4px;text-decoration-thickness:2px;min-height:32px}
@@ -744,12 +751,16 @@ function artErr(img,id){const n=+(img.dataset.retry||0);img.dataset.retry=n+1;
 function artSlides(d,o){const all=(window.AKS||{})[d.id]||[],e2=all.findIndex(s=>s[0]===d.id+'_2'),
     l=e2>=0?[all[e2],...all.filter((_,k)=>k!==e2)]:[[d.id+'_2','Elite 2'],...all];
   const src=pid=>pid===d.id+'_2'?art2(d.id):`${RES}skin/${encodeURIComponent(pid)}b.png`;
-  return `<div class="art" data-n="${esc(o.n)}"><div class="sl" tabindex="0" aria-label="Trang phục của ${esc(o.n)}, vuốt ngang để đổi">${l.map(([pid,sn],k)=>`<figure data-sn="${esc(sn)}"><img src="${src(pid)}" alt="${esc(o.n)} — ${esc(sn)}" loading="lazy"${k===0?` onerror="artErr(this,'${d.id}')"`:''}></figure>`).join('')}</div>
-    ${l.length>1?`<button class="an prev" aria-label="Trang phục trước" hidden>‹</button><button class="an next" aria-label="Trang phục sau">›</button><div class="acap"><span>${esc(l[0][1])}</span><b>1/${l.length}</b></div>`:''}</div>`}
+  return `<div class="art" data-n="${esc(o.n)}"><div class="sl" tabindex="0" aria-label="Trang phục của ${esc(o.n)}, vuốt ngang để đổi">${l.map(([pid,sn,sg,sa],k)=>`<figure data-sn="${esc(sn)}" data-sm="${esc([sg,sa&&'Hoạ sĩ: '+sa].filter(Boolean).join(' · '))}"><img src="${src(pid)}" alt="${esc(o.n)} — ${esc(sn)}" loading="lazy"${k===0?` onerror="artErr(this,'${d.id}')"`:''}></figure>`).join('')}</div>
+    ${l.length>1?`<button class="an prev" aria-label="Trang phục trước" hidden>‹</button><button class="an next" aria-label="Trang phục sau">›</button><div class="acap"><span>${esc(l[0][1])}</span><b>1/${l.length}</b></div>`:''}</div>
+    ${l.length>1?`<p class="asm">${esc([l[0][2],l[0][3]&&'Hoạ sĩ: '+l[0][3]].filter(Boolean).join(' · '))}</p><div class="athumb" aria-label="Chọn trang phục">${l.map(([pid,sn],k)=>`<button data-k="${k}" title="${esc(sn)}" aria-pressed="${k===0}"${k===0?' class="on"':''}><img src="${RES}portrait/${encodeURIComponent(pid)}.png" alt="" loading="lazy"><span>${esc(sn)}</span></button>`).join('')}</div>`:''}`}
 function artSync(sl){const a=sl.closest('.art'),f=sl.children,k=Math.round(sl.scrollLeft/sl.clientWidth),cap=a.querySelector('.acap');if(!cap)return;
   cap.querySelector('span').textContent=f[k]?.dataset.sn||'';cap.querySelector('b').textContent=`${k+1}/${f.length}`;
+  const w=a.parentElement,sm=w.querySelector('.asm');if(sm)sm.textContent=f[k]?.dataset.sm||'';
+  w.querySelectorAll('.athumb button').forEach((b,j)=>{b.classList.toggle('on',j===k);b.setAttribute('aria-pressed',j===k)});
   a.querySelector('.prev').hidden=k===0;a.querySelector('.next').hidden=k>=f.length-1}
 document.addEventListener('scroll',e=>{if(e.target.classList?.contains('sl'))artSync(e.target)},{capture:true,passive:true});
+document.addEventListener('click',e=>{const t=e.target.closest('.athumb button');if(!t)return;const sl=t.parentElement.parentElement.querySelector('.art .sl');sl.scrollTo({left:+t.dataset.k*sl.clientWidth,behavior:'smooth'})});
 document.addEventListener('click',e=>{const b=e.target.closest('.art .an');if(!b)return;const sl=b.parentElement.querySelector('.sl');sl.scrollBy({left:(b.classList.contains('next')?1:-1)*sl.clientWidth,behavior:'smooth'})});
 document.addEventListener('keydown',e=>{if(!e.target.classList?.contains('sl')||!/Arrow(Left|Right)/.test(e.key))return;e.preventDefault();e.target.scrollBy({left:(e.key==='ArrowRight'?1:-1)*e.target.clientWidth,behavior:'smooth'})});
 function rangeGrid(g){
@@ -779,7 +790,7 @@ function detail(o){
     <div class="stg">${[['HP',st.HP],['ATK',st.ATK],['DEF',st.DEF],['RES',st.RES],['COST',st.Cost],['BLOCK',st.Block],['REDEPLOY',st.Redeploy+'s'],['ATK INTERVAL',st.ASPD+'s']].map(([k,v])=>`<div><small>${k}</small><b>${v}</b></div>`).join('')}</div>
     ${rangeGrid(d.range)}
     ${d.usage?`<p class="quote">${esc(d.usage)}<br>— ${esc(d.quote)}</p>`:''}
-  </div>${artSlides(d,o)}</div>
+  </div><div class="aw">${artSlides(d,o)}</div></div>
   ${d.skills.length?`<h3 class="sec">Skill (M3)</h3>${d.skills.map((s,k)=>`<div class="sk"><img src="${RES}skill/skill_icon_${s.id}.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><div><h4>S${k+1} · ${esc(s.name)}</h4>
     <div class="spi">${s.auto==='PASSIVE'?ACT.PASSIVE:`${SPT[s.spType]||''} · ${ACT[s.auto]||''} · SP ${s.init}/${s.sp}${s.dur>0?` · ${s.dur} giây`:''}`}</div><p>${rt(s.desc)}</p></div></div>`).join('')}`:''}
   ${d.talents.length?`<h3 class="sec">Talent</h3>${d.talents.map(t=>`<div class="tal"><h4>${esc(t.name)}</h4><p>${rt(t.desc)}</p></div>`).join('')}`:''}
@@ -943,7 +954,6 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if
   function showSkins(o){cur=o;const [id,n,r,c,,gl]=o,i=idx[n],l=SK[id]||[[id+'_1','Mặc định','','',gl]];SK[id]=l;
     skv.innerHTML=`<div class="skh" style="--rr:${RR[r]}"><h2 id="skvn">${esc(n)}</h2><span class="rs">${'★'.repeat(r)}</span>${gl?'':'<span class="cn">CN</span>'}<button class="x" aria-label="Đóng">✕</button></div>
       <div class="skb" style="--rbg:var(--b${r})"><div class="ska"></div><div class="ski"><div><p class="sn"></p><p class="sg"></p></div><p class="sa"></p>
-      ${i!=null?`<button class="prof" data-i="${i}">Xem hồ sơ operator</button>`:''}
       <div><p class="sn" style="font-size:1rem">Nguyên liệu nâng cấp</p>${matHTML(id)}</div>
       <p class="sg">${l.length} trang phục</p><div class="skt">${l.map(([pid,sn],k)=>`<button data-k="${k}" title="${esc(sn)}"><img src="${PORT}${u(pid)}.png" alt="" loading="lazy"><span>${esc(sn)}</span></button>`).join('')}</div></div></div>`;
     pick(Math.max(0,l.findIndex(s=>s[1]==='Elite 2')));
@@ -954,7 +964,8 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if
   skv.addEventListener('close',backY);
   skv.addEventListener('cancel',e=>{if(history.state?.skin){e.preventDefault();history.back()}});
   addEventListener('popstate',()=>{if(skv.open&&!history.state?.skin)skv.close()});
-  $('#rgrid').onclick=e=>{const b=e.target.closest('.rc');if(b)showSkins(R.find(o=>o[0]===b.dataset.id))};
+  // bấm thẻ: operator có trong tier list mở thẳng hồ sơ (trang phục nằm trong hồ sơ); bản chưa có hồ sơ mở trình xem trang phục
+  $('#rgrid').onclick=e=>{const b=e.target.closest('.rc');if(!b)return;const o=R.find(o=>o[0]===b.dataset.id),i=idx[o[1]];if(i!=null)openOp(i);else showSkins(o)};
   draw()}
 // tabs
 $('#nav').onclick=e=>{const b=e.target.closest('button');if(!b)return;

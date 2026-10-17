@@ -1,6 +1,7 @@
 # Changelog
 
 ## 2026-10-17
+- Trang phục gộp vào hồ sơ operator: bấm thẻ ở tab Operator mở thẳng hồ sơ (không qua trình xem riêng nữa). Dưới khung ảnh có dải chân dung mọi trang phục (bấm để đổi), kèm bộ sưu tập và hoạ sĩ của trang phục đang xem. Operator chưa có hồ sơ (bản CN) vẫn mở trình xem trang phục kèm nguyên liệu nâng cấp.
 - Tab Operator: 17 operator chưa ra Global xếp theo đúng thứ tự banner CN (sớm nhất trước = sắp về Global trước), nhãn hiện số đợt banner (CN 1 … CN 5): Monster Hunter → Aphrissa/Mechanist → Angelina the Mellow Wish/Thumpy → Persona 3 → Clementia. Dữ liệu ở `_build/build_roster.py` (danh sách BANNERS).
 - Lưới tab Operator cố định 5 operator mỗi hàng trên máy tính (điện thoại giữ 3).
 - Nguyên liệu nâng cấp cho mọi operator (kể cả bản CN): Elite 1, Elite 2 (kèm LMD), skill Lv2–7 và M1/M2/M3 của từng skill, có icon và số lượng (rê chuột xem tên). Hiện trong trình xem trang phục và cuối hồ sơ operator. Dữ liệu tạo bằng `_build/build_mats.py` → `mats.js`.
