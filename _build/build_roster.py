@@ -43,6 +43,7 @@ for p in E('gacha_table')['gachaPoolClient']:
     k = (p.get('limitParam') or {}).get('limitedCharId')
     if k: anc[k] = min(p['openTime'], anc.get(k, p['openTime']))
 eitems = E('item_table')['items']
+LAUNCH = 1579176000  # 16/01/2020, ngày mở server Global
 seqs, T = {}, {}
 for k in en:
     if 'p_' + k in eitems: seqs.setdefault(eitems['p_' + k]['sortId'] // 100000, []).append((eitems['p_' + k]['sortId'], k))
@@ -52,6 +53,7 @@ for l in seqs.values():
         if t[i] is None: continue
         if m is not None and t[i] > m: t[i] = None  # mốc muộn hơn operator ra sau -> module/record bổ sung sau, bỏ, nội suy
         else: m = t[i]
+    if t[0] is None: t[0] = LAUNCH  # operator đầu mỗi độ hiếm: mốc ngày mở server Global, tránh dồn hết về mốc đầu tiên tìm thấy
     idx = [i for i, x in enumerate(t) if x is not None]
     for i, k in enumerate(ks):
         a = max((j for j in idx if j <= i), default=None); b = min((j for j in idx if j >= i), default=None)
@@ -62,6 +64,18 @@ cn_only = sorted((o for o in out if not o[5]), key=lambda o: BORD.get(o[0], (len
 for n, o in enumerate(cn_only, 1):
     o[6] = BORD.get(o[0], (len(BANNERS) + n,))[0] + 1
 # cột cuối: hạng ra mắt (lớn = mới hơn); bản CN theo BANNERS, đứng sau mọi operator Global
+# operator không có Token tiềm năng (operator tặng/collab, vd. Nine-Colored Deer, Luo Xiaohei): dùng thẳng mốc của nó
+for k, t in anc.items():
+    if k not in T and k in en: T[k] = (t, 0)
+# robot 1★ hầu như không có module/record nên ghi ngày ra Global cố định
+# (sự kiện đăng nhập/sự kiện tặng trong activity_table EN; Friston-3, U-Official theo GamePress / Terra Wiki)
+import datetime
+ROBOT = {'char_285_medic2': '2020-01-16', 'char_286_cast3': '2020-01-16', 'char_376_therex': '2021-01-02',
+         'char_4000_jnight': '2022-04-28', 'char_4077_palico': '2023-09-07', 'char_4093_frston': '2023-12-05',
+         'char_4091_ulika': '2024-04-01', 'char_4136_phonor': '2024-10-31', 'char_4188_confes': '2025-10-14',
+         'char_4227_gallus': '2026-10-14'}
+for k, d in ROBOT.items():
+    T[k] = (datetime.datetime.fromisoformat(d + 'T12:00:00+00:00').timestamp(), T.get(k, (0, 0))[1])
 # cùng ngày ra: 6★ trước, rồi theo thứ tự Token
 glo = sorted((o for o in out if o[5]), key=lambda o: (T.get(o[0], (0, 0))[0], o[2], T.get(o[0], (0, 0))[1]))
 for n, o in enumerate(glo + sorted(cn_only, key=lambda o: (o[6], o[2])), 1):
