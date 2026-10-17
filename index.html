@@ -297,7 +297,7 @@ dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
 .art .acap{position:absolute;left:0;right:0;bottom:0;z-index:3;display:flex;gap:10px;align-items:center;padding:18px 12px 8px;background:linear-gradient(#0000,#000b);color:#fff;font:600 0.8125rem "Be Vietnam Pro",system-ui,sans-serif;pointer-events:none}
 .art .acap span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.art .acap b{margin-left:auto;font:700 0.75rem var(--mono);letter-spacing:.06em}
 @media (hover:none){.art .an{display:none}}
-.art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 15%;animation:fade .8s ease both}
+.art img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:50% 50%;animation:fade .8s ease both}
 /* mở hồ sơ: màn sọc vàng–đen quét qua khung art rồi lộ ra ảnh */
 .art:after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:repeating-linear-gradient(-45deg,var(--accent) 0 7px,#111 7px 14px);box-shadow:inset -3px 0 0 var(--accent);animation:artscan .85s .1s cubic-bezier(.7,0,.2,1) both}
 @keyframes artscan{from{clip-path:inset(0 0 0 0)}to{clip-path:inset(0 0 0 100%)}}
@@ -747,11 +747,12 @@ const art2=id=>ART2[id]||`${RES}skin/${id}_2b.png`;
 function artErr(img,id){const n=+(img.dataset.retry||0);img.dataset.retry=n+1;
   if(n<2)setTimeout(()=>{img.src=`${art2(id)}?r=${n+1}`},600*(n+1));
   else{img.onerror=null;img.src=`${RES}skin/${id}_1b.png`}}
-// khung art trong hồ sơ: vuốt ngang qua mọi trang phục (skins.js), Elite 2 đứng đầu như trước
-function artSlides(d,o){const all=(window.AKS||{})[d.id]||[],e2=all.findIndex(s=>s[0]===d.id+'_2'),
-    l=e2>=0?[all[e2],...all.filter((_,k)=>k!==e2)]:[[d.id+'_2','Elite 2'],...all];
+// khung art trong hồ sơ: vuốt ngang qua mọi trang phục (skins.js)
+// thứ tự: Mặc định, Elite 2, rồi các skin
+function artSlides(d,o){const all=(window.AKS||{})[d.id]||[],f=id=>all.find(s=>s[0]===id),
+    l=[f(d.id+'_1')||[d.id+'_1','Mặc định'],f(d.id+'_2')||[d.id+'_2','Elite 2'],...all.filter(s=>s[0]!==d.id+'_1'&&s[0]!==d.id+'_2')];
   const src=pid=>pid===d.id+'_2'?art2(d.id):`${RES}skin/${encodeURIComponent(pid)}b.png`;
-  return `<div class="art" data-n="${esc(o.n)}"><div class="sl" tabindex="0" aria-label="Trang phục của ${esc(o.n)}, vuốt ngang để đổi">${l.map(([pid,sn,sg,sa],k)=>`<figure data-sn="${esc(sn)}" data-sm="${esc([sg,sa&&'Hoạ sĩ: '+sa].filter(Boolean).join(' · '))}"><img src="${src(pid)}" alt="${esc(o.n)} — ${esc(sn)}" loading="lazy"${k===0?` onerror="artErr(this,'${d.id}')"`:''}></figure>`).join('')}</div>
+  return `<div class="art" data-n="${esc(o.n)}"><div class="sl" tabindex="0" aria-label="Trang phục của ${esc(o.n)}, vuốt ngang để đổi">${l.map(([pid,sn,sg,sa],k)=>`<figure data-sn="${esc(sn)}" data-sm="${esc([sg,sa&&'Hoạ sĩ: '+sa].filter(Boolean).join(' · '))}"><img src="${src(pid)}" alt="${esc(o.n)} — ${esc(sn)}" loading="lazy"${pid===d.id+'_2'?` onerror="artErr(this,'${d.id}')"`:''}></figure>`).join('')}</div>
     ${l.length>1?`<button class="an prev" aria-label="Trang phục trước" hidden>‹</button><button class="an next" aria-label="Trang phục sau">›</button><div class="acap"><span>${esc(l[0][1])}</span><b>1/${l.length}</b></div>`:''}</div>
     ${l.length>1?`<p class="asm">${esc([l[0][2],l[0][3]&&'Hoạ sĩ: '+l[0][3]].filter(Boolean).join(' · '))}</p><div class="athumb" aria-label="Chọn trang phục">${l.map(([pid,sn],k)=>`<button data-k="${k}" title="${esc(sn)}" aria-pressed="${k===0}"${k===0?' class="on"':''}><img src="${RES}portrait/${encodeURIComponent(pid)}.png" alt="" loading="lazy"><span>${esc(sn)}</span></button>`).join('')}</div>`:''}`}
 function artSync(sl){const a=sl.closest('.art'),f=sl.children,k=Math.round(sl.scrollLeft/sl.clientWidth),cap=a.querySelector('.acap');if(!cap)return;
@@ -956,7 +957,7 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if
       <div class="skb" style="--rbg:var(--b${r})"><div class="ska"></div><div class="ski"><div><p class="sn"></p><p class="sg"></p></div><p class="sa"></p>
       <div><p class="sn" style="font-size:1rem">Nguyên liệu nâng cấp</p>${matHTML(id)}</div>
       <p class="sg">${l.length} trang phục</p><div class="skt">${l.map(([pid,sn],k)=>`<button data-k="${k}" title="${esc(sn)}"><img src="${PORT}${u(pid)}.png" alt="" loading="lazy"><span>${esc(sn)}</span></button>`).join('')}</div></div></div>`;
-    pick(Math.max(0,l.findIndex(s=>s[1]==='Elite 2')));
+    pick(0);
     if(!skv.open){keepY();skv.showModal();history.pushState({tab:'ops',skin:id},'')}}
   skv.addEventListener('click',e=>{const t=e.target.closest('.skt button');if(t)return pick(+t.dataset.k);
     if(e.target.closest('.x'))return history.state?.skin?history.back():skv.close();
