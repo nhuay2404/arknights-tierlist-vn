@@ -235,6 +235,31 @@ dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
 .rc.cn-only .nm{padding-right:34px}
 @media (max-width:760px){.rgrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.rc .nm{font-size:0.75rem;padding:3px 5px 10px}.rc .ci{width:24px;height:24px}.rc .ci .ico{width:19px;height:19px}.rc .st{font-size:0.625rem;bottom:8px;left:4px}
   .rctl .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.rctl .chips::-webkit-scrollbar{display:none}.rctl .chip{flex:none}.rcount{margin-left:0}}
+/* trình xem skin: ảnh toàn thân bên trái, thông tin + dải chân dung các trang phục bên phải */
+#skv{background:#101114;color:#eee}
+.skh{display:flex;align-items:center;gap:12px;height:60px;padding:0 16px;border-bottom:1px solid #fff2}
+.skh h2{margin:0;font:700 1.125rem var(--mono);text-transform:uppercase;letter-spacing:.04em;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.skh .rs{color:var(--rr);letter-spacing:-1px;font-size:0.875rem;flex:none}
+.skh .cn{background:#ff7a1a;color:#111;font:800 0.6875rem var(--mono);padding:2px 6px;flex:none}
+.skh .x{margin-left:auto;flex:none;width:44px;height:44px;border:1px solid #fff4;background:none;color:#fff;font-size:1.25rem;cursor:pointer}
+.skb{display:grid;grid-template-columns:minmax(0,1fr) 380px;height:calc(100dvh - 60px)}
+.ska{position:relative;overflow:hidden;background:radial-gradient(circle at 50% 40%,#2a2d35,#0c0d10 70%)}
+.ska img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+.ska .ph{filter:blur(6px);opacity:.5;object-fit:contain;transform:scale(.9)}
+.ska .full{opacity:0;transition:opacity .35s}.ska .full.ok{opacity:1}
+.ska .ld{position:absolute;left:16px;bottom:14px;font:600 0.75rem var(--mono);letter-spacing:.1em;color:#fff9}
+.ska .open{position:absolute;right:12px;bottom:12px;color:#fff;font:700 0.75rem var(--mono);letter-spacing:.08em;text-transform:uppercase;border:1px solid #fff5;padding:8px 10px;text-decoration:none;background:#0008}
+.ski{overflow:auto;padding:18px;border-left:1px solid #fff2;display:flex;flex-direction:column;gap:14px}
+.ski .sn{font:800 1.25rem/1.3 "Be Vietnam Pro",system-ui,sans-serif;margin:0}.ski .sg{color:#aaa;font:600 0.8125rem var(--mono);letter-spacing:.06em;margin:2px 0 0}
+.ski .sa{color:#aaa;font-size:0.8125rem;margin:0}
+.ski .prof{all:unset;cursor:pointer;text-align:center;min-height:44px;line-height:44px;background:var(--accent);color:#111;font:700 0.8125rem var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.ski .prof:focus-visible,.skt button:focus-visible,.skh .x:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.skt{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.skt button{all:unset;box-sizing:border-box;cursor:pointer;position:relative;aspect-ratio:180/250;overflow:hidden;background:linear-gradient(#cfcfcf,#777);border:2px solid transparent}
+.skt button.on{border-color:var(--accent)}.skt img{width:100%;display:block}
+.skt span{position:absolute;left:0;right:0;bottom:0;padding:10px 4px 3px;font:600 0.6875rem/1.2 "Be Vietnam Pro",system-ui,sans-serif;color:#fff;background:linear-gradient(#0000,#000c);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:760px){.skb{grid-template-columns:1fr;grid-template-rows:56dvh auto;height:auto}.ski{border-left:0;border-top:1px solid #fff2}
+  .skt{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:96px;overflow-x:auto;scrollbar-width:none}.skh h2{font-size:0.9375rem}}
 .fmore{display:none;width:100%;margin-top:8px;min-height:44px;border:1px dashed var(--line);background:none;color:var(--ink);font:700 0.8125rem var(--mono);letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
 .fmore:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 @media (max-width:760px){.fc.sub{margin-left:12px}.fch .fac{width:44px;height:44px}.fch{flex-wrap:wrap}.fch .fn{margin-left:0;flex-basis:100%}
@@ -489,12 +514,14 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 <footer><div class="wrap">Bản dịch tiếng Việt không chính thức. Mọi đánh giá thuộc về nhóm tác giả AK Tier List. Arknights © Hypergryph / Yostar.</div></footer>
 
 <dialog id="dlg"></dialog>
+<dialog id="skv" aria-labelledby="skvn"></dialog>
 
 <script src="data.js"></script>
 <script src="details.js"></script>
 <script src="glossary.js"></script>
 <script src="factions.js"></script>
 <script src="roster.js"></script>
+<script src="skins.js"></script>
 <script>
 const {ops:OPS, general:GENERAL} = window.AK;
 const TIERS=['EX','S+','S','S-','A+','A','A-','B+','B','B-','C+','C','C-','D','F'];
@@ -843,7 +870,8 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if
   mk($('#rsort'),[['new','Mới nhất'],['rar','Độ hiếm'],['az','Tên A–Z']],k=>k===st.sort,k=>st.sort=k);
   $('#rq').oninput=e=>{st.q=norm(e.target.value);draw()};
   const card=([id,n,r,c,sub,gl])=>{const i=idx[n];
-    return `<button class="rc${i!=null?' go':''}${gl?'':' cn-only'}" style="--rr:${RR[r]}"${i!=null?` data-i="${i}"`:' tabindex="-1"'} title="${esc(n)} · ${r}★ · ${esc(CLSVI[c])}${gl?'':' · chưa ra Global'}">
+    const k=(window.AKS?.[id]||[]).length;
+    return `<button class="rc go${gl?'':' cn-only'}" style="--rr:${RR[r]}" data-id="${id}" title="${esc(n)} · ${r}★ · ${esc(CLSVI[c])}${gl?'':' · chưa ra Global'}${k>2?` · ${k} trang phục`:''}">
       <img src="${PORT}${id}_1.png" alt="" loading="lazy" decoding="async" onerror="this.src='${IMG}${id}.png'">
       <span class="nm">${esc(n)}</span>${gl?'':'<span class="cn">CN</span>'}<span class="st">${'★'.repeat(r)}</span><span class="ci">${ico(`ui/subclass/sub_${sub}_icon.png`)}</span><span class="bt"></span></button>`};
   // "Mới nhất": bản chưa ra Global trước, rồi theo đợt operator được thêm vào tier list (ghi chú cũ nhất), không có thì xếp sau theo độ hiếm
@@ -853,7 +881,29 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if
     l=l.slice().sort(st.sort==='az'?(a,b)=>a[1].localeCompare(b[1]):st.sort==='rar'?(a,b)=>b[2]-a[2]||a[1].localeCompare(b[1]):(a,b)=>a[5]-b[5]||rank(b).localeCompare(rank(a))||b[2]-a[2]||a[1].localeCompare(b[1]));
     $('#rcount').textContent=`${l.length} / ${R.length} operator`;
     $('#rgrid').innerHTML=l.length?l.map(card).join(''):'<div class="empty">Không tìm thấy operator nào.</div>'}
-  $('#rgrid').onclick=e=>{const b=e.target.closest('.rc.go');if(b)openOp(+b.dataset.i)};
+  // bấm thẻ: mở trình xem skin (mọi operator, kể cả bản chưa ra Global); có trong tier list thì có nút sang hồ sơ
+  const SK=window.AKS||{},skv=$('#skv'),SKIN='https://raw.githubusercontent.com/yuanyan3060/ArknightsGameResource/main/skin/';
+  const u=x=>encodeURIComponent(x);
+  let cur=null;
+  function pick(j){const [pid,sn,sg,sa,sgl]=SK[cur[0]][j],a=skv.querySelector('.ska');
+    a.innerHTML=`<img class="ph" src="${PORT}${u(pid)}.png" alt=""><img class="full" alt="${esc(cur[1]+' — '+sn)}" src="${SKIN}${u(pid)}b.png"><span class="ld">Đang tải ảnh…</span><a class="open" href="${SKIN}${u(pid)}b.png" target="_blank" rel="noopener">Ảnh gốc ↗</a>`;
+    const f=a.querySelector('.full');f.onload=()=>{f.classList.add('ok');a.querySelector('.ld')?.remove()};f.onerror=()=>{f.remove();a.querySelector('.ld').textContent='Chưa có ảnh toàn thân'};
+    skv.querySelector('.sn').textContent=sn;skv.querySelector('.sg').textContent=[sg,sgl?'':'chưa ra Global'].filter(Boolean).join(' · ');
+    skv.querySelector('.sa').textContent=sa?'Hoạ sĩ: '+sa:'';
+    skv.querySelectorAll('.skt button').forEach((b,k)=>{b.classList.toggle('on',k===j);b.setAttribute('aria-pressed',k===j)})}
+  function showSkins(o){cur=o;const [id,n,r,c,,gl]=o,i=idx[n],l=SK[id]||[[id+'_1','Mặc định','','',gl]];SK[id]=l;
+    skv.innerHTML=`<div class="skh" style="--rr:${RR[r]}"><h2 id="skvn">${esc(n)}</h2><span class="rs">${'★'.repeat(r)}</span>${gl?'':'<span class="cn">CN</span>'}<button class="x" aria-label="Đóng">✕</button></div>
+      <div class="skb"><div class="ska"></div><div class="ski"><div><p class="sn"></p><p class="sg"></p></div><p class="sa"></p>
+      ${i!=null?`<button class="prof" data-i="${i}">Xem hồ sơ operator</button>`:''}
+      <p class="sg">${l.length} trang phục</p><div class="skt">${l.map(([pid,sn],k)=>`<button data-k="${k}" title="${esc(sn)}"><img src="${PORT}${u(pid)}.png" alt="" loading="lazy"><span>${esc(sn)}</span></button>`).join('')}</div></div></div>`;
+    pick(Math.max(0,l.findIndex(s=>s[1]==='Elite 2')));
+    if(!skv.open){skv.showModal();history.pushState({tab:'ops',skin:id},'')}}
+  skv.addEventListener('click',e=>{const t=e.target.closest('.skt button');if(t)return pick(+t.dataset.k);
+    if(e.target.closest('.x'))return history.state?.skin?history.back():skv.close();
+    const p=e.target.closest('.prof');if(p){const i=+p.dataset.i;skv.close();history.replaceState({tab:'ops'},'');openOp(i)}});
+  skv.addEventListener('cancel',e=>{if(history.state?.skin){e.preventDefault();history.back()}});
+  addEventListener('popstate',()=>{if(skv.open&&!history.state?.skin)skv.close()});
+  $('#rgrid').onclick=e=>{const b=e.target.closest('.rc');if(b)showSkins(R.find(o=>o[0]===b.dataset.id))};
   draw()}
 // tabs
 $('#nav').onclick=e=>{const b=e.target.closest('button');if(!b)return;
