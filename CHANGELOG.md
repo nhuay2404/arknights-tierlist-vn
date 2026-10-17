@@ -1,6 +1,7 @@
 # Changelog
 
 ## 2026-10-17
+- QC thứ tự "Mới nhất" ở tab Operator: trước đây operator Global xếp theo ngày được thêm ghi chú trong tier list nên sai (vd. Texas the Omertosa đứng ngay sau Closure). Giờ xếp theo thứ tự ra mắt lấy từ data game: thứ tự Token tiềm năng trong từng độ hiếm + mốc ngày ra module mặc định và operator record. Đầu danh sách Global giờ là Closure → Viy → Crackborne → … → Kal'tsit Esperanta → Zima the Raging Tide; Texas the Omertosa về đúng vị trí (2022). Data cũng xác nhận thứ tự 5 đợt banner CN; trong mỗi đợt operator 6★ đứng trước.
 - Tab Operator, sắp xếp "Mới nhất": đảo thứ tự operator CN thành banner mới nhất trên cùng (Clementia, de Toledo, Homebound … CN 5) xuống banner cũ nhất (Violet Mizutsune Orchid … CN 1), đợt sắp ra Global nằm sát ngay trên các operator Global mới nhất.
 - Tab Operator trên điện thoại cũng hiện 5 operator mỗi hàng (trước là 3): tên xuống tối đa 2 dòng, sao, icon class và nhãn CN thu nhỏ cho vừa thẻ.
 - Dải chân dung trang phục trong hồ sơ cũng hiện trọn ảnh (không cắt), đồng bộ với khung ảnh lớn: mọi trang phục (Mặc định, Elite 2, mọi skin) đều vừa khung.
