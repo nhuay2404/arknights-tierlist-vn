@@ -935,11 +935,11 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if
     return `<button class="rc go${gl?'':' cn-only'}" style="--rr:${RR[r]};--rbg:var(--b${r})" data-id="${id}" title="${esc(n)} · ${r}★ · ${esc(CLSVI[c])}${gl?'':` · chưa ra Global · banner CN thứ ${bn}`}${k>2?` · ${k} trang phục`:''}">
       <img src="${PORT}${id}_1.png" alt="" loading="lazy" decoding="async" onerror="this.src='${IMG}${id}.png'">
       <span class="nm">${esc(n)}</span>${gl?'':`<span class="cn">CN ${bn}</span>`}<span class="st">${'★'.repeat(r)}</span><span class="ci">${ico(`ui/subclass/sub_${sub}_icon.png`)}</span><span class="bt"></span></button>`};
-  // "Mới nhất": bản chưa ra Global trước theo thứ tự banner CN (banner sớm nhất = sắp về Global trước), rồi theo đợt operator được thêm vào tier list (ghi chú cũ nhất), không có thì xếp sau theo độ hiếm
+  // "Mới nhất": bản chưa ra Global trước, banner CN mới nhất trên cùng (banner cũ nhất = sắp về Global, nằm sát operator Global), rồi theo đợt operator được thêm vào tier list (ghi chú cũ nhất), không có thì xếp sau theo độ hiếm
   const rel=Object.fromEntries(OPS.map(o=>[base(o.n),(o.notes||[]).map(x=>x.u||'').filter(Boolean).sort()[0]||'']));
   const rank=o=>rel[o[1]]||'';
   function draw(){let l=R.filter(([,n,r,c,,gl])=>(!st.r||r===st.r)&&(!st.c||c===st.c)&&(st.srv==='all'||(st.srv==='gl')===!!gl)&&(!st.q||norm(n).includes(st.q)));
-    l=l.slice().sort(st.sort==='az'?(a,b)=>a[1].localeCompare(b[1]):st.sort==='rar'?(a,b)=>b[2]-a[2]||a[1].localeCompare(b[1]):(a,b)=>a[5]-b[5]||(a[6]||0)-(b[6]||0)||rank(b).localeCompare(rank(a))||b[2]-a[2]||a[1].localeCompare(b[1]));
+    l=l.slice().sort(st.sort==='az'?(a,b)=>a[1].localeCompare(b[1]):st.sort==='rar'?(a,b)=>b[2]-a[2]||a[1].localeCompare(b[1]):(a,b)=>a[5]-b[5]||(b[6]||0)-(a[6]||0)||rank(b).localeCompare(rank(a))||b[2]-a[2]||a[1].localeCompare(b[1]));
     $('#rcount').textContent=`${l.length} / ${R.length} operator`;
     $('#rgrid').innerHTML=l.length?l.map(card).join(''):'<div class="empty">Không tìm thấy operator nào.</div>'}
   // bấm thẻ: mở trình xem skin (mọi operator, kể cả bản chưa ra Global); có trong tier list thì có nút sang hồ sơ
