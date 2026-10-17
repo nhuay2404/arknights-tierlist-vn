@@ -31,7 +31,7 @@ It is a faithful translation of an established community tier list, not an indep
 
 - Tabs: Xếp hạng (tier list), Mới, Lịch sử, Giới thiệu. Includes search, rarity, class and view filters, an operator detail dialog with a range grid, and glossary tooltips.
 - Explanations live in place: glossary terms in kit text are underlined and open a tooltip, and class/subclass filter chips explain themselves on mouse hover or a ~450ms touch hold (subclass text = the in-game Trait from `details.js`; class text is hand-written).
-- Some operators appear twice, as an IS (Integrated Strategies) and a general-mode entry. The data keeps `(IS)` / `(General)` in names; the UI shows the general variant as **OG**, as a tag right beside the operator name.
+- Some operators appear twice, as an IS (Integrated Strategies) and a general-mode entry. The data keeps `(IS)` / `(General)` in names; the UI tags only the IS entry (`IS` beside the name); the general-mode entry shows the plain name with no tag.
 - Light and dark themes are both required.
 - Mobile-first layout is required.
 - The current stack is a static site (`index.html` plus data JS files, no build step). The user did not mark this as a hard constraint.
