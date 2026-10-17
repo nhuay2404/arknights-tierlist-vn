@@ -7,10 +7,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=Chakra+Petch:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-/* Phong cách Arknights: Endfield — nền trắng ngà, vàng acid + đen, rail dọc trái, chữ sọc chéo khổng lồ, nhãn HUD [ ] */
+/* Phong cách Arknights: Endfield — nền trắng ngà, xanh Arknights + đen, rail dọc trái, chữ sọc chéo khổng lồ, nhãn HUD [ ] */
 :root{
   --bg:#efefea;--panel:#fff;--panel2:#f6f6f2;--line:#d6d6cf;--text:#111;--mute:#5c5c57;--bg-a:rgba(239,239,234,.92);--grid:rgba(0,0,0,.035);--stripe:#d6d6ce;--link:#0b5cad;
-  --accent:#fff200;--ink:#111;--accent2:#111;
+  --accent:#0098dc;--ink:#111;--accent2:#111;
   --r6:#e8650a;--r5:#a88700;--r4:#9333ea;
   /* nền thẻ operator theo độ hiếm: gold, vàng nhợt, tím sáng, xanh da trời, xanh chuối neon, xám */
   --b6:linear-gradient(120deg,#fff3c4,#ffd95e 55%,#ffcb3d);--b5:linear-gradient(120deg,#fffbe6,#fff3c2);--b4:linear-gradient(120deg,#f4ebff,#e2ccff);--b3:linear-gradient(120deg,#eaf7ff,#c7ebff);--b2:linear-gradient(120deg,#f6ffd1,#e3ff7a);--b1:linear-gradient(120deg,#f4f4f2,#e4e4e0);
@@ -21,14 +21,11 @@
 html{font-size:clamp(16px,14.5px + .4vw,18px)}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font:0.9375rem/1.6 "Be Vietnam Pro",system-ui,sans-serif;min-height:100vh;padding-left:76px}
-/* nền chạy: lưới trôi chéo + vạch quét dọc, nằm cố định sau nội dung */
-body:before,body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none}
-body:before{background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px),radial-gradient(color-mix(in srgb,var(--ink) 18%,transparent) 1.5px,transparent 2px);
-  background-size:48px 48px,48px 48px,192px 192px;background-position:0 0,0 0,-1px -1px;animation:drift 40s linear infinite;
-  -webkit-mask:radial-gradient(ellipse at 70% 20%,#000 30%,transparent 85%);mask:radial-gradient(ellipse at 70% 20%,#000 30%,transparent 85%)}
-body:after{background:linear-gradient(transparent,color-mix(in srgb,var(--accent) 14%,transparent) 48%,color-mix(in srgb,var(--accent) 40%,transparent) 50%,transparent 50.2%);
+/* nền: lưới 48px tĩnh, nằm cố định sau nội dung */
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:48px 48px}
+/* vạch quét dọc chạy chậm sau nội dung */
+body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(transparent,color-mix(in srgb,var(--accent) 14%,transparent) 48%,color-mix(in srgb,var(--accent) 40%,transparent) 50%,transparent 50.2%);
   background-size:100% 260px;background-repeat:no-repeat;animation:scan 9s cubic-bezier(.5,0,.5,1) infinite}
-@keyframes drift{to{background-position:48px 48px,48px 48px,191px 191px}}
 @keyframes scan{from{background-position:0 -260px}to{background-position:0 calc(100vh + 260px)}}
 a{color:var(--ink);text-decoration-color:var(--accent);text-decoration-thickness:3px}
 ::selection{background:var(--accent)}
@@ -47,17 +44,18 @@ nav button.on{color:#111;background:var(--accent)}
 nav button.on:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--ink)}
 /* hero */
 .hero{position:relative;padding:40px 0 24px;isolation:isolate}
-.hero:before{content:"TIER";position:absolute;right:0;top:0;font:900 clamp(7.5rem,22vw,22.5rem)/.85 "Be Vietnam Pro";letter-spacing:-.04em;color:transparent;
+.hero:before{content:attr(data-g);position:absolute;right:0;top:0;font:900 clamp(7.5rem,22vw,22.5rem)/.85 "Be Vietnam Pro";letter-spacing:-.04em;color:transparent;
   background:repeating-linear-gradient(-45deg,var(--stripe) 0 3px,transparent 3px 9px);-webkit-background-clip:text;background-clip:text;-webkit-text-stroke:2px var(--stripe);pointer-events:none;z-index:-1}
-.kicker{display:inline-flex;gap:10px;align-items:center;font:600 0.75rem var(--mono);letter-spacing:.2em;text-transform:uppercase;background:var(--ink);color:var(--accent);padding:6px 12px}
-.kicker:before{content:"";width:8px;height:8px;background:var(--accent);clip-path:polygon(0 0,100% 50%,0 100%)}
-h1{font-size:clamp(2rem,5.5vw,4.5rem);line-height:.95;margin:14px 0 12px;font-weight:900;letter-spacing:-.03em;text-transform:uppercase}
+.stamp{margin:0;display:flex;align-items:center;gap:10px;font:600 0.75rem var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.stamp:before{content:"";width:8px;height:8px;background:var(--accent);outline:1.5px solid var(--ink);flex:none}
+h1{font-size:clamp(2rem,5.5vw,4.5rem);line-height:.95;margin:0 0 18px;font-weight:900;letter-spacing:-.03em;text-transform:uppercase}
 h1 span{display:inline-block;background:var(--accent);color:#111;padding:0 .15em;margin-top:.1em;box-shadow:8px 8px 0 var(--ink)}
 /* controls */
 .controls{position:relative;z-index:10;padding:14px 0;border-bottom:2px solid var(--ink);margin-bottom:28px}
 .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .search{flex:1 1 240px;position:relative}
 .search input{width:100%;background:var(--panel);border:1px solid var(--ink);color:var(--text);border-radius:0;padding:11px 14px 11px 40px;font:inherit;outline:none}
+.search input::placeholder{color:var(--mute);opacity:1}
 .search input:focus{box-shadow:4px 4px 0 var(--accent)}
 .search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%)}
 .chips{display:flex;gap:4px;flex-wrap:wrap}
@@ -79,21 +77,32 @@ body{overflow-anchor:none}
 /* tiers */
 .tier{display:grid;grid-template-columns:96px 1fr;background:var(--panel);border:1px solid var(--line);margin-bottom:10px}
 .tier:hover{border-color:var(--ink)}
-.tl{display:grid;place-items:center;font:700 2.125rem var(--mono);color:#0b0b0b;position:relative;overflow:hidden}
+.tl{display:grid;place-items:center;font:700 2.125rem var(--mono);color:#0b0b0b;position:relative;clip-path:inset(0)}
+/* chữ tier dính lại khi cuộn qua hàng dài, nằm ngay dưới dải nhảy tier */
+:root{--jump-h:56px;--stick:0px}
+.tier .tl{align-items:start}
+.tier .tl>span{position:sticky;top:calc(var(--stick) + var(--jump-h) + 10px);z-index:1;padding:14px 0}
+/* dải nhảy tier: dính trên cùng, bấm để tới hàng */
+.tjump{position:sticky;top:var(--stick);z-index:12;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding:6px 0;margin:-14px 0 14px;background:var(--bg);border-bottom:1px solid var(--line)}
+.tjump[hidden]{display:none}
+.tjump button{all:unset;cursor:pointer;flex:none;min-width:44px;height:44px;display:grid;place-items:center;font:700 0.875rem var(--mono);color:#0b0b0b;border:1px solid transparent;transition:transform .15s var(--ease),border-color .15s}
+.tjump button:hover{transform:translateY(-2px);border-color:var(--ink)}
+.tjump button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.tier{scroll-margin-top:calc(var(--stick) + var(--jump-h) + 8px)}
+/* phím tắt / cho ô tìm */
+.search kbd{position:absolute;right:10px;top:50%;transform:translateY(-50%);font:600 0.75rem var(--mono);color:var(--mute);border:1px solid var(--line);padding:1px 7px;pointer-events:none}
+.search input:focus~kbd,.search input:not(:placeholder-shown)~kbd{display:none}
 .tl:after{content:"";position:absolute;inset:0;background:var(--hatch)}
 .ops{display:grid;grid-template-columns:repeat(auto-fill,minmax(12rem,1fr));gap:6px;padding:12px}
 .op{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;padding:5px 12px 5px 5px;background:var(--rb,none),var(--panel2);color:#111;--r6:#c2410c;--r5:#8a6d00;--r4:#7e22ce;border:1px solid transparent;transition:.12s;max-width:100%}
 .op:hover{border-color:var(--ink);box-shadow:3px 3px 0 var(--accent)}
 .av{flex:none;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:0.875rem;color:#000;background:#e4e4de;position:relative;border:2px solid var(--panel)}
-.av:after{content:"";position:absolute;inset:-5px;border-radius:50%;background:conic-gradient(from 0deg,transparent 0 250deg,#fff200 300deg,#fff200 345deg,transparent 360deg),#fff;-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 3.5px),#000 calc(100% - 3px));mask:radial-gradient(farthest-side,transparent calc(100% - 3.5px),#000 calc(100% - 3px));filter:drop-shadow(0 0 1px #0009);animation:spin 2.4s linear infinite;pointer-events:none}
-@keyframes spin{to{transform:rotate(1turn)}}
 .av img{position:absolute;inset:0;width:100%;height:100%;border-radius:50%;object-fit:cover;background:#e4e4de}
 .op .nm{font-weight:700;font-size:0.875rem;line-height:1.2;white-space:nowrap;display:flex;align-items:center;gap:5px}
 .op .nm>span:first-child{overflow:hidden;text-overflow:ellipsis}.op .nm .tag{flex-shrink:0}
 .op .meta{font:500 0.6875rem var(--mono);color:var(--mute);display:flex;gap:6px;align-items:center;text-transform:uppercase;letter-spacing:.04em}
 .op .st{color:var(--rc);letter-spacing:-1px}
 .tag{font:700 0.625rem var(--mono);padding:1px 6px;background:var(--ink);color:var(--accent)}
-.tag.gen{background:#e4e4de;color:var(--mute)}
 .empty{color:var(--mute);text-align:center;padding:60px 0;font-family:var(--mono)}
 /* matrix */
 .matrix{overflow:auto;max-height:calc(100dvh - 40px);overscroll-behavior:contain;border:1px solid var(--ink);background:var(--panel);cursor:grab;user-select:none}
@@ -113,16 +122,21 @@ body{overflow-anchor:none}
 section[hidden]{display:none}
 .card{background:var(--panel);border:1px solid var(--line);padding:24px;margin-bottom:14px;position:relative}
 .card:before{content:"";position:absolute;left:-1px;top:-1px;width:24px;height:24px;border-left:3px solid var(--ink);border-top:3px solid var(--ink)}
-.card h3{margin:0 0 10px;font:700 1.25rem var(--mono);text-transform:uppercase;letter-spacing:.04em}
-.card h3:before{content:"[ "}.card h3:after{content:" ]"}
+.card :is(h2,h3){margin:0 0 10px;font:700 1.25rem var(--mono);text-transform:uppercase;letter-spacing:.04em}
+.card :is(h2,h3):before{content:"[ "}.card :is(h2,h3):after{content:" ]"}
 .card p{margin:.5em 0}
+.card :is(p,li),.clamp,.ev p,.note p,.sk p,.tal p{max-width:75ch}
 .card ul{margin:0;padding-left:20px}
 .card li{margin:6px 0}
 .grid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
 .upd{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:10px}
 .upd .av{width:56px;height:56px}
-.upd h4{margin:2px 0;font-size:1.0625rem;font-weight:800}
+.upd h3{margin:2px 0;font:800 1.0625rem/1.3 "Be Vietnam Pro",system-ui,sans-serif;text-transform:none;letter-spacing:0}.upd h3:before,.upd h3:after{content:none}
+.ngrp+.ngrp{margin-top:36px}
+.nh{margin:0 0 14px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;font:700 1.5rem var(--mono);text-transform:uppercase;letter-spacing:.04em}
+.nh small{font:600 0.8125rem var(--mono);letter-spacing:.12em;color:var(--mute)}
 .badge{font:700 0.8125rem var(--mono);padding:4px 10px;color:#000;border:1px solid var(--ink);white-space:nowrap}
+.badge.nt{background:#111;color:var(--accent);border-color:#111}
 .timeline{border-left:2px solid var(--ink);margin-left:6px;padding-left:24px}
 .ev{position:relative;margin-bottom:20px}
 .ev:before{content:"";position:absolute;left:-32px;top:5px;width:12px;height:12px;background:var(--accent);border:2px solid var(--ink);transform:rotate(45deg)}
@@ -181,7 +195,6 @@ dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
 @media (max-width:760px){.ptabs{margin-bottom:-12px}.ptabs button{flex:1;justify-content:center;padding:0 8px;font-size:0.75rem;letter-spacing:.06em}.atop{grid-template-columns:1fr}.ab{padding-left:0}.akv{grid-template-columns:minmax(100px,max-content) 1fr;gap:8px 12px}.aprof p{font-size:1rem}}
 .prof{display:grid;grid-template-columns:1fr 340px;gap:24px;margin-bottom:28px}
 .art{position:relative;background:var(--panel2) var(--hatch);border:1px solid var(--line);height:460px;align-self:start;overflow:hidden;isolation:isolate}
-.art:before{content:attr(data-n);position:absolute;left:8px;top:4px;font:900 4rem/1 "Be Vietnam Pro";color:transparent;-webkit-text-stroke:1px #cfcfc7;text-transform:uppercase;word-break:break-all}
 .facdd{display:flex;flex-wrap:wrap;gap:6px 14px}.facdd span,.facdd a{display:inline-flex;align-items:center;gap:6px}.facdd .fac{width:32px;height:32px}
 .facdd a{color:inherit;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:4px;text-decoration-thickness:2px;min-height:32px}
 .facdd a:hover{text-decoration-color:var(--ink)}.facdd a:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
@@ -242,7 +255,7 @@ dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
 .note{border-left:4px solid var(--accent);padding:4px 0 4px 14px;margin-bottom:22px}
 .note small{color:var(--mute);font-family:var(--mono)}
 .note p{white-space:pre-line;margin:6px 0 0}
-footer{font:500 0.75rem var(--mono);letter-spacing:.06em;padding:28px 0;margin-top:48px;background:var(--accent);border-top:2px solid var(--ink)}
+footer{font:500 0.75rem var(--mono);letter-spacing:.04em;color:#111;padding:28px 0;margin-top:48px;background:var(--accent);border-top:2px solid var(--ink)}
 /* chuyển động */
 :root{--ease:cubic-bezier(.22,1,.36,1)}
 @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
@@ -252,42 +265,31 @@ footer{font:500 0.75rem var(--mono);letter-spacing:.06em;padding:28px 0;margin-t
 @keyframes fade{from{opacity:0}to{opacity:1}}
 .hero>*{animation:rise .8s var(--ease) both}
 .hero>:nth-child(2){animation-delay:.08s}.hero>:nth-child(3){animation-delay:.16s}.hero>:nth-child(4){animation-delay:.24s}
-.hero:before{animation:fade 1.4s ease both,slide 6s linear infinite}
+.hero:before{animation:fade 1.4s ease both}
 h1 span{animation:wipe .9s .35s var(--ease) both}
-.tier.rv{opacity:0}
+/* gõ rồi xoá chữ khối xanh của tiêu đề, lặp lại; con trỏ nhấp nháy */
+h1 span.typing:after{content:"";display:inline-block;width:.12em;height:.75em;margin-left:.08em;background:#111;vertical-align:baseline;animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
 .tier.in{animation:rise .7s var(--ease) backwards}
 .tier.in .tl{animation:wipe .6s .1s var(--ease) both}
 .tier.in .op{animation:rise .5s var(--ease) backwards;animation-delay:calc(var(--i)*22ms + .15s)}
-.tl:after{transition:background-position .6s var(--ease)}
-.tier:hover .tl:after{background-position:30px 0}
+.tl:after{left:-40px;transition:transform .6s var(--ease)}
+/* sọc lặp mỗi 7px theo đường chéo = 9.9px theo chiều ngang; trượt đúng 3 chu kỳ để không lộ đường nối */
+.tier:hover .tl:after{transform:translateX(29.7px)}
 .op{transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s,border-color .25s}
 .op:hover{transform:translate(-2px,-2px)}
-.op .av img{transition:filter .3s}
-.op:hover .av img{filter:brightness(1.1) saturate(1.15)}
 .chip,nav button{transition:all .25s var(--ease)}
 section:not([hidden]){animation:rise .5s var(--ease) backwards}
 dialog[open]{animation:pop .45s var(--ease) backwards}
 dialog[open]::backdrop{animation:fade .3s ease both}
-/* hiệu ứng HUD: góc ngắm khi rê lên thẻ, vạch dữ liệu chạy dưới thanh lọc, con trỏ nhấp nháy sau tiêu đề, giải mã chữ lúc tải trang */
+/* hover thẻ: nền đen tràn ngang từ phải sang trái, phủ avatar/tên/sao/icon, lộ mặt operator */
 .op{position:relative}.op>*{position:relative;z-index:1}
-.op>.eye{position:absolute;inset:0;z-index:0;background:var(--eye,none) 92% 55%/60% auto no-repeat;opacity:0;transition:opacity .35s;-webkit-mask:linear-gradient(90deg,transparent 30%,#000 60%);mask:linear-gradient(90deg,transparent 30%,#000 60%);pointer-events:none}
-.op:hover>.eye{opacity:1}
-/* hover thẻ: một dải sọc chéo lướt qua thẻ một lần */
-.op>.sw{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;background:repeating-linear-gradient(-45deg,color-mix(in srgb,#111 22%,transparent) 0 2px,transparent 2px 7px);
-  -webkit-mask:linear-gradient(100deg,transparent 35%,#000 45%,#000 55%,transparent 65%) 120% 0/300% 100% no-repeat;mask:linear-gradient(100deg,transparent 35%,#000 45%,#000 55%,transparent 65%) 120% 0/300% 100% no-repeat}
-.op:hover>.sw{animation:sweep .7s cubic-bezier(.4,0,.2,1) both}
-@keyframes sweep{from{opacity:1;-webkit-mask-position:-20% 0;mask-position:-20% 0}to{opacity:1;-webkit-mask-position:120% 0;mask-position:120% 0}}
-.op .av:after{content:none}
-.op:before,.op:after{content:"";position:absolute;width:10px;height:10px;border:2px solid var(--ink);opacity:0;transition:opacity .2s,transform .3s var(--ease);pointer-events:none}
-.op:before{top:-4px;left:-4px;border-right:0;border-bottom:0;transform:translate(-4px,-4px)}
-.op:after{bottom:-4px;right:-4px;border-left:0;border-top:0;transform:translate(4px,4px)}
-.op:hover:before,.op:hover:after,.op:focus-visible:before,.op:focus-visible:after{opacity:1;transform:none}
-.controls:after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:18%;background:var(--accent);animation:scanx 4.5s cubic-bezier(.65,0,.35,1) infinite alternate}
-@keyframes scanx{from{left:0}to{left:82%}}
-h1:after{content:"";display:inline-block;width:.14em;height:.72em;margin-left:.14em;background:var(--ink);vertical-align:baseline;animation:blink 1.1s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
-.kicker.dec{font-variant-numeric:tabular-nums}
-@media (prefers-reduced-motion:reduce){*,*:before,*:after,::backdrop{animation:none!important;transition:none!important}.tier.rv{opacity:1}}
+.op>.eye{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden;background:#0b0b0b;clip-path:inset(0 0 0 100%);transition:clip-path .38s var(--ease)}
+/* tên operator viền mờ nằm dưới lớp mặt, tràn khỏi thẻ cũng được */
+.op>.eye:before{content:attr(data-n);position:absolute;left:6px;top:50%;transform:translateY(-50%);font:900 2.75rem/1 "Be Vietnam Pro",system-ui,sans-serif;text-transform:uppercase;letter-spacing:-.02em;white-space:nowrap;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.22)}
+.op>.eye:after{content:"";position:absolute;inset:0;z-index:1;background:var(--eye) right 58%/64% auto no-repeat;-webkit-mask:linear-gradient(90deg,transparent 36%,#000 48%);mask:linear-gradient(90deg,transparent 36%,#000 48%)}
+.op:hover>.eye{clip-path:inset(0)}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after,::backdrop{animation:none!important;transition:none!important}}
 @media (max-width:760px){
   .prof{grid-template-columns:1fr}.art{height:340px;order:-1}.stg{grid-template-columns:repeat(2,1fr)}
   .stg div:nth-child(4n){border-right:1px solid var(--line)}.stg div:nth-child(2n){border-right:0}
@@ -297,12 +299,14 @@ h1:after{content:"";display:inline-block;width:.14em;height:.72em;margin-left:.1
   .bar{flex-direction:row;gap:12px;padding:0 12px}
   .logo span{display:none}
   nav{flex-direction:row;overflow-x:auto;scrollbar-width:none}
+  nav.more{-webkit-mask:linear-gradient(90deg,#000 calc(100% - 36px),transparent);mask:linear-gradient(90deg,#000 calc(100% - 36px),transparent)}
   nav button{writing-mode:horizontal-tb;transform:none;padding:8px 10px;white-space:nowrap}
   nav button.on:before{left:0;right:0;top:auto;bottom:0;width:auto;height:3px}
   .controls{top:56px}
   .wrap{padding:0 16px}
   .matrix{max-height:calc(100dvh - 96px)}
   .tier{grid-template-columns:56px 1fr}.tl{font-size:1.375rem}
+  :root{--stick:56px}.search kbd{display:none}.tier .tl>span{padding:8px 0}
   /* điện thoại: 2 cột thẻ operator, hero và hàng số liệu gọn để bảng tier lên sớm */
   .tier{grid-template-columns:44px 1fr}.ops{grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;padding:6px}
   .op{gap:6px;padding:4px 6px 4px 4px}.op .av{width:34px;height:34px}.op .nm{font-size:0.8125rem;white-space:normal}.op .nm>span:first-child{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:1.15;word-break:break-word}
@@ -328,7 +332,7 @@ h1:after{content:"";display:inline-block;width:.14em;height:.72em;margin-left:.1
 /* dark mode: theo hệ thống, hoặc chọn tay qua nút ◐ ở rail (lưu localStorage) */
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1013;--panel:#17181c;--panel2:#1f2126;--line:#2e3138;--text:#ecebe4;--mute:#a6a59d;--ink:#ecebe4;--bg-a:rgba(15,16,19,.92);--grid:rgba(255,255,255,.04);--stripe:#262830;--link:#7cc4ff;--r6:#ff8a3d;--r5:#f0c419;--r4:#c084fc;--b6:linear-gradient(120deg,#f2cf63,#d9a521 55%,#e8bb3c);--b5:linear-gradient(120deg,#efe6bf,#ddd09a);--b4:linear-gradient(120deg,#dcc6ff,#b994f5);--b3:linear-gradient(120deg,#c4e8ff,#8fcff5);--b2:linear-gradient(120deg,#ecff9a,#c3ec2a);--b1:linear-gradient(120deg,#d9d9d5,#b9b9b4)}}
 :root[data-theme=dark]{--bg:#0f1013;--panel:#17181c;--panel2:#1f2126;--line:#2e3138;--text:#ecebe4;--mute:#a6a59d;--ink:#ecebe4;--bg-a:rgba(15,16,19,.92);--grid:rgba(255,255,255,.04);--stripe:#262830;--link:#7cc4ff;--r6:#ff8a3d;--r5:#f0c419;--r4:#c084fc;--b6:linear-gradient(120deg,#f2cf63,#d9a521 55%,#e8bb3c);--b5:linear-gradient(120deg,#efe6bf,#ddd09a);--b4:linear-gradient(120deg,#dcc6ff,#b994f5);--b3:linear-gradient(120deg,#c4e8ff,#8fcff5);--b2:linear-gradient(120deg,#ecff9a,#c3ec2a);--b1:linear-gradient(120deg,#d9d9d5,#b9b9b4)}
-.dk :is(.kicker,.tag:not(.gen),.matrix th,.ev time,.mh .x,.logo i,.trait,#totop){background:#000;color:var(--accent)}
+.dk :is(.tag:not(.gen),.matrix th,.ev time,.mh .x,.logo i,.trait,#totop){background:#000;color:var(--accent)}
 .dk .trait{color:#ecebe4}
 .dk .ptabs button[aria-selected=true],.dk .afile[open] .ai{background:#000;color:var(--accent);border-color:#000}
 .trait b,.sk p b,.tal b{color:#111!important}
@@ -349,6 +353,15 @@ h1:after{content:"";display:inline-block;width:.14em;height:.72em;margin-left:.1
 #fab .n:empty{display:none}
 #fab:before{content:"";position:absolute;inset:-2px;border:2px solid var(--accent);pointer-events:none;animation:fabping 1.6s .8s var(--ease) 2 both}
 @keyframes fabping{0%{opacity:.9;transform:none}100%{opacity:0;transform:scale(1.35,1.6)}}
+/* nút quay lại hồ sơ operator khi đi từ hồ sơ sang phe phái; dính trên cùng khi cuộn */
+#backbar{position:sticky;top:var(--stick);z-index:12;padding:8px 0;margin:-14px 0 14px;background:var(--bg)}
+#backbar[hidden]{display:none}
+.back{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px 0 10px;background:var(--ink);color:var(--accent);font:700 0.8125rem var(--mono);letter-spacing:.08em;text-transform:uppercase;box-shadow:3px 3px 0 var(--accent);transition:transform .15s var(--ease)}
+.back span{color:inherit}
+.back:hover{transform:translate(-2px,-2px)}.back:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.dk .back{background:#000}
+#scrim{position:fixed;inset:0;z-index:44;background:rgba(0,0,0,.45);animation:fade .2s ease}
+#scrim[hidden]{display:none}
 #theme{all:unset;cursor:pointer;margin-top:auto;width:44px;height:44px;display:grid;place-items:center;font-size:1.125rem}
 #theme:focus-visible{outline:2px solid var(--ink)}
 @media (max-width:760px){
@@ -374,45 +387,46 @@ h1:after{content:"";display:inline-block;width:.14em;height:.72em;margin-left:.1
 </div></header>
 
 <main class="wrap">
-  <div class="hero">
-    <div class="kicker">Cập nhật 12/10/2026 · Server Global</div>
+  <div class="hero" data-g="TIER">
     <h1>Bảng xếp hạng<br><span>Operator</span></h1>
+    <p class="stamp">Cập nhật 12/10/2026 · Server Global</p>
   </div>
 
   <section id="list">
     <div class="controls" id="ctl">
       <div class="row">
         <label class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-          <input id="q" type="search" placeholder="Tìm operator… (vd: Ines, Mon3tr)" aria-label="Tìm operator"></label>
+          <input id="q" type="search" placeholder="Tìm operator… (vd: Ines, Mon3tr)" aria-label="Tìm operator"><kbd title="Bấm / để tìm">/</kbd></label>
         <div class="grp" role="group" aria-labelledby="l-rar"><span class="lbl" id="l-rar">Độ hiếm</span><div class="chips" id="rar"></div></div>
         <div class="grp" role="group" aria-labelledby="l-view"><span class="lbl" id="l-view">Kiểu xem</span><div class="chips" id="view"></div></div>
       </div>
       <div class="row"><div class="grp" role="group" aria-labelledby="l-cls"><span class="lbl" id="l-cls">Class</span><div class="chips" id="cls"></div></div></div>
       <div class="row" id="subrow" hidden><div class="grp" role="group" aria-labelledby="l-sub"><span class="lbl" id="l-sub">Subclass</span><div class="chips" id="sub"></div></div></div>
     </div>
+    <div class="tjump" id="tjump" role="navigation" aria-label="Nhảy tới tier" hidden></div>
     <div id="board"></div>
   </section>
 
-  <section id="new" hidden><div class="grid2" id="newGrid"></div></section>
-  <section id="fac" hidden><div id="facBody"></div></section>
+  <section id="new" hidden><div id="newGrid"></div></section>
+  <section id="fac" hidden><div id="backbar" hidden><button class="back" onclick="history.back()"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><path d="M15 5l-7 7 7 7"/></svg>Quay lại hồ sơ <span></span></button></div><div id="facBody"></div></section>
   <section id="log" hidden><div class="card"><div class="timeline" id="timeline"></div></div></section>
   <section id="about" hidden>
     <div class="card">
-      <h3>Giả định chung</h3>
+      <h2>Giả định chung</h2>
       <ul>
         <li>Danh sách giả định <b>đầu tư tối đa</b>: E2 cấp tối đa, Potential, Mastery và Module. <b>Không</b> nên dùng làm danh sách cho người mới.</li>
         <li><b>Không</b> tính đến chi phí. Operator 4★ không được cộng điểm chỉ vì rẻ hơn.</li>
         <li>Xếp hạng trong Arknights hầu như không bao giờ tuyệt đối mà phụ thuộc góc nhìn người lập: người chơi CC risk cao, người chơi niche hay người chơi IS đều nhìn khác nhau. Góc nhìn ở đây là <b>ceiling cao nhất cho người chơi phổ thông</b> có quan tâm đến mọi chế độ.</li>
         <li>Ceiling được coi trọng hơn độ dễ dùng, nhưng cả hai đều được xem xét.</li>
         <li>Giá trị riêng theo chế độ chơi có được xét, nhưng điểm phải phản ánh toàn bộ trò chơi. Chỉ mạnh ở một chế độ là chưa đủ.</li>
-        <li>Module ISW-α (riêng cho IS) rất mạnh và IS là chế độ lớn, nên operator có chênh lệch giá trị lớn sẽ được ghi <b>hai lần</b>: bản <span class="tag">IS</span> và bản <span class="tag gen">OG</span>. (Kal'tsit đủ mạnh nên không có tier riêng.)</li>
+        <li>Module ISW-α (riêng cho IS) rất mạnh và IS là chế độ lớn, nên operator có chênh lệch giá trị lớn sẽ được ghi <b>hai lần</b>: bản <span class="tag">IS</span> và bản thường (không gắn tag). (Kal'tsit đủ mạnh nên không có tier riêng.)</li>
         <li>Giá trị trong challenge clear hay "niche" có thể được xét, nhưng giá trị chung được coi trọng hơn nhiều.</li>
         <li>Danh sách phản ánh <b>server Global</b>.</li>
         <li>Arknights là game PvE! Meta chỉ cần đến một mức nào đó. Đừng quá ám ảnh với thứ hạng — hãy chơi waifu của bạn dù cô ấy không được xếp cao như bạn muốn!</li>
       </ul>
     </div>
     <div class="card">
-      <h3>Thay đổi so với danh sách cũ</h3>
+      <h2>Thay đổi so với danh sách cũ</h2>
       <ul>
         <li>Robot, operator 2★ và 3★ đã bị loại: không thể lên E2 và chỉ có kỹ năng cơ bản nên giá trị kém xa từ 4★ trở lên.</li>
         <li>Khoảng xếp hạng cho 6★ được mở rộng: trước đây phần lớn nằm từ S+ đến A+, nay từ S+ đến B+. Bị "hạ hạng" không có nghĩa là operator yếu đi mà để xếp hạng chi tiết hơn.</li>
@@ -423,13 +437,14 @@ h1:after{content:"";display:inline-block;width:.14em;height:.72em;margin-left:.1
     </div>
     <div class="card" id="general"></div>
     <div class="card">
-      <h3>Nguồn &amp; tác giả</h3>
+      <h2>Nguồn &amp; tác giả</h2>
       <p>Dữ liệu từ <a href="https://docs.google.com/spreadsheets/d/1E7HmgKWiV8pKpJpvpVzziYxnaQTP01Vtw_PXEdL7XPA/" target="_blank" rel="noopener">An Arknights Operator Tier List</a>. Theo dõi: <a href="https://x.com/AKTierList" target="_blank" rel="noopener">X/Twitter</a> · <a href="https://bsky.app/profile/aktierlist.bsky.social" target="_blank" rel="noopener">Bluesky</a>.</p>
       <p>Đóng góp: TacticalBreakfast, Mal, Idyll, PlatypusGod, Delta, Alyeska, Holly, Mei of May, Windgesang.</p>
     </div>
   </section>
 </main>
 
+<div id="scrim" hidden></div>
 <button id="fab" aria-expanded="false" aria-controls="ctl"></button>
 <button id="totop" aria-label="Lên đầu trang" title="Lên đầu trang" hidden>↑</button>
 <footer><div class="wrap">Bản dịch tiếng Việt không chính thức. Mọi đánh giá thuộc về nhóm tác giả AK Tier List. Arknights © Hypergryph / Yostar.</div></footer>
@@ -503,7 +518,8 @@ const IMG='https://raw.githubusercontent.com/yuanyan3060/ArknightsGameResource/m
 const av=(o,txt)=>`<span class="av">${esc(txt)}${o.img?`<img src="${IMG}${o.img}.png" alt="" loading="lazy" onerror="this.remove()">`:''}</span>`;
 const gv=g=>g.replace(/^up to /i,'Lên ').replace(/^down to /i,'Xuống ').replace(/^remain(s)?( at)? /i,'Giữ ').replace(/\(unchanged\)/i,'(không đổi)').replace(/^no change$/i,'Không đổi');
 const tv=t=>t.replace('NOT AVAILABLE THIS BANNER','không có trong banner này').replace('moved to kernel soon','sắp chuyển sang Kernel');
-const badge=t=>`<span class="badge" style="background:${TC[t]||'#555'}">${esc(t)}</span>`;
+const tierIn=t=>TC[t]?t:(t.match(/(?:^|\s)(EX|[SABC][+-]?|D|F)(?=\s|$)/)||[])[1];
+const badge=t=>{const k=tierIn(t);return `<span class="badge${k?'':' nt'}"${k?` style="background:${TC[k]}"`:''}>${esc(t)}</span>`};
 
 // icon class/subclass trong game, từ PuppiizSunniiz/Arknight-Images
 const ICO='https://raw.githubusercontent.com/PuppiizSunniiz/Arknight-Images/main/';
@@ -530,34 +546,36 @@ try{const v=localStorage.getItem('ak-view');if(v)S.view=v}catch(e){}
   (p.get('r')||'').split(',').map(Number).filter(r=>[4,5,6].includes(r)).forEach(r=>S.rar.add(r));
   if(['tier','matrix'].includes(p.get('view')))S.view=p.get('view');}
 function saveURL(){const p=new URLSearchParams();if(S.q.trim())p.set('q',S.q.trim());if(S.cls.size)p.set('cls',[...S.cls].map(c=>c.slice(0,-1)).join(','));if(S.sub.size)p.set('sub',[...S.sub].join(','));if(S.rar.size)p.set('r',[...S.rar].join(','));if(S.view!=='tier')p.set('view',S.view);
-  history.replaceState(null,'',(p.toString()?'?'+p:location.pathname)+location.hash)}
+  history.replaceState(history.state,'',(p.toString()?'?'+p:location.pathname)+location.hash)}
 
 function opBtn(o,i){
   const v=variant(o.n), base=o.n.replace(/\s*\((IS|General)\)/,'');
-  return `<button class="op" style="--rc:${RC[o.r]};--rb:var(--b${o.r})" data-i="${i}" title="${esc(o.n)}"><span class="sw" aria-hidden="true"></span><span class="eye" aria-hidden="true"${o.img?` style="--eye:url('${IMG}${o.img}.png')"`:''}></span>
+  return `<button class="op" style="--rc:${RC[o.r]};--rb:var(--b${o.r})" data-i="${i}" title="${esc(o.n)}">${o.img?`<span class="eye" aria-hidden="true" data-n="${esc(base)}" style="--eye:url('${IMG}${o.img}.png')"></span>`:''}
     ${av(o,initials(base))}
-    <span style="min-width:0"><div class="nm"><span>${esc(base)}</span>${v?`<span class="tag ${v==='General'?'gen':''}">${v==='General'?'OG':v}</span>`:''}</div>
+    <span style="min-width:0"><div class="nm"><span>${esc(base)}</span>${v==='IS'?'<span class="tag">IS</span>':''}</div>
     <div class="meta"><span class="st">${'★'.repeat(o.r)}</span><span class="sb" role="img" aria-label="${esc(CLSVI[o.c]+' · '+subOf(o))}" title="${esc(CLSVI[o.c]+' · '+subOf(o))}">${S.view==='tier'?cIco(o.c):''}${sIco(subOf(o))}</span></div></span></button>`;
 }
 function filtered(){
   const q=norm(S.q.trim());
   return OPS.map((o,i)=>[o,i]).filter(([o])=>(!q||norm(o.n).includes(q))&&(!S.cls.size||S.cls.has(o.c))&&(!S.sub.size||S.sub.has(subOf(o)))&&(!S.rar.size||S.rar.has(o.r)));
 }
-// hiện dần từng tier khi cuộn tới
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.replace('rv','in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});
+// hàng tier chỉ chạy hiệu ứng vào ở lần vẽ đầu; lọc/tìm thì hiện ngay
+let firstPaint=true;
 // nút LỌC nổi: biểu tượng phễu + số bộ lọc đang bật
 function setFab(){const f=document.getElementById('fab');if(!f)return;const open=document.getElementById('ctl').classList.contains('sheet'),n=S.rar.size+S.cls.size+S.sub.size+(S.q.trim()?1:0);
   f.innerHTML=open?'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>ĐÓNG':`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></svg>LỌC<span class="n">${n||''}</span>`;
   f.setAttribute('aria-label',open?'Đóng bộ lọc':n?`Mở bộ lọc, đang bật ${n}`:'Mở bộ lọc')}
 function render(){
   saveURL();setFab();
-  const list=filtered(), b=$('#board');
+  const list=filtered(), b=$('#board'), tj=$('#tjump');
+  const by=t=>list.filter(([o])=>o.t===t), have=TIERS.filter(t=>by(t).length);
+  tj.hidden=S.view!=='tier'||have.length<2;
+  tj.innerHTML=have.map(t=>`<button data-t="${t}" style="background:${TC[t]}" aria-label="Tới tier ${t}">${t}</button>`).join('');
   if(!list.length){b.innerHTML='<div class="empty">Không tìm thấy operator nào.</div>';return}
-  const by=t=>list.filter(([o])=>o.t===t);
   if(S.view==='tier'){
     b.innerHTML=TIERS.map(t=>{const l=by(t);if(!l.length)return'';
-      return `<div class="tier rv"><div class="tl" style="background:${TC[t]}">${t}</div><div class="ops">${l.map(([o,i])=>opBtn(o,i)).join('')}</div></div>`}).join('');
-    b.querySelectorAll('.tier').forEach(r=>{r.querySelectorAll('.op').forEach((o,k)=>o.style.setProperty('--i',Math.min(k,24)));io.observe(r)});
+      return `<div class="tier${firstPaint?' in':''}" id="tier-${TIERS.indexOf(t)}"><div class="tl" style="background:${TC[t]}"><span>${t}</span></div><div class="ops">${l.map(([o,i])=>opBtn(o,i)).join('')}</div></div>`}).join('');
+    if(firstPaint)b.querySelectorAll('.tier').forEach(r=>r.querySelectorAll('.op').forEach((o,k)=>o.style.setProperty('--i',Math.min(k,24))));firstPaint=false;
   }else{
     const cols=CLS.filter(([c])=>!S.cls.size||S.cls.has(c));
     b.innerHTML=`<div class="matrix"><table><thead><tr><th></th>${cols.map(([c,v])=>`<th>${cIco(c)} ${v}</th>`).join('')}</tr></thead><tbody>${
@@ -565,6 +583,11 @@ function render(){
         return `<tr><td class="tl" style="background:${TC[t]}">${t}</td>${cols.map(([c])=>`<td>${l.filter(([o])=>o.c===c).map(([o,i])=>opBtn(o,i)).join('')}</td>`).join('')}</tr>`}).join('')}</tbody></table></div>`;
   }
 }
+$('#tjump').addEventListener('click',e=>{const b=e.target.closest('[data-t]');if(!b)return;
+  document.getElementById('tier-'+TIERS.indexOf(b.dataset.t))?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'})});
+// "/" để nhảy vào ô tìm (khi không đang gõ ở ô khác và hồ sơ không mở)
+addEventListener('keydown',e=>{if(e.key!=='/'||e.ctrlKey||e.metaKey||e.altKey||dlg.open||$('#list').hidden)return;
+  if(e.target.closest('input,textarea,select,[contenteditable]'))return;e.preventDefault();const q=$('#q');q.focus();q.select()});
 function chips(el,items,isOn,toggle){
   el.innerHTML=items.map(([k,l])=>`<button class="chip" data-k="${k}">${l}</button>`).join('');
   const sync=()=>el.querySelectorAll('.chip').forEach(c=>{c.classList.toggle('on',isOn(c.dataset.k));c.setAttribute('aria-pressed',isOn(c.dataset.k))});
@@ -648,15 +671,17 @@ function detail(o){
     ${rangeGrid(d.range)}
     ${d.usage?`<p class="quote">${esc(d.usage)}<br>— ${esc(d.quote)}</p>`:''}
   </div><div class="art" data-n="${esc(o.n)}"><img src="${art2(d.id)}" alt="Artwork ${esc(o.n)}" loading="lazy" onerror="artErr(this,'${d.id}')"></div></div>
-  ${d.skills.length?`<div class="sec">Skill (M3)</div>${d.skills.map((s,k)=>`<div class="sk"><img src="${RES}skill/skill_icon_${s.id}.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><div><h4>S${k+1} · ${esc(s.name)}</h4>
+  ${d.skills.length?`<h3 class="sec">Skill (M3)</h3>${d.skills.map((s,k)=>`<div class="sk"><img src="${RES}skill/skill_icon_${s.id}.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><div><h4>S${k+1} · ${esc(s.name)}</h4>
     <div class="spi">${s.auto==='PASSIVE'?ACT.PASSIVE:`${SPT[s.spType]||''} · ${ACT[s.auto]||''} · SP ${s.init}/${s.sp}${s.dur>0?` · ${s.dur} giây`:''}`}</div><p>${rt(s.desc)}</p></div></div>`).join('')}`:''}
-  ${d.talents.length?`<div class="sec">Talent</div>${d.talents.map(t=>`<div class="tal"><h4>${esc(t.name)}</h4><p>${rt(t.desc)}</p></div>`).join('')}`:''}`;
+  ${d.talents.length?`<h3 class="sec">Talent</h3>${d.talents.map(t=>`<div class="tal"><h4>${esc(t.name)}</h4><p>${rt(t.desc)}</p></div>`).join('')}`:''}`;
 }
 let CUR=-1;
 function openOp(i){
   const o=OPS[i];CUR=i;
+  // mở hồ sơ là một bước trong lịch sử (nút back đóng lại); ←/→ trong hồ sơ chỉ thay bước hiện tại
+  if(!NAV){const st={tab:curTab(),op:i};if(dlg.open)history.replaceState(st,'');else history.pushState(st,'',location.pathname+location.search)}
   dlg.innerHTML=`<div class="mh" style="--rc:${RC[o.r]}">${av(o,initials(o.n.replace(/\(.*?\)/g,'')))}
-    <div><h2>${esc(o.n.replace('(General)','(OG)'))}</h2><div style="color:var(--mute);font-size:0.875rem;margin-top:4px">${badge(o.t)} &nbsp;<span style="color:${RC[o.r]}">${'★'.repeat(o.r)}</span> · ${cIco(o.c)} ${esc(CLSVI[o.c])}${o.notes[0]?.ty?' · '+esc(tv(o.notes[0].ty)):''}</div></div>
+    <div><h2>${esc(o.n.replace(/\s*\(General\)/,''))}</h2><div style="color:var(--mute);font-size:0.875rem;margin-top:4px">${badge(o.t)} &nbsp;<span style="color:${RC[o.r]}">${'★'.repeat(o.r)}</span> · ${cIco(o.c)} ${esc(CLSVI[o.c])}${o.notes[0]?.ty?' · '+esc(tv(o.notes[0].ty)):''}</div></div>
     <button class="x" aria-label="Đóng" onclick="dlg.close()">✕</button>
     ${o.r===6?`<div class="ptabs" role="tablist" aria-label="Nội dung hồ sơ">${[['kit','Chỉ số & Skill'],['arch','Hồ sơ lưu trữ']].map(([k,l])=>`<button role="tab" id="t-${k}" data-pt="${k}" aria-controls="p-${k}" aria-selected="${PTAB===k}">${l}</button>`).join('')}</div>`:''}</div><div id="tip" role="tooltip" hidden></div>
     <div class="mb" id="p-kit" role="tabpanel" aria-labelledby="t-kit">${detail(o)}</div>${o.r===6?`<div class="mb arch" id="p-arch" role="tabpanel" aria-labelledby="t-arch" hidden></div>`:''}`;
@@ -677,12 +702,12 @@ function akv(x){const rows=[];x.split('\n').forEach(l=>{const m=l.match(/^\[([^\
 const apara=x=>atext(x).replace(/^\[([^\]]+)\]\s*(.*)\n?/gm,'<span class="am"><b>$1</b>$2</span>');
 function archHTML(o,secs){
   if(!secs)return '<p class="aempty">Operator này chưa có hồ sơ lưu trữ trong dữ liệu bản Global.</p>';
-  const tx=s=>ARCH_EN||!s.v?s.x:s.v, missing=secs.some(s=>!s.v);
+  const tx=s=>ARCH_EN||!s.v?s.x:s.v, missing=secs.some(s=>!s.v), none=secs.every(s=>!s.v);
   const by=t=>secs.find(s=>s.t===t), head=s=>`<h3 class="ah"><span>${ptv(s.t)}</span><small lang="en">${esc(s.t)}</small></h3>`;
   const top=['Basic Info','Physical Exam'].map(by).filter(Boolean), prof=by('Profile'), clin=by('Clinical Analysis');
   const files=secs.filter(s=>!['Basic Info','Physical Exam','Profile','Clinical Analysis'].includes(s.t));
-  return `<div class="abar"><span>${missing?'Một số mục chưa dịch, đang hiện bản gốc tiếng Anh.':'Bản dịch tiếng Việt từ hồ sơ trong game.'}</span>
-    <button class="chip" data-arch-en aria-pressed="${ARCH_EN}">${ARCH_EN?'Xem bản dịch':'Xem bản gốc'}</button></div>
+  return `<div class="abar"><span>${none?'Hồ sơ này chưa được dịch, đang hiện bản gốc tiếng Anh.':missing?'Một số mục chưa dịch, đang hiện bản gốc tiếng Anh.':'Bản dịch tiếng Việt từ hồ sơ trong game.'}</span>
+    ${none?'':`<button class="chip" data-arch-en aria-pressed="${ARCH_EN}">${ARCH_EN?'Xem bản dịch':'Xem bản gốc'}</button>`}</div>
   <div class="atop">${top.map(s=>`<section class="aplate">${head(s)}${akv(tx(s))}</section>`).join('')}</div>
   ${prof?`<section class="aprof">${head(prof)}<p>${atext(tx(prof))}</p></section>`:''}
   ${clin?`<section class="aclin">${head(clin)}<p>${apara(tx(clin))}</p></section>`:''}
@@ -710,18 +735,22 @@ dlg.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight'].includes(e.key
   e.preventDefault();openOp(order[(k+(e.key==='ArrowRight'?1:-1)+order.length)%order.length])});
 document.addEventListener('click',e=>{const b=e.target.closest('.op,.fop');if(b)openOp(+b.dataset.i)});
 dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+// đóng hồ sơ bằng ✕, Esc hay bấm nền thì lùi một bước để nút back của trình duyệt khớp
+dlg.addEventListener('close',()=>{if(!NAV&&!SILENT&&history.state?.op!=null)history.back()});
 
 // newest additions
 const newest=[];OPS.forEach((o,i)=>o.notes.forEach(n=>newest.push({o,i,n})));
-const months=[...new Set(newest.map(x=>x.n.u))];
-$('#newGrid').innerHTML=months.map(m=>newest.filter(x=>x.n.u===m).map(({o,i,n})=>`<div class="card" style="margin:0">
-  <div class="upd" style="--rc:${RC[o.r]}"><div style="display:flex;gap:14px;align-items:center">${av(o,initials(o.n.replace(/\(.*?\)/g,'')))}<div><small style="font-weight:700">${esc(m)}</small><h4>${esc(o.n.replace('(General)','(OG)'))}</h4><small style="color:${RC[o.r]}">${'★'.repeat(o.r)}</small> <small style="color:var(--mute)">· ${esc(CLSVI[o.c])}</small></div></div>${badge(gv(n.g))}</div>
-  <div class="clamp">${esc(n.vi||n.x)}</div><button class="chip" style="margin-top:12px" onclick="openOp(${i})">Xem hồ sơ operator</button></div>`).join('')).join('');
+// mỗi đợt cập nhật một nhóm, mới nhất lên đầu ("2026/10 - Episode 17 ..." → tháng 10/2026 + tên sự kiện)
+const months=[...new Set(newest.map(x=>x.n.u))].sort((a,b)=>b.slice(0,7).localeCompare(a.slice(0,7)));
+const mHead=m=>{const [,y,mo,ev]=m.match(/^(\d{4})\/(\d{2})\s*-?\s*(.*)$/)||[,'','',m];return y?`<span>Tháng ${+mo}/${y}</span><small>${esc(ev)}</small>`:esc(m)};
+$('#newGrid').innerHTML=months.map(m=>`<section class="ngrp"><h2 class="nh">${mHead(m)}</h2><div class="grid2">`+newest.filter(x=>x.n.u===m).map(({o,i,n})=>`<div class="card" style="margin:0">
+  <div class="upd" style="--rc:${RC[o.r]}"><div style="display:flex;gap:14px;align-items:center">${av(o,initials(o.n.replace(/\(.*?\)/g,'')))}<div><h3>${esc(o.n.replace(/\s*\(General\)/,''))}</h3><small style="color:${RC[o.r]}">${'★'.repeat(o.r)}</small> <small style="color:var(--mute)">· ${esc(CLSVI[o.c])}</small></div></div>${badge(gv(n.g))}</div>
+  ${n.vi||n.x?`<div class="clamp">${esc(n.vi||n.x)}</div>`:''}<button class="chip" style="margin-top:12px" onclick="openOp(${i})">Xem hồ sơ operator</button></div>`).join('')+'</div></section>').join('');
 
 $('#timeline').innerHTML=LOG.map(([d,t])=>`<div class="ev"><time>${d}</time><p>${esc(t)}</p></div>`).join('');
-$('#general').innerHTML='<h3>Ghi chú từ nhóm tác giả</h3>'+GENERAL.map(g=>`<div class="note"><small>${esc(g.u)}</small><p>${esc(g.vi||g.x)}</p></div>`).join('');
+$('#general').innerHTML='<h2>Ghi chú từ nhóm tác giả</h2>'+GENERAL.map(g=>`<div class="note"><small>${esc(g.u)}</small><p>${esc(g.vi||g.x)}</p></div>`).join('');
 
-// tab Phe phái: operator gom theo "fac" trong details.js (mỗi operator một lần, bỏ bản IS/OG trùng), mô tả từ factions.js
+// tab Phe phái: operator gom theo "fac" trong details.js (mỗi operator một lần, bỏ bản IS trùng), mô tả từ factions.js
 {const mem={},seen=new Set();
   OPS.forEach((o,i)=>{const b=o.n.replace(/\s*\((IS|General)\)/,'');if(seen.has(b))return;seen.add(b);(AKD[o.n]||AKD[b])?.fac.forEach(f=>(mem[f]??=[]).push(i))});
   const all=[...new Set([...Object.keys(FAC),...Object.keys(mem)])].filter(f=>mem[f]);
@@ -744,9 +773,13 @@ $('#general').innerHTML='<h3>Ghi chú từ nhóm tác giả</h3>'+GENERAL.map(g=
     ${gs.map(([,t,s,fs])=>`<h2 class="fgrp">${t}<small>${s}</small></h2>${fs.map(card).join('')}`).join('')}`;}
 function showFac(f){
   const id=f.startsWith('phe-')?f:'phe-'+facId(f),el=document.getElementById(id);if(!el)return;
-  if(dlg.open)dlg.close();
-  if($('#fac').hidden)$('#nav [data-tab=fac]').click();
-  history.replaceState(null,'',location.pathname+location.search+'#'+id);
+  // đi từ hồ sơ operator sang thì nhớ lại để nút "Quay lại hồ sơ" và nút back đưa về đúng hồ sơ đó
+  const from=dlg.open?CUR:NAV?history.state?.from??null:null;
+  if(dlg.open){SILENT=true;dlg.close();SILENT=false}
+  if($('#fac').hidden)goTab('fac');
+  const st={tab:'fac',fac:id,from};
+  if(NAV)history.replaceState(st,'',location.pathname+location.search+'#'+id);else history.pushState(st,'',location.pathname+location.search+'#'+id);
+  setBack(from);
   // xa quá 2 màn hình thì nhảy thẳng, cuộn mượt qua cả chục nghìn px sẽ mất vài giây
   requestAnimationFrame(()=>{const y=el.getBoundingClientRect().top+scrollY-96;
     scrollTo({top:y,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches||Math.abs(y-scrollY)>2*innerHeight?'instant':'smooth'});
@@ -756,11 +789,32 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if
 // tabs
 $('#nav').onclick=e=>{const b=e.target.closest('button');if(!b)return;
   document.querySelectorAll('#nav button').forEach(x=>x.classList.toggle('on',x===b));
-  document.querySelectorAll('main section').forEach(s=>s.hidden=s.id!==b.dataset.tab);window.scrollTo({top:0})};
+  document.querySelectorAll('main > section').forEach(s=>s.hidden=s.id!==b.dataset.tab);setHero(b.dataset.tab);window.scrollTo({top:0});
+  if(!NAV)history.pushState({tab:b.dataset.tab},'',location.pathname+location.search);if(b.dataset.tab!=='fac')setBack(null)};
+// lịch sử trình duyệt: mỗi tab, hồ sơ operator và phe phái là một bước; NAV = đang dựng lại từ lịch sử nên không đẩy bước mới
+let NAV=false,SILENT=false;
+const curTab=()=>$('#nav button.on')?.dataset.tab||'list';
+function goTab(k){const n=NAV;NAV=true;$(`#nav [data-tab=${k}]`).click();NAV=n}
+function setBack(i){const b=$('#backbar');if(i==null||!OPS[i]){b.hidden=true;return}
+  b.hidden=false;b.querySelector('span').textContent=OPS[i].n.replace(/\s*\(General\)/,'')}
+addEventListener('popstate',e=>{const st=e.state||{tab:'list'};NAV=true;
+  if(st.tab&&st.tab!==curTab())goTab(st.tab);
+  if(st.op!=null)openOp(st.op);
+  else{if(dlg.open)dlg.close();if(st.fac)showFac(st.fac);else setBack(null)}
+  NAV=false});
+history.replaceState(history.state||{tab:'list'},'');
+// tiêu đề và chữ nền khổng lồ đổi theo tab đang mở
+const HERO={list:['TIER','Bảng xếp hạng','Operator'],new:['NEW','Operator','mới về'],fac:['FAC','Phe phái','& vùng đất'],log:['LOG','Lịch sử','thay đổi'],about:['INFO','Giới thiệu','& nguồn']};
+function setHero(k){const [g,a,b]=HERO[k]||HERO.list,h=$('.hero');h.dataset.g=g;h.querySelector('h1').innerHTML=`${a}<br><span>${b}</span>`;typeHero();document.title=k==='list'?'Arknights Tier List VN':`${a} ${b} · Arknights Tier List VN`}
 render();
 // 4: bảng lọc nổi trên mobile
 const fab=$('#fab'),ctl=$('#ctl');
-fab.onclick=()=>{const o=ctl.classList.toggle('sheet');fab.setAttribute('aria-expanded',o);setFab()};setFab();
+const scrim=$('#scrim');
+const sheet=o=>{ctl.classList.toggle('sheet',o);scrim.hidden=!o;fab.setAttribute('aria-expanded',o);setFab()};
+fab.onclick=()=>sheet(!ctl.classList.contains('sheet'));scrim.onclick=()=>sheet(false);setFab();
+addEventListener('keydown',e=>{if(e.key==='Escape'&&ctl.classList.contains('sheet'))sheet(false)});
+// thanh tab trên điện thoại: mờ dần ở mép phải khi còn tab bị khuất
+{const nv=$('#nav'),f=()=>nv.classList.toggle('more',nv.scrollLeft+nv.clientWidth<nv.scrollWidth-2);nv.addEventListener('scroll',f,{passive:true});addEventListener('resize',f);f()}
 // 12: lên đầu trang
 // giải thích class/subclass: rê chuột hoặc giữ ngón tay trên nút; subclass lấy Trait từ details.js
 const CLSDESC={Vanguards:'Tiên phong: Cost thấp, hồi DP đầu trận để deploy đội hình nhanh, thường block 1–2 địch.',Guards:'Cận chiến chủ lực: gây sát thương vật lý mạnh, block địch, nhiều nhánh đánh diện rộng hoặc tầm xa.',Defenders:'Hộ vệ: HP và DEF cao, block nhiều địch để giữ đường, một số nhánh hồi máu hoặc gây sát thương.',Snipers:'Xạ thủ tầm xa: đặt ô cao, ưu tiên bắn địch bay hoặc gây sát thương vật lý từ xa.',Casters:'Pháp sư tầm xa: đặt ô cao, gây sát thương Arts, mạnh với địch DEF cao.',Medics:'Y sĩ: hồi HP cho đồng minh, đặt ô cao.',Supporters:'Hỗ trợ: làm chậm, debuff địch, buff đồng minh hoặc triệu hồi, đặt ô cao.',Specialists:'Đặc vụ: cơ chế đặc biệt như dịch chuyển địch, deploy lại nhanh, bẫy hoặc ẩn thân.'};
@@ -781,25 +835,22 @@ const SUBDESC={};for(const d of Object.values(AKD))if(d.sub&&!SUBDESC[d.sub])SUB
   ctl.addEventListener('contextmenu',e=>{if(e.target.closest('.chip'))e.preventDefault()});
   addEventListener('scroll',hide,{passive:true,capture:true});
   addEventListener('pointerdown',e=>{if(!e.target.closest('#ctl .chip'))hide()});}
-// giải mã chữ dòng cập nhật: ký tự ngẫu nhiên chốt dần từ trái sang phải
-{const k=document.querySelector('.kicker');if(k&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
-  const t=k.textContent,G='#$%&*+<>/\\=01ABCDEFX';let f=0;k.classList.add('dec');
-  const id=setInterval(()=>{const n=f/2;k.textContent=[...t].map((c,i)=>i<n||c===' '?c:G[Math.random()*G.length|0]).join('');if(++f>t.length*2){clearInterval(id);k.textContent=t}},28)}}
-// gõ rồi xoá chữ OPERATOR ở tiêu đề, lặp lại
-{const h=document.querySelector('h1 span');if(h&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
-  const w=h.textContent;let i=w.length,dir=-1;h.closest('h1').setAttribute('aria-label','Bảng xếp hạng '+w);h.style.minWidth='.3em';
-  const step=()=>{i+=dir;h.textContent=w.slice(0,i)||'\u200b';let d=dir>0?110:55;if(i>=w.length){dir=-1;d=2600}else if(i<=0){dir=1;d=500}setTimeout(step,d)};setTimeout(step,3000)}}
+// gõ rồi xoá lặp lại; aria-label giữ nguyên cả câu cho trình đọc màn hình
+let typeT;function typeHero(){const h=$('h1 span');if(!h||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  const w=h.textContent,h1=h.closest('h1');h1.setAttribute('aria-label',h1.firstChild.textContent.trim()+' '+w);clearTimeout(typeT);let i=0;h.classList.add('typing');h.textContent='​';
+  h.style.minWidth='.3em';let dir=1;
+  const step=()=>{i+=dir;h.textContent=w.slice(0,i)||'​';let d=dir>0?110:55;if(i>=w.length){dir=-1;d=2600}else if(i<=0){dir=1;d=500}typeT=setTimeout(step,d)};typeT=setTimeout(step,350)}
+typeHero();
 const toTop=$('#totop');addEventListener('scroll',()=>{toTop.hidden=scrollY<800},{passive:true});toTop.onclick=()=>scrollTo({top:0,behavior:'smooth'});
 // nút LỌC chỉ có ở tab Xếp hạng
-$('#nav').addEventListener('click',()=>{fab.hidden=$('#list').hidden;ctl.classList.remove('sheet');fab.setAttribute('aria-expanded',false);setFab()});
+$('#nav').addEventListener('click',()=>{fab.hidden=$('#list').hidden;sheet(false)});
 // 8: đổi sáng/tối
 const isDark=()=>{const t=document.documentElement.dataset.theme;return t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches};
 const applyDk=()=>document.documentElement.classList.toggle('dk',isDark());applyDk();
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change',applyDk);
 // rời tab Phe phái thì bỏ #phe-… khỏi URL; mở trang với #phe-… thì vào thẳng phe đó
-$('#nav').addEventListener('click',e=>{const b=e.target.closest('button');if(b&&b.dataset.tab!=='fac'&&location.hash.startsWith('#phe-'))history.replaceState(null,'',location.pathname+location.search)});
 // font và logo tải xong làm các thẻ phía trên cao thêm, nên canh lại một lần khi trang load xong
-if(location.hash.startsWith('#phe-')){const h=location.hash.slice(1);showFac(h);addEventListener('load',()=>showFac(h),{once:true})}
+if(location.hash.startsWith('#phe-')){const h=location.hash.slice(1),go=()=>{NAV=true;showFac(h);NAV=false};go();addEventListener('load',go,{once:true})}
 $('#theme').onclick=()=>{const t=isDark()?'light':'dark';document.documentElement.dataset.theme=t;try{localStorage.setItem('ak-theme',t)}catch(e){}applyDk()};
 </script>
 </body>

@@ -15,7 +15,8 @@ Mục tiêu: đọc như game thủ Việt viết, nhưng mọi thuật ngữ ga
 
 | Gốc | Dịch |
 |---|---|
-| we / us (nhóm tác giả) | chúng tôi |
+| we / us (nhóm tác giả tier list) | chúng tôi |
+| we / us (Rhodes Island trong hồ sơ lưu trữ — POV Doctor) | chúng ta (giữ "chúng tôi" khi nhân vật nói trong ngoặc “ ”) |
 | you (người đọc) | bạn |
 | she / he | cô ấy / anh ấy (theo giới tính trong game); ưu tiên lặp tên operator nếu câu dài |
 | it (Mon3tr, robot, summon) | nó |
