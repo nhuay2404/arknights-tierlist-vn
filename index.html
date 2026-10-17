@@ -11,7 +11,7 @@
 :root{
   --bg:#efefea;--panel:#fff;--panel2:#f6f6f2;--line:#d6d6cf;--text:#111;--mute:#5c5c57;--bg-a:rgba(239,239,234,.92);--grid:rgba(0,0,0,.035);--stripe:#d6d6ce;--link:#0b5cad;
   --accent:#0098dc;--ink:#111;--accent2:#111;
-  --r6:#e8650a;--r5:#a88700;--r4:#9333ea;
+  --r6:#e8650a;--r5:#a88700;--r4:#9333ea;--r3:#0369a1;--r2:#4d7c0f;--r1:#57534e;
   /* nền thẻ operator theo độ hiếm: gold, vàng nhợt, tím sáng, xanh da trời, xanh chuối neon, xám */
   --b6:linear-gradient(120deg,#fff3c4,#ffd95e 55%,#ffcb3d);--b5:linear-gradient(120deg,#fffbe6,#fff3c2);--b4:linear-gradient(120deg,#f4ebff,#e2ccff);--b3:linear-gradient(120deg,#eaf7ff,#c7ebff);--b2:linear-gradient(120deg,#f6ffd1,#e3ff7a);--b1:linear-gradient(120deg,#f4f4f2,#e4e4e0);
   --mono:"Chakra Petch",ui-monospace,monospace;
@@ -224,13 +224,14 @@ dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
 .rcls .chip{min-width:44px;justify-content:center}.rcls .chip .ico{width:22px;height:22px}
 .rrow{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}.rcount{margin-left:auto;font:700 0.8125rem var(--mono);color:var(--mute);letter-spacing:.06em}
 .rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
-.rc{all:unset;box-sizing:border-box;position:relative;display:block;aspect-ratio:180/250;overflow:hidden;background:linear-gradient(180deg,#d9d9d9,#8c8c8c 70%,var(--rr));border:1px solid #0006;cursor:default;isolation:isolate}
+.rc{all:unset;box-sizing:border-box;position:relative;display:block;aspect-ratio:180/250;overflow:hidden;background:var(--rbg);border:1px solid #0006;cursor:default;isolation:isolate}
 .rc.go{cursor:pointer}.rc.go:hover,.rc.go:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 .rc img{position:absolute;inset:0;width:100%;height:auto;min-height:100%;object-fit:cover;object-position:50% 0;z-index:-1}
 .rc .nm{position:absolute;left:0;right:0;top:0;padding:4px 7px 14px;color:#fff;font:700 0.9375rem/1.2 "Be Vietnam Pro",system-ui,sans-serif;background:linear-gradient(#000b,#0000);text-shadow:0 1px 2px #000;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .rc .bt{position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--rr)}
-.rc .st{position:absolute;left:6px;bottom:9px;color:var(--rr);font-size:0.75rem;letter-spacing:-1px;text-shadow:0 0 2px #000,0 0 2px #000}
-.rc .ci{position:absolute;right:4px;bottom:9px;width:30px;height:30px;display:grid;place-items:center;background:#000a}.rc .ci .ico{width:24px;height:24px;filter:invert(1)}
+.rc .st{position:absolute;left:4px;bottom:9px;padding:0 3px;background:#fffd;color:var(--rr);font-size:0.75rem;letter-spacing:-1px}
+.rc .ci{position:absolute;right:4px;bottom:9px;width:30px;height:30px;display:grid;place-items:center;background:#000a;color:#fff}.rc .ci .ico{width:24px;height:24px}
+.dk .rc .st{background:#000c}
 .rc .cn{position:absolute;right:0;top:0;padding:2px 6px;background:#ff7a1a;color:#111;font:800 0.6875rem var(--mono);letter-spacing:.06em}
 .rc.cn-only .nm{padding-right:34px}
 @media (max-width:760px){.rgrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.rc .nm{font-size:0.75rem;padding:3px 5px 10px}.rc .ci{width:24px;height:24px}.rc .ci .ico{width:19px;height:19px}.rc .st{font-size:0.625rem;bottom:8px;left:4px}
@@ -255,7 +256,7 @@ dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
 .ski .prof{all:unset;cursor:pointer;text-align:center;min-height:44px;line-height:44px;background:var(--accent);color:#111;font:700 0.8125rem var(--mono);letter-spacing:.1em;text-transform:uppercase}
 .ski .prof:focus-visible,.skt button:focus-visible,.skh .x:focus-visible{outline:2px solid #fff;outline-offset:2px}
 .skt{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
-.skt button{all:unset;box-sizing:border-box;cursor:pointer;position:relative;aspect-ratio:180/250;overflow:hidden;background:linear-gradient(#cfcfcf,#777);border:2px solid transparent}
+.skt button{all:unset;box-sizing:border-box;cursor:pointer;position:relative;aspect-ratio:180/250;overflow:hidden;background:var(--rbg);border:2px solid transparent}
 .skt button.on{border-color:var(--accent)}.skt img{width:100%;display:block}
 .skt span{position:absolute;left:0;right:0;bottom:0;padding:10px 4px 3px;font:600 0.6875rem/1.2 "Be Vietnam Pro",system-ui,sans-serif;color:#fff;background:linear-gradient(#0000,#000c);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media (max-width:760px){.skb{grid-template-columns:1fr;grid-template-rows:56dvh auto;height:auto}.ski{border-left:0;border-top:1px solid #fff2}
@@ -390,8 +391,8 @@ dialog[open]::backdrop{animation:fade .3s ease both}
   .mh h2{font-size:1.0625rem;line-height:1.25}.mh h2+div{font-size:.75rem!important;margin-top:2px!important}
   .mh .badge{font-size:.6875rem;padding:1px 5px}}
 /* dark mode: theo hệ thống, hoặc chọn tay qua nút ◐ ở rail (lưu localStorage) */
-@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1013;--panel:#17181c;--panel2:#1f2126;--line:#2e3138;--text:#ecebe4;--mute:#a6a59d;--ink:#ecebe4;--bg-a:rgba(15,16,19,.92);--grid:rgba(255,255,255,.04);--stripe:#262830;--link:#7cc4ff;--r6:#ff8a3d;--r5:#f0c419;--r4:#c084fc;--b6:linear-gradient(120deg,#f2cf63,#d9a521 55%,#e8bb3c);--b5:linear-gradient(120deg,#efe6bf,#ddd09a);--b4:linear-gradient(120deg,#dcc6ff,#b994f5);--b3:linear-gradient(120deg,#c4e8ff,#8fcff5);--b2:linear-gradient(120deg,#ecff9a,#c3ec2a);--b1:linear-gradient(120deg,#d9d9d5,#b9b9b4)}}
-:root[data-theme=dark]{--bg:#0f1013;--panel:#17181c;--panel2:#1f2126;--line:#2e3138;--text:#ecebe4;--mute:#a6a59d;--ink:#ecebe4;--bg-a:rgba(15,16,19,.92);--grid:rgba(255,255,255,.04);--stripe:#262830;--link:#7cc4ff;--r6:#ff8a3d;--r5:#f0c419;--r4:#c084fc;--b6:linear-gradient(120deg,#f2cf63,#d9a521 55%,#e8bb3c);--b5:linear-gradient(120deg,#efe6bf,#ddd09a);--b4:linear-gradient(120deg,#dcc6ff,#b994f5);--b3:linear-gradient(120deg,#c4e8ff,#8fcff5);--b2:linear-gradient(120deg,#ecff9a,#c3ec2a);--b1:linear-gradient(120deg,#d9d9d5,#b9b9b4)}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1013;--panel:#17181c;--panel2:#1f2126;--line:#2e3138;--text:#ecebe4;--mute:#a6a59d;--ink:#ecebe4;--bg-a:rgba(15,16,19,.92);--grid:rgba(255,255,255,.04);--stripe:#262830;--link:#7cc4ff;--r6:#ff8a3d;--r5:#f0c419;--r4:#c084fc;--r3:#5ab8f5;--r2:#b5e23a;--r1:#b9b9b4;--b6:linear-gradient(120deg,#f2cf63,#d9a521 55%,#e8bb3c);--b5:linear-gradient(120deg,#efe6bf,#ddd09a);--b4:linear-gradient(120deg,#dcc6ff,#b994f5);--b3:linear-gradient(120deg,#c4e8ff,#8fcff5);--b2:linear-gradient(120deg,#ecff9a,#c3ec2a);--b1:linear-gradient(120deg,#d9d9d5,#b9b9b4)}}
+:root[data-theme=dark]{--bg:#0f1013;--panel:#17181c;--panel2:#1f2126;--line:#2e3138;--text:#ecebe4;--mute:#a6a59d;--ink:#ecebe4;--bg-a:rgba(15,16,19,.92);--grid:rgba(255,255,255,.04);--stripe:#262830;--link:#7cc4ff;--r6:#ff8a3d;--r5:#f0c419;--r4:#c084fc;--r3:#5ab8f5;--r2:#b5e23a;--r1:#b9b9b4;--b6:linear-gradient(120deg,#f2cf63,#d9a521 55%,#e8bb3c);--b5:linear-gradient(120deg,#efe6bf,#ddd09a);--b4:linear-gradient(120deg,#dcc6ff,#b994f5);--b3:linear-gradient(120deg,#c4e8ff,#8fcff5);--b2:linear-gradient(120deg,#ecff9a,#c3ec2a);--b1:linear-gradient(120deg,#d9d9d5,#b9b9b4)}
 .dk :is(.tag:not(.gen),.matrix th,.ev time,.mh .x,.logo i,.trait,#totop){background:#000;color:var(--accent)}
 .dk .trait{color:#ecebe4}
 .dk .ptabs button[aria-selected=true],.dk .afile[open] .ai{background:#000;color:var(--accent);border-color:#000}
@@ -882,7 +883,8 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if
 
 // tab Operator: toàn bộ operator (roster.js, gồm cả bản chưa ra Global), ảnh nửa người portrait/<id>_1.png
 {const R=window.AKR||[],PORT='https://raw.githubusercontent.com/yuanyan3060/ArknightsGameResource/main/portrait/';
-  const RR={6:'#ff7a1a',5:'#ffcf3a',4:'#c8a6ff',3:'#4fb3ff',2:'#d8ff5a',1:'#e8e8e8'};
+  // cùng bảng màu độ hiếm với thẻ tier list: nền --b1…--b6, sao và viền --r1…--r6
+  const RR=Object.fromEntries([1,2,3,4,5,6].map(r=>[r,`var(--r${r})`]));
   const base=n=>n.replace(/\s*\((IS|General)\)/,'');
   const idx=Object.fromEntries(OPS.map((o,i)=>[base(o.n),i]).reverse());
   const st={q:'',r:0,c:'',srv:'all',sort:'new'};
@@ -896,7 +898,7 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if
   $('#rq').oninput=e=>{st.q=norm(e.target.value);draw()};
   const card=([id,n,r,c,sub,gl])=>{const i=idx[n];
     const k=(window.AKS?.[id]||[]).length;
-    return `<button class="rc go${gl?'':' cn-only'}" style="--rr:${RR[r]}" data-id="${id}" title="${esc(n)} · ${r}★ · ${esc(CLSVI[c])}${gl?'':' · chưa ra Global'}${k>2?` · ${k} trang phục`:''}">
+    return `<button class="rc go${gl?'':' cn-only'}" style="--rr:${RR[r]};--rbg:var(--b${r})" data-id="${id}" title="${esc(n)} · ${r}★ · ${esc(CLSVI[c])}${gl?'':' · chưa ra Global'}${k>2?` · ${k} trang phục`:''}">
       <img src="${PORT}${id}_1.png" alt="" loading="lazy" decoding="async" onerror="this.src='${IMG}${id}.png'">
       <span class="nm">${esc(n)}</span>${gl?'':'<span class="cn">CN</span>'}<span class="st">${'★'.repeat(r)}</span><span class="ci">${ico(`ui/subclass/sub_${sub}_icon.png`)}</span><span class="bt"></span></button>`};
   // "Mới nhất": bản chưa ra Global trước, rồi theo đợt operator được thêm vào tier list (ghi chú cũ nhất), không có thì xếp sau theo độ hiếm
@@ -918,7 +920,7 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if
     skv.querySelectorAll('.skt button').forEach((b,k)=>{b.classList.toggle('on',k===j);b.setAttribute('aria-pressed',k===j)})}
   function showSkins(o){cur=o;const [id,n,r,c,,gl]=o,i=idx[n],l=SK[id]||[[id+'_1','Mặc định','','',gl]];SK[id]=l;
     skv.innerHTML=`<div class="skh" style="--rr:${RR[r]}"><h2 id="skvn">${esc(n)}</h2><span class="rs">${'★'.repeat(r)}</span>${gl?'':'<span class="cn">CN</span>'}<button class="x" aria-label="Đóng">✕</button></div>
-      <div class="skb"><div class="ska"></div><div class="ski"><div><p class="sn"></p><p class="sg"></p></div><p class="sa"></p>
+      <div class="skb" style="--rbg:var(--b${r})"><div class="ska"></div><div class="ski"><div><p class="sn"></p><p class="sg"></p></div><p class="sa"></p>
       ${i!=null?`<button class="prof" data-i="${i}">Xem hồ sơ operator</button>`:''}
       <p class="sg">${l.length} trang phục</p><div class="skt">${l.map(([pid,sn],k)=>`<button data-k="${k}" title="${esc(sn)}"><img src="${PORT}${u(pid)}.png" alt="" loading="lazy"><span>${esc(sn)}</span></button>`).join('')}</div></div></div>`;
     pick(Math.max(0,l.findIndex(s=>s[1]==='Elite 2')));
