@@ -302,8 +302,9 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 @media (max-width:760px){
   .prof{grid-template-columns:1fr}.art{height:340px;order:-1}.stg{grid-template-columns:repeat(2,1fr)}
   .stg div:nth-child(4n){border-right:1px solid var(--line)}.stg div:nth-child(2n){border-right:0}
-  body{padding-left:0;padding-top:56px}
-  header{inset:0 0 auto 0;width:auto;height:56px;border-right:0;border-bottom:1px solid var(--line)}
+  body{padding-left:0}
+  /* sticky thay vì fixed: trình duyệt nhúng (Messenger, Facebook) hay đẩy lệch phần tử fixed khi thanh địa chỉ co giãn lúc cuộn */
+  header{position:sticky;inset:0 auto auto 0;width:auto;height:56px;border-right:0;border-bottom:1px solid var(--line)}
   header:after{display:none}
   .bar{flex-direction:row;gap:12px;padding:0 12px}
   .logo span{display:none}
