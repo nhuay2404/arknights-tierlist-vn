@@ -1,6 +1,7 @@
 # Changelog
 
 ## 2026-10-17
+- "Mới nhất": 80 operator có sẵn ngày mở server Global (16/01/2020) xuống dưới cùng danh sách — 6★ Exusiai…SilverAsh, 5★ Ptilopsis…Sora, 4★ Haze…Cuora, toàn bộ 3★ và 2★, Lancet-2, Castle-3. Ngay trên nhóm này là các operator ra sau đó (Skadi, Manticore, Ch'en, Schwarz…).
 - "Mới nhất": robot 1★ xếp theo đúng ngày ra Global — Lancet-2, Castle-3 (16/01/2020), THRM-EX (02/01/2021), 'Justice Knight' (28/04/2022), Terra Research Commission (07/09/2023), Friston-3 (05/12/2023), U-Official (01/04/2024), PhonoR-0 (31/10/2024), CONFESS-47 (14/10/2025), GALLUS² (14/10/2026). Sửa thêm: operator ra năm 2020 không còn bị dồn chung một ngày (mốc đầu là ngày mở server Global 16/01/2020); Vigil, Nine-Colored Deer, Luo Xiaohei, Conviction không còn rơi xuống cuối danh sách.
 - QC lại "Mới nhất" theo timeline Global thật thay vì ngày CN: mốc lấy từ data EN (ngày banner limited, ngày ra module mặc định, operator record) + thứ tự Token tiềm năng trong từng độ hiếm; mốc nào muộn hơn operator ra sau (module/record bổ sung về sau) thì bỏ và nội suy. Kết quả: Kal'tsit Esperanta về đúng đợt 14/10/2026 cùng Closure, Viy, Crackborne (không còn nằm cạnh Zima the Raging Tide, ra 16/09); Mon3tr, Necrass… không còn bị dồn chung đợt Exusiai the New Covenant.
 - Sửa "Mới nhất" ở tab Operator có lúc hiện theo độ hiếm + A–Z: trình duyệt/GitHub Pages dùng `roster.js` cũ (chưa có cột thứ tự ra mắt) với `index.html` mới. Các file data giờ kèm `?v=` để luôn tải bản mới cùng trang.

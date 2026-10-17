@@ -44,6 +44,10 @@ for p in E('gacha_table')['gachaPoolClient']:
     if k: anc[k] = min(p['openTime'], anc.get(k, p['openTime']))
 eitems = E('item_table')['items']
 LAUNCH = 1579176000  # 16/01/2020, ngày mở server Global
+# số operator đầu tiên (theo Token) mỗi độ hiếm có sẵn khi mở server Global = roster lúc CN mở server, trước banner Skadi:
+# 6★ Exusiai…SilverAsh, 5★ Ptilopsis…Sora, 4★ Haze…Cuora, toàn bộ 3★ và 2★, 1★ Lancet-2 + Castle-3
+LAUNCH_N = {6: 10, 5: 26, 4: 20, 3: 99, 2: 99, 1: 2}
+items_r = lambda k: int(str(en[k]['rarity']).replace('TIER_', '')) + (0 if str(en[k]['rarity']).startswith('TIER_') else 1)
 seqs, T = {}, {}
 for k in en:
     if 'p_' + k in eitems: seqs.setdefault(eitems['p_' + k]['sortId'] // 100000, []).append((eitems['p_' + k]['sortId'], k))
@@ -53,7 +57,9 @@ for l in seqs.values():
         if t[i] is None: continue
         if m is not None and t[i] > m: t[i] = None  # mốc muộn hơn operator ra sau -> module/record bổ sung sau, bỏ, nội suy
         else: m = t[i]
-    if t[0] is None: t[0] = LAUNCH  # operator đầu mỗi độ hiếm: mốc ngày mở server Global, tránh dồn hết về mốc đầu tiên tìm thấy
+    r = items_r(ks[0])
+    for i in range(min(LAUNCH_N.get(r, 0), len(t))): t[i] = LAUNCH  # có sẵn ngày mở server
+    if t[0] is None: t[0] = LAUNCH
     idx = [i for i, x in enumerate(t) if x is not None]
     for i, k in enumerate(ks):
         a = max((j for j in idx if j <= i), default=None); b = min((j for j in idx if j >= i), default=None)
@@ -77,7 +83,9 @@ ROBOT = {'char_285_medic2': '2020-01-16', 'char_286_cast3': '2020-01-16', 'char_
 for k, d in ROBOT.items():
     T[k] = (datetime.datetime.fromisoformat(d + 'T12:00:00+00:00').timestamp(), T.get(k, (0, 0))[1])
 # cùng ngày ra: 6★ trước, rồi theo thứ tự Token
-glo = sorted((o for o in out if o[5]), key=lambda o: (T.get(o[0], (0, 0))[0], o[2], T.get(o[0], (0, 0))[1]))
+# operator có sẵn khi mở server Global xuống dưới cùng
+launch = lambda o: T.get(o[0], (0, 0))[0] <= LAUNCH
+glo = sorted((o for o in out if o[5]), key=lambda o: (not launch(o), T.get(o[0], (0, 0))[0], o[2], T.get(o[0], (0, 0))[1]))
 for n, o in enumerate(glo + sorted(cn_only, key=lambda o: (o[6], o[2])), 1):
     o.append(n)
 open('roster.js', 'w', encoding='utf-8').write('window.AKR=' + json.dumps(out, ensure_ascii=False, separators=(',', ':')) + ';\n')
