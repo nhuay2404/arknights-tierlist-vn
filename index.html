@@ -218,7 +218,16 @@ dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
 .fc.hit{animation:fhit 1.6s ease-out}
 @keyframes fhit{0%,30%{box-shadow:0 0 0 4px var(--accent),0 0 0 6px var(--ink)}100%{box-shadow:0 0 0 0 transparent}}
 @media (prefers-reduced-motion:reduce){.fc.hit{animation:none;outline:3px solid var(--ink)}}
-@media (max-width:760px){.fc.sub{margin-left:12px}.fch .fac{width:44px;height:44px}.fch{flex-wrap:wrap}.fch .fn{margin-left:0;flex-basis:100%}.fops{grid-template-columns:1fr 1fr}}
+.fmore{display:none;width:100%;margin-top:8px;min-height:44px;border:1px dashed var(--line);background:none;color:var(--ink);font:700 0.8125rem var(--mono);letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.fmore:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+@media (max-width:760px){.fc.sub{margin-left:12px}.fch .fac{width:44px;height:44px}.fch{flex-wrap:wrap}.fch .fn{margin-left:0;flex-basis:100%}
+  /* điện thoại: lưới 2 cột không tràn ngang, mục lục mỗi nhóm là một hàng vuốt ngang, phe đông thì thu gọn danh sách operator */
+  .fops{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.fop{gap:8px;padding-right:6px}.fop .av{width:34px;height:34px}
+  .fidx .chips{display:grid;grid-template-rows:repeat(2,auto);grid-auto-flow:column;justify-content:start;overflow-x:auto;scrollbar-width:none;padding-bottom:4px;mask-image:linear-gradient(90deg,#000 85%,transparent)}.fidx .chips::-webkit-scrollbar{display:none}.fidx .chips a{white-space:nowrap}
+  .fidx .fil{margin:14px 0 8px}
+  .fgrp{flex-direction:column;align-items:flex-start;gap:4px;font-size:1.25rem;margin:28px 0 12px}
+  .fc:not(.open) .fop:nth-child(n+7){display:none}
+  .fmore{display:block}}
 .art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 15%;animation:fade .8s ease both}
 /* mở hồ sơ: màn sọc vàng–đen quét qua khung art rồi lộ ra ảnh */
 .art:after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:repeating-linear-gradient(-45deg,var(--accent) 0 7px,#111 7px 14px);box-shadow:inset -3px 0 0 var(--accent);animation:artscan .85s .1s cubic-bezier(.7,0,.2,1) both}
@@ -766,7 +775,7 @@ $('#general').innerHTML='<h2>Ghi chú từ nhóm tác giả</h2>'+GENERAL.map(g=
     return `<article class="card fc${sub?' sub':''}" id="phe-${facId(f)}" tabindex="-1"><div class="fch">${fIco(f)}<div><span class="fk">${esc(m.k||'Phe phái')}</span><h3>${esc(f)}</h3></div><span class="fn">${ops.length} operator</span></div>
       ${m.d?`<p>${esc(m.d)}</p>`:''}
       ${m.p||kids.length?`<div class="frel">${m.p&&mem[m.p]?`<span>Thuộc ${facA(m.p)}</span>`:''}${kids.length?`<span>Nhánh: ${kids.map(k=>facA(k)).join(', ')}</span>`:''}</div>`:''}
-      <div class="fops">${ops.map(fop).join('')}</div></article>`};
+      <div class="fops">${ops.map(fop).join('')}</div>${ops.length>6?`<button class="fmore" aria-expanded="false">Xem tất cả ${ops.length} operator</button>`:''}</article>`};
   const gs=GR.map(([g,t,s])=>[g,t,s,order(g)]).filter(x=>x[3].length);
   $('#facBody').innerHTML=`<div class="card fidx"><h2 class="fh">Phe phái</h2><p>Quốc gia, tổ chức và nhóm mà các operator thuộc về. Chọn một phe để xem giới thiệu và danh sách operator; nhấn vào operator để mở hồ sơ. Trong hồ sơ operator, tên phe phái cũng dẫn về đây.</p>
     ${gs.map(([,t,,fs])=>`<p class="fil">${t}</p><div class="chips">${fs.map(f=>facA(f,`${fIco(f)}${esc(f)} <small>${n(f)}</small>`).replace('<a ','<a class="chip" ')).join('')}</div>`).join('')}</div>
@@ -784,6 +793,8 @@ function showFac(f){
   requestAnimationFrame(()=>{const y=el.getBoundingClientRect().top+scrollY-96;
     scrollTo({top:y,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches||Math.abs(y-scrollY)>2*innerHeight?'instant':'smooth'});
     el.classList.remove('hit');void el.offsetWidth;el.classList.add('hit');el.focus({preventScroll:true})})}
+document.addEventListener('click',e=>{const m=e.target.closest('.fmore');if(!m)return;const c=m.closest('.fc'),o=c.classList.toggle('open');
+  m.setAttribute('aria-expanded',o);m.textContent=o?'Thu gọn':`Xem tất cả ${c.querySelectorAll('.fop').length} operator`;if(!o)c.scrollIntoView({block:'nearest'})});
 document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if(!a)return;e.preventDefault();showFac(a.dataset.fac)});
 
 // tabs
