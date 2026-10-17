@@ -2,7 +2,7 @@
 Dùng: python _build/build_mats.py <data CN> <data EN>
   CN: yuanyan3060/ArknightsGameResource/gamedata/excel/  (character_table, skill_table, item_table)
   EN: ArknightsAssets/ArknightsGamedata/en/gamedata/excel/
-Kết quả: window.AKM={c:{charId:[e1,e2,lv[6],[[tên skill,m1,m2,m3],…]]}, i:{itemId:[tên,iconId,rarity]}}
+Kết quả: window.AKM={c:{charId:[e1,e2,lv[6],[[tên skill,m1,m2,m3],…],[HP,ATK,DEF,RES,Cost,Block,Redeploy,ASPD]]}, i:{itemId:[tên,iconId,rarity]}}
 mỗi mốc là [[itemId,số lượng],…]; LMD của Elite tính theo độ hiếm (gamedata_const.evolveGoldCost)."""
 import json, sys, os
 L = lambda d, f: json.load(open(os.path.join(d, f + '.json'), encoding='utf-8'))
@@ -31,8 +31,8 @@ for k, v in cc.items():
         src = es if k in ec and sid in es else cs
         nm = src[sid]['levels'][0]['name'] if sid in src else sid
         sk.append([nm] + [cost(m['levelUpCost']) for m in s.get('levelUpCostCond') or []])
-    if any(el) or lv or sk:
-        out[k] = [el[0], el[1], lv, sk]
+    a = ph[-1]['attributesKeyFrames'][-1]['data']  # chỉ số max level, bậc Elite cao nhất
+    out[k] = [el[0], el[1], lv, sk, [a['maxHp'], a['atk'], a['def'], a['magicResistance'], a['cost'], a['blockCnt'], a['respawnTime'], a['baseAttackTime']]]
 items = {i: [(ei.get(i) or ci[i])['name'], ci[i]['iconId'], int(str(ci[i]['rarity']).replace('TIER_', '')) - (1 if str(ci[i]['rarity']).startswith('TIER_') else 0)] for i in sorted(used) if i in ci}
 open('mats.js', 'w', encoding='utf-8').write('window.AKM=' + json.dumps({'c': out, 'i': items}, ensure_ascii=False, separators=(',', ':')) + ';\n')
 print(f'mats.js: {len(out)} operator, {len(items)} nguyên liệu')
