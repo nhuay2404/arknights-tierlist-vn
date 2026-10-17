@@ -270,6 +270,14 @@ dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
   .fgrp{flex-direction:column;align-items:flex-start;gap:4px;font-size:1.25rem;margin:28px 0 12px}
   .fc:not(.open) .fop:nth-child(n+7){display:none}
   .fmore{display:block}}
+.art .sl{position:absolute;inset:0;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}.art .sl::-webkit-scrollbar{display:none}
+.art .sl:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
+.art figure{position:relative;flex:0 0 100%;margin:0;scroll-snap-align:start;scroll-snap-stop:always}
+.art .an{position:absolute;top:50%;z-index:3;width:40px;height:56px;margin-top:-28px;border:0;background:#000a;color:#fff;font-size:1.75rem;line-height:1;cursor:pointer}.art .an[hidden]{display:none}
+.art .prev{left:0}.art .next{right:0}.art .an:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.art .acap{position:absolute;left:0;right:0;bottom:0;z-index:3;display:flex;gap:10px;align-items:center;padding:18px 12px 8px;background:linear-gradient(#0000,#000b);color:#fff;font:600 0.8125rem "Be Vietnam Pro",system-ui,sans-serif;pointer-events:none}
+.art .acap span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.art .acap b{margin-left:auto;font:700 0.75rem var(--mono);letter-spacing:.06em}
+@media (hover:none){.art .an{display:none}}
 .art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 15%;animation:fade .8s ease both}
 /* mở hồ sơ: màn sọc vàng–đen quét qua khung art rồi lộ ra ảnh */
 .art:after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:repeating-linear-gradient(-45deg,var(--accent) 0 7px,#111 7px 14px);box-shadow:inset -3px 0 0 var(--accent);animation:artscan .85s .1s cubic-bezier(.7,0,.2,1) both}
@@ -719,6 +727,18 @@ const art2=id=>ART2[id]||`${RES}skin/${id}_2b.png`;
 function artErr(img,id){const n=+(img.dataset.retry||0);img.dataset.retry=n+1;
   if(n<2)setTimeout(()=>{img.src=`${art2(id)}?r=${n+1}`},600*(n+1));
   else{img.onerror=null;img.src=`${RES}skin/${id}_1b.png`}}
+// khung art trong hồ sơ: vuốt ngang qua mọi trang phục (skins.js), Elite 2 đứng đầu như trước
+function artSlides(d,o){const all=(window.AKS||{})[d.id]||[],e2=all.findIndex(s=>s[0]===d.id+'_2'),
+    l=e2>=0?[all[e2],...all.filter((_,k)=>k!==e2)]:[[d.id+'_2','Elite 2'],...all];
+  const src=pid=>pid===d.id+'_2'?art2(d.id):`${RES}skin/${encodeURIComponent(pid)}b.png`;
+  return `<div class="art" data-n="${esc(o.n)}"><div class="sl" tabindex="0" aria-label="Trang phục của ${esc(o.n)}, vuốt ngang để đổi">${l.map(([pid,sn],k)=>`<figure data-sn="${esc(sn)}"><img src="${src(pid)}" alt="${esc(o.n)} — ${esc(sn)}" loading="lazy"${k===0?` onerror="artErr(this,'${d.id}')"`:''}></figure>`).join('')}</div>
+    ${l.length>1?`<button class="an prev" aria-label="Trang phục trước" hidden>‹</button><button class="an next" aria-label="Trang phục sau">›</button><div class="acap"><span>${esc(l[0][1])}</span><b>1/${l.length}</b></div>`:''}</div>`}
+function artSync(sl){const a=sl.closest('.art'),f=sl.children,k=Math.round(sl.scrollLeft/sl.clientWidth),cap=a.querySelector('.acap');if(!cap)return;
+  cap.querySelector('span').textContent=f[k]?.dataset.sn||'';cap.querySelector('b').textContent=`${k+1}/${f.length}`;
+  a.querySelector('.prev').hidden=k===0;a.querySelector('.next').hidden=k>=f.length-1}
+document.addEventListener('scroll',e=>{if(e.target.classList?.contains('sl'))artSync(e.target)},{capture:true,passive:true});
+document.addEventListener('click',e=>{const b=e.target.closest('.art .an');if(!b)return;const sl=b.parentElement.querySelector('.sl');sl.scrollBy({left:(b.classList.contains('next')?1:-1)*sl.clientWidth,behavior:'smooth'})});
+document.addEventListener('keydown',e=>{if(!e.target.classList?.contains('sl')||!/Arrow(Left|Right)/.test(e.key))return;e.preventDefault();e.target.scrollBy({left:(e.key==='ArrowRight'?1:-1)*e.target.clientWidth,behavior:'smooth'})});
 function rangeGrid(g){
   if(!g||!g.length)return'';
   const all=[...g,[0,0]],rs=all.map(x=>x[0]),cs=all.map(x=>x[1]),r0=Math.min(...rs),c0=Math.min(...cs),R=Math.max(...rs)-r0+1,C=Math.max(...cs)-c0+1;
@@ -737,7 +757,7 @@ function detail(o){
     <div class="stg">${[['HP',st.HP],['ATK',st.ATK],['DEF',st.DEF],['RES',st.RES],['COST',st.Cost],['BLOCK',st.Block],['REDEPLOY',st.Redeploy+'s'],['ATK INTERVAL',st.ASPD+'s']].map(([k,v])=>`<div><small>${k}</small><b>${v}</b></div>`).join('')}</div>
     ${rangeGrid(d.range)}
     ${d.usage?`<p class="quote">${esc(d.usage)}<br>— ${esc(d.quote)}</p>`:''}
-  </div><div class="art" data-n="${esc(o.n)}"><img src="${art2(d.id)}" alt="Artwork ${esc(o.n)}" loading="lazy" onerror="artErr(this,'${d.id}')"></div></div>
+  </div>${artSlides(d,o)}</div>
   ${d.skills.length?`<h3 class="sec">Skill (M3)</h3>${d.skills.map((s,k)=>`<div class="sk"><img src="${RES}skill/skill_icon_${s.id}.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><div><h4>S${k+1} · ${esc(s.name)}</h4>
     <div class="spi">${s.auto==='PASSIVE'?ACT.PASSIVE:`${SPT[s.spType]||''} · ${ACT[s.auto]||''} · SP ${s.init}/${s.sp}${s.dur>0?` · ${s.dur} giây`:''}`}</div><p>${rt(s.desc)}</p></div></div>`).join('')}`:''}
   ${d.talents.length?`<h3 class="sec">Talent</h3>${d.talents.map(t=>`<div class="tal"><h4>${esc(t.name)}</h4><p>${rt(t.desc)}</p></div>`).join('')}`:''}`;
