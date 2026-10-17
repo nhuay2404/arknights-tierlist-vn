@@ -1,6 +1,9 @@
 # Changelog
 
 ## 2026-10-17
+- Tab Operator: 17 operator chưa ra Global xếp theo đúng thứ tự banner CN (sớm nhất trước = sắp về Global trước), nhãn hiện số đợt banner (CN 1 … CN 5): Monster Hunter → Aphrissa/Mechanist → Angelina the Mellow Wish/Thumpy → Persona 3 → Clementia. Dữ liệu ở `_build/build_roster.py` (danh sách BANNERS).
+- Lưới tab Operator cố định 5 operator mỗi hàng trên máy tính (điện thoại giữ 3).
+- Nguyên liệu nâng cấp cho mọi operator (kể cả bản CN): Elite 1, Elite 2 (kèm LMD), skill Lv2–7 và M1/M2/M3 của từng skill, có icon và số lượng (rê chuột xem tên). Hiện trong trình xem trang phục và cuối hồ sơ operator. Dữ liệu tạo bằng `_build/build_mats.py` → `mats.js`.
 - Tab Operator dùng chung bảng màu độ hiếm với tier list: nền thẻ vàng (6★), kem (5★), tím nhạt (4★), xanh nhạt (3★), xanh chanh (2★), xám (1★); sao và dải đáy cùng màu sao của tier list; thêm màu sao cho 1–3★ ở cả chế độ sáng và tối. Dải chân dung trong trình xem skin cũng dùng nền theo độ hiếm. Sửa icon class bị mất ở chế độ tối.
 - Đóng hồ sơ operator hoặc trình xem skin (nút ✕, Esc hay nút back) thì trang trở về đúng vị trí đang cuộn lúc mở, kể cả khi trình duyệt điện thoại nhảy trang nền về đầu lúc dialog mở. Bấm phe phái trong hồ sơ vẫn nhảy tới phe đó như cũ.
 - Hồ sơ operator: khung ảnh vuốt ngang được qua mọi trang phục (Elite 2 đứng đầu, rồi Mặc định và các skin), có tên skin và số thứ tự (vd. 4/5) ở chân ảnh; máy tính có nút ‹ › và dùng được phím mũi tên khi khung ảnh đang được chọn.

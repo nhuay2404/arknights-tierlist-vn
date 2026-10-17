@@ -223,7 +223,7 @@ dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
 .rctl .chips{gap:6px}.rctl .chip{min-height:40px}
 .rcls .chip{min-width:44px;justify-content:center}.rcls .chip .ico{width:22px;height:22px}
 .rrow{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}.rcount{margin-left:auto;font:700 0.8125rem var(--mono);color:var(--mute);letter-spacing:.06em}
-.rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.rgrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
 .rc{all:unset;box-sizing:border-box;position:relative;display:block;aspect-ratio:180/250;overflow:hidden;background:var(--rbg);border:1px solid #0006;cursor:default;isolation:isolate}
 .rc.go{cursor:pointer}.rc.go:hover,.rc.go:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 .rc img{position:absolute;inset:0;width:100%;height:auto;min-height:100%;object-fit:cover;object-position:50% 0;z-index:-1}
@@ -233,9 +233,20 @@ dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
 .rc .ci{position:absolute;right:4px;bottom:9px;width:30px;height:30px;display:grid;place-items:center;background:#000a;color:#fff}.rc .ci .ico{width:24px;height:24px}
 .dk .rc .st{background:#000c}
 .rc .cn{position:absolute;right:0;top:0;padding:2px 6px;background:#ff7a1a;color:#111;font:800 0.6875rem var(--mono);letter-spacing:.06em}
-.rc.cn-only .nm{padding-right:34px}
+.rc.cn-only .nm{padding-right:46px}
 @media (max-width:760px){.rgrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.rc .nm{font-size:0.75rem;padding:3px 5px 10px}.rc .ci{width:24px;height:24px}.rc .ci .ico{width:19px;height:19px}.rc .st{font-size:0.625rem;bottom:8px;left:4px}
   .rctl .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.rctl .chips::-webkit-scrollbar{display:none}.rctl .chip{flex:none}.rcount{margin-left:0}}
+/* nguyên liệu nâng cấp: Elite, skill Lv2–7, mastery từng skill */
+.mats{display:grid;gap:10px}.mats h4{margin:0 0 4px;font:700 0.8125rem var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.mrow{display:grid;grid-template-columns:56px 1fr;gap:4px 10px;align-items:center;padding:4px 0;border-top:1px solid var(--line)}
+.mrow>b{font:700 0.75rem var(--mono);color:var(--mute)}
+.mi{display:flex;flex-wrap:wrap;gap:4px}
+.mt{position:relative;display:inline-grid;place-items:center;width:40px;height:40px;background:var(--mr,#8884);border-radius:4px}
+.mt img{width:34px;height:34px;object-fit:contain}
+.mt span{position:absolute;right:-2px;bottom:-3px;padding:0 3px;background:#000c;color:#fff;font:700 0.625rem/1.3 var(--mono)}
+.mt[data-r="0"]{--mr:#9e9e9e55}.mt[data-r="1"]{--mr:#d8dd5a55}.mt[data-r="2"]{--mr:#00b2f655}.mt[data-r="3"]{--mr:#d8b4ff66}.mt[data-r="4"]{--mr:#ffd80066}
+#skv .mats{--line:#fff2;--mute:#aaa}
+.mnone{color:var(--mute);font-size:0.875rem;margin:0}
 /* trình xem skin: ảnh toàn thân bên trái, thông tin + dải chân dung các trang phục bên phải */
 #skv{background:#101114;color:#eee}
 .skh{display:flex;align-items:center;gap:12px;height:60px;padding:0 16px;border-bottom:1px solid #fff2}
@@ -531,6 +542,7 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 <script src="factions.js"></script>
 <script src="roster.js"></script>
 <script src="skins.js"></script>
+<script src="mats.js"></script>
 <script>
 const {ops:OPS, general:GENERAL} = window.AK;
 const TIERS=['EX','S+','S','S-','A+','A','A-','B+','B','B-','C+','C','C-','D','F'];
@@ -747,6 +759,15 @@ function rangeGrid(g){
   for(let r=r0;r<r0+R;r++)for(let c=c0;c<c0+C;c++)h+=`<i class="${r===0&&c===0?'me':on.has(r+','+c)?'on':''}"></i>`;
   return `<div><div class="rng" style="grid-template-columns:repeat(${C},16px)" role="img" aria-label="Range gồm ${g.length} ô">${h}</div></div>`;
 }
+// nguyên liệu nâng cấp (mats.js): Elite 1/2, skill Lv2–7 dùng chung, M1–M3 của từng skill
+const ITEM='https://raw.githubusercontent.com/yuanyan3060/ArknightsGameResource/main/item/';
+const fmtN=n=>n>=10000?(n/1000)+'K':n;
+function matHTML(id){const M=window.AKM,m=M?.c[id];if(!m)return '<p class="mnone">Operator này không có nguyên liệu nâng cấp.</p>';
+  const it=l=>`<div class="mi">${l.map(([k,n])=>{const [nm,ic,r]=M.i[k]||[k,'',0];return `<span class="mt" data-r="${r}" title="${esc(nm)} ×${n.toLocaleString('vi')}"><img src="${ITEM}${ic}.png" alt="${esc(nm)}" loading="lazy"><span>${fmtN(n)}</span></span>`}).join('')}</div>`;
+  const row=(l,c)=>c&&c.length?`<div class="mrow"><b>${l}</b>${it(c)}</div>`:'';
+  const [e1,e2,lv,sk]=m,blk=(t,h)=>h?`<div><h4>${t}</h4>${h}</div>`:'';
+  return `<div class="mats">${blk('Thăng Elite',row('Elite 1',e1)+row('Elite 2',e2))}${blk('Skill (dùng chung)',lv.map((c,k)=>row('Lv'+(k+2),c)).join(''))}
+    ${sk.map(([n,...ms],k)=>blk(`S${k+1} · ${esc(n)}`,ms.map((c,j)=>row('M'+(j+1),c)).join(''))).join('')}</div>`}
 function detail(o){
   const d=AKD[o.n];if(!d)return'';
   const st=d.stats;
@@ -761,7 +782,8 @@ function detail(o){
   </div>${artSlides(d,o)}</div>
   ${d.skills.length?`<h3 class="sec">Skill (M3)</h3>${d.skills.map((s,k)=>`<div class="sk"><img src="${RES}skill/skill_icon_${s.id}.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><div><h4>S${k+1} · ${esc(s.name)}</h4>
     <div class="spi">${s.auto==='PASSIVE'?ACT.PASSIVE:`${SPT[s.spType]||''} · ${ACT[s.auto]||''} · SP ${s.init}/${s.sp}${s.dur>0?` · ${s.dur} giây`:''}`}</div><p>${rt(s.desc)}</p></div></div>`).join('')}`:''}
-  ${d.talents.length?`<h3 class="sec">Talent</h3>${d.talents.map(t=>`<div class="tal"><h4>${esc(t.name)}</h4><p>${rt(t.desc)}</p></div>`).join('')}`:''}`;
+  ${d.talents.length?`<h3 class="sec">Talent</h3>${d.talents.map(t=>`<div class="tal"><h4>${esc(t.name)}</h4><p>${rt(t.desc)}</p></div>`).join('')}`:''}
+  <h3 class="sec">Nguyên liệu nâng cấp</h3>${matHTML(d.id)}`;
 }
 let CUR=-1;
 // đóng hồ sơ / trình xem skin thì trả trang nền về đúng vị trí cuộn lúc mở (mở dialog có thể làm trang xê dịch, nhất là trên điện thoại)
@@ -896,16 +918,16 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if
   mk($('#rsrv'),[['all','Tất cả server'],['gl','Đã ra Global'],['cn','Chưa ra Global']],k=>k===st.srv,k=>st.srv=k);
   mk($('#rsort'),[['new','Mới nhất'],['rar','Độ hiếm'],['az','Tên A–Z']],k=>k===st.sort,k=>st.sort=k);
   $('#rq').oninput=e=>{st.q=norm(e.target.value);draw()};
-  const card=([id,n,r,c,sub,gl])=>{const i=idx[n];
+  const card=([id,n,r,c,sub,gl,bn])=>{const i=idx[n];
     const k=(window.AKS?.[id]||[]).length;
-    return `<button class="rc go${gl?'':' cn-only'}" style="--rr:${RR[r]};--rbg:var(--b${r})" data-id="${id}" title="${esc(n)} · ${r}★ · ${esc(CLSVI[c])}${gl?'':' · chưa ra Global'}${k>2?` · ${k} trang phục`:''}">
+    return `<button class="rc go${gl?'':' cn-only'}" style="--rr:${RR[r]};--rbg:var(--b${r})" data-id="${id}" title="${esc(n)} · ${r}★ · ${esc(CLSVI[c])}${gl?'':` · chưa ra Global · banner CN thứ ${bn}`}${k>2?` · ${k} trang phục`:''}">
       <img src="${PORT}${id}_1.png" alt="" loading="lazy" decoding="async" onerror="this.src='${IMG}${id}.png'">
-      <span class="nm">${esc(n)}</span>${gl?'':'<span class="cn">CN</span>'}<span class="st">${'★'.repeat(r)}</span><span class="ci">${ico(`ui/subclass/sub_${sub}_icon.png`)}</span><span class="bt"></span></button>`};
-  // "Mới nhất": bản chưa ra Global trước, rồi theo đợt operator được thêm vào tier list (ghi chú cũ nhất), không có thì xếp sau theo độ hiếm
+      <span class="nm">${esc(n)}</span>${gl?'':`<span class="cn">CN ${bn}</span>`}<span class="st">${'★'.repeat(r)}</span><span class="ci">${ico(`ui/subclass/sub_${sub}_icon.png`)}</span><span class="bt"></span></button>`};
+  // "Mới nhất": bản chưa ra Global trước theo thứ tự banner CN (banner sớm nhất = sắp về Global trước), rồi theo đợt operator được thêm vào tier list (ghi chú cũ nhất), không có thì xếp sau theo độ hiếm
   const rel=Object.fromEntries(OPS.map(o=>[base(o.n),(o.notes||[]).map(x=>x.u||'').filter(Boolean).sort()[0]||'']));
   const rank=o=>rel[o[1]]||'';
   function draw(){let l=R.filter(([,n,r,c,,gl])=>(!st.r||r===st.r)&&(!st.c||c===st.c)&&(st.srv==='all'||(st.srv==='gl')===!!gl)&&(!st.q||norm(n).includes(st.q)));
-    l=l.slice().sort(st.sort==='az'?(a,b)=>a[1].localeCompare(b[1]):st.sort==='rar'?(a,b)=>b[2]-a[2]||a[1].localeCompare(b[1]):(a,b)=>a[5]-b[5]||rank(b).localeCompare(rank(a))||b[2]-a[2]||a[1].localeCompare(b[1]));
+    l=l.slice().sort(st.sort==='az'?(a,b)=>a[1].localeCompare(b[1]):st.sort==='rar'?(a,b)=>b[2]-a[2]||a[1].localeCompare(b[1]):(a,b)=>a[5]-b[5]||(a[6]||0)-(b[6]||0)||rank(b).localeCompare(rank(a))||b[2]-a[2]||a[1].localeCompare(b[1]));
     $('#rcount').textContent=`${l.length} / ${R.length} operator`;
     $('#rgrid').innerHTML=l.length?l.map(card).join(''):'<div class="empty">Không tìm thấy operator nào.</div>'}
   // bấm thẻ: mở trình xem skin (mọi operator, kể cả bản chưa ra Global); có trong tier list thì có nút sang hồ sơ
@@ -922,6 +944,7 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if
     skv.innerHTML=`<div class="skh" style="--rr:${RR[r]}"><h2 id="skvn">${esc(n)}</h2><span class="rs">${'★'.repeat(r)}</span>${gl?'':'<span class="cn">CN</span>'}<button class="x" aria-label="Đóng">✕</button></div>
       <div class="skb" style="--rbg:var(--b${r})"><div class="ska"></div><div class="ski"><div><p class="sn"></p><p class="sg"></p></div><p class="sa"></p>
       ${i!=null?`<button class="prof" data-i="${i}">Xem hồ sơ operator</button>`:''}
+      <div><p class="sn" style="font-size:1rem">Nguyên liệu nâng cấp</p>${matHTML(id)}</div>
       <p class="sg">${l.length} trang phục</p><div class="skt">${l.map(([pid,sn],k)=>`<button data-k="${k}" title="${esc(sn)}"><img src="${PORT}${u(pid)}.png" alt="" loading="lazy"><span>${esc(sn)}</span></button>`).join('')}</div></div></div>`;
     pick(Math.max(0,l.findIndex(s=>s[1]==='Elite 2')));
     if(!skv.open){keepY();skv.showModal();history.pushState({tab:'ops',skin:id},'')}}
