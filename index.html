@@ -763,6 +763,11 @@ function detail(o){
   ${d.talents.length?`<h3 class="sec">Talent</h3>${d.talents.map(t=>`<div class="tal"><h4>${esc(t.name)}</h4><p>${rt(t.desc)}</p></div>`).join('')}`:''}`;
 }
 let CUR=-1;
+// đóng hồ sơ / trình xem skin thì trả trang nền về đúng vị trí cuộn lúc mở (mở dialog có thể làm trang xê dịch, nhất là trên điện thoại)
+let KEEPY=null,KEEPT='';
+function keepY(){if(KEEPY==null){KEEPY=scrollY;KEEPT=curTab()}}
+function backY(){setTimeout(()=>{if(KEEPY==null||dlg.open||$('#skv')?.open)return;const y=KEEPY;KEEPY=null;
+  if(curTab()===KEEPT)scrollTo({top:y,behavior:'instant'})})}
 function openOp(i){
   const o=OPS[i];CUR=i;
   // mở hồ sơ là một bước trong lịch sử (nút back đóng lại); ←/→ trong hồ sơ chỉ thay bước hiện tại
@@ -772,7 +777,7 @@ function openOp(i){
     <button class="x" aria-label="Đóng" onclick="dlg.close()">✕</button>
     ${o.r===6?`<div class="ptabs" role="tablist" aria-label="Nội dung hồ sơ">${[['kit','Chỉ số & Skill'],['arch','Hồ sơ lưu trữ']].map(([k,l])=>`<button role="tab" id="t-${k}" data-pt="${k}" aria-controls="p-${k}" aria-selected="${PTAB===k}">${l}</button>`).join('')}</div>`:''}</div><div id="tip" role="tooltip" hidden></div>
     <div class="mb" id="p-kit" role="tabpanel" aria-labelledby="t-kit">${detail(o)}</div>${o.r===6?`<div class="mb arch" id="p-arch" role="tabpanel" aria-labelledby="t-arch" hidden></div>`:''}`;
-  if(!dlg.open)dlg.showModal();
+  if(!dlg.open){keepY();dlg.showModal()}
   showPT(o.r===6?PTAB:'kit');
   dlg.scrollTop=0;
 }
@@ -823,7 +828,7 @@ dlg.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight'].includes(e.key
 document.addEventListener('click',e=>{const b=e.target.closest('.op,.fop');if(b)openOp(+b.dataset.i)});
 dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
 // đóng hồ sơ bằng ✕, Esc hay bấm nền thì lùi một bước để nút back của trình duyệt khớp
-dlg.addEventListener('close',()=>{if(!NAV&&!SILENT&&history.state?.op!=null)history.back()});
+dlg.addEventListener('close',()=>{backY();if(!NAV&&!SILENT&&history.state?.op!=null)history.back()});
 
 // newest additions
 const newest=[];OPS.forEach((o,i)=>o.notes.forEach(n=>newest.push({o,i,n})));
@@ -862,7 +867,7 @@ function showFac(f){
   const id=f.startsWith('phe-')?f:'phe-'+facId(f),el=document.getElementById(id);if(!el)return;
   // đi từ hồ sơ operator sang thì nhớ lại để nút "Quay lại hồ sơ" và nút back đưa về đúng hồ sơ đó
   const from=dlg.open?CUR:NAV?history.state?.from??null:null;
-  if(dlg.open){SILENT=true;dlg.close();SILENT=false}
+  if(dlg.open){KEEPY=null;SILENT=true;dlg.close();SILENT=false}
   if($('#fac').hidden)goTab('fac');
   const st={tab:'fac',fac:id,from};
   if(NAV)history.replaceState(st,'',location.pathname+location.search+'#'+id);else history.pushState(st,'',location.pathname+location.search+'#'+id);
@@ -917,10 +922,11 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if
       ${i!=null?`<button class="prof" data-i="${i}">Xem hồ sơ operator</button>`:''}
       <p class="sg">${l.length} trang phục</p><div class="skt">${l.map(([pid,sn],k)=>`<button data-k="${k}" title="${esc(sn)}"><img src="${PORT}${u(pid)}.png" alt="" loading="lazy"><span>${esc(sn)}</span></button>`).join('')}</div></div></div>`;
     pick(Math.max(0,l.findIndex(s=>s[1]==='Elite 2')));
-    if(!skv.open){skv.showModal();history.pushState({tab:'ops',skin:id},'')}}
+    if(!skv.open){keepY();skv.showModal();history.pushState({tab:'ops',skin:id},'')}}
   skv.addEventListener('click',e=>{const t=e.target.closest('.skt button');if(t)return pick(+t.dataset.k);
     if(e.target.closest('.x'))return history.state?.skin?history.back():skv.close();
     const p=e.target.closest('.prof');if(p){const i=+p.dataset.i;skv.close();history.replaceState({tab:'ops'},'');openOp(i)}});
+  skv.addEventListener('close',backY);
   skv.addEventListener('cancel',e=>{if(history.state?.skin){e.preventDefault();history.back()}});
   addEventListener('popstate',()=>{if(skv.open&&!history.state?.skin)skv.close()});
   $('#rgrid').onclick=e=>{const b=e.target.closest('.rc');if(b)showSkins(R.find(o=>o[0]===b.dataset.id))};

@@ -1,6 +1,7 @@
 # Changelog
 
 ## 2026-10-17
+- Đóng hồ sơ operator hoặc trình xem skin (nút ✕, Esc hay nút back) thì trang trở về đúng vị trí đang cuộn lúc mở, kể cả khi trình duyệt điện thoại nhảy trang nền về đầu lúc dialog mở. Bấm phe phái trong hồ sơ vẫn nhảy tới phe đó như cũ.
 - Hồ sơ operator: khung ảnh vuốt ngang được qua mọi trang phục (Elite 2 đứng đầu, rồi Mặc định và các skin), có tên skin và số thứ tự (vd. 4/5) ở chân ảnh; máy tính có nút ‹ › và dùng được phím mũi tên khi khung ảnh đang được chọn.
 - Tab Operator: bấm thẻ bất kỳ (kể cả operator chưa ra Global) mở trình xem trang phục với ảnh minh hoạ toàn thân, tên skin, bộ sưu tập, hoạ sĩ và dải chân dung toàn bộ 1.359 trang phục (Mặc định, Elite 2 và mọi skin). Có nút mở ảnh gốc và nút sang hồ sơ operator; nút back trên điện thoại đóng trình xem. Dữ liệu tạo bằng `_build/build_skins.py` → `skins.js`.
 - Tab mới "Operator" làm trang đầu khi vào site: lưới thẻ chân dung nửa người (từ đầu tới thân) của toàn bộ 432 operator, gồm 17 operator chưa ra Global (gắn nhãn CN). Lọc theo độ hiếm 1–6★, class, server (đã ra / chưa ra Global), tìm theo tên; sắp xếp Mới nhất / Độ hiếm / Tên A–Z. Bấm thẻ operator có trong tier list để mở hồ sơ. Link chia sẻ có bộ lọc tier list (?q=, ?view=…) vẫn mở thẳng tab Xếp hạng. Dữ liệu tạo bằng `_build/build_roster.py` → `roster.js`.
