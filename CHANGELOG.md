@@ -1,6 +1,7 @@
 # Changelog
 
 ## 2026-10-17
+- Dải chân dung trang phục trong hồ sơ cũng hiện trọn ảnh (không cắt), đồng bộ với khung ảnh lớn: mọi trang phục (Mặc định, Elite 2, mọi skin) đều vừa khung.
 - Ảnh trang phục trong hồ sơ thu nhỏ vừa khung, thấy trọn cả nhân vật (trước đây bị phóng to, cắt mất hai bên). Thứ tự trang phục: Mặc định → Elite 2 → các skin; trình xem trang phục cũng mở ở Mặc định.
 - Trang phục gộp vào hồ sơ operator: bấm thẻ ở tab Operator mở thẳng hồ sơ (không qua trình xem riêng nữa). Dưới khung ảnh có dải chân dung mọi trang phục (bấm để đổi), kèm bộ sưu tập và hoạ sĩ của trang phục đang xem. Operator chưa có hồ sơ (bản CN) vẫn mở trình xem trang phục kèm nguyên liệu nâng cấp.
 - Tab Operator: 17 operator chưa ra Global xếp theo đúng thứ tự banner CN (sớm nhất trước = sắp về Global trước), nhãn hiện số đợt banner (CN 1 … CN 5): Monster Hunter → Aphrissa/Mechanist → Angelina the Mellow Wish/Thumpy → Persona 3 → Clementia. Dữ liệu ở `_build/build_roster.py` (danh sách BANNERS).
