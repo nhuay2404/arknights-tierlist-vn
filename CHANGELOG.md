@@ -1,6 +1,7 @@
 # Changelog
 
 ## 2026-10-18
+- Tab mới "Gacha": giả lập banner Global đang mở **Sealed With Time** (Limited Headhunting, 14/10 – 28/10/2026). Rate-up 6★ Kal'tsit Esperanta (limited) + Closure chiếm 70% tỉ lệ 6★; rate-up 5★ Crackborne 50%; Wiš'adel, Exusiai the New Covenant, Lappland the Decadenza ×5 tỉ lệ trong phần 6★ còn lại. Luật: 6★ 2% / 5★ 8% / 4★ 50% / 3★ 40%, bảo hiểm +2% mỗi lượt từ lượt 51 không ra 6★, 10 lượt đầu chắc chắn 5★+, mốc 300 lượt nhận Kal'tsit Esperanta. Quay 1 / 10 lượt, thẻ kết quả bấm mở hồ sơ, thống kê Orundum, tỉ lệ thực tế, thanh bảo hiểm, mốc 300, lịch sử 6★; lưu trên trình duyệt. Pool (42 6★, 45 5★, 49 4★, 17 3★ Global) bỏ operator Kernel 5–6★, collab và limited khác; tạo bằng `_build/build_gacha.py` → `gacha.js`.
 - Hồ sơ operator đồng nhất: bấm ở tab Operator giờ mở đúng kiểu hồ sơ của tier list (Archetype, Vị trí, Phe phái, Tag, Trait, chỉ số, range, Skill M3, Talent, trang phục, nguyên liệu) cho cả 432 operator. Sửa 5 operator có trong tier list nhưng bị mở bản rút gọn do tên lệch (Kal'tsit Esperanta, Jessica the Liberated, Reed the Flame Shadow, Fang the Fire-Sharpened…) — giờ ghép theo mã operator. 50 operator ngoài tier list (3★ trở xuống, robot, bản CN) lấy dữ liệu từ `_build/build_extra.py` → `details_x.js`; text chưa dịch giữ bản Global (tiếng Anh) hoặc CN (tiếng Trung) và có ghi chú. Bỏ hồ sơ rút gọn cũ.
 
 ## 2026-10-17

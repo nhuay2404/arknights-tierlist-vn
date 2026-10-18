@@ -243,6 +243,37 @@ dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
 .rc.cn-only .nm{padding-right:46px}
 @media (max-width:760px){.rgrid{grid-template-columns:repeat(5,minmax(0,1fr));gap:3px}.rc .nm{font-size:0.5625rem;padding:2px 3px 8px;white-space:normal;line-height:1.15;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}.rc .ci{width:16px;height:16px;right:2px;bottom:7px}.rc .ci .ico{width:13px;height:13px}.rc .st{font-size:0.4375rem;bottom:7px;left:2px;padding:0 1px}.rc .bt{height:3px}.rc .cn{font-size:0.5rem;padding:1px 3px}.rc.cn-only .nm{padding-top:12px;padding-right:3px}
   .rctl .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.rctl .chips::-webkit-scrollbar{display:none}.rctl .chip{flex:none}.rcount{margin-left:0}}
+/* tab Gacha: banner, nút quay, kết quả 10 thẻ, thống kê */
+.gban{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);min-height:340px;background:#101114;color:#eee;overflow:hidden;border:1px solid var(--line);margin-bottom:14px}
+.gban .gart{position:relative;min-height:340px}.gban .gart img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.gban .ginfo{padding:24px;display:flex;flex-direction:column;gap:10px;z-index:1}
+.gban h2{margin:0;font:800 1.75rem/1.15 "Be Vietnam Pro",system-ui,sans-serif}.gban .gtype{font:700 0.75rem var(--mono);letter-spacing:.14em;color:#ffb347;text-transform:uppercase}
+.gban .gtime{color:#aaa;font-size:0.8125rem}
+.gup{display:flex;flex-wrap:wrap;gap:8px}.gup .gop{display:flex;align-items:center;gap:8px;padding:4px 10px 4px 4px;background:#ffffff12;border:1px solid #ffffff22;font-size:0.8125rem;cursor:pointer;color:#eee}
+.gup .gop:hover,.gup .gop:focus-visible{outline:2px solid var(--accent)}
+.gup img{width:36px;height:36px;object-fit:cover;background:var(--b6)}.gup small{display:block;color:#aaa;font:600 0.6875rem var(--mono)}
+.gbar{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch;margin-bottom:14px}
+.gbtn{all:unset;box-sizing:border-box;cursor:pointer;min-height:56px;padding:8px 22px;display:grid;align-content:center;background:var(--panel);border:2px solid var(--ink);font:800 1rem "Be Vietnam Pro",system-ui,sans-serif;text-align:center}
+.gbtn small{font:600 0.6875rem var(--mono);color:var(--mute);letter-spacing:.06em}
+.gbtn.x10{background:var(--accent);border-color:var(--accent);color:#fff}.gbtn.x10 small{color:#e6f6ff}
+.gbtn:hover{transform:translateY(-1px)}.gbtn:focus-visible,.greset:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.greset{all:unset;cursor:pointer;margin-left:auto;align-self:center;padding:8px 12px;font:600 0.8125rem var(--mono);color:var(--mute);text-decoration:underline}
+.gres{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:6px;min-height:40px;margin-bottom:14px}
+.gres .gc{all:unset;box-sizing:border-box;cursor:pointer;position:relative;aspect-ratio:180/360;overflow:hidden;background:var(--rbg);border:1px solid #0006;animation:gin .45s var(--ease) both;animation-delay:calc(var(--i)*70ms)}
+.gres .gc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0}
+.gres .gc .nm{position:absolute;left:0;right:0;bottom:0;padding:16px 5px 5px;color:#fff;font:700 0.6875rem/1.2 "Be Vietnam Pro",system-ui,sans-serif;background:linear-gradient(#0000,#000c);text-shadow:0 1px 2px #000}
+.gres .gc .st{display:block;color:var(--rr);font-size:0.5625rem;letter-spacing:-1px}
+.gres .gc.r6{box-shadow:0 0 0 2px #ff8a3d,0 0 22px #ffb34799}.gres .gc.r5{box-shadow:0 0 0 2px #f0c419}
+.gres .gc .tg{position:absolute;top:0;left:0;padding:1px 5px;background:#ff7a1a;color:#111;font:800 0.5625rem var(--mono)}
+@keyframes gin{from{opacity:0;transform:translateY(14px) scale(.96)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.gres .gc{animation:none}}
+.gstat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:14px}
+.gstat>div{background:var(--panel);border:1px solid var(--line);padding:12px 14px}.gstat small{display:block;font:600 0.6875rem var(--mono);letter-spacing:.1em;color:var(--mute);text-transform:uppercase}.gstat b{font:800 1.375rem var(--mono)}
+.gstat .gbarp{grid-column:1/-1}.gstat .gp{height:8px;background:var(--panel2);margin-top:6px}.gstat .gp i{display:block;height:100%;background:var(--accent)}
+.gstat .gh{grid-column:1/-1}.gh ol{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.gh li{display:flex;align-items:center;gap:6px;padding:3px 8px 3px 3px;background:var(--panel2);font-size:0.8125rem}.gh li img{width:28px;height:28px;object-fit:cover}.gh li em{font:600 0.6875rem var(--mono);color:var(--mute);font-style:normal}
+.grule summary{cursor:pointer;font:700 0.875rem var(--mono);letter-spacing:.06em;text-transform:uppercase}.grule ul{margin:12px 0 0;padding-left:18px;line-height:1.6}
+@media (max-width:760px){.gban{grid-template-columns:1fr}.gban .gart{min-height:260px}.gres{grid-template-columns:repeat(5,minmax(0,1fr))}.gstat{grid-template-columns:repeat(2,minmax(0,1fr))}.gbtn{flex:1}.greset{margin-left:0}}
 /* nguyên liệu nâng cấp: Elite, skill Lv2–7, mastery từng skill */
 .mats{display:grid;gap:10px}.mats h4{margin:0 0 4px;font:700 0.8125rem var(--mono);letter-spacing:.06em;text-transform:uppercase}
 .mrow{display:grid;grid-template-columns:56px 1fr;gap:4px 10px;align-items:center;padding:4px 0;border-top:1px solid var(--line)}
@@ -432,6 +463,7 @@ dialog[open]::backdrop{animation:fade .3s ease both}
   <nav id="nav">
     <button data-tab="ops" class="on">Operator</button>
     <button data-tab="list">Xếp hạng</button>
+    <button data-tab="gacha">Gacha</button>
     <button data-tab="new">Mới</button>
     <button data-tab="fac">Phe phái</button>
     <button data-tab="log">Lịch sử</button>
@@ -470,6 +502,14 @@ dialog[open]::backdrop{animation:fade .3s ease both}
     </div>
     <div class="tjump" id="tjump" role="navigation" aria-label="Nhảy tới tier" hidden></div>
     <div id="board"></div>
+  </section>
+
+  <section id="gacha" hidden>
+    <div class="gban" id="gban"></div>
+    <div class="gbar"><button class="gbtn" data-n="1">Quay 1 lần<small>600 Orundum</small></button><button class="gbtn x10" data-n="10">Quay 10 lần<small>6.000 Orundum</small></button><button class="greset" id="greset">Làm lại từ đầu</button></div>
+    <div class="gres" id="gres" aria-live="polite"></div>
+    <div class="gstat" id="gstat"></div>
+    <details class="card grule"><summary>Luật gacha mô phỏng</summary><div id="grule"></div></details>
   </section>
 
   <section id="new" hidden><div id="newGrid"></div></section>
@@ -517,14 +557,15 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 <dialog id="dlg"></dialog>
 
 <!-- ?v=: đổi mỗi lần cập nhật data để trình duyệt/CDN không dùng file .js cũ lệch với index.html -->
-<script src="data.js?v=20261018a"></script>
-<script src="details.js?v=20261018a"></script>
-<script src="glossary.js?v=20261018a"></script>
-<script src="factions.js?v=20261018a"></script>
-<script src="roster.js?v=20261018a"></script>
-<script src="skins.js?v=20261018a"></script>
-<script src="mats.js?v=20261018a"></script>
-<script src="details_x.js?v=20261018a"></script>
+<script src="data.js?v=20261018b"></script>
+<script src="details.js?v=20261018b"></script>
+<script src="glossary.js?v=20261018b"></script>
+<script src="factions.js?v=20261018b"></script>
+<script src="roster.js?v=20261018b"></script>
+<script src="skins.js?v=20261018b"></script>
+<script src="mats.js?v=20261018b"></script>
+<script src="details_x.js?v=20261018b"></script>
+<script src="gacha.js?v=20261018b"></script>
 <script>
 const {ops:OPS, general:GENERAL} = window.AK;
 const TIERS=['EX','S+','S','S-','A+','A','A-','B+','B','B-','C+','C','C-','D','F'];
@@ -927,6 +968,57 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if
   // bấm thẻ: mở hồ sơ operator như ở tier list; bản chưa có trong tier list (CN) mở hồ sơ rút gọn cùng khung
   $('#rgrid').onclick=e=>{const b=e.target.closest('.rc');if(!b)return;const id=b.dataset.id,i=byId[id];if(i!=null)openOp(i);else openCN(id)};
   draw()}
+// tab Gacha: giả lập banner Global đang mở (gacha.js, _build/build_gacha.py) theo luật headhunting của Arknights
+{const G=window.AKG;if(G){const B=G.banner,P=G.pool,AR=Object.fromEntries((window.AKR||[]).map(o=>[o[0],o]));
+  const PORT='https://raw.githubusercontent.com/yuanyan3060/ArknightsGameResource/main/portrait/';
+  const nm=id=>AR[id]?.[1]||id,rr=id=>AR[id]?.[2]||3,KEY='ak-gacha-'+B.id;
+  const fresh=()=>({n:0,since:0,first:false,spark:false,cnt:{6:0,5:0,4:0,3:0},h6:[],last:[]});
+  let S=fresh();try{S={...S,...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch(e){}
+  const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+  const pick=a=>a[Math.floor(Math.random()*a.length)];
+  // 6★ ngoài rate-up: operator limited cũ được ×5 tỉ lệ
+  const off6=P[6].filter(k=>!B.up6.includes(k)).concat(B.w6),w6=off6.map(k=>B.w6.includes(k)?5:1),W6=w6.reduce((a,b)=>a+b,0);
+  const wpick=()=>{let x=Math.random()*W6;for(let i=0;i<off6.length;i++){x-=w6[i];if(x<0)return off6[i]}return off6.at(-1)};
+  const p6=()=>0.02+Math.max(0,S.since-49)*0.02;  // 50 lượt liên tiếp không có 6★ thì từ lượt 51 mỗi lượt +2%
+  function one(){const q=p6(),x=Math.random();let r;
+    // 10 lượt đầu chắc chắn có ít nhất một 5★ trở lên
+    if(!S.first&&S.n%10===9&&S.n<B.first10)r=Math.random()<q/(q+0.08)?6:5;
+    else{const k=(1-q)/0.98;r=x<q?6:x<q+0.08*k?5:x<q+0.58*k?4:3}
+    S.n++;S.cnt[r]++;if(r>=5)S.first=true;
+    let id;
+    if(r===6){S.since=0;id=Math.random()<B.up6rate?pick(B.up6):wpick();S.h6.push([id,S.n])}
+    else{S.since++;id=r===5?(Math.random()<B.up5rate?pick(B.up5):pick(P[5].filter(k=>!B.up5.includes(k)))):pick(P[r])}
+    return [id,r]}
+  function roll(n){const out=[];for(let i=0;i<n;i++)out.push(one());
+    // 300 lượt trong banner: nhận thẳng operator limited (không tính vào 6★ và bảo hiểm)
+    if(!S.spark&&S.n>=B.spark){S.spark=true;out.push([B.limited,6,'spark'])}
+    S.last=out;save();draw(true)}
+  const gc=([id,r,t],i)=>`<button class="gc r${r}" style="--i:${i};--rbg:var(--b${r});--rr:var(--r${r})" data-id="${id}" title="${esc(nm(id))} · ${r}★"><img src="${PORT}${id}_1.png" alt="" loading="lazy">${t?'<span class="tg">300 lượt</span>':B.up6.includes(id)||B.up5.includes(id)?'<span class="tg">UP</span>':''}<span class="nm"><span class="st">${'★'.repeat(r)}</span>${esc(nm(id))}</span></button>`;
+  const pct=x=>(Math.round(x*1000)/10).toLocaleString('vi')+'%';
+  function draw(anim){
+    $('#gres').innerHTML=S.last.length?S.last.map(gc).join(''):'<p class="mnone" style="grid-column:1/-1">Bấm "Quay" để bắt đầu. Kết quả và bảo hiểm được lưu trên trình duyệt này.</p>';
+    if(!anim)$('#gres').querySelectorAll('.gc').forEach(c=>c.style.animation='none');
+    const N=S.n||1;
+    $('#gstat').innerHTML=`<div><small>Đã quay</small><b>${S.n}</b></div><div><small>Orundum đã dùng</small><b>${(S.n*600).toLocaleString('vi')}</b></div>
+      <div><small>6★ · 5★</small><b>${S.cnt[6]} · ${S.cnt[5]}</b></div><div><small>Tỉ lệ 6★ thực tế</small><b>${S.n?pct(S.cnt[6]/N):'—'}</b></div>
+      <div class="gbarp"><small>Bảo hiểm: ${S.since} lượt chưa có 6★ · tỉ lệ 6★ lượt tới ${pct(p6())}</small><div class="gp"><i style="width:${Math.min(100,S.since/99*100)}%"></i></div>
+        <small style="margin-top:8px">${S.spark?`Đã nhận ${esc(nm(B.limited))} từ mốc ${B.spark} lượt`:`Mốc ${B.spark} lượt nhận ${esc(nm(B.limited))}: ${S.n}/${B.spark}`}</small><div class="gp"><i style="width:${Math.min(100,S.n/B.spark*100)}%;background:#ff8a3d"></i></div></div>
+      <div class="gh"><small>Lịch sử 6★</small>${S.h6.length?`<ol>${S.h6.slice().reverse().map(([id,n])=>`<li><img src="${PORT}${id}_1.png" alt="">${esc(nm(id))} <em>lượt ${n}</em></li>`).join('')}</ol>`:'<p class="mnone" style="margin-top:6px">Chưa có.</p>'}</div>`}
+  const t=d=>new Date(d*1000).toLocaleDateString('vi',{day:'2-digit',month:'2-digit',year:'numeric'});
+  $('#gban').innerHTML=`<div class="gart"><img src="${art2(B.limited)}" alt="${esc(nm(B.limited))}"></div><div class="ginfo"><span class="gtype">Limited Headhunting · Global</span><h2>${esc(B.name)}</h2>
+    <span class="gtime">${t(B.open)} – ${t(B.end)}</span>
+    <div><small style="font:600 0.75rem var(--mono);color:#aaa">6★ RATE-UP · ${pct(B.up6rate)} tỉ lệ 6★</small><div class="gup">${B.up6.map(id=>`<button class="gop" data-id="${id}"><img src="${IMG}${id}.png" alt="">${esc(nm(id))}<small>${id===B.limited?'LIMITED':''}</small></button>`).join('')}</div></div>
+    <div><small style="font:600 0.75rem var(--mono);color:#aaa">5★ RATE-UP · ${pct(B.up5rate)} tỉ lệ 5★</small><div class="gup">${B.up5.map(id=>`<button class="gop" data-id="${id}"><img src="${IMG}${id}.png" alt="">${esc(nm(id))}</button>`).join('')}</div></div>
+    <div><small style="font:600 0.75rem var(--mono);color:#aaa">LIMITED CŨ · ×5 TỈ LỆ TRONG PHẦN 6★ CÒN LẠI</small><div class="gup">${B.w6.map(id=>`<button class="gop" data-id="${id}"><img src="${IMG}${id}.png" alt="">${esc(nm(id))}</button>`).join('')}</div></div></div>`;
+  $('#grule').innerHTML=`<ul><li>Tỉ lệ gốc: 6★ 2% · 5★ 8% · 4★ 50% · 3★ 40%.</li><li>Bảo hiểm: 50 lượt liên tiếp không ra 6★ thì từ lượt 51 tỉ lệ 6★ tăng thêm 2% mỗi lượt (lượt 99 chắc chắn 6★); ra 6★ thì đếm lại từ 0.</li>
+    <li>10 lượt đầu trong banner chắc chắn có ít nhất một operator 5★ trở lên.</li><li>Khi ra 6★: ${pct(B.up6rate)} là ${B.up6.map(nm).map(esc).join(' hoặc ')} (chia đều); phần còn lại là 6★ khác trong pool, ${B.w6.map(nm).map(esc).join(', ')} được ×5 tỉ lệ.</li>
+    <li>Khi ra 5★: ${pct(B.up5rate)} là ${B.up5.map(nm).map(esc).join(', ')}.</li><li>Đủ ${B.spark} lượt trong banner nhận thẳng ${esc(nm(B.limited))} (một lần, không ảnh hưởng bảo hiểm).</li>
+    <li>Pool: ${P[6].length+B.w6.length} 6★, ${P[5].length} 5★, ${P[4].length} 4★, ${P[3].length} 3★ của Global; không gồm operator Kernel 5–6★, collab và limited khác. 1 lượt = 600 Orundum.</li>
+    <li>Đây là mô phỏng không chính thức dựa trên data game và thông báo banner; không phải tỉ lệ được Hypergryph/Yostar công bố cho từng operator.</li></ul>`;
+  document.querySelector('#gacha .gbar').addEventListener('click',e=>{const b=e.target.closest('.gbtn');if(b)roll(+b.dataset.n)});
+  $('#greset').onclick=()=>{if(confirm('Xoá toàn bộ kết quả và bảo hiểm của banner này?')){S=fresh();save();draw()}};
+  $('#gacha').addEventListener('click',e=>{const c=e.target.closest('.gc,.gop');if(!c)return;const i=OPS.findIndex(o=>(AKD[o.n]?.id||o.img)===c.dataset.id);if(i>=0)openOp(i);else openCN(c.dataset.id)});
+  draw()}}
 // tabs
 $('#nav').onclick=e=>{const b=e.target.closest('button');if(!b)return;
   document.querySelectorAll('#nav button').forEach(x=>x.classList.toggle('on',x===b));
@@ -946,7 +1038,7 @@ addEventListener('popstate',e=>{const st=e.state||{tab:'ops'};NAV=true;
   NAV=false});
 history.replaceState(history.state||{tab:'ops'},'');
 // tiêu đề và chữ nền khổng lồ đổi theo tab đang mở
-const HERO={ops:['OPS','Danh sách','Operator'],list:['TIER','Bảng xếp hạng','Operator'],new:['NEW','Operator','mới về'],fac:['FAC','Phe phái','& vùng đất'],log:['LOG','Lịch sử','thay đổi'],about:['INFO','Giới thiệu','& nguồn']};
+const HERO={ops:['OPS','Danh sách','Operator'],gacha:['HH','Giả lập','Headhunting'],list:['TIER','Bảng xếp hạng','Operator'],new:['NEW','Operator','mới về'],fac:['FAC','Phe phái','& vùng đất'],log:['LOG','Lịch sử','thay đổi'],about:['INFO','Giới thiệu','& nguồn']};
 function setHero(k){const [g,a,b]=HERO[k]||HERO.ops,h=$('.hero');h.dataset.g=g;h.querySelector('h1').innerHTML=`${a}<br><span>${b}</span>`;typeHero();document.title=k==='ops'?'Arknights Tier List VN':`${a} ${b} · Arknights Tier List VN`}
 render();
 // 4: bảng lọc nổi trên mobile
