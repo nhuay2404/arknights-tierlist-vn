@@ -25,7 +25,9 @@ banner = {'id': B['gachaPoolId'], 'name': B['gachaPoolName'], 'open': B['openTim
           'up6': ['char_1052_kalts2', 'char_4228_closur'], 'up6rate': 0.7,      # 35% mỗi người
           'up5': ['char_4225_tanya'], 'up5rate': 0.5,                           # Crackborne
           'w6': ['char_1035_wisdel', 'char_1041_angel2', 'char_1038_whitw2'],   # limited Celebration cũ, ×5 tỉ lệ
-          'first10': B['guarantee5Count']}
+          'first10': B['guarantee5Count'],
+          # ảnh banner thật (UI gacha bản Global, ArknightsAssets/ArknightsAssets2 nhánh en) đã lưu ở img/gacha/<pool>/
+          'art': os.path.isdir('img/gacha/' + B['gachaPoolId'].lower())}
 for k in banner['up6'] + banner['up5'] + banner['w6']:
     assert k in c, k
 open('gacha.js', 'w', encoding='utf-8').write('window.AKG=' + json.dumps({'banner': banner, 'pool': pool}, ensure_ascii=False, separators=(',', ':')) + ';\n')
