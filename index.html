@@ -576,15 +576,15 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 <dialog id="dlg"></dialog>
 
 <!-- ?v=: đổi mỗi lần cập nhật data để trình duyệt/CDN không dùng file .js cũ lệch với index.html -->
-<script src="data.js?v=20261018f"></script>
-<script src="details.js?v=20261018f"></script>
-<script src="glossary.js?v=20261018f"></script>
-<script src="factions.js?v=20261018f"></script>
-<script src="roster.js?v=20261018f"></script>
-<script src="skins.js?v=20261018f"></script>
-<script src="mats.js?v=20261018f"></script>
-<script src="details_x.js?v=20261018f"></script>
-<script src="gacha.js?v=20261018f"></script>
+<script src="data.js?v=20261018g"></script>
+<script src="details.js?v=20261018g"></script>
+<script src="glossary.js?v=20261018g"></script>
+<script src="factions.js?v=20261018g"></script>
+<script src="roster.js?v=20261018g"></script>
+<script src="skins.js?v=20261018g"></script>
+<script src="mats.js?v=20261018g"></script>
+<script src="details_x.js?v=20261018g"></script>
+<script src="gacha.js?v=20261018g"></script>
 <script>
 const {ops:OPS, general:GENERAL} = window.AK;
 const TIERS=['EX','S+','S','S-','A+','A','A-','B+','B','B-','C+','C','C-','D','F'];
@@ -843,10 +843,11 @@ function openOp(i){profile(OPS[i],i)}
 function openCN(id){const a=(window.AKR||[]).find(x=>x[0]===id);if(!a)return;const [,n,r,c,,gl,bn]=a;
   if(!AKD[n]&&window.AKX?.[id])AKD[n]=AKX[id];
   profile({n,r,c,t:'',img:id,notes:[],x:{gl,bn,id}},-1)}
-function profile(o,i){CUR=i;const rc=`var(--r${o.r})`,d=AKD[o.n];
+let CURO=null;
+function profile(o,i){CUR=i;CURO=o;const rc=`var(--r${o.r})`,d=AKD[o.n];
   // mở hồ sơ là một bước trong lịch sử (nút back đóng lại); ←/→ trong hồ sơ chỉ thay bước hiện tại
   if(!NAV){const st=i>=0?{tab:curTab(),op:i}:{tab:curTab(),cn:o.x.id};if(dlg.open)history.replaceState(st,'');else history.pushState(st,'',location.pathname+location.search)}
-  const arch=o.r===6&&i>=0,src=o.x&&d?(d.src==='zh'?'CN (tiếng Trung)':'Global (tiếng Anh)'):'';
+  const arch=o.r>=5&&!(o.x&&!o.x.gl),src=o.x&&d?(d.src==='zh'?'CN (tiếng Trung)':'Global (tiếng Anh)'):'';
   dlg.innerHTML=`<div class="mh" style="--rc:${rc}">${av(o,initials(o.n.replace(/\(.*?\)/g,'')))}
     <div><h2>${esc(o.n.replace(/\s*\(General\)/,''))}</h2><div style="color:var(--mute);font-size:0.875rem;margin-top:4px">${o.t?badge(o.t)+' &nbsp;':''}<span style="color:${rc}">${'★'.repeat(o.r)}</span> · ${cIco(o.c)} ${esc(CLSVI[o.c])}${o.notes[0]?.ty?' · '+esc(tv(o.notes[0].ty)):''}${o.x&&!o.x.gl?` · chưa ra Global · banner CN thứ ${o.x.bn}`:''}</div></div>
     <button class="x" aria-label="Đóng" onclick="dlg.close()">✕</button>
@@ -856,7 +857,7 @@ function profile(o,i){CUR=i;const rc=`var(--r${o.r})`,d=AKD[o.n];
   showPT(arch?PTAB:'kit');
   dlg.scrollTop=0;
 }
-// tab "Hồ sơ lưu trữ": File & Story của operator 6★, tải profiles/<id>.json khi mở lần đầu
+// tab "Hồ sơ lưu trữ": File & Story của operator 5★/6★ bản Global, tải profiles/<id>.json khi mở lần đầu
 let PTAB='kit',ARCH_EN=false;
 const PROF=new Map();
 const PT={'Basic Info':'Thông tin cơ bản','Physical Exam':'Kiểm tra thể chất','Profile':'Lý lịch','Clinical Analysis':'Chẩn đoán lâm sàng','Promotion Record':'Hồ sơ thăng cấp'};
@@ -881,11 +882,11 @@ function archHTML(o,secs){
   ${files.map((s,k)=>`<details class="afile"${k===0?' open':''}><summary><span class="ai">${s.t==='Promotion Record'?'E2':String(k+1).padStart(2,'0')}</span><span class="at">${ptv(s.t)}<small lang="en">${esc(s.t)}</small></span></summary><div class="ab"${ARCH_EN||!s.v?' lang="en"':''}>${atext(tx(s))}</div></details>`).join('')}`;
 }
 async function loadArch(){
-  const o=OPS[CUR],d=AKD[o.n]||{},el=$('#p-arch');if(!el)return;
+  const o=CURO,d=AKD[o.n]||{},el=$('#p-arch');if(!el||!o)return;
   const id={'Amiya (Medic)':'char_1037_amiya3'}[o.n]||d.id||o.img;
   if(!PROF.has(id)){el.innerHTML='<p class="aempty">Đang tải hồ sơ…</p>';
     PROF.set(id,fetch(`profiles/${id}.json`).then(r=>r.ok?r.json():null).catch(()=>{PROF.delete(id);return undefined}))}
-  const secs=await PROF.get(id);if(OPS[CUR]!==o)return;
+  const secs=await PROF.get(id);if(CURO!==o)return;
   el.innerHTML=secs===undefined?'<p class="aempty">Không tải được hồ sơ. Kiểm tra kết nối rồi mở lại tab này.</p>':archHTML(o,secs);
 }
 function showPT(k){
