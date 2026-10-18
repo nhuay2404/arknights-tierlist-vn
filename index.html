@@ -284,7 +284,15 @@ dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
 .gstat .gh{grid-column:1/-1}.gh ol{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
 .gh li{display:flex;align-items:center;gap:6px;padding:3px 8px 3px 3px;background:var(--panel2);font-size:0.8125rem}.gh li img{width:28px;height:28px;object-fit:cover}.gh li em{font:600 0.6875rem var(--mono);color:var(--mute);font-style:normal}
 .grule summary{cursor:pointer;font:700 0.875rem var(--mono);letter-spacing:.06em;text-transform:uppercase}.grule ul{margin:12px 0 0;padding-left:18px;line-height:1.6}
-@media (max-width:760px){.gban .gart{aspect-ratio:4/3}.gban .ginfo{grid-template-columns:1fr}.gban .ginfo>:not(.ghome){grid-column:1}.gban .ginfo>.ghome{grid-row:auto}.gres{grid-template-columns:repeat(5,minmax(0,1fr))}.gstat{grid-template-columns:repeat(2,minmax(0,1fr))}.gbtn{flex:1}.greset{margin-left:0}}
+@media (max-width:760px){.gban{margin-bottom:8px}.gban .gart{aspect-ratio:16/10}.gban .ghome{display:none}
+  /* điện thoại: gọn lại để nút quay và kết quả lên gần màn hình đầu */
+  .gban .ginfo{grid-template-columns:1fr;padding:10px 12px 12px;gap:6px}.gban .ginfo>:not(.ghome){grid-column:1}
+  .gban h2{font-size:1.125rem}.gban .gtype,.gban .gw6{display:none}.gban .gtime{font-size:0.75rem}.gban .ginfo small{font-size:0.625rem!important}
+  .gup{gap:4px;margin-top:2px}.gup .gop{padding:2px 8px 2px 2px;gap:6px;font-size:0.75rem}.gup img{width:28px;height:28px}
+  .gbar{gap:6px;margin-bottom:8px}.gbtn{flex:1;min-height:48px;padding:6px 10px;font-size:0.9375rem}.greset{margin-left:0;padding:4px 0}
+  .gres{grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;margin-bottom:8px}
+  .gstat{grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;margin-bottom:8px}.gstat>div{padding:6px 8px}.gstat b{font-size:0.9375rem}.gstat small{font-size:0.5625rem;letter-spacing:.04em}
+  .grule{padding:12px}}
 /* nguyên liệu nâng cấp: Elite, skill Lv2–7, mastery từng skill */
 .mats{display:grid;gap:10px}.mats h4{margin:0 0 4px;font:700 0.8125rem var(--mono);letter-spacing:.06em;text-transform:uppercase}
 .mrow{display:grid;grid-template-columns:56px 1fr;gap:4px 10px;align-items:center;padding:4px 0;border-top:1px solid var(--line)}
@@ -568,15 +576,15 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 <dialog id="dlg"></dialog>
 
 <!-- ?v=: đổi mỗi lần cập nhật data để trình duyệt/CDN không dùng file .js cũ lệch với index.html -->
-<script src="data.js?v=20261018d"></script>
-<script src="details.js?v=20261018d"></script>
-<script src="glossary.js?v=20261018d"></script>
-<script src="factions.js?v=20261018d"></script>
-<script src="roster.js?v=20261018d"></script>
-<script src="skins.js?v=20261018d"></script>
-<script src="mats.js?v=20261018d"></script>
-<script src="details_x.js?v=20261018d"></script>
-<script src="gacha.js?v=20261018d"></script>
+<script src="data.js?v=20261018f"></script>
+<script src="details.js?v=20261018f"></script>
+<script src="glossary.js?v=20261018f"></script>
+<script src="factions.js?v=20261018f"></script>
+<script src="roster.js?v=20261018f"></script>
+<script src="skins.js?v=20261018f"></script>
+<script src="mats.js?v=20261018f"></script>
+<script src="details_x.js?v=20261018f"></script>
+<script src="gacha.js?v=20261018f"></script>
 <script>
 const {ops:OPS, general:GENERAL} = window.AK;
 const TIERS=['EX','S+','S','S-','A+','A','A-','B+','B','B-','C+','C','C-','D','F'];
@@ -1023,7 +1031,7 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if
     <span class="gtime">${t(B.open)} – ${t(B.end)}</span>
     <div><small style="font:600 0.75rem var(--mono);color:#aaa">6★ RATE-UP · ${pct(B.up6rate)} tỉ lệ 6★</small><div class="gup">${B.up6.map(id=>`<button class="gop" data-id="${id}"><img src="${IMG}${id}.png" alt="">${esc(nm(id))}<small>${id===B.limited?'LIMITED':''}</small></button>`).join('')}</div></div>
     <div><small style="font:600 0.75rem var(--mono);color:#aaa">5★ RATE-UP · ${pct(B.up5rate)} tỉ lệ 5★</small><div class="gup">${B.up5.map(id=>`<button class="gop" data-id="${id}"><img src="${IMG}${id}.png" alt="">${esc(nm(id))}</button>`).join('')}</div></div>
-    <div><small style="font:600 0.75rem var(--mono);color:#aaa">LIMITED CŨ · ×5 TỈ LỆ TRONG PHẦN 6★ CÒN LẠI</small><div class="gup">${B.w6.map(id=>`<button class="gop" data-id="${id}"><img src="${IMG}${id}.png" alt="">${esc(nm(id))}</button>`).join('')}</div></div></div>`;
+    <div class="gw6"><small style="font:600 0.75rem var(--mono);color:#aaa">LIMITED CŨ · ×5 TỈ LỆ TRONG PHẦN 6★ CÒN LẠI</small><div class="gup">${B.w6.map(id=>`<button class="gop" data-id="${id}"><img src="${IMG}${id}.png" alt="">${esc(nm(id))}</button>`).join('')}</div></div></div>`;
   $('#grule').innerHTML=`<ul><li>Tỉ lệ gốc: 6★ 2% · 5★ 8% · 4★ 50% · 3★ 40%.</li><li>Bảo hiểm: 50 lượt liên tiếp không ra 6★ thì từ lượt 51 tỉ lệ 6★ tăng thêm 2% mỗi lượt (lượt 99 chắc chắn 6★); ra 6★ thì đếm lại từ 0.</li>
     <li>10 lượt đầu trong banner chắc chắn có ít nhất một operator 5★ trở lên.</li><li>Khi ra 6★: ${pct(B.up6rate)} là ${B.up6.map(nm).map(esc).join(' hoặc ')} (chia đều); phần còn lại là 6★ khác trong pool, ${B.w6.map(nm).map(esc).join(', ')} được ×5 tỉ lệ.</li>
     <li>Khi ra 5★: ${pct(B.up5rate)} là ${B.up5.map(nm).map(esc).join(', ')}.</li><li>Đủ ${B.spark} lượt trong banner nhận thẳng ${esc(nm(B.limited))} (một lần, không ảnh hưởng bảo hiểm).</li>
