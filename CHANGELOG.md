@@ -1,6 +1,7 @@
 # Changelog
 
 ## 2026-10-18
+- Popup Archetype trình bày lại: tên + class ở đầu, dòng vai trò ngắn in đậm màu nhấn (vd. Hexer — "Gắn debuff, nhân sát thương"), đoạn cách dùng/điểm mạnh, rồi khối TRAIT gốc tách riêng bằng đường kẻ. Viết lại văn phong cả 73 archetype: câu ngắn, gọn, giọng hướng dẫn người chơi. Dưới tên Archetype trong hồ sơ chỉ còn dòng vai trò ngắn. Áp dụng cho popup trong hồ sơ và tooltip chip Subclass ở tier list.
 - Hồ sơ operator: chỉ số theo level — chọn Elite (E0/E1/E2), kéo Level, Trust 0–100% và Potential 1–6, bảng HP/ATK/DEF/RES/Cost/Block/Redeploy/ATK Interval cập nhật ngay (nội suy theo data game, mặc định E2 max như trước). Skill theo level — mỗi skill có nút Lv1…Lv7, M1, M2, M3: SP, SP ban đầu, thời gian và các con số trong mô tả tiếng Việt đổi theo level (khớp 918/919 skill). Tiêu đề "Skill (M3)" đổi thành "Skill".
 - Dịch tiếng Việt toàn bộ mô tả Module (Trait và Talent được nâng ở từng Stage) và Base skill: 1.671 đoạn, gồm cả operator bản CN. Thuật ngữ theo TRANSLATION_GUIDE (ATK, Stun, Arts… giữ tiếng Anh; phòng căn cứ dịch tiếng Việt). Tên Module, tên Base skill và tên Talent giữ nguyên bản gốc. Bản dịch ở `i18n/kit/`, ghép bằng `_build/build_kit.py`.
 - Mô tả chi tiết cho toàn bộ 73 archetype (subclass): vai trò, cách chơi và điểm mạnh (vd. Hexer: gây sát thương Arts và chuyên gắn debuff giảm DEF/RES, Fragile… nhân sát thương cho cả đội). Hiện ngay dưới Archetype trong hồ sơ operator và trong tooltip khi rê/giữ chip Subclass ở tier list (kèm Trait gốc). Dữ liệu ở `subclass.js`.

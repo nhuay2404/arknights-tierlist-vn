@@ -383,6 +383,13 @@ dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
 #ctl .chip{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
 #tip,#ctip{white-space:pre-line;position:fixed;z-index:50;background:#2b2f36;color:#e9ebf2;padding:14px 16px;font-size:0.875rem;line-height:1.55;box-shadow:0 10px 30px rgba(0,0,0,.35);border-left:4px solid var(--accent);pointer-events:none;animation:fade .15s ease}
 #tip b,#ctip b{display:block;font:700 0.9375rem var(--mono);margin-bottom:4px;color:#fff}
+/* popup archetype có cấu trúc */
+#tip .tt-h,#ctip .tt-h{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:2px}#tip .tt-h b,#ctip .tt-h b{margin:0}
+#tip .tt-h em,#ctip .tt-h em{font:600 0.6875rem var(--mono);font-style:normal;letter-spacing:.1em;text-transform:uppercase;color:#9fb4c8}
+#tip .tt-r,#ctip .tt-r{display:block;color:#7cc4ff;font-weight:700;margin-bottom:6px}
+#tip .tt-d,#ctip .tt-d{display:block;white-space:normal}
+#tip .tt-t,#ctip .tt-t{display:block;white-space:normal;margin-top:10px;padding-top:8px;border-top:1px solid #ffffff22;color:#c9ced8;font-size:0.8125rem}
+#tip .tt-t i,#ctip .tt-t i{display:block;font:700 0.625rem var(--mono);font-style:normal;letter-spacing:.14em;color:var(--accent);margin-bottom:2px}
 .quote{font-style:italic;color:var(--mute);border-left:3px solid var(--accent);padding-left:12px}
 .note{border-left:4px solid var(--accent);padding:4px 0 4px 14px;margin-bottom:22px}
 .note small{color:var(--mute);font-family:var(--mono)}
@@ -613,17 +620,17 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 <dialog id="dlg"></dialog>
 
 <!-- ?v=: đổi mỗi lần cập nhật data để trình duyệt/CDN không dùng file .js cũ lệch với index.html -->
-<script src="data.js?v=20261018m"></script>
-<script src="details.js?v=20261018m"></script>
-<script src="glossary.js?v=20261018m"></script>
-<script src="factions.js?v=20261018m"></script>
-<script src="roster.js?v=20261018m"></script>
-<script src="skins.js?v=20261018m"></script>
-<script src="mats.js?v=20261018m"></script>
-<script src="subclass.js?v=20261018m"></script>
-<script src="details_x.js?v=20261018m"></script>
-<script src="gacha.js?v=20261018m"></script>
-<script>const KITV='20261018m'</script>
+<script src="data.js?v=20261018n"></script>
+<script src="details.js?v=20261018n"></script>
+<script src="glossary.js?v=20261018n"></script>
+<script src="factions.js?v=20261018n"></script>
+<script src="roster.js?v=20261018n"></script>
+<script src="skins.js?v=20261018n"></script>
+<script src="mats.js?v=20261018n"></script>
+<script src="subclass.js?v=20261018n"></script>
+<script src="details_x.js?v=20261018n"></script>
+<script src="gacha.js?v=20261018n"></script>
+<script>const KITV='20261018n'</script>
 <script>
 const {ops:OPS, general:GENERAL} = window.AK;
 const TIERS=['EX','S+','S','S-','A+','A','A-','B+','B','B-','C+','C','C-','D','F'];
@@ -802,7 +809,7 @@ const dlg=$('#dlg');
 // thuật ngữ trong GLOSS được gạch chân, nhấn vào để xem giải thích (khóa dài khớp trước: "Arts Fragility" trước "Arts")
 const GRE=new RegExp('(?<![\\p{L}\\d-])('+Object.keys(GLOSS).sort((a,b)=>b.length-a.length).map(k=>k.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|')+')(?![\\p{L}\\d-])','gu');
 const rt=s=>esc(s).replace(GRE,'<span class="kw" tabindex="0" role="button">$1</span>').replace(/\[\[([\s\S]*?)\]\]/g,'<b>$1</b>');
-function showTip(el){const t=$('#tip');if(!t)return;t.innerHTML=`<b>${esc(el.textContent)}</b>${esc(GLOSS[el.textContent]??SUBDESC[el.textContent])}`;t.hidden=false;t.style.top='0px';t.style.left='0px';
+function showTip(el){const t=$('#tip');if(!t)return;const k=el.textContent;t.innerHTML=AKSUB?.[k]?subTip(k):`<b>${esc(k)}</b>${esc(GLOSS[k]??SUBDESC[k]??'')}`;t.hidden=false;t.style.top='0px';t.style.left='0px';
   const r=el.getBoundingClientRect(),w=Math.min(340,innerWidth-24);t.style.width=w+'px';
   t.style.left=Math.max(12,Math.min(r.left+r.width/2-w/2,innerWidth-w-12))+'px';
   const h=t.getBoundingClientRect().height,below=r.bottom+8+h<innerHeight;t.style.top=(below?r.bottom+8:r.top-h-8)+'px';}
@@ -861,7 +868,7 @@ function detail(o){
   const d=AKD[o.n];if(!d)return'';
   const st=d.stats;
   return `<div class="prof"><div>
-    <dl class="kv"><dt>Archetype</dt><dd>${sIco(d.sub)} <span class="kw" tabindex="0" role="button">${esc(d.sub)}</span>${window.AKSUB?.[d.sub]?`<small class="subd">${esc(AKSUB[d.sub])}</small>`:''}</dd><dt>Vị trí</dt><dd>${d.pos==='MELEE'?'Melee':'Ranged'}</dd>
+    <dl class="kv"><dt>Archetype</dt><dd>${sIco(d.sub)} <span class="kw" tabindex="0" role="button">${esc(d.sub)}</span>${window.AKSUB?.[d.sub]?`<small class="subd">${esc(AKSUB[d.sub][0])}</small>`:''}</dd><dt>Vị trí</dt><dd>${d.pos==='MELEE'?'Melee':'Ranged'}</dd>
     ${d.fac.length?`<dt>Phe phái</dt><dd class="facdd">${d.fac.map(f=>facA(f,fIco(f)+esc(f))).join('')}</dd>`:''}
     ${d.tags.length?`<dt>Tag</dt><dd>${d.tags.map(t=>`<span class="pill">${esc(t)}</span>`).join('')}</dd>`:''}</dl>
     <div class="trait"><small style="font:600 0.625rem var(--mono);letter-spacing:.14em;color:var(--accent)">TRAIT</small><br>${rt(d.trait)}</div>
@@ -1208,10 +1215,13 @@ addEventListener('keydown',e=>{if(e.key==='Escape'&&ctl.classList.contains('shee
 // giải thích class/subclass: rê chuột hoặc giữ ngón tay trên nút; subclass lấy Trait từ details.js
 const CLSDESC={Vanguards:'Tiên phong: Cost thấp, hồi DP đầu trận để deploy đội hình nhanh, thường block 1–2 địch.',Guards:'Cận chiến chủ lực: gây sát thương vật lý mạnh, block địch, nhiều nhánh đánh diện rộng hoặc tầm xa.',Defenders:'Hộ vệ: HP và DEF cao, block nhiều địch để giữ đường, một số nhánh hồi máu hoặc gây sát thương.',Snipers:'Xạ thủ tầm xa: đặt ô cao, ưu tiên bắn địch bay hoặc gây sát thương vật lý từ xa.',Casters:'Pháp sư tầm xa: đặt ô cao, gây sát thương Arts, mạnh với địch DEF cao.',Medics:'Y sĩ: hồi HP cho đồng minh, đặt ô cao.',Supporters:'Hỗ trợ: làm chậm, debuff địch, buff đồng minh hoặc triệu hồi, đặt ô cao.',Specialists:'Đặc vụ: cơ chế đặc biệt như dịch chuyển địch, deploy lại nhanh, bẫy hoặc ẩn thân.'};
 // archetype: mô tả vai trò (subclass.js), kèm Trait trong game
-const SUBDESC={};for(const d of Object.values(AKD))if(d.sub&&!SUBDESC[d.sub])SUBDESC[d.sub]=(window.AKSUB?.[d.sub]?window.AKSUB[d.sub]+' — Trait: ':'')+d.trait.replace(/\[\[|\]\]/g,'');
+const SUBDESC={},SUBCLS={};for(const d of [...Object.values(AKD),...Object.values(window.AKX||{})])if(d.sub&&!SUBDESC[d.sub]){SUBDESC[d.sub]=d.trait.replace(/\[\[|\]\]/g,'')}
+for(const o of OPS){const d=AKD[o.n];if(d?.sub&&!SUBCLS[d.sub])SUBCLS[d.sub]=o.c}
+// popup archetype: tên + class, vai trò (1 dòng), cách dùng, Trait gốc
+function subTip(k){const [r,d]=AKSUB[k],c=SUBCLS[k];return `<span class="tt-h"><b>${esc(k)}</b>${c?`<em>${esc(CLSVI[c]||c)}</em>`:''}</span><span class="tt-r">${esc(r)}</span><span class="tt-d">${esc(d)}</span>${SUBDESC[k]?`<span class="tt-t"><i>TRAIT</i>${esc(SUBDESC[k])}</span>`:''}`}
 {const t=document.createElement('div');t.id='ctip';t.setAttribute('role','tooltip');t.hidden=true;document.body.append(t);
   const txt=c=>c.closest('#cls')?CLSDESC[c.dataset.k]:c.closest('#sub')?SUBDESC[c.dataset.k]:null;
-  const show=c=>{const d=txt(c);if(!d)return;t.innerHTML=`<b>${esc(c.textContent.trim())}</b>${esc(d)}`;t.hidden=false;
+  const show=c=>{const d=txt(c),k=c.dataset.k;if(!d)return;t.innerHTML=c.closest('#sub')&&AKSUB?.[k]?subTip(k):`<b>${esc(c.textContent.trim())}</b>${esc(d)}`;t.hidden=false;
     const b=c.getBoundingClientRect(),w=t.offsetWidth,h=t.offsetHeight;
     t.style.left=Math.max(16,Math.min(b.left,innerWidth-w-16))+'px';t.style.top=(b.bottom+8+h>innerHeight?b.top-8-h:b.bottom+8)+'px'};
   const hide=()=>{t.hidden=true};let timer,held=false;
