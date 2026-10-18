@@ -293,10 +293,6 @@ dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
   .gres{grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;margin-bottom:8px}
   .gstat{grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;margin-bottom:8px}.gstat>div{padding:6px 8px}.gstat b{font-size:0.9375rem}.gstat small{font-size:0.5625rem;letter-spacing:.04em}
   .grule{padding:12px}}
-/* link video gameplay trong hồ sơ */
-.vid{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 16px}.vid span{font:700 0.6875rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
-.vid a{display:inline-flex;align-items:center;min-height:36px;padding:0 12px;background:#e62117;color:#fff;font:700 0.8125rem "Be Vietnam Pro",system-ui,sans-serif;text-decoration:none}
-.vid a+a{background:var(--panel2);color:var(--text);border:1px solid var(--line)}.vid a:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 /* nguyên liệu nâng cấp: Elite, skill Lv2–7, mastery từng skill */
 .mats{display:grid;gap:10px}.mats h4{margin:0 0 4px;font:700 0.8125rem var(--mono);letter-spacing:.06em;text-transform:uppercase}
 .mrow{display:grid;grid-template-columns:56px 1fr;gap:4px 10px;align-items:center;padding:4px 0;border-top:1px solid var(--line)}
@@ -580,15 +576,15 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 <dialog id="dlg"></dialog>
 
 <!-- ?v=: đổi mỗi lần cập nhật data để trình duyệt/CDN không dùng file .js cũ lệch với index.html -->
-<script src="data.js?v=20261018h"></script>
-<script src="details.js?v=20261018h"></script>
-<script src="glossary.js?v=20261018h"></script>
-<script src="factions.js?v=20261018h"></script>
-<script src="roster.js?v=20261018h"></script>
-<script src="skins.js?v=20261018h"></script>
-<script src="mats.js?v=20261018h"></script>
-<script src="details_x.js?v=20261018h"></script>
-<script src="gacha.js?v=20261018h"></script>
+<script src="data.js?v=20261018i"></script>
+<script src="details.js?v=20261018i"></script>
+<script src="glossary.js?v=20261018i"></script>
+<script src="factions.js?v=20261018i"></script>
+<script src="roster.js?v=20261018i"></script>
+<script src="skins.js?v=20261018i"></script>
+<script src="mats.js?v=20261018i"></script>
+<script src="details_x.js?v=20261018i"></script>
+<script src="gacha.js?v=20261018i"></script>
 <script>
 const {ops:OPS, general:GENERAL} = window.AK;
 const TIERS=['EX','S+','S','S-','A+','A','A-','B+','B','B-','C+','C','C-','D','F'];
@@ -848,10 +844,6 @@ function openCN(id){const a=(window.AKR||[]).find(x=>x[0]===id);if(!a)return;con
   if(!AKD[n]&&window.AKX?.[id])AKD[n]=AKX[id];
   profile({n,r,c,t:'',img:id,notes:[],x:{gl,bn,id}},-1)}
 let CURO=null;
-// video gameplay: không gọi được API YouTube nên mở trang tìm kiếm theo tên operator — trong kênh YTCH trước, dự phòng toàn YouTube
-const YTCH='tsalthsu';
-const vidRow=o=>{const n=o.n.replace(/\s*\((IS|General|Medic)\)/,'').replace('·',' ').replace(/\s+/g,' ').trim(),q=encodeURIComponent;
-  return `<div class="vid"><span>Video gameplay</span><a href="https://www.youtube.com/@${YTCH}/search?query=${q(n)}" target="_blank" rel="noopener">▶ ${YTCH}</a><a href="https://www.youtube.com/results?search_query=${q('Arknights '+n+' showcase')}" target="_blank" rel="noopener">▶ YouTube khác</a></div>`};
 function profile(o,i){CUR=i;CURO=o;const rc=`var(--r${o.r})`,d=AKD[o.n];
   // mở hồ sơ là một bước trong lịch sử (nút back đóng lại); ←/→ trong hồ sơ chỉ thay bước hiện tại
   if(!NAV){const st=i>=0?{tab:curTab(),op:i}:{tab:curTab(),cn:o.x.id};if(dlg.open)history.replaceState(st,'');else history.pushState(st,'',location.pathname+location.search)}
@@ -860,7 +852,7 @@ function profile(o,i){CUR=i;CURO=o;const rc=`var(--r${o.r})`,d=AKD[o.n];
     <div><h2>${esc(o.n.replace(/\s*\(General\)/,''))}</h2><div style="color:var(--mute);font-size:0.875rem;margin-top:4px">${o.t?badge(o.t)+' &nbsp;':''}<span style="color:${rc}">${'★'.repeat(o.r)}</span> · ${cIco(o.c)} ${esc(CLSVI[o.c])}${o.notes[0]?.ty?' · '+esc(tv(o.notes[0].ty)):''}${o.x&&!o.x.gl?` · chưa ra Global · banner CN thứ ${o.x.bn}`:''}</div></div>
     <button class="x" aria-label="Đóng" onclick="dlg.close()">✕</button>
     ${arch?`<div class="ptabs" role="tablist" aria-label="Nội dung hồ sơ">${[['kit','Chỉ số & Skill'],['arch','Hồ sơ lưu trữ']].map(([k,l])=>`<button role="tab" id="t-${k}" data-pt="${k}" aria-controls="p-${k}" aria-selected="${PTAB===k}">${l}</button>`).join('')}</div>`:''}</div><div id="tip" role="tooltip" hidden></div>
-    <div class="mb" id="p-kit" role="tabpanel" aria-labelledby="t-kit">${vidRow(o)}${src?`<p class="mnone" style="margin:0 0 14px">Operator ngoài tier list, chưa có bản dịch tiếng Việt: mô tả giữ nguyên bản ${src}.</p>`:''}${d?detail(o):`<h3 class="sec">Nguyên liệu nâng cấp</h3>${matHTML(o.img)}`}</div>${arch?`<div class="mb arch" id="p-arch" role="tabpanel" aria-labelledby="t-arch" hidden></div>`:''}`;
+    <div class="mb" id="p-kit" role="tabpanel" aria-labelledby="t-kit">${src?`<p class="mnone" style="margin:0 0 14px">Operator ngoài tier list, chưa có bản dịch tiếng Việt: mô tả giữ nguyên bản ${src}.</p>`:''}${d?detail(o):`<h3 class="sec">Nguyên liệu nâng cấp</h3>${matHTML(o.img)}`}</div>${arch?`<div class="mb arch" id="p-arch" role="tabpanel" aria-labelledby="t-arch" hidden></div>`:''}`;
   if(!dlg.open){keepY();dlg.showModal()}
   showPT(arch?PTAB:'kit');
   dlg.scrollTop=0;
