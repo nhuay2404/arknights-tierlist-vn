@@ -308,6 +308,13 @@ dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
 @media (max-width:760px){.pgrid{grid-template-columns:1fr}.ptot{position:static;order:-1}.prow{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* mô tả archetype ngay dưới tên trong hồ sơ */
 .subd{display:block;margin-top:4px;color:var(--mute);font-size:0.8125rem;line-height:1.45;max-width:52ch}
+/* chỉnh chỉ số theo Elite/Level/Trust/Potential và skill theo level */
+.stctl{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;margin:0 0 8px;font:600 0.8125rem var(--mono)}
+.stctl .chips{gap:4px}.stctl .chip{min-height:32px;padding:0 10px}.stctl label{display:flex;align-items:center;gap:8px}.stctl label b{min-width:2.5em}
+.stctl input[type=range]{width:120px;accent-color:var(--accent)}.stctl select{font:inherit;background:var(--panel2);color:var(--text);border:1px solid var(--line)}
+.sklv{display:flex;flex-wrap:wrap;gap:3px;margin:6px 0 4px}.sklv button{all:unset;cursor:pointer;min-width:30px;height:26px;padding:0 4px;display:grid;place-items:center;border:1px solid var(--line);font:700 0.6875rem var(--mono)}
+.sklv button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff}.sklv button:focus-visible{outline:2px solid var(--ink)}
+@media (max-width:760px){.stctl input[type=range]{width:96px}}
 /* Module + Base skill trong hồ sơ */
 .mod{border:1px solid var(--line);padding:12px 14px;margin-bottom:8px}.modh{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.modh h4{margin:0;flex:1;min-width:0}
 .mtype{font:800 0.75rem var(--mono);padding:3px 7px;background:var(--ink);color:var(--bg)}.mtype[data-c=red]{background:#d33}.mtype[data-c=blue]{background:#2a7fd4}.mtype[data-c=yellow]{background:#c9a400;color:#111}.mtype[data-c=green]{background:#3a9b4b}
@@ -606,17 +613,17 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 <dialog id="dlg"></dialog>
 
 <!-- ?v=: đổi mỗi lần cập nhật data để trình duyệt/CDN không dùng file .js cũ lệch với index.html -->
-<script src="data.js?v=20261018l"></script>
-<script src="details.js?v=20261018l"></script>
-<script src="glossary.js?v=20261018l"></script>
-<script src="factions.js?v=20261018l"></script>
-<script src="roster.js?v=20261018l"></script>
-<script src="skins.js?v=20261018l"></script>
-<script src="mats.js?v=20261018l"></script>
-<script src="subclass.js?v=20261018l"></script>
-<script src="details_x.js?v=20261018l"></script>
-<script src="gacha.js?v=20261018l"></script>
-<script>const KITV='20261018l'</script>
+<script src="data.js?v=20261018m"></script>
+<script src="details.js?v=20261018m"></script>
+<script src="glossary.js?v=20261018m"></script>
+<script src="factions.js?v=20261018m"></script>
+<script src="roster.js?v=20261018m"></script>
+<script src="skins.js?v=20261018m"></script>
+<script src="mats.js?v=20261018m"></script>
+<script src="subclass.js?v=20261018m"></script>
+<script src="details_x.js?v=20261018m"></script>
+<script src="gacha.js?v=20261018m"></script>
+<script>const KITV='20261018m'</script>
 <script>
 const {ops:OPS, general:GENERAL} = window.AK;
 const TIERS=['EX','S+','S','S-','A+','A','A-','B+','B','B-','C+','C','C-','D','F'];
@@ -862,7 +869,7 @@ function detail(o){
     ${rangeGrid(d.range)}
     ${d.usage?`<p class="quote">${esc(d.usage)}<br>— ${esc(d.quote)}</p>`:''}
   </div><div class="aw">${artSlides(d,o)}</div></div>
-  ${d.skills.length?`<h3 class="sec">Skill (M3)</h3>${d.skills.map((s,k)=>`<div class="sk"><img src="${RES}skill/skill_icon_${s.id}.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><div><h4>S${k+1} · ${esc(s.name)}</h4>
+  ${d.skills.length?`<h3 class="sec">Skill</h3>${d.skills.map((s,k)=>`<div class="sk"><img src="${RES}skill/skill_icon_${s.id}.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><div><h4>S${k+1} · ${esc(s.name)}</h4>
     <div class="spi">${s.auto==='PASSIVE'?ACT.PASSIVE:`${SPT[s.spType]||''} · ${ACT[s.auto]||''} · SP ${s.init}/${s.sp}${s.dur>0?` · ${s.dur} giây`:''}`}</div><p>${rt(s.desc)}</p></div></div>`).join('')}`:''}
   ${d.talents.length?`<h3 class="sec">Talent</h3>${d.talents.map(t=>`<div class="tal"><h4>${esc(t.name)}</h4><p>${rt(t.desc)}</p></div>`).join('')}`:''}
   <div class="kitx" data-id="${d.id}"></div>
@@ -907,8 +914,41 @@ function modHTML(ms){return ms.map((m,k)=>`<div class="mod" data-k="${k}"><div c
       ${l.tr.map(t=>`<p><small>TRAIT</small> ${rt(t)}</p>`).join('')}${l.ta.map(([n,t])=>`<p><small>${esc(n||'TALENT')}</small> ${rt(t)}</p>`).join('')}
       ${l.c.length?`<div class="mrow"><b>Stage ${j+1}</b>${itemsHTML(l.c)}</div>`:''}</div>`).join('')}</div>`).join('')}
 function baseHTML(bs){return `<div class="bsk">${bs.map(b=>`<div class="bs"><img src="${BSK}${b.ic}.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><div><h4>${esc(b.n)} <small>${ROOM[b.room]||esc(b.room)} · ${b.ph?'E'+b.ph:b.lv>1?'Lv'+b.lv:'Mặc định'}</small></h4><p>${rt(b.d)}</p></div></div>`).join('')}</div>`}
-function fillKit(){const el=dlg.querySelector('.kitx');if(!el)return;const id=el.dataset.id;
+// chỉ số theo Elite / Level / Potential / Trust (kit.js: 2 mốc Lv1–Lv max mỗi Elite, nội suy tuyến tính như trong game)
+const STL=['HP','ATK','DEF','RES','COST','BLOCK','REDEPLOY','ATK INTERVAL'];
+function statAt(S,e,l,pot,tr){const [k0,k1,mx]=S.ph[e],t=mx>1?(l-1)/(mx-1):0,v=k0.map((a,i)=>i<3?Math.round(a+(k1[i]-a)*t):a+(k1[i]-a)*t);
+  S.f.forEach((f,i)=>v[i]+=Math.round(f*Math.min(tr,100)/100));let aspd=0;
+  S.p.slice(0,pot-1).forEach(m=>m.forEach(([i,x])=>{if(i===8)aspd+=x;else v[i]+=x}));
+  v[7]=Math.round(v[7]*100/(100+aspd)*100)/100;v[3]=Math.round(v[3]*10)/10;return v}
+function statCtl(S,box){const E=S.ph.length-1;let st={e:E,l:S.ph[E][2],p:1,t:0};
+  const ctl=document.createElement('div');ctl.className='stctl';box.before(ctl);
+  const draw=()=>{const v=statAt(S,st.e,st.l,st.p,st.t);box.innerHTML=STL.map((k,i)=>`<div><small>${k}</small><b>${i===6?v[i]+'s':i===7?v[i]+'s':v[i]}</b></div>`).join('');
+    ctl.innerHTML=`<div class="chips">${S.ph.map((_,e)=>`<button class="chip${e===st.e?' on':''}" data-e="${e}" aria-pressed="${e===st.e}">E${e}</button>`).join('')}</div>
+      <label>Level <b>${st.l}</b><input type="range" min="1" max="${S.ph[st.e][2]}" value="${st.l}" data-x="l" aria-label="Level"></label>
+      <label>Trust <b>${st.t}%</b><input type="range" min="0" max="100" step="5" value="${st.t}" data-x="t" aria-label="Trust"></label>
+      ${S.p.length?`<label>Potential <select data-x="p" aria-label="Potential">${[1,2,3,4,5,6].slice(0,S.p.length+1).map(p=>`<option${p===st.p?' selected':''}>${p}</option>`).join('')}</select></label>`:''}`};
+  ctl.addEventListener('click',e=>{const b=e.target.closest('[data-e]');if(!b)return;st.e=+b.dataset.e;st.l=S.ph[st.e][2];draw()});
+  ctl.addEventListener('input',e=>{const x=e.target.dataset.x;if(!x)return;st[x]=+e.target.value;
+    if(x==='p'){draw();return}const v=statAt(S,st.e,st.l,st.p,st.t);box.querySelectorAll('b').forEach((b,i)=>b.textContent=i>5?v[i]+'s':v[i]);e.target.previousElementSibling.textContent=x==='t'?st.t+'%':st.l});
+  draw()}
+// skill theo level: thay các số trong mô tả (bản M3 đã dịch) bằng số của level đang chọn
+const LVN=['Lv1','Lv2','Lv3','Lv4','Lv5','Lv6','Lv7','M1','M2','M3'];
+function skillAt(desc,L,j){const e3=L[L.length-1][3],ej=L[j][3],nre=/[+-]?\d+(?:[.,]\d+)?/g;let out=desc;
+  const vt=[...desc.matchAll(/\[\[([\s\S]*?)\]\]/g)];
+  e3.forEach((a,i)=>{const b=ej[i];if(a===b||b==null)return;const na=a.match(nre)||[],nb=b.match(nre)||[];
+    if(vt.length===e3.length&&na.length===nb.length){let t=vt[i][1],k=0;t=t.replace(nre,m=>k<na.length&&m.replace(',','.')===na[k].replace(',','.')?nb[k++]:m);out=out.replace(`[[${vt[i][1]}]]`,`[[${t}]]`)}
+    else out=out.replace(`[[${a}]]`,`[[${b}]]`)});
+  return out}
+function skillCtl(d,K){const L=K.sk[d.id],els=dlg.querySelectorAll('#p-kit .sk');if(!L||L.length!==els.length)return;
+  els.forEach((el,k)=>{const s=d.skills[k],lv=L[k];if(!s||lv.length<2)return;const sel=document.createElement('div');sel.className='sklv';
+    sel.innerHTML=lv.map((_,j)=>`<button data-j="${j}" aria-pressed="${j===lv.length-1}">${LVN[j]||j+1}</button>`).join('');el.querySelector('h4').after(sel);
+    sel.onclick=e=>{const b=e.target.closest('button');if(!b)return;const j=+b.dataset.j,[sp,init,dur]=lv[j];sel.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+      el.querySelector('.spi').textContent=s.auto==='PASSIVE'?ACT.PASSIVE:`${SPT[s.spType]||''} · ${ACT[s.auto]||''} · SP ${init}/${sp}${dur>0?` · ${dur} giây`:''}`;
+      el.querySelector('p').innerHTML=rt(skillAt(s.desc,lv,j))}})}
+function fillKit(){const el=dlg.querySelector('.kitx');if(!el)return;const id=el.dataset.id,d=AKD[CURO?.n]?.id===id?AKD[CURO.n]:null;
   needKit().then(K=>{if(!el.isConnected)return;const ms=K.m[id],bs=K.b[id];
+    const box=dlg.querySelector('#p-kit .stg');if(K.st[id]&&box&&!box.previousElementSibling?.classList.contains('stctl'))statCtl(K.st[id],box);
+    if(d&&!dlg.querySelector('.sklv'))skillCtl(d,K);
     el.innerHTML=(ms?`<h3 class="sec">Module</h3>${modHTML(ms)}`:'')+(bs?`<h3 class="sec">Base skill</h3>${baseHTML(bs)}`:'')}).catch(()=>{el.innerHTML='<p class="mnone">Không tải được Module / Base skill.</p>'})}
 dlg.addEventListener('click',e=>{const b=e.target.closest('.mst button');if(!b)return;const m=b.closest('.mod'),j=b.dataset.j;
   m.querySelectorAll('.mst button').forEach(x=>x.setAttribute('aria-pressed',x===b));m.querySelectorAll('.modb').forEach(x=>x.hidden=x.dataset.j!==j)});
