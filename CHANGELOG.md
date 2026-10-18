@@ -1,6 +1,7 @@
 # Changelog
 
 ## 2026-10-18
+- Mô tả chi tiết cho toàn bộ 73 archetype (subclass): vai trò, cách chơi và điểm mạnh (vd. Hexer: gây sát thương Arts và chuyên gắn debuff giảm DEF/RES, Fragile… nhân sát thương cho cả đội). Hiện ngay dưới Archetype trong hồ sơ operator và trong tooltip khi rê/giữ chip Subclass ở tier list (kèm Trait gốc). Dữ liệu ở `subclass.js`.
 - Hồ sơ operator thêm **Module** (491 module của 386 operator): loại (vd. PHY-X), chọn Stage 1/2/3 để xem chỉ số cộng thêm, Trait và Talent được nâng, nguyên liệu từng Stage. Thêm **Base skill** (RIIC) cho cả 432 operator: icon, tên, phòng (Ký túc xá, Trạm giao dịch, Nhà máy…) và điều kiện mở (E1/E2/Lv). Text giữ bản gốc (Global tiếng Anh, CN tiếng Trung). Dữ liệu từ `_build/build_kit.py` → `kit.js`, chỉ tải khi mở hồ sơ.
 - Tab mới **Planner**: thêm operator, chọn Elite, Level, Skill Lv, Mastery từng skill và Stage từng Module hiện tại → mục tiêu; tự cộng dồn nguyên liệu, LMD và EXP (quy ra Strategic Battle Record) cho cả danh sách. Kế hoạch lưu trên trình duyệt.
 - Bỏ dòng "Video gameplay" (nút YouTube tsalthsu / YouTube khác) khỏi hồ sơ operator.

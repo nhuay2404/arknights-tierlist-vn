@@ -306,6 +306,8 @@ dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
 .prow select,.prow input{font:600 0.8125rem var(--mono);background:var(--panel2);color:var(--text);border:1px solid var(--line);padding:3px 2px;max-width:58px}
 .prow em{font-style:normal;color:var(--mute)}
 @media (max-width:760px){.pgrid{grid-template-columns:1fr}.ptot{position:static;order:-1}.prow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* mô tả archetype ngay dưới tên trong hồ sơ */
+.subd{display:block;margin-top:4px;color:var(--mute);font-size:0.8125rem;line-height:1.45;max-width:52ch}
 /* Module + Base skill trong hồ sơ */
 .mod{border:1px solid var(--line);padding:12px 14px;margin-bottom:8px}.modh{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.modh h4{margin:0;flex:1;min-width:0}
 .mtype{font:800 0.75rem var(--mono);padding:3px 7px;background:var(--ink);color:var(--bg)}.mtype[data-c=red]{background:#d33}.mtype[data-c=blue]{background:#2a7fd4}.mtype[data-c=yellow]{background:#c9a400;color:#111}.mtype[data-c=green]{background:#3a9b4b}
@@ -604,15 +606,16 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 <dialog id="dlg"></dialog>
 
 <!-- ?v=: đổi mỗi lần cập nhật data để trình duyệt/CDN không dùng file .js cũ lệch với index.html -->
-<script src="data.js?v=20261018j"></script>
-<script src="details.js?v=20261018j"></script>
-<script src="glossary.js?v=20261018j"></script>
-<script src="factions.js?v=20261018j"></script>
-<script src="roster.js?v=20261018j"></script>
-<script src="skins.js?v=20261018j"></script>
-<script src="mats.js?v=20261018j"></script>
-<script src="details_x.js?v=20261018j"></script>
-<script src="gacha.js?v=20261018j"></script>
+<script src="data.js?v=20261018k"></script>
+<script src="details.js?v=20261018k"></script>
+<script src="glossary.js?v=20261018k"></script>
+<script src="factions.js?v=20261018k"></script>
+<script src="roster.js?v=20261018k"></script>
+<script src="skins.js?v=20261018k"></script>
+<script src="mats.js?v=20261018k"></script>
+<script src="subclass.js?v=20261018k"></script>
+<script src="details_x.js?v=20261018k"></script>
+<script src="gacha.js?v=20261018k"></script>
 <script>const KITV='20261018j'</script>
 <script>
 const {ops:OPS, general:GENERAL} = window.AK;
@@ -851,7 +854,7 @@ function detail(o){
   const d=AKD[o.n];if(!d)return'';
   const st=d.stats;
   return `<div class="prof"><div>
-    <dl class="kv"><dt>Archetype</dt><dd>${sIco(d.sub)} <span class="kw" tabindex="0" role="button">${esc(d.sub)}</span></dd><dt>Vị trí</dt><dd>${d.pos==='MELEE'?'Melee':'Ranged'}</dd>
+    <dl class="kv"><dt>Archetype</dt><dd>${sIco(d.sub)} <span class="kw" tabindex="0" role="button">${esc(d.sub)}</span>${window.AKSUB?.[d.sub]?`<small class="subd">${esc(AKSUB[d.sub])}</small>`:''}</dd><dt>Vị trí</dt><dd>${d.pos==='MELEE'?'Melee':'Ranged'}</dd>
     ${d.fac.length?`<dt>Phe phái</dt><dd class="facdd">${d.fac.map(f=>facA(f,fIco(f)+esc(f))).join('')}</dd>`:''}
     ${d.tags.length?`<dt>Tag</dt><dd>${d.tags.map(t=>`<span class="pill">${esc(t)}</span>`).join('')}</dd>`:''}</dl>
     <div class="trait"><small style="font:600 0.625rem var(--mono);letter-spacing:.14em;color:var(--accent)">TRAIT</small><br>${rt(d.trait)}</div>
@@ -1164,7 +1167,8 @@ addEventListener('keydown',e=>{if(e.key==='Escape'&&ctl.classList.contains('shee
 // 12: lên đầu trang
 // giải thích class/subclass: rê chuột hoặc giữ ngón tay trên nút; subclass lấy Trait từ details.js
 const CLSDESC={Vanguards:'Tiên phong: Cost thấp, hồi DP đầu trận để deploy đội hình nhanh, thường block 1–2 địch.',Guards:'Cận chiến chủ lực: gây sát thương vật lý mạnh, block địch, nhiều nhánh đánh diện rộng hoặc tầm xa.',Defenders:'Hộ vệ: HP và DEF cao, block nhiều địch để giữ đường, một số nhánh hồi máu hoặc gây sát thương.',Snipers:'Xạ thủ tầm xa: đặt ô cao, ưu tiên bắn địch bay hoặc gây sát thương vật lý từ xa.',Casters:'Pháp sư tầm xa: đặt ô cao, gây sát thương Arts, mạnh với địch DEF cao.',Medics:'Y sĩ: hồi HP cho đồng minh, đặt ô cao.',Supporters:'Hỗ trợ: làm chậm, debuff địch, buff đồng minh hoặc triệu hồi, đặt ô cao.',Specialists:'Đặc vụ: cơ chế đặc biệt như dịch chuyển địch, deploy lại nhanh, bẫy hoặc ẩn thân.'};
-const SUBDESC={};for(const d of Object.values(AKD))if(d.sub&&!SUBDESC[d.sub])SUBDESC[d.sub]=d.trait.replace(/\[\[|\]\]/g,'');
+// archetype: mô tả vai trò (subclass.js), kèm Trait trong game
+const SUBDESC={};for(const d of Object.values(AKD))if(d.sub&&!SUBDESC[d.sub])SUBDESC[d.sub]=(window.AKSUB?.[d.sub]?window.AKSUB[d.sub]+' — Trait: ':'')+d.trait.replace(/\[\[|\]\]/g,'');
 {const t=document.createElement('div');t.id='ctip';t.setAttribute('role','tooltip');t.hidden=true;document.body.append(t);
   const txt=c=>c.closest('#cls')?CLSDESC[c.dataset.k]:c.closest('#sub')?SUBDESC[c.dataset.k]:null;
   const show=c=>{const d=txt(c);if(!d)return;t.innerHTML=`<b>${esc(c.textContent.trim())}</b>${esc(d)}`;t.hidden=false;
