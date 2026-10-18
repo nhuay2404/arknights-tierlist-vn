@@ -1,7 +1,7 @@
 """Module, Base skill (RIIC) và dữ liệu cho Operator Planner -> kit.js
 Dùng: python _build/build_kit.py <thư mục excel CN> <thư mục excel EN>
   cần: character_table, uniequip_table, battle_equip_table, building_data, item_table, gamedata_const
-Text: bản Global lấy tiếng Anh, bản CN lấy tiếng Trung (chưa dịch).
+Text gốc: bản Global tiếng Anh, bản CN tiếng Trung; bản dịch tiếng Việt trong i18n/kit/*.json ({gốc: dịch}) được thay vào nếu có.
 window.AKK={m:{charId:[module…]}, b:{charId:[base skill…]}, i:{itemId:[tên,icon,rarity]}, p:{exp,gold,evo,max}}"""
 import json, os, re, sys
 
@@ -35,6 +35,10 @@ def resolve(text, bb):  # giống _build/extract.py: {key:0%} -> giá trị, th�
     return re.sub(r'</?[^>]+>', '', text).replace('\\n', '\n').strip()
 
 
+VI = {}
+for f in sorted(__import__('glob').glob('i18n/kit/*.json')):
+    VI.update(json.load(open(f, encoding='utf-8')))
+tv = lambda t: VI.get(t) or t
 cost = lambda l: [[x['id'], x['count']] for x in l or []]
 used, M, Bs = set(), {}, {}
 for cid, n, r, c, sub, gl, *_ in roster:
@@ -74,6 +78,16 @@ for cid, n, r, c, sub, gl, *_ in roster:
                 out.append({'n': b['buffName'], 'room': b['roomType'], 'ic': b['skillIcon'], 'd': resolve(b['description'], None),
                             'ph': int(str(x['cond']['phase']).replace('PHASE_', '')), 'lv': x['cond']['level']})
         if out: Bs[cid] = out
+miss = set()
+for ms in M.values():
+    for m in ms:
+        for l in m['lv']:
+            miss.update(t for t in l['tr'] + [t for _, t in l['ta']] if t not in VI)
+            l['tr'] = [tv(t) for t in l['tr']]; l['ta'] = [[n, tv(t)] for n, t in l['ta']]
+for bs in Bs.values():
+    for b in bs:
+        if b['d'] not in VI: miss.add(b['d'])
+        b['d'] = tv(b['d'])
 ei, ci = src[ed]['item_table']['items'], src[cd]['item_table']['items']
 items = {}
 for i in sorted(used):
@@ -84,4 +98,4 @@ mx = {cid: [p['maxLevel'] for p in (src[ed]['character_table'].get(cid) or src[c
 open('kit.js', 'w', encoding='utf-8').write('window.AKK=' + json.dumps(
     {'m': M, 'b': Bs, 'i': items, 'p': {'exp': g['characterExpMap'], 'gold': g['characterUpgradeCostMap'], 'evo': g['evolveGoldCost'], 'max': mx}},
     ensure_ascii=False, separators=(',', ':')) + ';\n')
-print(f'kit.js: module {sum(map(len, M.values()))} ({len(M)} operator), base skill {len(Bs)} operator, {len(items)} vật phẩm module')
+print(f'chưa dịch {len(miss)} đoạn'); print(f'kit.js: module {sum(map(len, M.values()))} ({len(M)} operator), base skill {len(Bs)} operator, {len(items)} vật phẩm module')
