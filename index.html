@@ -247,15 +247,15 @@ dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
 .gban{position:relative;display:grid;grid-template-columns:1fr;background:#101114;color:#eee;overflow:hidden;border:1px solid var(--line);margin-bottom:14px}
 .gban .gart{position:relative;aspect-ratio:16/7;overflow:hidden;background:#050506 center/cover no-repeat;isolation:isolate}
 .gban .gart img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%}
-/* banner thật: ảnh nhân vật trong file UI gacha của game (img/gacha/<pool>/) xếp chồng như màn hình headhunting */
-.gban .gart .c2{left:22%;width:78%;object-position:60% 30%}
-.gban .gart .c1{width:52%;object-position:35% 25%;-webkit-mask-image:linear-gradient(90deg,#000 55%,#0000);mask-image:linear-gradient(90deg,#000 55%,#0000);animation:gslide .9s var(--ease) both}
+/* banner thật: 2 ảnh key art của banner trong file UI gacha (img/gacha/<pool>/char1, char2) đặt cạnh nhau như màn hình headhunting */
+.gban .gart .k1,.gban .gart .k2{width:50%;object-position:50% 35%;animation:gslide .9s var(--ease) both}
+.gban .gart .k2{left:50%;animation-name:gslide2}
 .gban .gart .gt{position:absolute;left:14px;top:12px;inset:auto auto auto auto;width:min(46%,220px);height:auto;object-fit:contain;z-index:2}
 .gban .gart .n1,.gban .gart .n2{position:absolute;inset:auto;height:auto;object-fit:contain;z-index:2;filter:drop-shadow(0 2px 6px #000)}
 .gban .gart .n1{left:8px;bottom:10px;width:min(30%,170px)}.gban .gart .n2{right:8px;bottom:10px;width:min(40%,240px)}
 .gban .ghome{width:100%;max-width:360px;height:auto;display:block;border:1px solid #ffffff22}
-@keyframes gslide{from{opacity:0;transform:translateX(-24px)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){.gban .gart .c1{animation:none}}
+@keyframes gslide{from{opacity:0;transform:translateX(-24px)}to{opacity:1;transform:none}}@keyframes gslide2{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.gban .gart .k1,.gban .gart .k2{animation:none}}
 .gban .ginfo{padding:20px 24px 24px;display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:10px 24px;align-items:start;z-index:1}
 .gban .ginfo>.ghome{grid-row:1/span 6}.gban .ginfo>:not(.ghome){grid-column:2}
 .gban h2{margin:0;font:800 1.75rem/1.15 "Be Vietnam Pro",system-ui,sans-serif}.gban .gtype{font:700 0.75rem var(--mono);letter-spacing:.14em;color:#ffb347;text-transform:uppercase}
@@ -284,7 +284,7 @@ dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
 .gstat .gh{grid-column:1/-1}.gh ol{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
 .gh li{display:flex;align-items:center;gap:6px;padding:3px 8px 3px 3px;background:var(--panel2);font-size:0.8125rem}.gh li img{width:28px;height:28px;object-fit:cover}.gh li em{font:600 0.6875rem var(--mono);color:var(--mute);font-style:normal}
 .grule summary{cursor:pointer;font:700 0.875rem var(--mono);letter-spacing:.06em;text-transform:uppercase}.grule ul{margin:12px 0 0;padding-left:18px;line-height:1.6}
-@media (max-width:760px){.gban .gart{aspect-ratio:16/10}.gban .gart .c2{left:30%;width:70%;object-position:62% 30%}.gban .gart .c1{width:58%;object-position:30% 25%}.gban .ginfo{grid-template-columns:1fr}.gban .ginfo>:not(.ghome){grid-column:1}.gban .ginfo>.ghome{grid-row:auto}.gres{grid-template-columns:repeat(5,minmax(0,1fr))}.gstat{grid-template-columns:repeat(2,minmax(0,1fr))}.gbtn{flex:1}.greset{margin-left:0}}
+@media (max-width:760px){.gban .gart{aspect-ratio:4/3}.gban .ginfo{grid-template-columns:1fr}.gban .ginfo>:not(.ghome){grid-column:1}.gban .ginfo>.ghome{grid-row:auto}.gres{grid-template-columns:repeat(5,minmax(0,1fr))}.gstat{grid-template-columns:repeat(2,minmax(0,1fr))}.gbtn{flex:1}.greset{margin-left:0}}
 /* nguyên liệu nâng cấp: Elite, skill Lv2–7, mastery từng skill */
 .mats{display:grid;gap:10px}.mats h4{margin:0 0 4px;font:700 0.8125rem var(--mono);letter-spacing:.06em;text-transform:uppercase}
 .mrow{display:grid;grid-template-columns:56px 1fr;gap:4px 10px;align-items:center;padding:4px 0;border-top:1px solid var(--line)}
@@ -568,15 +568,15 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 <dialog id="dlg"></dialog>
 
 <!-- ?v=: đổi mỗi lần cập nhật data để trình duyệt/CDN không dùng file .js cũ lệch với index.html -->
-<script src="data.js?v=20261018c"></script>
-<script src="details.js?v=20261018c"></script>
-<script src="glossary.js?v=20261018c"></script>
-<script src="factions.js?v=20261018c"></script>
-<script src="roster.js?v=20261018c"></script>
-<script src="skins.js?v=20261018c"></script>
-<script src="mats.js?v=20261018c"></script>
-<script src="details_x.js?v=20261018c"></script>
-<script src="gacha.js?v=20261018c"></script>
+<script src="data.js?v=20261018d"></script>
+<script src="details.js?v=20261018d"></script>
+<script src="glossary.js?v=20261018d"></script>
+<script src="factions.js?v=20261018d"></script>
+<script src="roster.js?v=20261018d"></script>
+<script src="skins.js?v=20261018d"></script>
+<script src="mats.js?v=20261018d"></script>
+<script src="details_x.js?v=20261018d"></script>
+<script src="gacha.js?v=20261018d"></script>
 <script>
 const {ops:OPS, general:GENERAL} = window.AK;
 const TIERS=['EX','S+','S','S-','A+','A','A-','B+','B','B-','C+','C','C-','D','F'];
@@ -1017,7 +1017,7 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if
       <div class="gh"><small>Lịch sử 6★</small>${S.h6.length?`<ol>${S.h6.slice().reverse().map(([id,n])=>`<li><img src="${PORT}${id}_1.png" alt="">${esc(nm(id))} <em>lượt ${n}</em></li>`).join('')}</ol>`:'<p class="mnone" style="margin-top:6px">Chưa có.</p>'}</div>`}
   const t=d=>new Date(d*1000).toLocaleDateString('vi',{day:'2-digit',month:'2-digit',year:'numeric'});
   const A=B.art&&(f=>`img/gacha/${B.id.toLowerCase()}/${f}.webp`);
-  $('#gban').innerHTML=`<div class="gart"${A?` style="background-image:url('${A('anim_bg1')}')"`:''} role="img" aria-label="Banner ${esc(B.name)}: ${B.up6.map(nm).map(esc).join(', ')}">${A?`<img class="c2" src="${A('c2_char')}" alt=""><img class="c1" src="${A('c1_char')}" alt="">
+  $('#gban').innerHTML=`<div class="gart"${A?` style="background-image:url('${A('anim_bg1')}')"`:''} role="img" aria-label="Banner ${esc(B.name)}: ${B.up6.map(nm).map(esc).join(', ')}">${A?`<img class="k1" src="${A('char1')}" alt=""><img class="k2" src="${A('char2')}" alt="">
       <img class="gt" src="${A('limit_gacha_title')}" alt=""><img class="n1" src="${A('name1')}" alt=""><img class="n2" src="${A('name2')}" alt="">`:`<img src="${art2(B.limited)}" alt="">`}</div>
     <div class="ginfo">${A?`<img class="ghome" src="${A('home')}" alt="Ảnh banner ${esc(B.name)} trong game">`:''}<span class="gtype">Limited Headhunting · Global</span><h2>${esc(B.name)}</h2>
     <span class="gtime">${t(B.open)} – ${t(B.end)}</span>
