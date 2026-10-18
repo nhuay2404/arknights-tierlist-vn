@@ -1,6 +1,7 @@
 # Changelog
 
 ## 2026-10-18
+- Thống nhất thuật ngữ hồ sơ lưu trữ: sửa 40 nhãn ở 24 hồ sơ (vd. Audio Log / Voice Log → "Bản ghi âm", Dungeoneering Experience → "Kinh nghiệm thám hiểm hầm ngục", vài nhãn còn sót tiếng Anh như Gender, Weight); bổ sung các nhãn mới, mức đánh giá Exceptional, ghi chú (REDACTED)/UNUSED và tên riêng giữ tiếng Anh vào TRANSLATION_GUIDE mục 7.
 - Hồ sơ operator có dòng "Video gameplay": nút ▶ tsalthsu mở tìm kiếm video của operator trong kênh YouTube @tsalthsu, nút ▶ YouTube khác mở tìm "Arknights <tên> showcase" trên toàn YouTube khi kênh chưa có video. Áp dụng cho mọi operator.
 - Hồ sơ lưu trữ: dịch tiếng Việt xong toàn bộ 192/192 operator 5★ (Basic Info, Physical Exam, Profile, Clinical Analysis, Archive File, Promotion Record), theo TRANSLATION_GUIDE. Cùng 130 operator 6★, toàn bộ 322 hồ sơ 5★/6★ bản Global đã có bản tiếng Việt (nút "Xem bản gốc" để đọc tiếng Anh).
 - Hồ sơ lưu trữ mở cho toàn bộ operator 5★ (192 operator, kể cả 5★ ngoài tier list): tab "Hồ sơ lưu trữ" trong hồ sơ operator hiện File & Story bản gốc tiếng Anh, bản dịch tiếng Việt sẽ được thêm dần. `_build/extract_profiles.py` giờ lấy mọi 5★/6★ đã ra Global (322 hồ sơ).

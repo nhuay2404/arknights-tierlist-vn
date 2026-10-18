@@ -161,5 +161,22 @@ Bản dịch: `i18n/profiles/<id>.vi.json` là **một mảng JSON chuỗi**, đ
 | Originium Arts Assimilation / Originium Adaptability | Thích ứng Originium Arts |
 | Cell-Originium Assimilation | Tỷ lệ đồng hoá tế bào–Originium |
 | Blood Originium-Crystal Density | Mật độ tinh thể Originium trong máu |
+| Somatic Cell-Originium Assimilation | Tỷ lệ đồng hoá tế bào soma–Originium |
+| Exoskeleton-Originium Assimilation / Machine-Originium Assimilation | Tỷ lệ đồng hoá khung xương ngoài–Originium / Tỷ lệ đồng hoá máy móc–Originium |
+| Oil / Coolant Originium-Crystal Density | Mật độ tinh thể Originium trong dầu / trong chất làm mát |
+| Originium Complications | Biến chứng Originium |
+| Name / Codename | Tên / Mật danh |
+| Weight · Tail Length · Horn Length | Cân nặng · Chiều dài đuôi · Chiều dài sừng |
+| Combat Skills | Kỹ năng chiến đấu |
+| Work / Guide / Bodyguard / Performance Experience | Kinh nghiệm làm việc / dẫn đường / làm vệ sĩ / biểu diễn |
+| Thieving / Brawling Experience | Kinh nghiệm trộm cắp / ẩu đả |
+| Dungeoneering Experience | Kinh nghiệm thám hiểm hầm ngục |
+| Competition Knight Experience | Kinh nghiệm Kỵ sĩ thi đấu |
+| Audio Log / Voice Log | Bản ghi âm |
+| Medical Department Audio Log | Bản ghi âm của Medical Department |
+| Iris's Notes | Ghi chép của Iris |
+| Miscellaneous Records | Ghi chép linh tinh |
 
-Giá trị: Male → Nam, Female → Nữ; `X Years` → `X năm`; ngày sinh `Apr 23` → `23/4`; Unknown/Undisclosed → Không rõ / Không tiết lộ. Mức đánh giá: Flawed → Kém; Normal → Bình thường; Standard → Tiêu chuẩn; Excellent → Xuất sắc; Outstanding → Vượt trội; ■■ giữ nguyên. Câu kết luận y khoa (Infection Status, Clinical Analysis) dịch đầy đủ, văn phong báo cáo y tế.
+Giá trị: Male → Nam, Female → Nữ; `X Years` → `X năm`; ngày sinh `Apr 23` → `23/4`; Unknown/Undisclosed → Không rõ / Không tiết lộ. Mức đánh giá: Flawed → Kém; Normal → Bình thường; Standard → Tiêu chuẩn; Excellent → Xuất sắc; Outstanding → Vượt trội; Exceptional → Phi thường; ■■ giữ nguyên. Câu kết luận y khoa (Infection Status, Clinical Analysis) dịch đầy đủ, văn phong báo cáo y tế. Ghi chú hệ thống: (REDACTED) → (ĐÃ BIÊN TẬP), UNUSED → KHÔNG SỬ DỤNG; lỗi đánh máy của bản gốc giữ nguyên ý, không tự sửa.
+
+**Tên riêng trong truyện giữ tiếng Anh** kể cả khi chưa có trong danh sách trên, ví dụ: `Knight Primus`, `Karlan Saintess`, `Vine-Bead Court`, `Infected Knights Act`, `Twin Spires`, `Spire of Authority`, `Spire of Grace`, `Consultant`, `wakemen`, tên vũ khí (`Eulogy`).
