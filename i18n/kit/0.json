@@ -310,7 +310,7 @@
 "[[Elemental Injury]] recovery +27% when healing ground units": "Hồi [[Elemental Injury]] +27% khi hồi máu cho unit mặt đất",
 "再部署时间-18秒且不提高部署费用；部署至上次部署位置周围更大范围时，30秒内攻击力+20%并且可以部署在近战位": "Thời gian Redeploy -18 giây và không tăng DP Cost; khi deploy trong vùng rộng hơn quanh vị trí deploy lần trước, ATK +20% trong 30 giây và có thể deploy trên ô cận chiến",
 "操作[[浮游单元]]造成[[法术伤害]]\n单元攻击同一敌人伤害提升（单元初始伤害提高，最高造成干员110%攻击力的伤害）": "Điều khiển [[Floating Unit]] gây [[sát thương Arts]]\nUnit tấn công cùng một địch thì sát thương tăng dần (sát thương ban đầu của unit được tăng, tối đa bằng 110% ATK của operator)",
-"进驻会客室时，更容易获得线索板上尚未拥有的线索，若[[焰狐龙梓兰]]进驻控制中枢，则线索搜集速度提升[[10%]]": "Khi ở Phòng tiếp khách, dễ nhận Clue chưa có trên Clue Board hơn; nếu [[Zilan]] ở Phòng điều khiển, tốc độ tìm Clue tăng [[10%]]",
+"进驻会客室时，更容易获得线索板上尚未拥有的线索，若[[焰狐龙梓兰]]进驻控制中枢，则线索搜集速度提升[[10%]]": "Khi ở Phòng tiếp khách, dễ nhận Clue chưa có trên Clue Board hơn; nếu [[Violet Mizutsune Orchid]] ở Phòng điều khiển, tốc độ tìm Clue tăng [[10%]]",
 "进驻宿舍时，自身心情每小时恢复[[+0.7]]": "Khi ở Ký túc xá, Morale bản thân hồi [[+0.7]] mỗi giờ",
 "部署后，嘉辛塔自身与周围八格的友方单位获得15%的[[对空庇护]]": "Sau khi deploy, bản thân và đồng minh trong 8 ô xung quanh nhận 15% [[Sanctuary đối không]]"
 }
