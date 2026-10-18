@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-10-18
+- Hồ sơ operator đồng nhất: bấm ở tab Operator giờ mở đúng kiểu hồ sơ của tier list (Archetype, Vị trí, Phe phái, Tag, Trait, chỉ số, range, Skill M3, Talent, trang phục, nguyên liệu) cho cả 432 operator. Sửa 5 operator có trong tier list nhưng bị mở bản rút gọn do tên lệch (Kal'tsit Esperanta, Jessica the Liberated, Reed the Flame Shadow, Fang the Fire-Sharpened…) — giờ ghép theo mã operator. 50 operator ngoài tier list (3★ trở xuống, robot, bản CN) lấy dữ liệu từ `_build/build_extra.py` → `details_x.js`; text chưa dịch giữ bản Global (tiếng Anh) hoặc CN (tiếng Trung) và có ghi chú. Bỏ hồ sơ rút gọn cũ.
+
 ## 2026-10-17
 - "Mới nhất": 80 operator có sẵn ngày mở server Global (16/01/2020) xuống dưới cùng danh sách — 6★ Exusiai…SilverAsh, 5★ Ptilopsis…Sora, 4★ Haze…Cuora, toàn bộ 3★ và 2★, Lancet-2, Castle-3. Ngay trên nhóm này là các operator ra sau đó (Skadi, Manticore, Ch'en, Schwarz…).
 - "Mới nhất": robot 1★ xếp theo đúng ngày ra Global — Lancet-2, Castle-3 (16/01/2020), THRM-EX (02/01/2021), 'Justice Knight' (28/04/2022), Terra Research Commission (07/09/2023), Friston-3 (05/12/2023), U-Official (01/04/2024), PhonoR-0 (31/10/2024), CONFESS-47 (14/10/2025), GALLUS² (14/10/2026). Sửa thêm: operator ra năm 2020 không còn bị dồn chung một ngày (mốc đầu là ngày mở server Global 16/01/2020); Vigil, Nine-Colored Deer, Luo Xiaohei, Conviction không còn rơi xuống cuối danh sách.
