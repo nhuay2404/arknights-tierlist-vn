@@ -2,7 +2,7 @@
 
 ## 2026-10-18
 - Hồ sơ operator có dòng "Video gameplay": nút ▶ tsalthsu mở tìm kiếm video của operator trong kênh YouTube @tsalthsu, nút ▶ YouTube khác mở tìm "Arknights <tên> showcase" trên toàn YouTube khi kênh chưa có video. Áp dụng cho mọi operator.
-- Hồ sơ lưu trữ: dịch tiếng Việt xong 104/192 operator 5★ (File, Story, Clinical Analysis, Promotion Record…), theo TRANSLATION_GUIDE; phần còn lại đang dịch tiếp và tạm hiện bản gốc tiếng Anh.
+- Hồ sơ lưu trữ: dịch tiếng Việt xong toàn bộ 192/192 operator 5★ (Basic Info, Physical Exam, Profile, Clinical Analysis, Archive File, Promotion Record), theo TRANSLATION_GUIDE. Cùng 130 operator 6★, toàn bộ 322 hồ sơ 5★/6★ bản Global đã có bản tiếng Việt (nút "Xem bản gốc" để đọc tiếng Anh).
 - Hồ sơ lưu trữ mở cho toàn bộ operator 5★ (192 operator, kể cả 5★ ngoài tier list): tab "Hồ sơ lưu trữ" trong hồ sơ operator hiện File & Story bản gốc tiếng Anh, bản dịch tiếng Việt sẽ được thêm dần. `_build/extract_profiles.py` giờ lấy mọi 5★/6★ đã ra Global (322 hồ sơ).
 - Tab Gacha trên điện thoại gọn hơn: bỏ ảnh banner nhỏ thứ hai, bỏ dòng "Limited Headhunting · Global" và nhóm limited cũ ×5 (vẫn ghi trong Luật gacha), khung banner thấp hơn (16:10), giảm khoảng cách và cỡ chữ phần thông tin, nút quay, lưới kết quả; 4 ô thống kê trên một hàng. Nút "Quay" giờ nằm trong màn hình đầu (từ ~760px xuống ~630px), trang ngắn đi ~13%.
 - Sửa banner tab Gacha bị mờ/chồng hình: thay 2 lớp ảnh hiệu ứng (vốn là khung chuyển động, nhoè) bằng 2 ảnh key art gốc của banner — Closure bên trái, Kal'tsit Esperanta bên phải — đặt cạnh nhau như màn hình headhunting trong game, giữ logo và bảng tên.
