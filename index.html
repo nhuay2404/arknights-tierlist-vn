@@ -293,6 +293,27 @@ dialog::backdrop{background:var(--bg-a);backdrop-filter:blur(6px)}
   .gres{grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;margin-bottom:8px}
   .gstat{grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;margin-bottom:8px}.gstat>div{padding:6px 8px}.gstat b{font-size:0.9375rem}.gstat small{font-size:0.5625rem;letter-spacing:.04em}
   .grule{padding:12px}}
+/* tab Planner: danh sách operator + tổng nguyên liệu */
+.padd{display:flex;gap:8px;margin-bottom:14px}.padd .search{flex:1;min-width:0}.padd .gbtn{flex:none;min-height:44px}
+.pgrid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:14px;align-items:start}
+.ptot{position:sticky;top:calc(var(--stick,0px) + 72px);padding:16px}.ptot h3{margin:0 0 8px;font:800 0.875rem var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.ptot .mi{gap:6px}.ptot .sum{display:grid;grid-template-columns:1fr auto;gap:4px 10px;font-size:0.875rem;margin-bottom:12px}.ptot .sum b{font-family:var(--mono)}
+.pop{background:var(--panel);border:1px solid var(--line);padding:12px 14px;margin-bottom:8px}
+.poh{display:flex;align-items:center;gap:10px;margin-bottom:8px}.poh img{width:40px;height:40px;object-fit:cover;background:var(--rbg)}.poh h4{margin:0;flex:1}.poh button{all:unset;cursor:pointer;width:32px;height:32px;display:grid;place-items:center;color:var(--mute);font-size:1.125rem}.poh button:focus-visible{outline:2px solid var(--ink)}
+.prow{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px 12px}
+.prow label{display:flex;align-items:center;justify-content:space-between;gap:6px;font-size:0.8125rem;padding:4px 0;border-bottom:1px dashed var(--line)}
+.prow label span{color:var(--mute);font:600 0.75rem var(--mono);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.prow select,.prow input{font:600 0.8125rem var(--mono);background:var(--panel2);color:var(--text);border:1px solid var(--line);padding:3px 2px;max-width:58px}
+.prow em{font-style:normal;color:var(--mute)}
+@media (max-width:760px){.pgrid{grid-template-columns:1fr}.ptot{position:static;order:-1}.prow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Module + Base skill trong hồ sơ */
+.mod{border:1px solid var(--line);padding:12px 14px;margin-bottom:8px}.modh{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.modh h4{margin:0;flex:1;min-width:0}
+.mtype{font:800 0.75rem var(--mono);padding:3px 7px;background:var(--ink);color:var(--bg)}.mtype[data-c=red]{background:#d33}.mtype[data-c=blue]{background:#2a7fd4}.mtype[data-c=yellow]{background:#c9a400;color:#111}.mtype[data-c=green]{background:#3a9b4b}
+.mst{display:flex;gap:4px}.mst button{all:unset;cursor:pointer;width:32px;height:32px;display:grid;place-items:center;border:1px solid var(--line);font:700 0.8125rem var(--mono)}.mst button[aria-pressed=true]{background:var(--accent);color:#fff;border-color:var(--accent)}.mst button:focus-visible{outline:2px solid var(--ink)}
+.modb p{margin:8px 0 0;font-size:0.875rem;line-height:1.55}.modb small{font:700 0.6875rem var(--mono);letter-spacing:.08em;color:var(--accent);margin-right:4px}
+.mattr{display:flex;flex-wrap:wrap;gap:6px 14px}.mattr span{font:600 0.8125rem var(--mono)}.modb .mrow{margin-top:10px}
+.bsk{display:grid;gap:8px}.bs{display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start;border:1px solid var(--line);padding:10px 12px}.bs img{width:40px;height:40px;background:#333;border-radius:4px}
+.bs h4{margin:0}.bs h4 small{font:600 0.6875rem var(--mono);color:var(--mute);margin-left:6px}.bs p{margin:4px 0 0;font-size:0.875rem;line-height:1.5}
 /* nguyên liệu nâng cấp: Elite, skill Lv2–7, mastery từng skill */
 .mats{display:grid;gap:10px}.mats h4{margin:0 0 4px;font:700 0.8125rem var(--mono);letter-spacing:.06em;text-transform:uppercase}
 .mrow{display:grid;grid-template-columns:56px 1fr;gap:4px 10px;align-items:center;padding:4px 0;border-top:1px solid var(--line)}
@@ -483,6 +504,7 @@ dialog[open]::backdrop{animation:fade .3s ease both}
     <button data-tab="ops" class="on">Operator</button>
     <button data-tab="list">Xếp hạng</button>
     <button data-tab="gacha">Gacha</button>
+    <button data-tab="plan">Planner</button>
     <button data-tab="new">Mới</button>
     <button data-tab="fac">Phe phái</button>
     <button data-tab="log">Lịch sử</button>
@@ -531,6 +553,12 @@ dialog[open]::backdrop{animation:fade .3s ease both}
     <details class="card grule"><summary>Luật gacha mô phỏng</summary><div id="grule"></div></details>
   </section>
 
+  <section id="plan" hidden>
+    <div class="padd"><label class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="pq" list="pql" placeholder="Thêm operator vào kế hoạch… (vd: Closure)" aria-label="Thêm operator"></label><datalist id="pql"></datalist><button class="gbtn x10" id="padd">Thêm</button></div>
+    <div class="pgrid"><div id="plist"></div><aside class="ptot card" id="ptot" aria-live="polite"></aside></div>
+  </section>
+
   <section id="new" hidden><div id="newGrid"></div></section>
   <section id="fac" hidden><div id="backbar" hidden><button class="back" onclick="history.back()"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><path d="M15 5l-7 7 7 7"/></svg>Quay lại hồ sơ <span></span></button></div><div id="facBody"></div></section>
   <section id="log" hidden><div class="card"><div class="timeline" id="timeline"></div></div></section>
@@ -576,15 +604,16 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 <dialog id="dlg"></dialog>
 
 <!-- ?v=: đổi mỗi lần cập nhật data để trình duyệt/CDN không dùng file .js cũ lệch với index.html -->
-<script src="data.js?v=20261018i"></script>
-<script src="details.js?v=20261018i"></script>
-<script src="glossary.js?v=20261018i"></script>
-<script src="factions.js?v=20261018i"></script>
-<script src="roster.js?v=20261018i"></script>
-<script src="skins.js?v=20261018i"></script>
-<script src="mats.js?v=20261018i"></script>
-<script src="details_x.js?v=20261018i"></script>
-<script src="gacha.js?v=20261018i"></script>
+<script src="data.js?v=20261018j"></script>
+<script src="details.js?v=20261018j"></script>
+<script src="glossary.js?v=20261018j"></script>
+<script src="factions.js?v=20261018j"></script>
+<script src="roster.js?v=20261018j"></script>
+<script src="skins.js?v=20261018j"></script>
+<script src="mats.js?v=20261018j"></script>
+<script src="details_x.js?v=20261018j"></script>
+<script src="gacha.js?v=20261018j"></script>
+<script>const KITV='20261018j'</script>
 <script>
 const {ops:OPS, general:GENERAL} = window.AK;
 const TIERS=['EX','S+','S','S-','A+','A','A-','B+','B','B-','C+','C','C-','D','F'];
@@ -809,8 +838,11 @@ function rangeGrid(g){
 // nguyên liệu nâng cấp (mats.js): Elite 1/2, skill Lv2–7 dùng chung, M1–M3 của từng skill
 const ITEM='https://raw.githubusercontent.com/yuanyan3060/ArknightsGameResource/main/item/';
 const fmtN=n=>n>=10000?(n/1000)+'K':n;
+// ô vật phẩm: tên/icon từ mats.js, vật phẩm của Module từ kit.js
+const itemInfo=k=>window.AKM?.i[k]||window.AKK?.i[k]||[k,'',0];
+const itemsHTML=l=>`<div class="mi">${l.map(([k,n])=>{const [nm,ic,r]=itemInfo(k);return `<span class="mt" data-r="${r}" title="${esc(nm)} ×${n.toLocaleString('vi')}"><img src="${ITEM}${ic}.png" alt="${esc(nm)}" loading="lazy"><span>${fmtN(n)}</span></span>`}).join('')}</div>`;
 function matHTML(id){const M=window.AKM,m=M?.c[id];if(!m||!m.slice(0,4).some(x=>x.length))return '<p class="mnone">Operator này không có nguyên liệu nâng cấp.</p>';
-  const it=l=>`<div class="mi">${l.map(([k,n])=>{const [nm,ic,r]=M.i[k]||[k,'',0];return `<span class="mt" data-r="${r}" title="${esc(nm)} ×${n.toLocaleString('vi')}"><img src="${ITEM}${ic}.png" alt="${esc(nm)}" loading="lazy"><span>${fmtN(n)}</span></span>`}).join('')}</div>`;
+  const it=itemsHTML;
   const row=(l,c)=>c&&c.length?`<div class="mrow"><b>${l}</b>${it(c)}</div>`:'';
   const [e1,e2,lv,sk]=m,blk=(t,h)=>h?`<div><h4>${t}</h4>${h}</div>`:'';
   return `<div class="mats">${blk('Thăng Elite',row('Elite 1',e1)+row('Elite 2',e2))}${blk('Skill (dùng chung)',lv.map((c,k)=>row('Lv'+(k+2),c)).join(''))}
@@ -830,6 +862,7 @@ function detail(o){
   ${d.skills.length?`<h3 class="sec">Skill (M3)</h3>${d.skills.map((s,k)=>`<div class="sk"><img src="${RES}skill/skill_icon_${s.id}.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><div><h4>S${k+1} · ${esc(s.name)}</h4>
     <div class="spi">${s.auto==='PASSIVE'?ACT.PASSIVE:`${SPT[s.spType]||''} · ${ACT[s.auto]||''} · SP ${s.init}/${s.sp}${s.dur>0?` · ${s.dur} giây`:''}`}</div><p>${rt(s.desc)}</p></div></div>`).join('')}`:''}
   ${d.talents.length?`<h3 class="sec">Talent</h3>${d.talents.map(t=>`<div class="tal"><h4>${esc(t.name)}</h4><p>${rt(t.desc)}</p></div>`).join('')}`:''}
+  <div class="kitx" data-id="${d.id}"></div>
   <h3 class="sec">Nguyên liệu nâng cấp</h3>${matHTML(d.id)}`;
 }
 let CUR=-1;
@@ -854,9 +887,28 @@ function profile(o,i){CUR=i;CURO=o;const rc=`var(--r${o.r})`,d=AKD[o.n];
     ${arch?`<div class="ptabs" role="tablist" aria-label="Nội dung hồ sơ">${[['kit','Chỉ số & Skill'],['arch','Hồ sơ lưu trữ']].map(([k,l])=>`<button role="tab" id="t-${k}" data-pt="${k}" aria-controls="p-${k}" aria-selected="${PTAB===k}">${l}</button>`).join('')}</div>`:''}</div><div id="tip" role="tooltip" hidden></div>
     <div class="mb" id="p-kit" role="tabpanel" aria-labelledby="t-kit">${src?`<p class="mnone" style="margin:0 0 14px">Operator ngoài tier list, chưa có bản dịch tiếng Việt: mô tả giữ nguyên bản ${src}.</p>`:''}${d?detail(o):`<h3 class="sec">Nguyên liệu nâng cấp</h3>${matHTML(o.img)}`}</div>${arch?`<div class="mb arch" id="p-arch" role="tabpanel" aria-labelledby="t-arch" hidden></div>`:''}`;
   if(!dlg.open){keepY();dlg.showModal()}
+  fillKit();
   showPT(arch?PTAB:'kit');
   dlg.scrollTop=0;
 }
+// Module + Base skill (kit.js, ~750KB) chỉ tải khi mở hồ sơ hoặc tab Planner lần đầu
+let KITP=null;
+const needKit=()=>KITP||=new Promise((ok,no)=>{const sc=document.createElement('script');sc.src='kit.js?v='+KITV;sc.onload=()=>ok(window.AKK);sc.onerror=()=>{KITP=null;no()};document.head.append(sc)});
+const ATTR={atk:'ATK',def:'DEF',max_hp:'HP',magic_resistance:'RES',attack_speed:'ASPD',cost:'Cost',respawn_time:'Redeploy',block_cnt:'Block',base_attack_time:'ATK Interval'};
+const ROOM={CONTROL:'Phòng điều khiển',DORMITORY:'Ký túc xá',TRADING:'Trạm giao dịch',MANUFACTURE:'Nhà máy',POWER:'Trạm điện',MEETING:'Phòng tiếp khách',HIRE:'Văn phòng HR',WORKSHOP:'Xưởng',TRAINING:'Phòng huấn luyện'};
+const BSK='https://raw.githubusercontent.com/yuanyan3060/ArknightsGameResource/main/building_skill/';
+function modHTML(ms){return ms.map((m,k)=>`<div class="mod" data-k="${k}"><div class="modh"><span class="mtype" data-c="${esc(m.col)}">${esc(m.t)}</span><h4>${esc(m.n)}</h4>
+    <div class="mst" role="group" aria-label="Stage">${m.lv.map((_,j)=>`<button data-j="${j}" aria-pressed="${j===m.lv.length-1}">${j+1}</button>`).join('')}</div></div>
+    ${m.lv.map((l,j)=>`<div class="modb" data-j="${j}"${j===m.lv.length-1?'':' hidden'}>
+      ${Object.keys(l.a).length?`<p class="mattr">${Object.entries(l.a).map(([a,v])=>`<span>${ATTR[a]||esc(a)} <b>${v>0?'+':''}${v}</b></span>`).join('')}</p>`:''}
+      ${l.tr.map(t=>`<p><small>TRAIT</small> ${rt(t)}</p>`).join('')}${l.ta.map(([n,t])=>`<p><small>${esc(n||'TALENT')}</small> ${rt(t)}</p>`).join('')}
+      ${l.c.length?`<div class="mrow"><b>Stage ${j+1}</b>${itemsHTML(l.c)}</div>`:''}</div>`).join('')}</div>`).join('')}
+function baseHTML(bs){return `<div class="bsk">${bs.map(b=>`<div class="bs"><img src="${BSK}${b.ic}.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><div><h4>${esc(b.n)} <small>${ROOM[b.room]||esc(b.room)} · ${b.ph?'E'+b.ph:b.lv>1?'Lv'+b.lv:'Mặc định'}</small></h4><p>${rt(b.d)}</p></div></div>`).join('')}</div>`}
+function fillKit(){const el=dlg.querySelector('.kitx');if(!el)return;const id=el.dataset.id;
+  needKit().then(K=>{if(!el.isConnected)return;const ms=K.m[id],bs=K.b[id];
+    el.innerHTML=(ms?`<h3 class="sec">Module</h3>${modHTML(ms)}`:'')+(bs?`<h3 class="sec">Base skill</h3>${baseHTML(bs)}`:'')}).catch(()=>{el.innerHTML='<p class="mnone">Không tải được Module / Base skill.</p>'})}
+dlg.addEventListener('click',e=>{const b=e.target.closest('.mst button');if(!b)return;const m=b.closest('.mod'),j=b.dataset.j;
+  m.querySelectorAll('.mst button').forEach(x=>x.setAttribute('aria-pressed',x===b));m.querySelectorAll('.modb').forEach(x=>x.hidden=x.dataset.j!==j)});
 // tab "Hồ sơ lưu trữ": File & Story của operator 5★/6★ bản Global, tải profiles/<id>.json khi mở lần đầu
 let PTAB='kit',ARCH_EN=false;
 const PROF=new Map();
@@ -1042,6 +1094,43 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if
   $('#greset').onclick=()=>{if(confirm('Xoá toàn bộ kết quả và bảo hiểm của banner này?')){S=fresh();save();draw()}};
   $('#gacha').addEventListener('click',e=>{const c=e.target.closest('.gc,.gop');if(!c)return;const i=OPS.findIndex(o=>(AKD[o.n]?.id||o.img)===c.dataset.id);if(i>=0)openOp(i);else openCN(c.dataset.id)});
   draw()}}
+// tab Planner: chọn mức Elite / Level / Skill / Mastery / Module hiện tại -> mục tiêu, cộng dồn nguyên liệu, LMD, EXP
+{const R=window.AKR||[],AR=Object.fromEntries(R.map(o=>[o[0],o])),M=window.AKM?.c||{},KEY='ak-planner';
+  let P=[];try{P=JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){}
+  const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(P))}catch(e){}};
+  $('#pql').innerHTML=R.map(o=>`<option value="${esc(o[1])}">`).join('');
+  const add=()=>{const v=norm($('#pq').value),o=R.find(x=>norm(x[1])===v)||R.find(x=>norm(x[1]).includes(v));if(!v||!o)return;
+    if(!P.some(p=>p.id===o[0])){const sk=(M[o[0]]?.[3]||[]).length;P.unshift({id:o[0],e:[0,o[2]>=4?2:o[2]>=3?1:0],l:[1,1],s:[1,7],m:Array.from({length:sk},()=>[0,0]),q:[]});save()}
+    $('#pq').value='';draw()};
+  $('#padd').onclick=add;$('#pq').addEventListener('keydown',e=>{if(e.key==='Enter')add()});
+  const opt=(a,b,v,f=x=>x)=>Array.from({length:b-a+1},(_,i)=>a+i).map(x=>`<option value="${x}"${x===v?' selected':''}>${f(x)}</option>`).join('');
+  const pair=(lab,k,i,a,b,f)=>{const v=k.split('.').reduce((o,x)=>o[x],P[i]);return `<label><span>${lab}</span><select data-i="${i}" data-k="${k}.0">${opt(a,b,v[0],f)}</select><em>→</em><select data-i="${i}" data-k="${k}.1">${opt(a,b,v[1],f)}</select></label>`};
+  function card(p,i,K){const o=AR[p.id];if(!o)return'';const mx=K.p.max[p.id]||[50],E=mx.length-1,sk=M[p.id]?.[3]||[],mods=K.m[p.id]||[];
+    while(p.q.length<mods.length)p.q.push([0,0]);
+    return `<div class="pop"><div class="poh" style="--rbg:var(--b${o[2]})"><img src="${IMG}${p.id}.png" alt=""><h4>${esc(o[1])} <small style="color:var(--r${o[2]})">${'★'.repeat(o[2])}</small></h4><button data-del="${i}" aria-label="Bỏ ${esc(o[1])}">✕</button></div>
+      <div class="prow">${E?pair('Elite','e',i,0,E,x=>'E'+x):''}<label><span>Level</span><input type="number" min="1" max="${mx[p.e[0]]}" value="${p.l[0]}" data-i="${i}" data-k="l.0"><em>→</em><input type="number" min="1" max="${mx[p.e[1]]}" value="${p.l[1]}" data-i="${i}" data-k="l.1"></label>
+      ${sk.length?pair('Skill Lv','s',i,1,7):''}${sk.map((x,j)=>p.m[j]?pair(`S${j+1} Mastery`.replace(' Mastery',' · M'),`m.${j}`,i,0,3,v=>v?'M'+v:'—'):'').join('')}
+      ${mods.map((m,j)=>pair(`${m.t}`,`q.${j}`,i,0,m.lv.length,v=>v?'S'+v:'—')).join('')}</div></div>`}
+  function total(K){const T={},add=l=>(l||[]).forEach(([k,n])=>T[k]=(T[k]||0)+n);let exp=0;
+    for(const p of P){const m=M[p.id],mx=K.p.max[p.id]||[50],[e0,e1]=p.e,[l0,l1]=p.l;
+      if(e1>e0||(e1===e0&&l1>l0))for(let e=e0;e<=e1;e++){const a=e===e0?l0:1,b=e===e1?l1:mx[e];for(let l=a;l<b;l++){exp+=Math.max(0,K.p.exp[e][l-1]||0);T['4001']=(T['4001']||0)+Math.max(0,K.p.gold[e][l-1]||0)}}
+      if(m){for(let e=e0+1;e<=e1;e++)add(m[e-1]);for(let s=p.s[0];s<p.s[1];s++)add(m[2][s-1]);
+        p.m.forEach(([a,b],j)=>{for(let x=a;x<b;x++)add(m[3][j]?.[1+x])})}
+      (K.m[p.id]||[]).forEach((md,j)=>{const [a,b]=p.q[j]||[0,0];for(let x=a;x<b;x++)add(md.lv[x]?.c)})}
+    return [T,exp]}
+  function draw(){needKit().then(K=>{
+    $('#plist').innerHTML=P.length?P.map((p,i)=>card(p,i,K)).join(''):'<p class="mnone">Chưa có operator nào. Gõ tên ở ô trên rồi bấm "Thêm".</p>';
+    const [T,exp]=total(K),lmd=T['4001']||0;delete T['4001'];
+    const its=Object.entries(T).filter(([,n])=>n>0).sort((a,b)=>itemInfo(b[0])[2]-itemInfo(a[0])[2]||a[0].localeCompare(b[0]));
+    $('#ptot').innerHTML=`<h3>Tổng cần</h3><div class="sum"><span>LMD</span><b>${lmd.toLocaleString('vi')}</b><span>EXP</span><b>${exp.toLocaleString('vi')}</b><span>≈ Strategic Battle Record (2.000 EXP)</span><b>${Math.ceil(exp/2000).toLocaleString('vi')}</b><span>Operator</span><b>${P.length}</b></div>
+      ${its.length?itemsHTML(its):'<p class="mnone">Chưa cần nguyên liệu nào.</p>'}`}).catch(()=>{$('#plist').innerHTML='<p class="mnone">Không tải được dữ liệu Planner.</p>'})}
+  $('#plist').addEventListener('change',e=>{const t=e.target;if(!t.dataset.k)return;const p=P[+t.dataset.i],ks=t.dataset.k.split('.'),last=+ks.pop();
+    const arr=ks.reduce((o,x)=>o[x],p);arr[last]=Math.max(+t.min||0,Math.min(+t.max||99,+t.value||0));
+    if(ks[0]==='e'||ks[0]==='l'){p.l[0]=Math.max(1,p.l[0]);p.l[1]=Math.max(1,p.l[1])}
+    if(arr[1]<arr[0]&&ks[0]!=='l')arr[1]=arr[0];save();draw()});
+  $('#plist').addEventListener('click',e=>{const b=e.target.closest('[data-del]');if(b){P.splice(+b.dataset.del,1);save();draw()}});
+  $('#nav').addEventListener('click',e=>{if(e.target.closest('[data-tab=plan]'))draw()});
+  if(!$('#plan').hidden)draw()}
 // tabs
 $('#nav').onclick=e=>{const b=e.target.closest('button');if(!b)return;
   document.querySelectorAll('#nav button').forEach(x=>x.classList.toggle('on',x===b));
@@ -1061,7 +1150,7 @@ addEventListener('popstate',e=>{const st=e.state||{tab:'ops'};NAV=true;
   NAV=false});
 history.replaceState(history.state||{tab:'ops'},'');
 // tiêu đề và chữ nền khổng lồ đổi theo tab đang mở
-const HERO={ops:['OPS','Danh sách','Operator'],gacha:['HH','Giả lập','Headhunting'],list:['TIER','Bảng xếp hạng','Operator'],new:['NEW','Operator','mới về'],fac:['FAC','Phe phái','& vùng đất'],log:['LOG','Lịch sử','thay đổi'],about:['INFO','Giới thiệu','& nguồn']};
+const HERO={ops:['OPS','Danh sách','Operator'],gacha:['HH','Giả lập','Headhunting'],plan:['PLAN','Operator','Planner'],list:['TIER','Bảng xếp hạng','Operator'],new:['NEW','Operator','mới về'],fac:['FAC','Phe phái','& vùng đất'],log:['LOG','Lịch sử','thay đổi'],about:['INFO','Giới thiệu','& nguồn']};
 function setHero(k){const [g,a,b]=HERO[k]||HERO.ops,h=$('.hero');h.dataset.g=g;h.querySelector('h1').innerHTML=`${a}<br><span>${b}</span>`;typeHero();document.title=k==='ops'?'Arknights Tier List VN':`${a} ${b} · Arknights Tier List VN`}
 render();
 // 4: bảng lọc nổi trên mobile

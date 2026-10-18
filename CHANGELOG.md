@@ -1,6 +1,8 @@
 # Changelog
 
 ## 2026-10-18
+- Hồ sơ operator thêm **Module** (491 module của 386 operator): loại (vd. PHY-X), chọn Stage 1/2/3 để xem chỉ số cộng thêm, Trait và Talent được nâng, nguyên liệu từng Stage. Thêm **Base skill** (RIIC) cho cả 432 operator: icon, tên, phòng (Ký túc xá, Trạm giao dịch, Nhà máy…) và điều kiện mở (E1/E2/Lv). Text giữ bản gốc (Global tiếng Anh, CN tiếng Trung). Dữ liệu từ `_build/build_kit.py` → `kit.js`, chỉ tải khi mở hồ sơ.
+- Tab mới **Planner**: thêm operator, chọn Elite, Level, Skill Lv, Mastery từng skill và Stage từng Module hiện tại → mục tiêu; tự cộng dồn nguyên liệu, LMD và EXP (quy ra Strategic Battle Record) cho cả danh sách. Kế hoạch lưu trên trình duyệt.
 - Bỏ dòng "Video gameplay" (nút YouTube tsalthsu / YouTube khác) khỏi hồ sơ operator.
 - Thống nhất thuật ngữ hồ sơ lưu trữ: sửa 40 nhãn ở 24 hồ sơ (vd. Audio Log / Voice Log → "Bản ghi âm", Dungeoneering Experience → "Kinh nghiệm thám hiểm hầm ngục", vài nhãn còn sót tiếng Anh như Gender, Weight); bổ sung các nhãn mới, mức đánh giá Exceptional, ghi chú (REDACTED)/UNUSED và tên riêng giữ tiếng Anh vào TRANSLATION_GUIDE mục 7.
 - Hồ sơ operator có dòng "Video gameplay": nút ▶ tsalthsu mở tìm kiếm video của operator trong kênh YouTube @tsalthsu, nút ▶ YouTube khác mở tìm "Arknights <tên> showcase" trên toàn YouTube khi kênh chưa có video. Áp dụng cho mọi operator.
