@@ -510,6 +510,46 @@ dialog[open]::backdrop{animation:fade .3s ease both}
   #theme{margin:0 0 0 auto}
   .controls.sheet{background:var(--panel);position:fixed;left:0;right:0;bottom:0;top:auto;z-index:45;max-height:75vh;overflow:auto;padding:16px 16px 80px;border-top:2px solid var(--ink);border-bottom:0;box-shadow:0 -12px 40px rgba(0,0,0,.25);margin:0}
 }
+/* tab Cốt truyện: mục lục trái + cột đọc kiểu light novel */
+.stnote{font-size:0.8125rem;color:var(--mute);border-left:3px solid var(--accent);padding:8px 12px;background:var(--panel);margin:0 0 16px;max-width:none}
+.stnote b{color:var(--text)}.stnote a{color:var(--link)}
+.stwrap{display:grid;grid-template-columns:250px minmax(0,1fr);gap:28px;align-items:start}
+.stoc{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto;background:var(--panel);border:1px solid var(--line);padding:8px}
+.stoc .stc{all:unset;cursor:pointer;display:block;width:100%;box-sizing:border-box;padding:10px 10px;font-size:0.875rem;font-weight:600;line-height:1.3;border-left:3px solid transparent}
+.stoc .stc b{display:block;font:600 0.6875rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-bottom:2px}
+.stoc .stc:hover{background:var(--panel2)}.stoc .stc.on{border-left-color:var(--accent);background:var(--panel2)}.stoc .stc.on b{color:var(--accent)}
+.stoc .stc:focus-visible,.stoc ol button:focus-visible,.stnav button:focus-visible,.stfs button:focus-visible{outline:2px solid var(--ink);outline-offset:1px}
+.stoc ol{list-style:none;margin:0 0 6px;padding:0 0 0 13px}
+.stoc ol button{all:unset;cursor:pointer;display:block;padding:5px 8px;font-size:0.8125rem;line-height:1.35;color:var(--mute)}
+.stoc ol button span{font:600 0.6875rem var(--mono);color:var(--text);margin-right:6px}
+.stoc ol button:hover{color:var(--ink)}
+.sread{--sfs:1.0625rem;background:var(--panel);border:1px solid var(--line);padding:40px clamp(18px,5vw,64px) 32px;position:relative}
+.sread:before{content:"";position:absolute;left:-1px;top:-1px;width:24px;height:24px;border-left:3px solid var(--ink);border-top:3px solid var(--ink)}
+.sthead{max-width:66ch;margin:0 auto 28px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.sthead .no{font:700 0.75rem var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.sthead h2{margin:6px 0 2px;font:900 clamp(1.75rem,4vw,2.625rem)/1.1 "Be Vietnam Pro";letter-spacing:-.02em}
+.sthead .en{font:600 0.8125rem var(--mono);letter-spacing:.08em;color:var(--mute)}
+.sthead .sum{margin:14px 0 0;color:var(--mute);font-size:0.9375rem;font-style:italic}
+.stfs{display:flex;gap:4px;align-items:center;margin-top:14px;font:600 0.6875rem var(--mono);letter-spacing:.1em;color:var(--mute);text-transform:uppercase}
+.stfs button{all:unset;cursor:pointer;min-width:32px;height:28px;display:grid;place-items:center;border:1px solid var(--line);font:700 0.8125rem var(--mono);color:var(--text)}.stfs button:hover{border-color:var(--ink)}
+.stbody{max-width:66ch;margin:0 auto;font-size:var(--sfs);line-height:1.85}
+.stbody h3{margin:2.4em 0 1em;font:700 1.125rem/1.3 "Be Vietnam Pro";scroll-margin-top:72px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.stbody h3:first-child{margin-top:0}
+.stbody h3 span{font:700 0.6875rem var(--mono);letter-spacing:.12em;padding:3px 7px;background:var(--ink);color:var(--accent);text-transform:uppercase}
+.stbody p{margin:0 0 .95em;max-width:none}
+.stbody hr{border:0;margin:1.8em 0;text-align:center;color:var(--mute)}.stbody hr:after{content:"◆   ◆   ◆";white-space:pre;font-size:0.625rem;letter-spacing:.3em}
+.stnav{max-width:66ch;margin:36px auto 0;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:10px}
+.stnav button{all:unset;cursor:pointer;padding:10px 14px;border:1px solid var(--line);font-size:0.875rem;line-height:1.3;max-width:48%}
+.stnav button small{display:block;font:600 0.6875rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.stnav button:hover{border-color:var(--ink)}.stnav .nx{margin-left:auto;text-align:right}
+.stend{max-width:66ch;margin:28px auto 0;text-align:center;color:var(--mute);font-size:0.8125rem}
+@media (max-width:760px){
+  .stwrap{grid-template-columns:1fr;gap:12px}
+  .stoc{position:static;max-height:none;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:6px}.stoc::-webkit-scrollbar{display:none}
+  .stoc .stc{width:auto;flex:none;max-width:200px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-left:0;border-bottom:3px solid transparent;padding:8px 10px}
+  .stoc .stc.on{border-bottom-color:var(--accent)}.stoc ol{display:none}
+  .sread{padding:24px 16px 20px}.sread{--sfs:1rem}.stbody{line-height:1.8}
+}
 </style>
 <script>try{const t=localStorage.getItem('ak-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
@@ -523,6 +563,7 @@ dialog[open]::backdrop{animation:fade .3s ease both}
     <button data-tab="plan">Planner</button>
     <button data-tab="new">Mới</button>
     <button data-tab="fac">Phe phái</button>
+    <button data-tab="story">Cốt truyện</button>
     <button data-tab="log">Lịch sử</button>
     <button data-tab="about">Giới thiệu</button>
   </nav>
@@ -577,6 +618,10 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 
   <section id="new" hidden><div id="newGrid"></div></section>
   <section id="fac" hidden><div id="backbar" hidden><button class="back" onclick="history.back()"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><path d="M15 5l-7 7 7 7"/></svg>Quay lại hồ sơ <span></span></button></div><div id="facBody"></div></section>
+  <section id="story" hidden>
+    <p class="stnote"><b>Truyện chữ không chính thức.</b> Cốt truyện, nhân vật, thế giới và lời thoại gốc của Arknights thuộc quyền sở hữu trí tuệ của <b>Hypergryph</b> (bản Global: <b>Yostar</b>). Đây là bản phóng tác văn xuôi tiếng Việt do fan viết lại từ kịch bản chính tuyến bản Global, phi thương mại, không phải bản dịch chính thức; tình tiết và lời thoại bám theo game, câu chữ được diễn đạt lại theo lối light novel. Tham khảo: <a href="https://akgcc.github.io/story/#main&amp;main_0&amp;0" target="_blank" rel="noopener">akgcc story reader</a> · <a href="https://arknights.wiki.gg/wiki/Story" target="_blank" rel="noopener">Arknights Wiki</a>.</p>
+    <div class="stwrap"><aside class="stoc" id="stoc" aria-label="Mục lục cốt truyện"></aside><article class="sread" id="sread" aria-live="polite"><p>Đang tải…</p></article></div>
+  </section>
   <section id="log" hidden><div class="card"><div class="timeline" id="timeline"></div></div></section>
   <section id="about" hidden>
     <div class="card">
@@ -1200,7 +1245,7 @@ addEventListener('popstate',e=>{const st=e.state||{tab:'ops'};NAV=true;
   NAV=false});
 history.replaceState(history.state||{tab:'ops'},'');
 // tiêu đề và chữ nền khổng lồ đổi theo tab đang mở
-const HERO={ops:['OPS','Danh sách','Operator'],gacha:['HH','Giả lập','Headhunting'],plan:['PLAN','Operator','Planner'],list:['TIER','Bảng xếp hạng','Operator'],new:['NEW','Operator','mới về'],fac:['FAC','Phe phái','& vùng đất'],log:['LOG','Lịch sử','thay đổi'],about:['INFO','Giới thiệu','& nguồn']};
+const HERO={ops:['OPS','Danh sách','Operator'],gacha:['HH','Giả lập','Headhunting'],plan:['PLAN','Operator','Planner'],list:['TIER','Bảng xếp hạng','Operator'],new:['NEW','Operator','mới về'],fac:['FAC','Phe phái','& vùng đất'],story:['LORE','Cốt truyện','chính tuyến'],log:['LOG','Lịch sử','thay đổi'],about:['INFO','Giới thiệu','& nguồn']};
 function setHero(k){const [g,a,b]=HERO[k]||HERO.ops,h=$('.hero');h.dataset.g=g;h.querySelector('h1').innerHTML=`${a}<br><span>${b}</span>`;typeHero();document.title=k==='ops'?'Arknights Tier List VN':`${a} ${b} · Arknights Tier List VN`}
 render();
 // 4: bảng lọc nổi trên mobile
@@ -1211,6 +1256,26 @@ fab.onclick=()=>sheet(!ctl.classList.contains('sheet'));scrim.onclick=()=>sheet(
 addEventListener('keydown',e=>{if(e.key==='Escape'&&ctl.classList.contains('sheet'))sheet(false)});
 // thanh tab trên điện thoại: mờ dần ở mép phải khi còn tab bị khuất
 {const nv=$('#nav'),f=()=>nv.classList.toggle('more',nv.scrollLeft+nv.clientWidth<nv.scrollWidth-2);nv.addEventListener('scroll',f,{passive:true});addEventListener('resize',f);f()}
+// tab Cốt truyện: truyện chữ (story.js, ~250KB) chỉ tải khi mở tab lần đầu; nhớ chương và cỡ chữ đang đọc
+let STP,SCH=0,SFS=0;try{SCH=+localStorage.getItem('ak-story')||0;SFS=+localStorage.getItem('ak-story-fs')||0}catch(e){}
+const needStory=()=>STP||=new Promise((ok,no)=>{const sc=document.createElement('script');sc.src='story.js?v='+KITV;sc.onload=()=>ok(window.AKS);sc.onerror=()=>{STP=null;no()};document.head.append(sc)});
+function drawStory(){needStory().then(S=>{
+  SCH=Math.min(Math.max(SCH,0),S.length-1);const c=S[SCH],pv=S[SCH-1],nx=S[SCH+1];
+  $('#stoc').innerHTML=S.map((x,i)=>`<button class="stc${i===SCH?' on':''}" data-ch="${i}" aria-current="${i===SCH}"><b>${x.no}</b>${x.title}</button>`+(i===SCH?`<ol>${x.secs.map((s,j)=>`<li><button data-sec="${j}"><span>${s.c}</span>${s.t}</button></li>`).join('')}</ol>`:'')).join('');
+  const r=$('#sread');r.style.setProperty('--sfs',SFS?`${SFS}rem`:'');
+  r.innerHTML=`<div class="sthead"><div class="no">${c.no}</div><h2>${c.title}</h2><div class="en">${c.en}</div><p class="sum">${c.sum}</p>
+    <div class="stfs">Cỡ chữ <button data-fs="-1" aria-label="Chữ nhỏ hơn">A−</button><button data-fs="1" aria-label="Chữ lớn hơn">A+</button></div></div>
+    <div class="stbody">${c.secs.map((s,j)=>`<h3 id="st-${j}"><span>${s.c}</span>${s.t}</h3>`+s.p.map(p=>p?`<p>${p}</p>`:'<hr>').join('')).join('')}</div>
+    ${nx?'':'<p class="stend">— Hết phần đã viết. Các chương tiếp theo sẽ được bổ sung dần. —</p>'}
+    <div class="stnav">${pv?`<button data-ch="${SCH-1}"><small>‹ Chương trước</small>${pv.no} · ${pv.title}</button>`:''}${nx?`<button class="nx" data-ch="${SCH+1}"><small>Chương sau ›</small>${nx.no} · ${nx.title}</button>`:''}</div>`;
+}).catch(()=>{$('#sread').innerHTML='<p>Không tải được truyện. Hãy tải lại trang.</p>'})}
+$('#story').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+  if(b.dataset.ch!=null){SCH=+b.dataset.ch;try{localStorage.setItem('ak-story',SCH)}catch(e){}drawStory();scrollTo({top:0})}
+  else if(b.dataset.sec!=null)$('#st-'+b.dataset.sec)?.scrollIntoView({behavior:'smooth'});
+  else if(b.dataset.fs){const rem=n=>parseFloat(getComputedStyle(n).fontSize),cur=rem($('.stbody'))/rem(document.documentElement);
+    SFS=Math.round(Math.min(1.375,Math.max(.875,cur+.0625*b.dataset.fs))*16)/16;
+    $('#sread').style.setProperty('--sfs',SFS+'rem');try{localStorage.setItem('ak-story-fs',SFS)}catch(e){}}});
+$('#nav').addEventListener('click',e=>{if(e.target.closest('[data-tab=story]'))drawStory()});
 // 12: lên đầu trang
 // giải thích class/subclass: rê chuột hoặc giữ ngón tay trên nút; subclass lấy Trait từ details.js
 const CLSDESC={Vanguards:'Tiên phong: Cost thấp, hồi DP đầu trận để deploy đội hình nhanh, thường block 1–2 địch.',Guards:'Cận chiến chủ lực: gây sát thương vật lý mạnh, block địch, nhiều nhánh đánh diện rộng hoặc tầm xa.',Defenders:'Hộ vệ: HP và DEF cao, block nhiều địch để giữ đường, một số nhánh hồi máu hoặc gây sát thương.',Snipers:'Xạ thủ tầm xa: đặt ô cao, ưu tiên bắn địch bay hoặc gây sát thương vật lý từ xa.',Casters:'Pháp sư tầm xa: đặt ô cao, gây sát thương Arts, mạnh với địch DEF cao.',Medics:'Y sĩ: hồi HP cho đồng minh, đặt ô cao.',Supporters:'Hỗ trợ: làm chậm, debuff địch, buff đồng minh hoặc triệu hồi, đặt ô cao.',Specialists:'Đặc vụ: cơ chế đặc biệt như dịch chuyển địch, deploy lại nhanh, bẫy hoặc ẩn thân.'};

@@ -15,6 +15,7 @@ python -m http.server 8765
 | `index.html` | Toàn bộ giao diện (HTML + CSS + JS) |
 | `data.js` | Tier list + nhận xét (từ Google Sheet) |
 | `details.js` | Thông tin chi tiết operator đã dịch (sinh bởi `_build/build_details.py`) |
+| `story.js` | Truyện chữ cốt truyện chính cho tab Cốt truyện (sinh bởi `_build/build_story.py` từ `i18n/story/`) |
 | `glossary.js` | Từ điển thuật ngữ cho tooltip |
 | `TRANSLATION_GUIDE.md` | Guideline dịch thuật |
 | `i18n/` | Bản dịch tiếng Việt theo từng đợt |
@@ -29,6 +30,16 @@ python _build/extract.py && python _build/build_details.py
 ```
 
 Đoạn mô tả mới chưa có bản dịch sẽ hiển thị tiếng Anh cho tới khi được thêm vào `i18n/`.
+
+## Cốt truyện
+
+Truyện chữ viết ở `i18n/story/main_XX.txt` (mỗi file một chương; định dạng ghi ở đầu `_build/build_story.py`), rồi chạy:
+
+```bash
+python _build/build_story.py
+```
+
+Đây là bản phóng tác văn xuôi của fan dựa trên kịch bản chính tuyến bản Global; cốt truyện, nhân vật và lời thoại gốc thuộc quyền sở hữu trí tuệ của Hypergryph / Yostar.
 
 ## Nguồn
 
