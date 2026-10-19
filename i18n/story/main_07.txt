@@ -1,0 +1,1361 @@
+@id main_7
+@no Chương 7
+@title Sự ra đời của bi kịch
+@en The Birth of Tragedy
+@sum Lõi đô thị Chernobog lao về phía Lungmen. W phản bội Talulah, Ch’en cắt đứt với Wei Yenwu để một mình lên đường, còn Rhodes Island lặng lẽ xâm nhập lõi đô thị, nơi Patriot và những bí mật của Talulah đang chờ.
+
+## 7-1 | Ba mươi hai giờ
+
+*Một con quái vật già từng nói với tôi… Thứ gì không giết được mày sẽ khiến mày mạnh hơn.*
+
+*Tôi luôn thấy câu đó thật ngu ngốc. Nhưng gã là quái vật, nên có lẽ tôi cũng phải nghĩ lại một chút.*
+
+*Con sâu lao vào lửa thì có mạnh hơn không? Ngu thật. Con sâu lao vào lửa chỉ chứng minh rằng hơi nóng đã nấu chín bộ não của nó, nếu nó có não. Còn nếu tôi lao vào lửa thì sao? Ngoài việc chứng minh rằng tôi điên, nó còn chứng minh được gì nữa? Tôi sẽ cháy sém một chút, nhưng điều đó làm tôi mạnh hơn kiểu gì?*
+
+*Mà chúng ta đang nói về cái chết đấy. Một con quái vật không bao giờ chết thì biết gì về cái chết chứ?*
+
+***
+
+“Cô vẫn chịu nói chuyện với tôi à? Bất ngờ đấy,” W nói. “Tôi tưởng cô đang mải mê với kế hoạch san bằng Lungmen cơ, Talulah.”
+
+“W. Cô đến mà không báo trước.”
+
+“Ha. Ối, lỗi của tôi. Làm lính đánh thuê lâu quá nên quên mất vụ phải báo cáo từng chi tiết đời mình cho sếp. Xin lỗi nhé, Thủ lĩnh. Nhưng cô biết đấy, tôi không lên được tận đỉnh tháp chỉ huy, nên đành phiền cô hạ mình xuống tầm của tôi vậy.”
+
+“Lời mỉa mai của cô chẳng giúp ích gì cho chúng ta,” Talulah nói. “Reunion cần sức mạnh của người Sarkaz. Chúng ta nên cố đừng tạo thêm mâu thuẫn cá nhân.”
+
+“Cứ gọi bọn tôi là quỷ đi. Chỉ đám tốt bụng giả tạo mới gọi bọn tôi là Sarkaz. Lính đánh thuê như bọn tôi biết rõ mình là cái gì.” W nhún vai. “Người của cô gọi bọn tôi là quỷ đâu phải vì ghét, hay vì nghe cho kêu. ‘Quỷ’ là chữ dành cho nỗi sợ. Các người gọi bọn tôi như thế vì các người sợ bọn tôi. Và bọn tôi luôn đảm bảo rằng bất kỳ kẻ nào còn sống sót đều thấm thía cái ẩn ý đó.” Cô ta cười khẩy. “À, xin lỗi. Tôi lải nhải chuyện này trước mặt cô chẳng khác gì múa rìu qua mắt thợ. Xét về khoản dọa người, chẳng ai qua được cô đâu, Thủ lĩnh.”
+
+“‘Gieo nỗi kinh hoàng cho kẻ thù, mang hơi ấm đến cho bạn bè,’” Talulah nói. “Đó là cách Reunion luôn làm.”
+
+“Vậy việc lái lõi đô thị của Ursus đâm vào Lungmen cũng là theo ước nguyện tha thiết của đồng chí nào đó hả?”
+
+“Các chiến binh của chúng ta vẫn đang anh dũng chiến đấu trong Lungmen. Họ cần chúng ta hỗ trợ. Người Infected ở Lungmen cần hy vọng.” Talulah ngừng lại. “Điều này cũng có lợi cho người Sarkaz, ta đảm bảo. Thứ các cô tìm kiếm không phải là hy vọng, nên ta sẽ cho các cô lợi ích. Sau Lungmen, sẽ chẳng còn nomadic city nào an toàn. Đồng loại của cô sẽ có thêm chỗ để bành trướng.”
+
+“Nghe được đấy. Chỉ xét về lợi nhuận thôi là tôi đồng ý cả hai tay.” W nghiêng đầu. “Giờ nói về nhiệm vụ của tôi nhé. Tin xấu là tôi thất bại. Không mang được mục tiêu về, mà cô bé cũng chẳng chịu đưa tôi món đồ.”
+
+“Không phải lỗi của cô. Quan hệ máu mủ giữa Misha và Skullshatterer chắc chắn sẽ sinh ra những bất trắc.”
+
+“Vậy sao cô lại bắt tôi đi tóm con gái của tay nhà khoa học đó? Có vẻ cô chẳng cần đến cô bé hay bí mật của cô bé cho kế hoạch lớn của mình.”
+
+“Chiếc Chìa khóa cần được xác minh,” Talulah nói. “Ta có thể tự xác nhận việc khởi động lõi đô thị. Nhưng Reunion cần toàn quyền kiểm soát cách nó dừng lại. Chiếc Chìa khóa thật đã mất cùng cái chết của Misha. Thứ mà Patriot tìm chỉ là phương án dự phòng.”
+
+“Tôi muốn biết có bao nhiêu chiếc Chìa khóa. Tôi hứa sau đó sẽ không hỏi gì nữa, được chứ?”
+
+“Hai. Sergei, nhà khoa học hoàng gia của Chernobog, giữ một chiếc và đã gửi nó cho Misha bằng cách đặc biệt. Chiếc kia thuộc về Bá tước Boris, cựu thị trưởng Chernobog. Trong cuộc tấn công của chúng ta, ông ta đã tách một mảng thành phố để trốn đi. Nhưng ông ta không thoát được Catastrophe.”
+
+“Thành phố vệ tinh đổ nát.”
+
+“Người của chúng ta cài trong đó đã giữ lại mọi thứ ta cần.”
+
+“Cô giỏi giải thích thật đấy, Thủ lĩnh. Tôi hết câu hỏi rồi.”
+
+“Nếu sự cởi mở có thể hóa giải hiểu lầm giữa chúng ta, ta sẽ không tiếc thời gian,” Talulah nói. “Chúng ta cần hỗ trợ nhau để vượt qua những rắc rối sắp tới.”
+
+“Thật sao? Cảm động ghê.”
+
+“Tất nhiên.”
+
+*Tôi chưa bao giờ ưa người phụ nữ này.*
+
+*Tôi nói dối rất nhiều. Chẳng có gì mạnh hơn một lời nói dối đặt đúng chỗ, trừ mấy quả bom. Sự thật giống một cốc nước. Nhà đang cháy thì một cốc nước giúp được gì? Nhưng khi tôi nói dối, tôi biết mình đang nói dối. Còn ả rồng cái này, ả nói dối tự nhiên đến mức như thể lời nói ấy thoát ra từ miệng kẻ khác. Ả không chỉ chỉnh vài chi tiết để che giấu kế hoạch. Ả biến thành hẳn một hình dạng khác, thành thứ người đối diện tin tưởng hơn, nói những điều họ muốn nghe. Đứng với tôi, ả là một thương nhân. Đứng với Patriot, ả hóa thành một nữ chiến binh.*
+
+*Ả có khuôn mặt thật không nhỉ? Hay ả là củ hành, bóc hết lớp này đến lớp khác rồi mới nhận ra bên trong chẳng có gì?*
+
+“Ta thật lòng mà,” Talulah nói.
+
+Cô ta khẽ nâng tay lên.
+
+*Ha. Tôi biết trò đó.*
+
+*Có thứ gì đó hút hết không khí trước mặt tôi. Chỉ một tích tắc nữa thôi là toàn bộ cơ thể tôi sẽ tan chảy. Chưa ai hiểu nổi những thứ vô hình mà Talulah ném ra. Nhưng tôi biết rõ chúng làm gì. Phế tích. Tro vụn. Mọi thứ mất cả cấu trúc cơ bản nhất của nó. Giống như một ngọn lửa không có ánh sáng.*
+
+“Đừng bảo là cô định giết tôi chỉ vì bị trêu vài câu nhé,” W nói. “Lộ quá rồi, rồng cái. Talulah ngày xưa sẽ không lật bài sớm thế này đâu.”
+
+Thiết bị nhỏ mà W đã thả xuống đất từ lúc nói chuyện nổ bùng thành một quả cầu lửa trước mặt cô ta. Một luồng nhiệt ập tới. May thay, hơi ấm dễ chịu ấy không phải của Talulah.
+
+*Tôi chẳng phải chuyên gia Arts gì. Nhưng theo kinh nghiệm của tôi, chín mươi chín phần trăm Arts trên đời không chống lại nổi một vụ nổ thuần túy. Nhiệt, mảnh vỡ, sóng xung kích. Một sức mạnh công bằng xé nát mọi kẻ thù, kể cả tôi.*
+
+“Mánh vặt của cô lại vô hiệu hóa được Originium Arts của ta,” Talulah nói. “Có lẽ ta đã đánh giá thấp cô. Cô đã chuẩn bị từ trước. Cô định tấn công ta ngay từ đầu.”
+
+“Cô ra tay trước mà, rồng cái. Cô định thiêu tôi vì tôi phiền, hay muốn bịt miệng tôi vì tôi đã nhìn thấu cô?”
+
+Một luồng nhiệt lao ra từ đầu ngón tay Talulah. W gập người lăn đi một vòng khoa trương như thể đang cúi xuống buộc dây giày.
+
+“Ối. Lần sau ngắm cho chuẩn vào.”
+
+“W, những thủ đoạn bẩn thỉu của cô đã bị phơi bày. Giờ cô là kẻ thù của Reunion,” Talulah nói. “Cô… muốn ngăn ta dùng lõi đô thị tấn công Lungmen.”
+
+“…Ồ?”
+
+“Nếu chỉ muốn trả thù, cô sẽ không chọn lúc này. Nếu muốn giết ta, cô hoàn toàn có thể đợi đến khi cả Lungmen lẫn ta đều kiệt sức. Một thủ lĩnh lính đánh thuê chẳng quan tâm Reunion đi về đâu sẽ không hỏi ta về kế hoạch.” Giọng Talulah trở nên dịu dàng. “Ta quý cô, W. Cô là một tên hề vui tính. Ta không muốn xử tử một tên hề vô hại. Cô thật sự hung tợn và điên loạn như những màn diễn của cô sao? Không. Cô muốn ngăn Reunion. Cô muốn ngăn cuộc tấn công vào Lungmen. W ơi W… cô dễ đọc quá. Ta thậm chí chẳng cần lên kế hoạch điều tra cô.”
+
+“Nói nhảm. Tôi sẽ biến cô thành một vũng máu thịt rồi bảo người đổ xuống ống rác, nếu còn sót lại gì.”
+
+W ấn nút trên thiết bị trong tay. Một kíp nổ Originium đơn giản, điều khiển từ xa, kích nổ dây chuyền.
+
+*Ánh sáng hủy diệt chói lòa, sóng nhiệt mang theo mảnh vụn, lật tung mọi thứ trước mặt tôi. Đúng như kế hoạch, mọi thứ hóa thành tro, kể cả tên Sarkaz da dày nhất…*
+
+*Khoan…*
+
+*Khoan đã, chẳng phải tôi đã cài kíp nổ cho đống thuốc nổ sao?*
+
+Talulah đã cắm thanh kiếm xuống nền.
+
+“Đây là cái bẫy của cô à? Thử lại đi, W của người Sarkaz.”
+
+*Không có lửa. Không có cháy. Hàng trăm khối thuốc nổ Originium tôi kỳ công quấn vào móng thép của thành phố… biến mất cả rồi. Chỗ tôi cài thuốc nổ đã méo mó, chảy ra, cong vênh. Những giọt sắt và lớp sơn dầu cháy khét bốc mùi hôi. Chỉ vậy thôi. Ả rồng cái xảo quyệt đã truyền Arts vào thanh kiếm, dẫn sâu xuống lớp thép dưới chân. Hơi nóng lan đến từng cái bẫy của tôi, làm chúng chảy ra.*
+
+*Vụ nổ tận thế lẽ ra phải thổi ả thành hàng tỷ mảnh… chỉ còn là một tiếng xì hơi ướt át.*
+
+*Được rồi. Tôi bị chơi một vố đau thật.*
+
+“Khụ, khụ…” W loạng choạng. “Rồng cái, cô… cũng không tệ đâu…”
+
+“Để ta đoán nhé. Phương án dự phòng của cô là một màn đánh bom tự sát ngẫu hứng, đúng không?” Talulah nói. “Đừng phí thời gian của nhau nữa. Chọn cách chết đi. Chết trong lửa của ta, bị ném khỏi tường thành, hay bị kiếm của ta xuyên qua.”
+
+“Cô thật sự… kết liễu được tôi sao?”
+
+“Thép phải trải qua ngàn lần tôi luyện trong lò mới thành kiếm. Một thanh kiếm sinh ra đã là vũ khí. Còn cô… chỉ là một cái vỏ phàm trần chưa chết mà thôi.”
+
+“Bị thanh kiếm này đâm xuyên… Tôi sẽ là… người đầu tiên chứ?”
+
+“Tiếc thay, cô phải chấp nhận vị trí thứ hai.”
+
+“Còn nếu nói về những người tôi từng cho nổ tung… Cô thì…” W cười khục khặc. “…còn chẳng có nổi một con số.”
+
+*Tôi sắp chết sao? Chắc vậy. Nhưng chết thì có gì tệ? Có nhiều thứ còn tệ hơn cái chết. Nên khi thấy mình tiêu đời rồi… chỉ cần mày đã chuẩn bị cho những thứ tệ hơn cái chết, mày sẽ tự làm chính mình bất ngờ.*
+
+*Giờ thì… đến lúc tôi cũng chuồn khỏi đây rồi.*
+
+Một tiếng nổ. Talulah ho khan, tay áo bốc khói.
+
+“Cô tự nổ tung ngay trong tay ta…? Ta tưởng cô sợ chết hơn thế chứ.” Cô ta nhìn xuống khoảng trống trước mặt. “Việc cô phản bội không làm ta bất ngờ. Nhưng bản thân cô thì… có làm ta bất ngờ một chút. Cô có chút tiềm năng… làm màn mở đầu cho một vở hài kịch. Mong cái chết của cô đủ đau đớn, W của Victoria.”
+
+***
+
+*Sau trận chiến. Ba mươi mốt giờ trước va chạm. 6:30 tối.*
+
+Patriot bước vào, dáng người khổng lồ che lấp cả khung cửa.
+
+“Thủ lĩnh.”
+
+“Thưa ngài. Ngài trở về khiến ta yên tâm hơn nhiều.”
+
+“Không cần nghi thức. Ở đây, có trận chiến. Vừa xong.”
+
+“Là giữa ta và W, kẻ định ám sát ta. Đừng lo, ta không sao.” Talulah nói tiếp. “Theo báo cáo, cô ta đã có dấu hiệu nổi loạn từ khi chiếm đóng Chernobog. Tự ý để kẻ thù trốn thoát, xúi giục lính đánh thuê Sarkaz làm phản, giết cấp trên của mình. Có lẽ đằng sau là thế lực chính trị bên ngoài. Cô ta đã kích nổ chỗ thuốc nổ giấu quanh người và rơi xuống khu vực lõi. Ta sẽ cử người tìm xác.”
+
+“Lẽ ra cô ta, phải ra tòa.” Patriot im lặng một lúc. “Thủ lĩnh. Lõi đô thị này… đã được khởi động. Mà ta không biết. Tại sao? Ngay cả liên lạc. Cũng bị cắt.”
+
+“Chúng ta hết lựa chọn rồi. Ursus có thể tấn công Chernobog bất cứ lúc nào và tàn sát đồng bào của chúng ta. Vì họ, chúng ta phải hạ Lungmen trước. Toàn bộ năng lượng phải dùng để vận hành lõi đô thị, không còn dư để duy trì các kênh liên lạc. Lệnh triệu hồi ngài đã dùng hết nguồn dự trữ cuối cùng. Giờ chỉ còn một nơi có đủ Originium tinh luyện cho chúng ta.”
+
+“Dù vậy, nếu thời gian gấp. Xin hãy bàn với chúng tôi.”
+
+“Ngài nói đúng. Ta xin lỗi. Lẽ ra ta nên suy nghĩ kỹ hơn.”
+
+“Nhưng… việc đã rồi.” Patriot nhìn vật trong tay Talulah. “Chìa khóa này. Cô sẽ dùng thế nào?”
+
+“Nó có thể dừng thành phố. Ta giao nó cho ngài. Ngài sẽ quyết định khi nào chúng ta dừng lại.”
+
+“Nhiều thứ, một khi bắt đầu. Sẽ không dừng lại.” Ông cầm lấy chiếc Chìa khóa. “Ta sẽ đi. Canh giữ lõi đô thị. Sẽ có kẻ tấn công. Chúng sẽ thử. Và ta sẽ chặn chúng.”
+
+“Crownslayer, FrostNova, Mephisto và Faust vẫn đang chờ chúng ta cứu viện. Không được để kẻ ngoài can thiệp vào kế hoạch.”
+
+“…Talulah.”
+
+“Có chuyện gì vậy, chiến binh của ta?”
+
+“Thủ lĩnh. Bất kỳ cái ác nào, dù lớn đến đâu. Rồi cũng sẽ, đến hồi kết. Điều này, ta tin chắc.”
+
+“Vâng, ta cũng có chung niềm tin ấy.”
+
+“…Tạm biệt, Thủ lĩnh.”
+
+“Đi đi, Patriot. Để kết thúc cuộc chiến này và giành lại vị thế cho người Infected, Reunion sẽ nghiền nát mọi kẻ thù cản đường.”
+
+***
+
+*Một giọng nói lạnh buốt: “Cái gì đây?”*
+
+*Một giọng khàn khàn: “Một loại, bùa hộ mệnh của Sarkaz. Hai mảnh. Mảnh này, cho con. Mảnh kia, ta giữ. Nó có thể, chịu đựng sự giày vò. Vết thương chí mạng, nội tạng nát, thì không. Nhưng sự hao mòn sinh mạng, nó chịu được. Đến khi nó vỡ. Nếu mảnh của con vỡ… mảnh của ta sẽ rung lên. Và ta sẽ đi. Cứu con.”*
+
+*“Nếu cả hai mảnh đều vỡ thì sao? …Sao cha không nói gì? Thôi được, con sẽ giữ nó. Đằng nào con cũng sống lâu hơn cha, nên cha cứ lo việc của mình đi.”*
+
+***
+
+Patriot đứng một mình trong hành lang. Bàn tay ông siết chặt một mảnh đá nhỏ.
+
+“Cứu, ai? Kết thúc, cuộc chiến nào?” Ông thì thầm. “Bùa của ta. Nó cũng, đã vỡ rồi.”
+
+***
+
+Những chiến binh Sarkaz đứng thành hàng trước Talulah.
+
+“Cô giết W,” một tên nói. “Giờ cô định làm gì?”
+
+“Giải phóng các ngươi. Các ngươi sẽ không bao giờ phải cúi đầu trước một người Sarkaz nữa. Mọi thứ các ngươi khao khát, ta sẽ ban cho.”
+
+“Đó là gì?”
+
+“Chiến tranh,” Talulah nói. “Các ngươi sẽ không còn phải nếm vị chua chát của việc tàn sát kẻ yếu. Không còn phí sức như hòn sỏi ném vào đá. Ta sẽ cho các ngươi một cuộc chiến thực sự cân sức. Người Sarkaz, lũ quỷ lang thang. Thứ ta ban cho các ngươi… không chỉ là nỗi sợ của nạn nhân. Ta sẽ rèn lại máu, thịt, thép, và nỗi nhục của bao thế hệ tổ tiên các ngươi. Ta ban cho các ngươi sự tàn sát, và ta ban cho các ngươi cái chết. Một kỷ nguyên mới đã đến, chiến tranh sẽ ngự trị. Những người Sarkaz nào muốn nếm trải kỷ nguyên mới này, hãy bước lên.”
+
+Im lặng. Rồi một giọng hỏi:
+
+“Cô muốn chúng tôi giết ai?”
+
+## 7-2 | Đêm chia ly
+
+*6:30 tối. Rhodes Island.*
+
+“Số hiệu 00000-00002, cấp độ truy cập 8,” PRTS nói. “Dr. {@nickname}, cảm ơn đã ghé thăm Đơn vị Xử lý Sinh học Tích hợp của Rhodes Island. Hệ thống phát hiện tâm trạng của bạn đang tệ.”
+
+“Để tôi yên.”
+
+“Xin cứ tự nhiên. Hệ thống đối xử bình đẳng với tất cả. PRTS được trang bị chức năng trấn áp phi sát thương. Nếu bạn hành động thiếu lý trí, bạn sẽ mất ý thức trong 3,55 giờ làm việc.” Một nhịp ngừng. “Chào mừng về nhà, Doctor.”
+
+“Đây có thể gọi là nhà được sao?”
+
+Doctor đứng giữa căn phòng trắng toát lạnh lẽo, trên tay là thi thể FrostNova. Cô gái tóc trắng giờ nhẹ bẫng, như thể cái lạnh đã mang đi mọi sức nặng của cô.
+
+“Ngài là Dr. {@nickname} phải không?”
+
+Một cô bé đứng ở cửa. Nhỏ nhắn, đôi tai mèo hơi cụp xuống, giọng nói nhẹ đến mức gần như tan vào tiếng máy chạy.
+
+“Là ngài. Em chắc chắn. Em cảm nhận được… ngài hơi khác.” Cô bé nhìn FrostNova. “Nhưng… người ngài đang bế, bộ đồng phục đó… Em hỏi được không, đó là ai vậy?”
+
+“Một người bạn.”
+
+“Bạn ạ? Nhưng… ngài gần như không biết gì về chị ấy.” Cô bé ngập ngừng. “Ngài có vẻ như đã đánh mất thứ gì đó.”
+
+“Em… cảm thấy gì?”
+
+“Dấu vết của những người từng trò chuyện với nhau. Mùi hương, hơi ấm, hình dáng. Em không chắc, nhưng chị ấy…”
+
+Cô bé đưa tay về phía FrostNova. Doctor khẽ lắc đầu.
+
+“Ngài không muốn em làm vậy ạ? Không. Em là người ngoài. Em không quen chị ấy. Em xin lỗi.”
+
+“Em đọc được suy nghĩ, như Amiya sao?”
+
+“Không, em không thể… Amiya đặc biệt lắm. Em biết Arts của Amiya… và em nghĩ chị ấy chịu đựng nhiều lắm. Em không chạm được vào chị ấy, cũng không cảm nhận được chị ấy.” Cô bé cúi đầu. “Các operator khác cũng nói vậy. Ở Rhodes Island có nhiều người tính cách lớn lắm… Nhưng có lẽ ngay cả với họ, em cũng kỳ lạ.”
+
+“Xin lỗi, cô bé.”
+
+“Không sao đâu ạ. Em quen rồi. Em thà người ta thẳng thắn với em còn hơn là sợ em.” Cô bé nhìn cỗ máy. “Ngài… muốn dùng cái máy này ạ?”
+
+“Nếu đây thật sự là nơi yên nghỉ cuối cùng của người Infected.”
+
+“…Đúng vậy ạ. Chờ em xem nhật ký đã. Họ dọn ngăn này rồi. Đặt chị ấy lên tấm phiến này. Nhẹ thôi. Rồi tấm phiến sẽ trượt vào đó, đợi nó đóng lại, cuối cùng ấn nút này.”
+
+“Em rành nó quá.”
+
+“Vì em dùng nó nhiều lần rồi. Đây là nơi tất cả người Infected của Rhodes Island kết thúc. Nếu em quen họ, nếu em cảm nhận được họ, nếu họ là đồng đội của em, em luôn tự tay lo cho họ.” Cô bé nói nhỏ. “Nó giống như một sợi xích. Hay nói đúng hơn, như nhìn thấy những sợi dây nối giữa người với người. Tiễn những người gắn bó với mình nghĩa là tháo gỡ những sợi dây quanh họ. Đầu kia của sợi dây vẫn buộc vào chúng ta, nhưng dù một đầu đã mất, sợi dây vẫn không rủ xuống. Cảm giác như ngài đánh mất thứ gì đó bên trong mình. Thứ ngài không biết là có ở đó, nhưng biết rằng nó sẽ không trở lại.”
+
+“Sao em lại muốn cảm nhận điều đó?”
+
+“Vì nếu biết trước cảm giác ấy, nó sẽ không bất ngờ đâm vào mình, phải không ạ?”
+
+“Xin lỗi đã làm phiền,” PRTS chen vào. “Mã nhận dạng của Rosmontis, elite operator, sẽ hết hạn sau mười lăm phút. Ngoài ra, đang có giao tranh ở mạn phải. Nếu có thể, xin hỗ trợ sau khi cập nhật mã.”
+
+“À, vâng. Em sẽ đi. Em ghi vào thiết bị rồi.”
+
+“Nhắc lần thứ sáu, nếu bạn cho phép hệ thống truy cập, nó có thể gửi thông tin trực tiếp đến…”
+
+“Không. Chỉ mình em được dùng nó.”
+
+“Đã hiểu.”
+
+“Elite operator…?” Doctor hỏi.
+
+“PRTS đang nói về em.”
+
+“Tôi gọi em là Rosmontis nhé?”
+
+“Vâng… Rosmontis.” Cô bé nhìn tấm phiến. “Còn… chị ấy? Em nghĩ ít nhất em nên biết tên chị ấy.”
+
+“FrostNova.”
+
+“FrostNova… Một cái tên đẹp.” Rosmontis khẽ cúi đầu. “Xin chào, FrostNova. …Tạm biệt.”
+
+***
+
+*Văn phòng của Wei Yenwu. 6:30 tối.*
+
+“Chính xác, ngài Wei. Ba mươi hai giờ nữa, lõi đô thị sẽ va vào Lungmen,” Kal’tsit nói. “Mã nhận dạng đô thị của nó không thay đổi. Nghĩa là lõi của nomadic city Chernobog vẫn là lãnh thổ Ursus.”
+
+“Vậy tấn công nó là hành động chiến tranh…?” Ch’en hỏi.
+
+“Reunion bắt Ursus làm con tin như thế này thật vô lý hết mức,” Wei Yenwu nói. “Chủ nghĩa bành trướng của Ursus được thúc đẩy bởi lòng tham. Nếu có lợi, Đế quốc đã phát động thế chiến từ mấy chục năm trước. Nhưng gây chiến với Yan ư? Yan không gây chiến suốt nhiều thế kỷ không có nghĩa là Yan mất khả năng chiến đấu. Một cuộc thế chiến sẽ khiến cả hai bên kiệt quệ, và Ursus với vô số mâu thuẫn nội bộ sẽ chịu đòn nặng hơn. Chỉ kẻ ngốc và kẻ điên mới gây ra một cuộc chiến tốn kém, không lợi lộc và chắc chắn thất bại.”
+
+“Theo tôi biết, kẻ ngốc và kẻ điên ở các nomadic city nhiều như rươi,” Kal’tsit nói.
+
+“Loại bỏ những kẻ như vậy là một trong những nhiệm vụ quan trọng nhất của ta, và của Hội đồng Nhà nước Ursus. Khi Hội đồng phản hồi, chúng ta sẽ có biện pháp dừng lõi Chernobog. Phần còn lại để các nhà ngoại giao lo.”
+
+“Ông tin Đế quốc đến thế sao?”
+
+“Không. Ta tin vào lợi ích chung. Đế quốc Ursus là một cái xác đang thối rữa, cố làm ra vẻ mạnh mẽ. Ta và Chủ tịch Hội đồng không có thỏa thuận nào, nhưng hai bọn ta còn sót lại chừng ấy lý trí như nhau.” Ông quay sang. “Fumizuki, gửi tin giúp ta…”
+
+“Ừm.” Fumizuki không nhúc nhích. “Có một tin nhắn khác. Cho anh. Bác sĩ Kal’tsit, Amiya, Ch’en… mọi người cũng nên nghe. Nếu anh lại từ chối sự giúp đỡ của họ, chúng ta sẽ thật sự bị cô lập.”
+
+Một đoạn ghi âm vang lên.
+
+*“Trưởng quan Wei, ngài phải hành động ngay khi nhận được tin này. Nhóm Ba và Nhóm Bốn đã rút lui. Chúng tôi không thể chạm đến gốc rễ vấn đề. Tôi thậm chí không thể đoán được kẻ đứng sau là ai. Chúng thì thầm từ hàng ghế quan sát của nghị viện, cười nhạo màn trình diễn thảm hại, bất lực của tôi. Nhưng tôi không tìm được bằng chứng nào để buộc tội chúng. Nếu có chuyện xảy ra ở Chernobog, ngài phải làm mọi cách để ngăn nó lại. Điều chúng tôi không làm được, ngài phải làm thay.”*
+
+*“Tôi không gặp được Chủ tịch Witte. Sứ giả ông ấy cử đến bị những thế lực vô danh chặn đường. Tôi tin rằng trong lòng Ursus có những phe phái đang tranh giành quyền lực. Tôi đã đến Khe nứt Ural và chiếm một trạm liên lạc. Chuyện gì sẽ xảy ra tiếp, chính tôi cũng không biết. Mong được trở về Lungmen, nếm lại hương vị quê nhà.”*
+
+“Giờ cậu ấy thế nào?” Wei Yenwu hỏi.
+
+“Không rõ sống chết,” Fumizuki nói.
+
+“Có vẻ Chủ tịch Hội đồng định đứng ngoài xem chuyện diễn biến ra sao,” Kal’tsit nói. “Hội đồng ở trung tâm Đế quốc… nhưng Chernobog giờ ở vùng ngoại vi. Vùng biên phần lớn thuộc về Quân đội và tàn dư giới quý tộc cũ. Phần lớn người Infected của Reunion không được huấn luyện, chẳng có cửa chống lại Vệ binh Ursus và cảnh sát chống bạo động Chernobog… nhưng Catastrophe thì có. Chernobog không kịp tách mảng thành phố. Reunion phải thâm nhập từ sớm để chặn lực lượng an ninh, còn Quân đội thì làm ngơ.” Bà dừng lại. “Đến tận hôm nay, Chernobog và triều đình Ursus vẫn chưa nói một lời. Giờ chúng ta biết vì sao rồi. Ursus đã giao Chernobog cho Reunion. Viết tên cả thành phố và mọi cư dân của nó vào sổ tổn thất.”
+
+“Họ chẳng cần làm gì cả,” Fumizuki thì thào. “Họ chỉ… tránh đường.”
+
+“Nhưng sau Catastrophe, Chernobog chỉ là một thành phố chết, chẳng còn gì giá trị…” Amiya nói.
+
+“Thế nên người Infected mới kéo về Lungmen! Bất kể ai cầm đầu Reunion, mọi yếu tố đều đã xếp hàng hoàn hảo…!”
+
+Wei Yenwu im lặng rất lâu.
+
+“Ra lệnh. Đội Ngự sử phải rút lui, dùng vũ lực nếu cần. Chúng ta chuẩn bị chiến tranh. Phải chắc chắn vô hiệu hóa được cái lõi đó trước khi quá muộn. Và không ai được biết chuyện này cho đến khi lõi Chernobog dừng lại.”
+
+“Ngài Wei?!” Amiya kêu lên.
+
+“Anh định tự mình khơi mào chiến tranh sao?” Fumizuki hỏi.
+
+“Anh trai ta sẽ không đời nào chấp nhận việc ta gây chiến với Ursus. Nhưng ta phải giành thế chủ động, kiểm soát tình hình, kể cả khi phải trả giá bằng cả Lungmen.”
+
+“Kẻ nổ súng trước sẽ bị coi là kẻ xâm lược,” Kal’tsit nói. “Họ sẽ khó tìm được đồng minh. Ngài Wei, tôi tin chúng ta có thể đạt được hòa bình bằng con đường ngoại giao.”
+
+“Cảm ơn lời khuyên, bà Kal’tsit. Nhưng ta e rằng Witte và ta là hy vọng cuối cùng cho hòa bình giữa hai nước. Nếu Witte quá nhu nhược để dùng kênh chính thức ngăn chặn chuyện này, nghĩa là ông ta sẽ gặp quá nhiều sự phản kháng. Nếu lõi không dừng lại, va chạm sẽ hủy diệt Lungmen. Và xung đột tiếp theo sẽ là thảm họa không thể lường được. Giờ chỉ còn Lungmen. Chỉ chúng ta mới dừng được lõi Chernobog.”
+
+Amiya hít một hơi. “Ngài Wei. Rhodes Island…”
+
+“Tôi sẽ đi.”
+
+Tất cả quay lại. Ch’en đứng thẳng, tay đặt lên chuôi kiếm.
+
+“Cô là người Lungmen,” Wei Yenwu nói.
+
+“Tôi có thể rời Lungmen.”
+
+“Thanh tra trưởng Ch’en, đừng làm anh hùng. Đây không phải trách nhiệm của cô.”
+
+“Nếu Lungmen cần một kẻ phản bội, hãy để đó là tôi,” Ch’en nói. “Tôi chán ông lắm rồi, Wei Yenwu. Ông và cái thành phố quý báu của ông. Tôi đã thôi là người Lungmen từ trước khi ông thò móng vuốt vào khu ổ chuột.”
+
+“Giờ không phải lúc tranh luận đạo đức.”
+
+“Họ đã làm gì? Tại sao ông phải làm thế với họ?”
+
+“‘Họ đã làm gì?’” Wei Yenwu lặp lại. “Cô nói ta nghe xem, cô Ch’en. Reunion ẩn náu ở đâu? Chúng lẻn vào thành phố qua đâu? Cô tin người khu ổ chuột, nhưng họ có tin cô không? Ngoài chỉ điểm của cô và tai mắt của Lin Kojui, có ai báo cáo việc người Infected xâm nhập nhà họ không? Cô nhận được dù chỉ một tin báo chưa?”
+
+Ch’en im lặng.
+
+“Có hay không?”
+
+“…Không.”
+
+“Không một ai. Không một người nào đứng ra. Họ thà tin những kẻ khiêu khích ngoại bang còn hơn tin Vua Chuột hay Thanh tra trưởng L.G.D. Ta không trách họ đùm bọc lẫn nhau. Nhưng lẽ ra họ có thể chống lại Reunion. Lẽ ra họ có thể nhờ cô giúp…” Giọng ông lạnh dần. “Chính người dân ở đó không muốn L.G.D. vào khu ổ chuột. Lungmen đã từ chối họ sao? Trả lời ta đi, cô Ch’en. Nhìn vào mắt ta mà trả lời!”
+
+“Không phải lỗi của họ.”
+
+“Vậy thì lỗi của ai? Khu ổ chuột mà cô dốc sức vì nó đã trở thành điểm yếu có thể khiến Lungmen bị hủy diệt. Reunion lợi dụng người Infected ở đó để đánh lạc hướng chúng ta. Và những người Infected đó chỉ đứng nhìn. Nếu Lungmen sụp đổ ở đây, xét cho cùng là do tay họ. Không phải Lungmen từ chối họ. Mà là họ từ chối Lungmen.”
+
+“Vậy nên ông sẽ xử lý họ?”
+
+“Sự thờ ơ và thiển cận đã hủy hoại họ rồi. Ch’en. Ai trong chúng ta cũng nhuốm đầy sai lầm. Ai cũng mắc sai lầm. Tất cả những gì ta làm được là sửa chúng, hoặc che giấu chúng một thời gian.”
+
+“Ai cũng mắc sai lầm sao? Tôi hiểu ông đang nói gì,” Ch’en nói. “Người Infected là một sai lầm, chừng nào họ còn tồn tại trong thành phố này?”
+
+“…Con bé cứng đầu.”
+
+“Vậy thì được.” Ch’en hít một hơi. “Wei Yenwu, việc tôi phải làm, việc L.G.D. phải làm, là gọi tên kẻ có lỗi và sửa chữa sai lầm. Theo định nghĩa của ông, có vẻ tôi chính là kẻ có lỗi. Cũng có thể nói tôi chính là sai lầm. Vì tôi là người Infected.”
+
+“Cô—”
+
+“Ch’en?!” Fumizuki thốt lên.
+
+“Không cần giấu nữa. Suốt ba năm ông đã giấu chuyện tôi nhiễm bệnh. Giờ người Infected không còn chỗ trong thành phố này, thì tôi cũng vậy. Cô ấy và tôi đều là người Infected. Chỉ tôi mới ngăn được cô ấy.”
+
+*“Đừng buồn. Tôi hiểu mà. Chúng ta là huynh đệ kết nghĩa, phải không? Huynh đệ… hãy nhớ chúng ta đến từ đâu.”*
+
+*Nghĩa huynh đệ tan vỡ.*
+
+*“Tôi hận anh. Và tôi hận họ. Lẽ ra tôi phải yêu anh, nhưng lúc này tôi hận từng người một trong các người.”*
+
+*Tình máu mủ tan vỡ.*
+
+*“Tại sao lại là tôi? Tại sao phải là tôi? Ai có thể thấy an toàn khi ngồi ở đây chứ?”*
+
+*Tình thân tan vỡ.*
+
+“Không,” Wei Yenwu nói. “Nếu hôm nay cô bước ra khỏi văn phòng này, Ch’en Hui-chieh… cô sẽ là kẻ thù của Lungmen. Cô sẽ không bao giờ được đặt chân vào thành phố này nữa. Và mọi thứ chúng ta cùng gây dựng suốt mười năm qua… sẽ thành hư không.”
+
+“Mọi thứ tôi gây dựng đã thành hư không ngay khi ông làm điều ông đã làm,” Ch’en nói. “Khác biệt duy nhất là tôi không giống ông. Tôi không nghĩ có ai là ‘sai lầm’.”
+
+“Quyền lực rốt cuộc chỉ là công cụ. Nếu muốn dùng nó để sửa đổi thế giới, cô phải tuân theo những kỳ vọng của thế giới. Đừng tự biến mình thành trò cười, Thanh tra Ch’en. Ta nuôi dạy cô để thay đổi điều đó. Ta mong cô sẽ khiến thế giới này muốn nhiều hơn là sự thịnh vượng và phát triển.”
+
+“Vậy nó đã thay đổi chưa? Có thể thay đổi được không? Những gì tôi đã làm có ý nghĩa gì không?”
+
+“Dù bây giờ không thể, một ngày nào đó cũng phải thay đổi. Cô sẽ là người đảm bảo điều đó.”
+
+Bên ngoài, tiếng lễ tân hét lên: “Đứng lại! Các người là ai?! Bảo vệ đâu?! Có kẻ đột nhập!”
+
+Những bóng áo choàng đen tràn vào phòng.
+
+“Ngài Wei, chúng thần sẽ hành động.”
+
+“Cút ra ngoài,” Wei Yenwu nói. “Các ngươi không nên đến đây.”
+
+“Ha… haha, ahahahaha…” Ch’en bật cười. “Wei Yenwu, chỉ cần thế thôi là ông lộ bản chất rồi à? Đội quân riêng của ông xuất hiện ngay trong văn phòng ông?”
+
+“Ngài Wei… chúng thần có thể thâm nhập thành phố kia, giết kẻ cầm đầu và ngăn va chạm! Chúng thần nguyện hy sinh vì thành phố, gỡ gánh nặng này khỏi vai ngài!”
+
+“Cút ra!”
+
+“Sao nào, Wei Yenwu? Ông sẽ cử họ đi, hay cử tôi? Lựa chọn khó khăn lắm à?” Ch’en nói. “Sao ông luôn quyết đoán khi giết người mà lại do dự khi phải cứu người? Bây giờ là vậy. Hồi đó cũng vậy.” Cô quay sang Fumizuki. “Tôi không ngờ có dịp nói lời tạm biệt đàng hoàng. Cô Fumizuki, xin lỗi vì mẹ tôi đã đối xử với cô như thế. Cảm ơn cô đã chăm sóc tôi suốt những năm qua. Tôi luôn coi cô là người nhà.”
+
+“…Ch’en?!”
+
+“Thanh tra trưởng Ch’en!” Wei Yenwu quát.
+
+“Không còn nữa. Tấm huy hiệu này? Trả lại ông.”
+
+“Bắt cô ta lại!”
+
+“Muốn đánh nhau ở đây trước sao? Để xem ai mới là kẻ phản bội thật sự?”
+
+“Thanh tra trưởng, kẻ thù đã đến trước cổng!”
+
+“Tôi là người Infected. Tôi là kẻ thù lớn nhất của các người.”
+
+“Dừng tay! Nếu không ta sẽ không nương tay!”
+
+“Các người đã từng nương tay với ai chưa?!” Ch’en rút kiếm. “Chi Xiao – Khởi khí!”
+
+*“Anh à, nếu thanh kiếm này dùng để chém rồng, vậy nó có chém được Draco không?”*
+
+*“Có thể lắm. Xem ra anh phải cẩn thận với em hơn rồi, haha…”*
+
+“Arts của cô ấy… đang tràn ra?” Kal’tsit nheo mắt.
+
+“Doctor, ra sau em! Em sẽ chặn Arts!” Amiya kêu.
+
+“Không. Trước sức mạnh ấy, nó sẽ bị xé toạc thôi. Cô ấy không nhắm vào chúng ta. Ra khỏi tầm của cô ấy ngay. Lùi lại!”
+
+“——Phóng!”
+
+Lưỡi kiếm đỏ rực chém xuống. Một bóng áo đen đưa cổ tay ra đỡ.
+
+“Thanh kiếm chém rồng… đã rút khỏi vỏ?!”
+
+“Anh đỡ được bằng cổ tay thôi sao?” Ch’en nói.
+
+“Tinh tường lắm! Kiếm thuật của Thanh tra trưởng sắc bén hơn bao giờ hết!”
+
+“…Originium tôi luyện. Chi Xiao à?” Kal’tsit lẩm bẩm. “Không ngờ người ta vẫn còn rèn những vũ khí như thế…”
+
+“Doctor, thanh kiếm đó được rèn đặc biệt để chống lại Arts dạng năng lượng sao?” Amiya thì thầm. “…Lúc đầu, cô Ch’en thậm chí không cho em nhìn thanh kiếm ấy. Phải chăng cô ấy đã hình dung đến lúc em trở thành kẻ thù…?”
+
+“Tránh đường!”
+
+“Ngài Wei, Thanh tra trưởng đã chọn con đường của mình. Thần e không đỡ nổi nhát thứ hai. Thần có nên liều mạng không? Bằng cái chết của mình, thần đảm bảo cô ấy sẽ ở lại Lungmen. Dù không chắc tay chân cô ấy còn nguyên vẹn, nhưng cô ấy sẽ sống.”
+
+“Không được phép,” Wei Yenwu nói. “Lùi lại. Đừng giao chiến trực tiếp với nó!”
+
+“Định gọi viện binh à? Chi Xiao—!”
+
+“Dừng lại!!”
+
+Một áp lực vô hình đè xuống khiến Ch’en khựng lại.
+
+“Hui-chieh, cô định dùng thanh kiếm xẻ mây sao?” Wei Yenwu nói. “Đừng quên ai đã dạy cô kiếm thuật và Arts. Ta chưa bao giờ nghĩ sẽ tước đi kiếm thuật của cô, nhưng đến nước này ta sẽ không nhân nhượng nữa. Đừng ép ta, Ch’en Hui-chieh.”
+
+“Vậy thì làm đi, sư phụ Wei. Chi Xiao nghe lệnh tôi. Cái ngày ông trao Chi Xiao cho tôi, ông có nghĩ tôi sẽ chém ông không? Tôi sẽ không dùng nó để đổ máu ông.” Ch’en hạ giọng. “Ông nghĩ ông đang bảo vệ tôi, phải không? Mẹ tôi chết vì trầm uất. Talulah bị bắt đi. Tôi nhiễm Oripathy khi làm nhiệm vụ. Ông nghĩ mọi việc ông làm đều để bảo vệ tôi. Vì lương tâm cắn rứt, hay vì tự tin vào mưu lược của mình?”
+
+“Ta không muốn chứng kiến thêm một bi kịch nào nữa.”
+
+“Nói dối!” Ch’en lùi về phía ô cửa kính. “Có những kẻ thanh kiếm này muốn giết… và những người nó muốn bảo vệ. Nếu cô ấy thật sự muốn hủy diệt Lungmen…! Tôi chưa từng nghĩ sẽ thắng được ông và đám Áo choàng đen ở đây. Nhưng lối ra khỏi đây không chỉ có một, Wei Yenwu.”
+
+“Cửa sổ?!”
+
+“Ch’en Hui-chieh! Dừng trò điên rồ này lại! Chúng ta đang cách mặt đất hàng trăm mét!”
+
+“Đây không phải lần đầu tôi đi đường cửa sổ. Cũng không phải lần thứ hai.”
+
+“Ch’en Hui-chieh, cô không được đến chỗ con bé! Cô không được lặp lại sai lầm! Cô không được đi lại con đường chúng ta đã đi! Nếu có ai phải chết vì thành phố này, người đó phải là—”
+
+Ch’en thở dài.
+
+“Chú…” Cô khựng lại. “Không… Wei Yenwu. Từ hôm nay, chúng ta là người dưng.”
+
+Tiếng kính vỡ vang khắp căn phòng. Ch’en ngửa mặt rơi khỏi tòa nhà cao vút. Chúa tể Lungmen gầm lên, và gã áo choàng đen lao về phía cửa sổ như mũi tên bật khỏi dây cung.
+
+Nhưng Ch’en đã quyết rồi.
+
+## 7-3 | Lưỡi kiếm phản nghịch
+
+*Khu thượng thành Lungmen. 7:00 tối, hoàng hôn.*
+
+“Lệnh bắt giữ bí mật? Thanh tra trưởng Ch’en?!” Một sĩ quan L.G.D. siết tờ lệnh. “Chắc chắn có nhầm lẫn… Này! Quay lại đây! Tôi hỏi có nhầm lẫn hay không cơ mà! Chết tiệt, Thanh tra trưởng, chuyện quái gì thế này… Ai đứng sau chuyện này?! Tôi phải tìm cô ấy. Tôi phải nghe cô ấy nói!”
+
+***
+
+“…Vâng. Ta hiểu rồi,” Vua Chuột nói. “Greytail, đi làm những gì ta dặn. Xong việc thì tìm chỗ trốn một thời gian. Đi đi. Nhanh lên.”
+
+Khi chỉ còn một mình, ông lão thở dài.
+
+“Hóa ra thật sự có kẻ chơi lại được Wei Yenwu. Talulah, Talulah… đây thật sự chỉ là số phận thôi sao? Ôi, thiếu gia, nếu ngài nhìn thấy chúng ta từ trên đó, hẳn ngài cũng chẳng muốn thấy cảnh này. Hui-chieh… Hui-chieh! Cẩn thận, Hui-chieh… Con không được chết đấy!”
+
+***
+
+*Bến cảng Lungmen. 7:20 tối.*
+
+Những bóng người méo mó, nửa người nửa đá, lảo đảo tiến về phía rào chắn. Bầy chiên của Mephisto. Dù chủ nhân của chúng đã không còn, chúng vẫn bước.
+
+“Chết tiệt, vẫn còn nhiều thế này… Tưởng L.G.D. đã kiểm soát khu này rồi chứ?” Một operator Rhodes Island lùi lại. “Lưới polyfiber và cáp thép bị chúng xé như giấy. Mà trong thành phố thì không được dùng vũ khí hạng nặng… Quét không thấy chút hoạt động não nào. Về cơ bản, chúng đã chết rồi. Chỉ là những cái vỏ rỗng được Arts chống đỡ. Tàn nhẫn không tưởng…”
+
+“Xin chào các operator.” Rosmontis bước ra. “Hôm nay chúng ta đánh với họ sao?”
+
+“Rosmontis! Ơn trời, được cứu rồi.”
+
+“Họ là người Infected bị Arts làm biến dạng…? Kẻ làm chuyện này phải trả giá.” Cô bé nhìn quanh. “Nhưng quan trọng hơn, ít nhất mọi người đều an toàn. Em sẽ… làm họ bình tĩnh lại.”
+
+“Em định chiến đấu sao?” Doctor hỏi.
+
+“Vâng.”
+
+“Nhưng trông em…”
+
+“Doctor… ngài chưa từng thấy Rosmontis chiến đấu à?” Operator nói. “Vậy thì lùi lại đi. Tôi đảm bảo ngài chưa từng thấy thứ gì như thế này đâu.”
+
+Trên đầu họ, một khối kim loại khổng lồ từ landship lơ lửng bay tới, lặng lẽ như một đám mây.
+
+“Đó là thiết bị của em sao?”
+
+“Là của em.” Rosmontis ngẩng đầu. “Operator, xin mô tả ấn tượng của anh về mục tiêu.”
+
+“Chờ chút, để tôi xem sổ tay… Mục tiêu là một nhóm lớn cá thể hoạt động, bồn chồn. Di chuyển theo nhóm, không có mục tiêu rõ ràng. Thế được chưa?”
+
+“Đã nhận. Em sẽ xử lý. Bác sĩ Kal’tsit dặn rất rõ: xong việc này, Rhodes Island phải rời Lungmen ngay.”
+
+***
+
+*Cùng lúc ấy, ở một góc khuất của khu thượng thành.*
+
+“Chào buổi tối, bạn già.”
+
+Ch’en đang đẩy chiếc xe địa hình thì khựng lại. Hoshiguma tựa vào tường, khoanh tay.
+
+“Hoshiguma…? Cô làm gì ở đây? Vết thương thì sao?”
+
+“Tôi là Oni. Mấy vết xước đó lành từ lâu rồi.” Hoshiguma liếc chiếc xe. “Chiếc buggy cô đang đẩy là mẫu mới của Rim Billiton phải không? ‘Vượt địa hình tuyệt vời. Chống bụi, leo dốc nhẹ nhàng, tầm hoạt động xa, tiết kiệm nhiên liệu.’ Ừ, xin lỗi. Tôi xem quảng cáo đó trên terminal cả triệu lần rồi.”
+
+“Cô muốn nói gì?”
+
+“Trông cô tệ lắm, Ch’en. Cô định đi đâu?”
+
+“Sao cô biết tôi ở đây…?”
+
+“Lần nào muốn lẻn khỏi thành phố cô cũng đến đây. Tôi cũng thuộc từng ngóc ngách chỗ này mà. L.G.D. đã ra lệnh bắt.”
+
+“Nhưng cô không đến vì chuyện đó.”
+
+“Tất nhiên rồi. Tôi biết rõ cô là người thế nào.”
+
+“Đây là đường duy nhất để tôi rời Lungmen.”
+
+“Vậy thì cô sẽ không bao giờ ra khỏi Lungmen được,” Hoshiguma nói. “Họ cũng giống tôi. Họ không muốn cô đi.”
+
+“Hoshiguma… cô định cản tôi sao? Tại sao lại là cô?!”
+
+“Tất nhiên là tôi, Ch’en. Tôi là thanh tra L.G.D., và quan trọng hơn, là bạn cô. Cô thật sự định lang thang đi đóng vai anh hùng đơn độc trong một cuộc phiêu lưu vĩ đại à? Chính vì vậy tôi không thể để cô đi.”
+
+“Cô là người Lungmen, Hoshiguma! Đây là cơ hội cuối cùng. Nếu để Wei Yenwu làm theo cách của ông ta, sẽ có thêm nhiều người chết!”
+
+“Cách của cô thì tốt hơn sao?” Hoshiguma hỏi. “Họ thật sự yêu Lungmen à, Ch’en? Tôi thì cổ hủ lắm. Truyện tranh, phim, rượu, những con phố mưa, một gã chạy qua không có ô. Người ta bảo có những thứ lỗi thời nhanh lắm. Ch’en, chúng ta có chạy thắng được thời gian không? Tôi thì không. Cuộc rượt đuổi đó đã nghiền nát quá nhiều thứ tôi trân trọng. Những người đó chết thảm thương, hy sinh bản thân để tìm một chỗ đứng trên thế giới. Còn tôi? Tôi chỉ nhìn họ tan thành tro bụi. Có những người, chính đôi tay này đã đập vỡ giấc mơ của họ. Họ không yêu Lungmen. Họ chỉ không còn nơi nào khác để đi. Và rốt cuộc, đó là lỗi của tôi.”
+
+“Ah Faat đã chết, bao nhiêu người đã chết vì Lungmen… Cô định giả vờ như chưa từng thấy sao?”
+
+“Đừng làm như cô quen họ. Họ ở bên tôi lâu hơn cô nhiều.” Hoshiguma nhìn thẳng vào Ch’en. “Cô còn là Thanh tra trưởng Ch’en à? Ai giao trách nhiệm đó cho cô?”
+
+“Chính tôi.”
+
+“…Đó chỉ là thứ cô muốn tự nghe mình nói thôi phải không? Nhìn cô xem. Định một mình cứu Lungmen? Một người phụ nữ chống lại cả Reunion? Cơn giận dỗi của cô không đưa cô đi xa thế đâu.” Hoshiguma cười nhạt. “Buồn cười thật. Cô luôn là người thi hành mệnh lệnh của ngài Wei, vì cô hiểu ông ấy. Giờ tôi lại là người hiểu ông ấy hơn một chút. Tôi đã xem qua kế hoạch của ngài Wei. Nếu phải có người chết, ngài ấy nghĩ đó phải là chính ngài ấy. Ngài Wei thà mình chết còn hơn để cô chết.”
+
+“Cô đánh giá ông ta quá cao.”
+
+“Có lẽ cô đánh giá ông ấy quá thấp, Ch’en. Nếu ngài ấy chết, Lungmen sẽ được gột bớt tội. Ngài ấy muốn cô điều hành L.G.D. Sớm muộn cô sẽ thay ngài ấy, rồi trở thành người đứng đầu cả thành phố. Có rất nhiều thứ mục ruỗng bị bỏ lại, và cô nên là người dọn sạch chúng. Lungmen vẫn cần cô.”
+
+“Tôi phải nói với cô một chuyện, Hoshiguma. Đó là lý do tôi không thuộc về nơi này.” Ch’en ngừng lại. “Tôi là người Infected.”
+
+“…Cái gì?” Hoshiguma lặng đi. “…Từ khi nào…?”
+
+“Ba năm trước.”
+
+“Cô giấu tôi? Ngay cả tôi cũng không nói…?”
+
+“Wei Yenwu không muốn ai biết. L.G.D. không thể có người Infected. Nên tôi không thể là người Infected.”
+
+“Không. Tôi hiểu rồi.” Hoshiguma khẽ nói. “Cuối cùng tôi cũng thật sự hiểu, Ch’en. Tôi hiểu chính xác vì sao cô không thể rời Lungmen. Nếu cô đến lõi đô thị, ngài Wei sẽ phải gắn mác kẻ thù cho cô. Không chỉ kẻ thù, mà là kẻ thù Infected nguy hiểm chống lại Lungmen. Cả thành phố sẽ biết cô là người Infected. Họ có thể còn nghĩ cô cấu kết với Reunion. Và thế là hết. Cô sẽ không bao giờ quay về được.”
+
+“Tôi không quan tâm.”
+
+“Đó là câu của tôi mới đúng. ‘Cô là người Infected? Tôi không quan tâm.’ Tôi không quan tâm. Tiểu thư không quan tâm. Nine không quan tâm. L.G.D. không quan tâm. Ngay cả ngài Wei cũng không quan tâm.”
+
+“Nine đã đi rồi. Cô ấy rời L.G.D. vì cũng là người Infected. Có lẽ chúng tôi nhiễm bệnh trong cùng một nhiệm vụ. Cô ấy làm nội gián cho tôi trong Reunion… rồi vì Reunion mà rời bỏ Lungmen. Vì cô ấy đã thấy sự thật của thành phố này.” Ch’en nhìn Hoshiguma. “Cô có biết ai đang cầm đầu Reunion không?”
+
+“Tôi quên tên rồi.”
+
+“Talulah. Tiểu thư chưa nói với cô sao? Talulah là chị gái tôi.”
+
+“Ồ. Ồồ… Ha. Tôi hiểu rồi.” Hoshiguma đứng thẳng dậy. “Ch’en, hôm nay cô không đi đâu cả.”
+
+“…Tại sao…? Chị tôi, gia đình tôi… không đủ quan trọng sao?!”
+
+“Chính vì thế,” Hoshiguma nói. “Chính vì thế tôi không thể để cô đi. Kể cả khi tôi phải chết ở đây.”
+
+“Không phải cô quyết định chuyện đó, Hoshiguma.”
+
+“Hannya có thể quyết định.” Hoshiguma nhấc tấm khiên lên. “Người thợ rèn tấm khiên này có cả gia đình bị một đám Oni lang thang giết sạch. Cơn thịnh nộ của ông ta độc hơn bất kỳ Catastrophe nào. Ch’en, ngài Wei không phải người tốt. Chúng ta có thể cùng nhau đá đít ông ấy. Cô muốn làm gì, tôi làm cùng cô. Cô muốn chiếc Columbian Big Single 70 vv của tôi à? Nó là của cô. Nhưng giờ không phải lúc. Đừng đi. Đừng ép tôi làm thế này. Tôi chỉ xin cô vậy thôi.”
+
+“Ép cô? Sao cô lại nói giống Wei Yenwu…? Tôi không thích thế. Khi ông ta phản bội anh trai mình, phụ lòng mẹ tôi, và ru cả thành phố ngủ dưới bóng mây đen độc ác, đó là lúc tôi quyết định làm điều này.”
+
+“Cô nghĩ những chuyện đó liên quan đến cô, nhưng tôi thì không,” Hoshiguma nói. “Những gì ông ấy đã làm, những gì ông ấy làm vì cô, và những gì cô nên làm, chẳng có gì nối với nhau cả. Đó là điều ngài Wei mong. Ông ấy không muốn đóng vai kẻ ác. Ông ấy trao cho cô thanh kiếm.” Giọng cô trầm xuống. “Không chỉ một lần. Nó xảy ra hết lần này đến lần khác… Tôi đã phá hủy nhà mình, phá hủy gia đình mình. Mỗi lần, tôi lại đẫm máu từ sừng đến chân, chiến đấu đến cùng, cho đến khi chỉ còn mình tôi đứng vững. Vì tôi nghĩ mình đúng, còn họ sai. Tôi đã tự hỏi rất nhiều lần liệu mình có đáng sống không. Tôi không đáng. Nhưng tôi vẫn sống. Chỉ là tôi không thể sống cho bản thân nữa. Liều mạng vì một khái niệm đúng sai nào đó… là điều ngu ngốc nhất một người có thể làm. Và tôi đã sống cả đời với nỗi hối hận ấy. Cô nghĩ chỉ mình cô mang gánh nặng sao, cô Ch’en?”
+
+“Đừng nói như thế!”
+
+“Tôi đã thấy quá nhiều người chết vô ích. Tôi không quan tâm cô là ai. Tôi chỉ quan tâm cô đi đâu. Đây là chuyện của thủ lĩnh Reunion. Cô không thay đổi được tình hình. Cô cũng sẽ chết vô ích thôi.”
+
+“—Cảm ơn cô, Hoshiguma,” Ch’en nói. “Nhưng tôi vẫn sẽ đi.”
+
+“Thật sao? Cô thấy trái tim mình đang cứng như sắt à?” Hoshiguma thở dài. “Được thôi. Xem ra cô phải ăn đòn mới học được, như Hoshiguma hồi trẻ, rằng ương bướng chỉ là một sự bốc đồng ngu xuẩn. Muốn đánh thì đánh, Ch’en. Cho tôi xem cô học được gì trong hai năm qua.”
+
+“Đừng. Nói. Như. Thế.”
+
+***
+
+“Thiết bị Điều khiển Originium Arts Tầm xa EX-42, operator Rosmontis, xin phê duyệt.”
+
+“Phê duyệt sử dụng trong tác chiến phòng thủ. Người dùng: Chuyên gia Hủy diệt, elite operator Rosmontis. Cho phép kích hoạt.”
+
+“Được rồi. Em đi đây,” Rosmontis nói. “Nhờ anh báo với Closure giúp em, về việc khởi động landship Rhodes Island.”
+
+“Nhanh lên, Doctor, vào cabin đi. Đừng nhìn,” operator kéo tay Doctor. “Nếu dính mảnh vỡ của Rosmontis thì coi như tiêu đời.”
+
+***
+
+*Khu thượng thành Lungmen. 7:20 tối.*
+
+Ch’en thở dốc, mũi kiếm chống xuống nền.
+
+“…Cô nghiêm túc thật đấy,” Hoshiguma nói. “Không ngờ đấy. Chưa bao giờ nghĩ cô có thể khiến tôi đổ máu.”
+
+“Chúng ta… chưa bao giờ… thoát được… quá khứ của mình,” Ch’en nói. “Hoshiguma, cô luôn là một phần của thành phố này. Nhưng tôi thì không. Tôi luôn chạy trốn. Tôi nghĩ tôi sẽ không bao giờ chịu nổi nơi này.”
+
+“Rốt cuộc lại thành ra thế này.” Hoshiguma hạ khiên. “Tôi không cản được cô. Đi đi.”
+
+“Xin lỗi, Hoshiguma. Sau khi tôi đi, xin cô đến khu ổ chuột giúp tôi. Người dân ở đó đang hoảng loạn. L.G.D. phải có người bảo vệ họ.” Ch’en ngừng lại. “Nếu có mấy đứa trẻ Infected tặng cô một con gấu bông… hãy giữ lấy. Một cô bé Ursus tên Misha đã dạy chúng làm những con gấu đó. Cô bé chết rồi, vì chúng ta đã phụ cô bé.”
+
+“Được. Tôi sẽ giữ.”
+
+“Tôi xin lỗi. Tôi nợ cô.”
+
+“Tôi không cần cô xin lỗi. Thật lòng mà nói, cô xin lỗi dở lắm.” Hoshiguma quay đi. “…Xong rồi. Đi đi! Và đừng quay lại.”
+
+“…Bảo trọng.”
+
+Tiếng động cơ xa dần. Hoshiguma đứng lại một mình.
+
+“‘Không chịu nổi nơi này’ à?” cô lẩm bẩm. “…Có bao nhiêu người quan tâm đến thành phố này nhiều như cô chứ? Nói nhảm…”
+
+“Thanh tra Hoshiguma!” Một nhóm sĩ quan L.G.D. chạy tới. “…Hả? Thanh tra, ch-chị bị thương? Ai có thể… À, vâng, bọn em vừa thấy, ừm, cô Ch’en——”
+
+“À, chuyện đó, xin lỗi nhé. Các cậu có rảnh nói chuyện một lát không?”
+
+“Thanh tra… chị cũng định trái lệnh sao?”
+
+“…Tôi sẽ không gọi nó như thế.”
+
+***
+
+“Ra ngoài,” Wei Yenwu nói.
+
+“Vâng, ngài Wei.”
+
+“Ta đã bảo… đừng gọi ta như thế.”
+
+Khi những bóng áo đen đã đi hết, Fumizuki quay sang hai vị khách. “Bà Kal’tsit, Amiya, trước khi hai người nói, cho tôi nói với anh ấy vài lời được không?”
+
+“Vâng, chị cứ nói ạ.”
+
+“Chúng ta đã ở bên nhau bao năm rồi, Wei Yenwu,” Fumizuki nói. “Chỉ cần nhìn vào mắt anh là em biết anh đang nghĩ gì. Em biết Lungmen có ý nghĩa thế nào với anh. Em biết anh đã hy sinh những gì cho nó. Nhưng hôm nay, đây không phải điều anh muốn, đúng không? Ý em là… sự thịnh vượng mà anh đã đánh đổi tất cả. Anh đã mất hai người thân. Không, anh từng nói là ba. Hay hàng chục người? Chắc chắn anh không chịu nổi việc mất cả cháu gái mình.”
+
+“Con bé ghét Ảnh vệ. Nếu ta cử họ đi đưa nó về, nó sẽ chiến đấu với họ đến chết.”
+
+“Không, Wei Yenwu… Ý em không phải vậy. Anh không hối hận sao? Nếu để cả hai đứa chết ở một thành phố xa lạ? Chúng là người Infected thì sao? Chúng không phải cháu anh sao? Nếu chúng ta có con, anh cũng sẽ đối xử với chúng như thế sao…?”
+
+“Mọi thứ ta làm đều vì mảnh đất này. Ta chưa bao giờ muốn Ch’en Hui-chieh làm thay việc của ta.”
+
+“Nhưng con bé là như thế đấy! Giấu sự thật chỉ khiến vết cắt sâu hơn. Chỉ khiến nó cảm thấy mình không thuộc về nơi này…”
+
+“Nhưng đến lúc này, ta có thể dừng lại được sao? Lungmen có cho phép ta dừng lại không? Đó là điều con bé muốn. Nó muốn biến thành phố này thành một nơi hoàn toàn khác với thành phố dưới sự cai trị của ta. Ta chỉ dạy nó cách đến được đó, nó phải làm gì, và phải từ bỏ những gì.”
+
+“Thôi đủ rồi, đừng biện minh nữa. Anh làm em nhức đầu đấy,” Fumizuki nói. “Em sẽ tự đi đưa con bé về. Em sẽ làm điều anh không thể làm.”
+
+“Vô lý! Ta không cho phép! Fumizuki, cô không được bước chân ra khỏi tòa nhà này.”
+
+“Ồ? Anh định cản em à?” Fumizuki nheo mắt. “Damare, kono yarou!”
+
+“Ừm? Doctor, chị Fumizuki vừa nói gì vậy ạ?” Amiya thì thầm.
+
+“Lâu lắm rồi tôi mới nghe tiếng Higashi giận dữ đến thế,” Kal’tsit nói.
+
+“Anh quên tôi là ai rồi sao, Wei Yenwu? Anh quên chính anh là ai rồi sao?” Fumizuki quay sang. “Nào, các bạn Rhodes Island. Giúp Lungmen, và giúp Ch’en của chúng tôi, tốn bao nhiêu? Tôi sẽ tự trả. Nói ra thì không phải phép, nhưng hôm nay chồng tôi không được minh mẫn lắm. Hay nói đúng hơn, kế hoạch của đối thủ đã vượt quá mọi dự đoán của chúng tôi, và bao gồm cả những gì anh ấy trân quý nhất. Chúng hiểu thấu cả Lungmen lẫn Wei Yenwu.”
+
+“Tôi hiểu mọi điều cô nói, cô Fumizuki. Tiền không cần thiết. Nhưng tôi cần hai người nghe tôi nói,” Kal’tsit nói. “Rhodes Island chỉ là một công ty dược. Nhưng thế giới này khắc nghiệt. Một công ty dược như chúng tôi gây thù chuốc oán rất nhiều, trong làm ăn, trong địa chính trị, hay ở đâu đó khác. Chúng tôi lang thang giữa những kẽ nứt giữa các quốc gia vì không còn lựa chọn nào khác. Ngài Wei, với sức mạnh của Lungmen và tài năng của ngài, ngài có thể xóa sổ Rhodes Island chỉ bằng một cái búng tay. Nếu chúng tôi chống lại ngài, Rhodes Island coi như chết.”
+
+“Nói tiếp. Bác sĩ Kal’tsit, cô Amiya, yên tâm. Ta chẳng còn sức đâu mà nhắm vào Rhodes Island nữa.”
+
+“Một đồng nghiệp của tôi từng thấy Công tước Kashchey tại một buổi tiệc gây quỹ cùng con gái nuôi của ông ta,” Kal’tsit nói. “Đó không phải chợ nô lệ hay một cuộc truy hoan của quý tộc, mà là một sự kiện dành cho những kẻ có quyền định đoạt thế giới. Đêm ấy nhiều người trẻ đã chứng tỏ giá trị bằng tư tưởng và lý luận của mình. Nhưng Talulah thì không. Cả tôi lẫn đồng nghiệp đều không ngờ cô ấy sẽ trở thành thủ lĩnh Reunion. Lẽ ra chúng tôi phải nhận ra rằng Công tước Kashchey chỉ lộ diện khi cần thiết, để làm điều cần thiết. Ông ta chưa bao giờ biến cô ấy thành nô lệ hay con tin.”
+
+“Con bé là người kế thừa của hắn,” Wei Yenwu nói.
+
+“Ồ?” Fumizuki khựng lại.
+
+“Quan sát của cô xác nhận mối nghi ngờ của ta. Talulah là người kế thừa của Kashchey.”
+
+“Chính xác. Công tước Kashchey biết ngài có gì và làm được gì. Talulah có lẽ cũng biết,” Kal’tsit nói. “Ngài có thể giao việc này cho chúng tôi. Như Amiya đã nói, thỏa thuận chính thức giữa Lungmen và Rhodes Island đã kết thúc. Lúc này landship Rhodes Island đã rời cảng Lungmen. Những gì chúng tôi làm từ đây không liên quan gì đến Lungmen. Được chứ, Amiya?”
+
+“…Vâng.” Amiya bước lên. “Ngài Wei. Chúng tôi… sẽ không can thiệp vào tương lai của Lungmen hay chuyện riêng của ngài. Nhưng tất cả những chuyện này là âm mưu lợi dụng người Infected, và chúng tôi sẽ dốc toàn lực chống lại nó. Nếu ngài cho phép chúng tôi hành động, và hứa sẽ không chống lại chúng tôi bằng bất kỳ cách nào—thì trận chiến sắp tới là trận chiến của chúng tôi. Của Rhodes Island.”
+
+“Ta sẽ không dựa vào người Infected. Ta không tin người Infected. Khác biệt duy nhất giữa các người và Reunion là các người chưa quay lưng với Lungmen… chưa thôi,” Wei Yenwu nói. “Reunion trước kia thế nào? Dù chúng ta không nhớ, vẫn có người nhớ. Chúng không giống bây giờ. Các người có thể khoác lên mưu đồ của mình những lời hoa mỹ, cũng như Reunion có thể hô hào rằng chúng sẽ giải thoát người Infected khỏi số phận. Rốt cuộc chúng vẫn thành bia đỡ đạn cho Ursus. Các người sẽ là Reunion tiếp theo sao? Hơn nữa, ta nghi các người không đủ sức đối phó với người kế thừa của Kashchey. Suốt bao năm qua, chỉ Lungmen là chống lại hắn thành công.”
+
+“Ngài Wei, ngài định đích thân dẫn quân tấn công lõi đô thị Chernobog, đúng không?” Kal’tsit hỏi. “Ngài nghĩ chỉ mình ngài xử lý được tình hình này. Và lần này, ngài định hy sinh bản thân để vô hiệu hóa lời tuyên chiến với Ursus. Như cô Fumizuki nói, ngài cảm thấy mình đã phản bội nguyên tắc của mình, và muốn kết thúc tất cả bằng cái chết.”
+
+“Ta đã phạm quá nhiều sai lầm. Cái chết của ta không trả hết được. Ta còn chẳng biết mình phải trả cho ai.”
+
+“Dù vậy, ngài chắc chắn rằng sau khi ngài chết, không ai còn mang ác ý với ngài sao?”
+
+“Lungmen có vị trí chiến lược với Yan. Nhờ sự bảo hộ của ta, nó sẽ tiếp tục thịnh vượng.”
+
+“Tôi đang nói về phu nhân Fumizuki.”
+
+*(Bác sĩ Kal’tsit… tế nhị một chút đi mà!)* Amiya nghĩ thầm.
+
+“Bác sĩ Kal’tsit?! Cô nói gì vậy?!” Fumizuki kêu lên.
+
+“Tôi nói thật lòng. Tôi e vợ ngài sẽ phải chịu khổ vì hành động của ngài. Dù ngài đã chết, bà ấy vẫn là quả phụ của ngài. Bà ấy vẫn biết mọi thứ ngài biết. Tôi có cảm giác kẻ đang ép ngài sẽ không rộng lượng đến thế. Và có lẽ không chỉ dừng lại ở cô Fumizuki.”
+
+“Nói đi, bác sĩ Kal’tsit,” Wei Yenwu nói.
+
+“Vì thành phố ngài yêu… Vì những người ngài yêu… Tôi cầu xin ngài, ngài Wei. Hãy để việc này cho người trong nghề. Chúng tôi có thể bất lực trước một đội quân chính quy, nhưng chúng tôi hiểu người Infected. Chúng tôi biết họ muốn gì, và không muốn gì. Chỉ người Infected mới đối mặt được với người Infected.”
+
+Một khoảng lặng dài.
+
+“Vậy cô muốn gì? Người lãnh đạo Rhodes Island, bác sĩ Kal’tsit? Các người không phải tổ chức từ thiện. Tấn công lõi đô thị chẳng khác gì ném trứng vào đá.”
+
+“Hơn cả sự đồng ý với kế hoạch tác chiến, ngài Wei, chúng tôi cần lời đảm bảo của ngài,” Amiya nói. “Vì có thể ngài sẽ đổi ý về sau… Chúng tôi cần ngài hứa, ngay bây giờ. Vì em tin rằng Lungmen, gia đình ngài, và cô Ch’en, đáng giá lời hứa ấy. Chúng tôi không cần tiền của chị, chị Fumizuki. Lòng tốt và thái độ của chị với người Infected đã đủ để chúng tôi thực hiện chiến dịch này miễn phí.”
+
+Fumizuki khẽ giơ ngón cái về phía cô bé. Amiya chớp mắt, không hiểu.
+
+“Ta đồng ý,” Wei Yenwu nói. “Cho đến khi xung đột Lungmen – Chernobog kết thúc, Lungmen sẽ không can thiệp vào việc của Rhodes Island dưới bất kỳ hình thức nào. Và ta thấy bác sĩ Kal’tsit vẫn còn điều muốn nói. Cứ nói đi. Ta còn chịu được, lúc này. Vì ta cần Rhodes Island cứu một người Infected rất cụ thể.”
+
+“…Vậy tôi có một đề nghị nữa.”
+
+“Ra giá đi.”
+
+“Hai mươi năm trước, Edward Artorius, cha của Talulah Artorius, đã chết tại Lungmen,” Kal’tsit nói. “Tôi muốn ngài Wei cho chúng tôi mượn di hài của ông ấy.”
+
+## 7-4 | Kề vai sát cánh
+
+*Đài chỉ huy Rhodes Island. 6:00 sáng.*
+
+“Gửi các operator xuất sắc của chúng ta, em có một thông tin quan trọng cần báo với mọi người ở Rhodes Island. Em là Amiya.”
+
+Giọng cô bé vang khắp các hành lang landship.
+
+“Từ đêm qua, Rhodes Island đã chính thức rời Lungmen. Do diễn biến gần đây, thỏa thuận thương mại giữa chúng ta và Lungmen đã bị hủy. Thật không may… một số operator của chúng ta sẽ sớm tiến sâu vào lõi đô thị Chernobog. Một trận chiến cực kỳ khó khăn đang chờ ở đó.”
+
+“Nhiều người có thể nghĩ chiến tranh là chuyện xa vời với chúng ta. Rằng chiến tranh là xung đột giữa hai quốc gia, chẳng liên quan gì đến một công ty dược. Nhưng chiến tranh… em nghĩ chiến tranh chưa bao giờ rời xa chúng ta. Chúng ta luôn ở trong một cuộc chiến. Cuộc chiến dai dẳng chống lại sự bất công với người Infected, cuộc chiến khiến con người căm ghét nhau. Kẻ thù của người Infected sẽ không để họ được chữa trị. Và mỗi tội ác chúng gây ra với người Infected lại khiến căng thẳng thêm trầm trọng. Hãy tưởng tượng… nếu chúng ta bào chế được thuốc chữa căn bệnh này, nhưng không bao giờ có cơ hội đưa nó đến tay người Infected. Khi đó thì sao? Kẻ thù của chúng ta không chỉ là ‘Oripathy’.”
+
+“Hai tuần trước, Reunion và Rhodes Island đã giao tranh dữ dội. Nhiều operator của chúng ta đã hy sinh ở Chernobog. Nhưng nếu mỗi sự hy sinh đều đòi chúng ta báo thù, chúng ta sẽ bị khóa trong vòng luẩn quẩn báo thù bất tận. Cuộc đấu tranh của chúng ta với Reunion không thể dựa trên hận thù. Nhưng Reunion vẫn chìm trong cơn điên của chúng. Chúng đã chiếm lõi đô thị Chernobog và đang lái nó lao vào Lungmen. Lạ hơn nữa, Ursus vẫn chưa từ bỏ quyền kiểm soát lãnh thổ với lõi đô thị đó, dù Ursus chưa từng hành động suốt cả sự kiện này. Đế quốc Ursus làm ngơ trước những tội ác ở Chernobog. Họ đã bỏ rơi chính công dân của mình.”
+
+“Điều này khiến em kết luận rằng Ursus đã âm mưu tạo ra những sự kiện này. Va chạm với lõi đô thị sẽ châm ngòi một cuộc chiến giữa Ursus và Yan. Và bất kể ai đứng sau Reunion, bất kể kẻ chủ mưu thật sự là ai, chỉ còn một sự thật duy nhất bày ra trước mắt chúng ta: ‘Người Infected đã gây ra cuộc chiến này.’ Bất kể kết cục ra sao, người Infected sẽ luôn là vật tế thần. Họ sẽ phải đối mặt với sự áp bức tàn bạo hơn, cuộc sống khốn khổ hơn, và một mối hận thù rực lửa vĩnh viễn. Nếu chuyện đó xảy ra, mọi thứ Rhodes Island đã làm sẽ thành vô nghĩa.”
+
+“Nhưng dù vậy, chúng ta sẽ không bao giờ bỏ cuộc. Chúng ta sẽ dùng lý trí chống lại kẻ cuồng tín, dùng mưu lược chống lại hận thù. Nên chúng ta sẽ ngăn Reunion. Chúng ta sẽ ngăn lõi đô thị Chernobog va vào Lungmen. Mong những ai ở lại landship sẽ chăm lo cho Rhodes Island. Dù chúng ta có trở về hay không, Rhodes Island vẫn sẽ tiếp tục chiến đấu.”
+
+Cô bé tắt micro, thở ra một hơi dài.
+
+“Phù…”
+
+“Bài phát biểu hay lắm,” Doctor nói.
+
+“A, ừm, cảm ơn Doctor! …Hả? Trên mặt em có gì sao? Em không để dính vụn bánh đấy chứ?”
+
+“Có phải hơi u ám quá không?”
+
+“…Vâng, các operator khác cũng nghĩ vậy. Họ bảo những lúc thế này nên khích lệ tinh thần. Nhưng em nghĩ chúng ta không phải đội như thế. Với chúng ta, không phải chuyện tinh thần tốt hay xấu. Chúng ta cần hiểu mình đang làm gì. Càng khó khăn, càng phải nói sự thật cho mọi người. Còn gì nguy hiểm hơn việc bịt mắt bước đi trên thế giới này…?”
+
+“Tôi nghe nói cô Ch’en đã rời Lungmen.”
+
+“…Đúng vậy. Em nghĩ cô Ch’en có lẽ sẽ một mình lẻn vào lõi đô thị. Lungmen, người Infected, dòng máu của cô ấy… Cô Ch’en là người phức tạp, mang trong mình rất nhiều mâu thuẫn. Nhưng dù vậy, cô ấy không bỏ cuộc, không bỏ chạy. Cô ấy không sợ bị phản bội, bị lưu đày hay cái chết.” Amiya nhìn lên. “Dr. {@nickname}, cô Ch’en là người Infected.”
+
+“Tôi đoán được từ lâu rồi.”
+
+“Vâng. Khi đến lõi đô thị, chúng ta cũng sẽ làm hết sức để cứu cô ấy. Không chỉ vì cô ấy là bạn chúng ta, cũng không hoàn toàn vì có người thuê chúng ta làm vậy. Cô Ch’en sẽ không phải một mình đối mặt với Reunion. Chúng ta sẽ đứng cùng cô ấy.” Amiya mỉm cười. “Em từng nghi ngờ cô Ch’en. Em tưởng cô ấy là kiểu người không thể thay đổi. Nhưng khi cô ấy đưa tay ra giúp người Infected, em đã thấy. Em đã thấy màu sắc trái tim cô ấy.”
+
+“Còn một người nữa đã nhờ tôi ngăn Reunion,” Doctor nói.
+
+“…Doctor, ngài đang nói về…” Amiya cúi đầu. “…Chị FrostNova… Vâng. Và… Misha. Nếu có điều gì chúng ta làm được để ngăn bi kịch của Misha lặp lại, để an ủi FrostNova và người của chị ấy, để giúp thêm nhiều người, để ngăn những nỗi đau mới ra đời trên mảnh đất này, chúng ta sẽ làm.”
+
+“Ta đã gửi thông tin cho cả hai người rồi,” Kal’tsit bước vào. “Đây sẽ là lần đầu tiên ba chúng ta cùng chỉ huy.”
+
+“Bà định làm việc với tôi sao?”
+
+“Ngài có thể ở lại đây. Tùy ngài. Ta không ép được.”
+
+“…Bác sĩ Kal’tsit,” Amiya nói. “Em mong bác sĩ gác lại mọi định kiến về Dr. {@nickname}. Và Doctor, em mong ngài gác lại mọi thành kiến với bác sĩ Kal’tsit, từ những điều bác sĩ từng nói. Ít nhất là trong lúc này. Doctor bị mất trí nhớ. Rhodes Island không có cách điều trị đáng tin cậy nào để khôi phục trí nhớ chỉ trong hai tuần. Nên mọi thứ Doctor bây giờ đều là sản phẩm của hiểu biết mới. Bác sĩ Kal’tsit, em mong bác sĩ nhìn Doctor này bằng con mắt mới. Còn Doctor, em không muốn ngài nghi ngờ ý định của bác sĩ Kal’tsit chỉ vì những gì bác sĩ đã nói. Bác sĩ là người… ngài có thể dựa vào nhất. Dù ngài có tin bác sĩ hay không. Xin cả hai người hãy hứa với em.”
+
+“Tôi còn làm gì khác được đâu,” Doctor nói.
+
+“Dr. {@nickname},” Kal’tsit nói. “Chuyện cũ không thể cho qua. Đạo đức sẽ không biến chúng ta thành người tốt hơn. Ta không từ chối đề nghị của em, Amiya. Chỉ là, tha thứ như một hình thức tử tế, như từ bỏ quyền được giận dữ, sẽ chỉ khiến chúng ta yếu đi vô cùng. Ta sẽ không từ bỏ quyền đó. Nhưng lúc này, ta sẽ cất định kiến đi. Giải quyết lõi đô thị trước đã.”
+
+“Amiya, tôi đang đứng cạnh em,” Doctor nói.
+
+“Vâng… được ạ.” Amiya hơi ngập ngừng. “Em tin ngài sẽ ở bên em khi cần, Doctor. Nhưng trước kia, điều em muốn là ngài dẫn dắt em, lo liệu mọi thứ em không làm được trong những lúc khó khăn… Em từng nghĩ có Doctor bên cạnh, em có thể dũng cảm.” Cô bé ngẩng lên. “Giờ thì, Doctor, chúng ta kề vai sát cánh. Từ khi ngài trở lại, em đã đợi dịp để nói với ngài… Em đã lớn rồi. Em không cần ngài, hay bác sĩ Kal’tsit, hay… ừm… em không cần ai bảo vệ em nữa. Em sẽ chứng minh ngài đã đúng khi tin em. Em hứa.”
+
+Một nhịp ngừng.
+
+“Này! Kề vai chỉ là cách nói thôi. Đừng chê em lùn! Em vẫn đang lớn mà…! Hừ! Rồi em sẽ cao bằng ngài cho xem, Doctor!” Giọng cô bé dịu xuống. “…Em chỉ vui thôi, Doctor. Vâng… chỉ là… rất vui.”
+
+Không ai nói gì.
+
+“Tôi phát hiện một sự im lặng lạnh lẽo,” PRTS nói. “Bạn có muốn tăng nhiệt độ phòng điều khiển lên một chút không?”
+
+Kal’tsit nhìn Doctor. “Ta đã không nghĩ chuyện này lại dễ đến thế. Thành thật mà nói, ta còn chờ ngài cài vài cái bẫy giữa những lời nói của mình. …Nhưng thì đã sao? Rất mong được hợp tác với ngài, Dr. {@nickname}.”
+
+“Kế hoạch là gì?”
+
+“Rhodes Island có cách làm riêng,” Kal’tsit nói. “Bốn tiếng nữa, chúng ta sẽ tạo ra một trận bão cát nhỏ trên đường đi của lõi đô thị Chernobog.”
+
+***
+
+*10:00 sáng. Hoang mạc.*
+
+“Số một!” Nearl hô.
+
+“Máy nén số một đã có điện!”
+
+“Số hai!”
+
+“Kho đạn số hai sẵn sàng,” Firewatch nói.
+
+“Số ba.”
+
+“Bơm gió số ba, ngụy trang… ngụy trang xong!”
+
+“Tháp chỉ huy của lõi đô thị có tầm nhìn rất rộng. Không ngụy trang thì không được,” Firewatch nói. “Họ thậm chí chẳng buồn che giấu việc lõi đô thị về cơ bản được thiết kế như một chiến hạm. Đế quốc sống nhờ bạo lực và chinh phạt. Ursus đã gây bao tội ác với quê hương tôi? Chúng sẽ không bao giờ rửa sạch máu trên tay. Chúng đốt ruộng, lấp giếng bằng tro. Chúng san bằng cả làng mạc, chỉ để lại những xác cháy đen… Đó là những ‘thường dân Ursus’ tôi biết. Nếu họ không ủng hộ chiến tranh, những chuyện đó đã không xảy ra.”
+
+“Tôi tin đó không phải ý chí chung của người dân Ursus, mà là biểu hiện của những tư tưởng xấu xa,” Nearl nói. “Chúng ta không chiến đấu với người dân Ursus, mà với chính cái ác. Firewatch, đây có thể không phải đất Kazimierz. Nhưng chúng ta sẽ không để những tội ác ấy lặp lại. Chúng ta không đến đây để làm hại người. Chúng ta đến để ngăn người khác bị hại.”
+
+“…Các hiệp sĩ chưa bao giờ giúp đội du kích chúng tôi,” Firewatch nói. “Lãnh đạo của chúng tôi chờ nhiều năm, nhưng cuối cùng chẳng có ai đến. Chúng tôi chiến đấu đến cùng, đơn độc, cho đến khi bị Ursus nuốt chửng. Tôi không trách các hiệp sĩ. Nhất là cô, Nearl. Nhưng tôi cứ nghĩ mãi về quãng thời gian chiến đấu với Ursus. Tôi không tin chúng, và tôi cũng không tin Kazimierz.”
+
+“Đó là sai lầm nghiêm trọng của các hiệp sĩ Kazimierz. Một sai lầm họ không thể sửa chữa,” Nearl nói. “Nhưng ít nhất hôm nay, chúng ta có thể chiến đấu bên nhau, Firewatch. Hồi đó tôi không có cơ hội giúp cô. Nhưng lần này chúng ta chiến đấu, không phải vì quê nhà, mà để chấm dứt tội ác của Ursus. Tôi đã sẵn sàng. Chiến đấu vì điều mình tin, và chết vì cô.”
+
+“Chết vì người khác…” Firewatch lặp lại. “Không phải hiệp sĩ nào cũng như cô.”
+
+“Nhưng tôi tin hiệp sĩ là phải như thế. Chết vì người khác là có ý nghĩa. Cô Firewatch, hãy để trận này là lời xin lỗi của tôi.”
+
+“…Operator Nearl. Cô cần tôi làm gì?”
+
+“Canh giữ khu vực, cho đến khi các thiết bị hoạt động hoàn toàn.”
+
+***
+
+*Bốn giờ trước.*
+
+“Đây là ngụy trang của chúng ta à?” Doctor hỏi.
+
+“Sau bao nhiêu trận đánh lớn, xâm nhập về cơ bản là môn bắt buộc với operator của chúng ta,” Kal’tsit nói. “Bão cát chỉ để xóa dấu vết. Xâm nhập thành công là tổng hòa của rất nhiều mảnh ghép. Thông tin từ Phòng khám Azazel đã xác thực bản thiết kế Chernobog mà ta có. Chúng ta có hình dung khá chắc về các tầng dưới của lõi đô thị. Đến lúc đó, ta sẽ vào qua hệ thống thoát nước ở móng. Nhưng chúng ta cần mồi nhử. Không có mồi thì không câu được cá.”
+
+“Thợ săn cũng vậy.”
+
+“Hừ… Ừ. Ngài nói đúng. Nhưng cho đủ thời gian, ngay cả thợ săn tồi nhất cũng phân biệt được con mồi và mồi nhử. Chúng ta phải ẩn mình đủ lâu để ngăn điều đó.”
+
+***
+
+*10:00 sáng. Trên không.*
+
+“Chuyến này không cần hạ cánh đúng không, Huấn luyện viên?” viên phi công hỏi.
+
+“Không cần,” Dobermann nói. “Cứ làm như sắp hạ cánh, nhưng liên tục bay vòng quanh thành phố. Giữ được nửa tiếng không?”
+
+“Không vấn đề! Cô yên tâm, cô đang ngồi trên ‘Good Boy’, nó còn ồn hơn ‘Bad Guy’ nhiều! Cả nửa tiếng mọi con mắt sẽ dồn vào chúng ta!”
+
+“Cẩn thận đấy. Đừng để bị bắn rơi.”
+
+“Cô cứ ngồi thư giãn. Tôi chở Blaze với Ascalon cả trăm lần mà chưa bị bắn rơi lần nào khi bay thấp.”
+
+“…Bị bắn rơi thì chỉ cần một lần thôi…”
+
+Dưới mặt đất, đám Reunion ngoài rìa lõi đô thị chỉ trỏ lên trời. “Cái gì kia? Chúng bay?! Kẻ thù có vũ khí mới! Bắn hạ nó đi! Không được để nó hạ cánh!”
+
+“Thứ này có tính năng an toàn gì không?” Dobermann hỏi.
+
+“Cô sợ độ cao à, Huấn luyện viên?”
+
+“…Một chút.”
+
+“Đừng lo! Nếu có sự cố, chúng ta sẽ không kịp phản ứng đâu. Cú rơi sẽ nghiền nát chúng ta. Không ai nhận dạng được xác luôn. Công bằng tuyệt đối!”
+
+“Thế thì làm sao mà không lo được?!” Dobermann bấm liên lạc. “Amiya, đã đánh lạc hướng được địch. Chúng tin rằng chúng ta sắp hạ cánh. Bắt đầu chiến dịch!”
+
+“Các operator chiến đấu, chú ý! Một nhóm nhỏ địch đang tiến đến vị trí của ta, có lẽ là đội trinh sát từ lõi đô thị!” Nearl hô. “Thiết bị đã hoạt động. Chúng ta sẽ không để chúng phá hỏng kế hoạch. Cô Firewatch, yểm trợ tôi!”
+
+***
+
+“Hạ được đội trinh sát đó rồi chúng ta cũng chẳng còn nhiều thời gian,” Doctor nói.
+
+“Đúng. Lịch trình rất gấp,” Kal’tsit nói. “Lõi đô thị đang di chuyển. Năm đội của chúng ta sẽ dùng xe, nương theo bão cát tiếp cận thành phố, rồi dùng thiết bị chuyên dụng leo lên phần khung bên dưới.”
+
+“Chỉ có năm đội?”
+
+“Chúng ta không vội gây sự chú ý của giới chóp bu Ursus ở đây. Cũng không muốn họ phái chiến hạm đến nghiền nát Rhodes Island giữa hoang mạc. Dù họ có làm thế, ngài cũng sẽ không thấy một dòng tin nào trên báo. Đám ngân hàng và bảo hiểm sẽ lặng lẽ gạch tên ngài và nhét hết tiền vào túi. Không ai muốn chọc giận Ursus. Sự trung lập cho chúng ta chút tự do di chuyển giữa các thế lực, nghĩa là chúng ta không thể được thế lực nào chống lưng. Chúng ta sống sót nhờ hành động trong bóng tối. Giống như khi chúng ta cử đội đi cứu ngài. Năm đội. Để lại dấu vết, xóa dấu vết; mục tiêu hoàn thành, mục tiêu thất bại. Dù thế nào, Rhodes Island chỉ bao giờ triển khai năm đội.”
+
+“Vậy sao họ cần chúng ta?”
+
+“Vì đây là chuyện của người Infected.” Kal’tsit ngừng lại. “Nhưng như vậy vẫn chưa đủ. Chúng ta cần thứ gì đó khác để nghiêng cán cân.”
+
+“Hai người u ám thật đấy,” Amiya xen vào. “Em biết chuyện nghiêm trọng, nhưng đâu cần phải… cười như thế chứ?”
+
+“Amiya… ta có cười sao?”
+
+“Em biết là có. Môi bác sĩ có thể không động đậy, nhưng em cảm nhận được.”
+
+“Không, ta phải nói rõ điều này: ta không có ý định xây dựng lại bất kỳ mối quan hệ nào với người này.”
+
+“Ha. Tôi cũng vậy.”
+
+“Haizz…” Amiya thở dài.
+
+“Ta, Amiya và ba elite operator sẽ dẫn năm đội: ba đội chiến đấu, một đội trinh sát, một đội tác chiến đặc biệt,” Kal’tsit nói. “Ngài có lẽ muốn gặp đội trưởng của một trong số đó.”
+
+***
+
+“Rosmontis! Đợi đã!”
+
+Blaze khập khiễng chạy tới, băng trắng quấn quanh người.
+
+“A… Blaze. Chị bị thương nặng lắm. Sao chị lại ở đây? Chị nên quay về đi.”
+
+“Lần này em xuất kích à? Chị sẽ kiếm người thay em. Misery thì sao? Cậu ta giỏi tác chiến tấn công hơn em. Vẫy tay một cái là xong. Để cậu ta đi đi.”
+
+“Chị không muốn em đi?”
+
+“Ừ. Em không nên đi. Lần này không giống những nhiệm vụ trước của em!”
+
+“Vì em có thể chết?”
+
+“Coi chừng cái miệng! Em không thể… cứ thế nói thẳng ra như vậy được! Em còn quá nhỏ cho nhiệm vụ nguy hiểm thế này. Không đúng chút nào!”
+
+“Nhưng Amiya cũng đi mà.”
+
+“Đó là vì con bé…! Con bé là…” Blaze nghẹn lời. “Amiya…”
+
+“Chị ấy cũng như em. Chị ấy là người Infected. Chị ấy là operator,” Rosmontis nói. “Em đã xem nhật ký. Ace và Scout đều ở Chernobog. Họ không trở về. Nghĩa là họ đã mất rồi. Em muốn thấy. Em muốn biết chuyện gì đã xảy ra. Em muốn thấy ai đang điều khiển Reunion. Em muốn biết chuyện gì đã xảy ra với Ace và Scout.”
+
+“Rosmontis? Em không cần phải ghi lại… những chuyện như thế.” Blaze cắn môi. “Chết tiệt. Mình đang nói cái quái gì thế này…? Không, xin lỗi, chị không nên nói vậy. Cái miệng chết tiệt của chị! Chúng ta có những kỷ niệm vui, và cả những kỷ niệm đau. Em phải nhớ cả hai. Nhưng… chị không muốn thấy em đau đớn như vậy. Sao em phải ngoảnh lại nhìn họ? Em có thể buông những ký ức đó xuống. Đặt chúng ở đó, để chúng ở đó, và đừng ngoảnh lại.”
+
+“Nếu em không nhìn… thì ghi lại chúng để làm gì?” Rosmontis nói. “Nếu em không nhìn… chúng sẽ bị lãng quên. Em sẽ không quên. Em nhất định sẽ không quên một cái chết nào.”
+
+“Ha. Phải rồi. Em cũng như chị. Em là elite operator của Rhodes Island. Chị không thể đi thay em. Thật ra, chị…” Blaze ôm sườn, máu thấm qua lớp băng.
+
+“Chị lại chảy máu rồi?”
+
+“Không sao.”
+
+“Em đưa chị về.”
+
+“Ối.” Blaze bị nhấc bổng lên. “Rosmontis… Em và Amiya nhớ giữ mình nhé.”
+
+“Vâng. Em sẽ nhớ.”
+
+***
+
+“Các elite operator của Rhodes Island, vì lý do riêng, cống hiến tài năng và sức lực cho Rhodes Island,” Amiya nói. “Đội của họ hỗ trợ họ hết mình. Vì ở một mức độ nào đó, elite operator có thể trực tiếp quyết định cách chúng ta áp dụng một chiến thuật. Nhưng không phải ai trong số họ cũng… đúng như chúng ta tưởng tượng.”
+
+“Nhìn phản ứng của ngài, có lẽ ngài đã gặp người chúng ta đang nói đến,” Kal’tsit nói. “Đó là kế hoạch cơ bản. Kế hoạch là kế hoạch, chiến dịch là chiến dịch. Một sai sót trong chiến dịch có thể đập vỡ cả kế hoạch.”
+
+“Mong là ở đây không có chuyên gia báo điềm gở nào.”
+
+***
+
+“Ối… không ổn rồi! Có vấn đề!” Một kỹ sư kêu lên. “Mật độ bụi vẫn quá thấp. Với góc sáng này thì không được. Chúng ta đang lộ hết! Nếu họ nhìn xuống từ đài chỉ huy, họ có thể phát hiện ra chúng ta trước khi mọi thứ vận hành xong!”
+
+“…Để tôi lo,” Nearl nói. “Firewatch, để ý giúp tôi, bảo tôi cần chỉnh hướng nào.”
+
+“Cô… định làm gì?”
+
+“Chỉnh góc của ánh sáng.” Nearl bước lên đỉnh đụn cát. “Để giảm bớt khổ đau của thế gian… Tôi tin ngay cả mặt trời cũng sẽ cúi đầu trước tôi.”
+
+Từ xa, Elysium nheo mắt. “Ai trên đụn cát kia? Nearl à? Không lên ngựa, cũng không rút lui? Cô ấy làm gì thế? Thiền à? Tạo dáng… cô ấy đang tạo dáng ở đây à? Không, khoan, ánh sáng gì kia? Cả người cô ấy đang phát sáng… Không ổn! Chói quá!” Một bàn tay bịt lên mắt anh ta. “Ừm, cảm ơn Đội trưởng… Cảm ơn đã che mắt cho tôi, nhưng sẽ tuyệt hơn nếu anh đừng bóp như muốn bóp nát hộp sọ tôi.” Anh ta hé nhìn. “Cô ấy đang kéo hết ánh sáng xung quanh về phía mình? Chà. Đội trưởng, ánh sáng đang tụ lại. Ngoài Hiệp sĩ Rạng rỡ ra, còn ai làm được chuyện này chứ? Nhìn bóng của các đụn cát mà xem. Anh còn đoán được bây giờ là mấy giờ không?”
+
+Trên trời, chiếc trực thăng lắc lư. “Đưa chúng ta lên cao! Có mấy quả cầu màu mè gì đó sượt qua!” Dobermann quát.
+
+“Đừng sợ, Huấn luyện viên. Caster của Reunion không đủ trình bắn hạ chúng ta đâu. Diễn đủ hay thì có khi Reunion đầu hàng luôn, đó chẳng phải là phô trương lực lượng sao?”
+
+“Nhào lộn trên không không phải phô trương lực lượng!”
+
+“Bám chắc nhé, Huấn luyện viên!”
+
+“—Tôi cần túi nôn!”
+
+“Thiết bị đã vận hành hoàn toàn!” Nearl hô. “Amiya, chúng ta sẵn sàng rồi!”
+
+“Rõ!”
+
+“Lái xe, giữ tốc độ đều! Kiểm tra bản đồ. Dùng bão cát che giấu đường tiếp cận cho đến khi vào tầm triển khai thiết bị leo! Xuất phát!” Kal’tsit ra lệnh.
+
+“Cát sẽ xóa dấu vết của chúng ta. Nhớ đồ bảo hộ, đừng để cát lọt vào thiết bị nhạy cảm!” Amiya nói. “Nhưng… em thấy mặt trời. Sao ánh nắng lại xuyên qua được bão cát? Mặt dưới lõi đô thị rõ như ban ngày, như thể… Arts vậy. Đây đâu có trong kế hoạch. Đó là ánh sáng tự nhiên sao?”
+
+“…Đừng bận tâm!” Nearl đáp. *(Mình làm hơi quá tay nên phải chĩa xuống đất, nhưng đừng nói với con bé phần đó…)*
+
+“Rõ! Móc leo, chuẩn bị bắn! Đảm bảo cáp được cố định chắc vào mặt dưới thành phố!” Amiya nói. “Khi tất cả operator đã lên, xe sẽ rời đi ngay! Bình thường em không hay nói thế này, nhưng em khá chắc ánh sáng vừa rồi là điềm lành cho chúng ta!”
+
+“…Chắc chắn rồi!”
+
+“Khoan, lõi đô thị đang tăng tốc?” Nearl nhìn lên. “Máy của chúng ta chạy bằng sức gió, chỉ duy trì được bão cát trong phạm vi một cây số! Nếu họ vượt quá phạm vi đó, chắc chắn sẽ bị phát hiện!”
+
+“Mọi người nhanh lên!”
+
+“Hết giờ rồi! Phải giảm tốc!” người lái xe kêu. “Nếu ra khỏi bão cát, hệ thống quan sát quang học của Chernobog sẽ thấy chúng ta ngay! Còn bao nhiêu người nữa? Nhanh lên…”
+
+“Không còn ai nữa,” Doctor nói, rồi đeo khẩu trang chống bụi. “Đưa tôi móc khóa. Tôi tự đi.”
+
+“Nguy hiểm lắm, Doctor! Ngài chưa từng được huấn luyện operator! Không thể để ngài lên một mình! Bác sĩ Kal’tsit không phân ai hỗ trợ ngài sao?”
+
+“Có đấy.”
+
+Kal’tsit xuất hiện từ trong bão cát.
+
+“Ta.”
+
+Bà ta vòng một tay ôm ngang eo Doctor, tay kia kéo cả hai lên dây cáp.
+
+“Lần sau hãy tự nắm lấy số phận của mình, Dr. {@nickname}.”
+
+Bão cát dữ dội, và “cánh tay” đang giữ chặt Doctor cứng đến lạ. Doctor không chắc nó có thật sự thuộc về Kal’tsit hay không.
+
+“Tất cả các đội, vào vị trí!” Amiya hô. “Chiến dịch sắp tới không có chỗ cho sai sót!”
+
+***
+
+*10:30 sáng. Móng lõi đô thị.*
+
+“Đúng là có dấu hiệu đột nhập,” một operator nói. “Xác nhận một kẻ xâm nhập.”
+
+“Không chắc vết máu kia là của Reunion hay ai khác. Nó chưa khô,” Amiya nói. “Rất có thể là của cô Ch’en! Chúng ta phải nhanh lên.” Rồi cô bé quay lại. “A, Doctor! May quá ngài đến nơi an toàn.”
+
+“Em gọi thế là an toàn à…! Suýt nữa là em mất tôi rồi đấy.”
+
+“…Ơ? Hả?! N-nguy hiểm đến thế ạ? Ngài có bị thương không?!”
+
+“Tôi ổn. Đi thôi. Chỉ hơi chấn thương tâm lý chút thôi.”
+
+## 7-6 | Vùng đất bị lãng quên
+
+*Căn cứ ngầm Chernobog. 10:30 sáng.*
+
+“Bà đợi tôi ở đây à?”
+
+“Đúng vậy,” Kal’tsit nói. “Trước khi bắt đầu, ngài nên nghe chính xác những gì đang diễn ra trong lõi đô thị. Ngài đã đọc bản tóm tắt nhiệm vụ, nhưng loại thông tin đó không đủ với một bộ óc như ngài.”
+
+“Cuối cùng bà cũng nhận ra mình cần tôi sao?”
+
+“Nếu điều tồi tệ nhất xảy ra, ta không muốn ngài hy sinh mà vẫn chẳng biết gì. Mà nếu ngài hứng thú với phần nào đó của ta, cứ nói thẳng ra. Không cần nhìn chằm chằm như thế. Ngài có thể không nhớ, nhưng ta thì nhớ. Ta nhớ ngài từng có tài hâm nóng khẩu phần ăn bằng cách đổ thẳng nước sôi vào miệng lúc bốn giờ sáng.” Kal’tsit quay đi. “Bỏ qua chuyện phiếm. Chúng ta không có nhiều thời gian. Amiya báo với ta rằng ngài đã có một trận chiến khó khăn với FrostNova dưới đáy Lungmen. Trận chiến kết thúc bằng chiến thắng của ngài.”
+
+“Không có ai thắng cả.”
+
+“Ta hiểu. Theo dữ liệu từ PRTS, ngài đã đưa thi thể của kẻ thù về Rhodes Island.”
+
+“Tôi không coi cô ấy là kẻ thù.”
+
+“Dr. {@nickname}, ‘phân biệt bạn và thù’.” Kal’tsit ngừng lại. “…Không. Ngài có thể hiểu lầm, nhưng hãy nghe ta nói. Ta không trách ngài. Chỉ những người có mặt lúc đó mới có đủ thông tin để quyết định. Ngài đã cố hiểu động cơ của người Infected đó. Ngài sẵn sàng gánh hậu quả cho những gì FrostNova đã làm. Nếu ngài định dùng cách này để hiểu nỗi khổ của thế gian, ta không có lý do gì để trách ngài. Ta thậm chí sẵn sàng bảo lãnh cho ngài trước các operator. Hãy tự đưa ra quyết định, ta sẽ cố không can thiệp. ‘Phân biệt bạn và thù.’ Đó là lời của ngài, không phải của ta.”
+
+Rồi bà ta thì thầm, khẽ đến mức gần như không nghe thấy: “Nếu ngài thật sự muốn cùng chung một hơi thở…”
+
+“Bà đang… đứng về phía tôi sao?”
+
+“Ta chưa bao giờ nói vậy.” Giọng Kal’tsit trở lại bình thường. “Nói chính xác, FrostNova và Đội Yeti là một đội du kích tinh nhuệ của người Infected. Hiện Reunion vẫn còn hai lực lượng tinh nhuệ có thể huy động. Những chiến binh du kích này là một. Lực lượng kia là lính đánh thuê Sarkaz, W, cùng đám lính của cô ta. W đã dùng thủ đoạn để nắm quyền chỉ huy lính đánh thuê Sarkaz làm việc cho Reunion. Lính đánh thuê Sarkaz không đáng tin. Họ không giống lính đánh thuê thông thường. Họ là phần quân lực dư thừa của Kazdel, tràn ra khắp đại địa. Cố điều khiển họ là điều ngu xuẩn.”
+
+“Bà có vẻ hiểu người Sarkaz rất sâu.”
+
+“Ta còn chưa đến phần quan trọng. Du kích Yeti hoàn toàn khác lính đánh thuê Sarkaz. Trước khi gia nhập Reunion, họ là một lực lượng du kích Infected độc lập, uy tín của họ trong một số nhóm người Infected còn lớn hơn cả Reunion. Và trước khi thành lập đội du kích, họ từng là một phần của quân đội Ursus hùng mạnh.”
+
+“Đội du kích Lãnh nguyên Tây Bắc?”
+
+“…Ta không biết ngài lấy thông tin đó ở đâu, Doctor, nhưng ta khá ấn tượng. Dù đó là thông tin khá cơ bản, ta mừng vì ngài biết tự thu thập tình báo.”
+
+“Bà nhất định phải thêm câu cuối đó vào à…”
+
+“Ta chỉ cho ngài những gì ngài xứng đáng.” Kal’tsit chỉ vào bản đồ. “Chúng ta đang ở móng của khu công nghiệp lõi đô thị Chernobog. Tiếp theo, ta sẽ dẫn ba đội qua các đường hầm ngầm, theo ống cống vào tầng công nghiệp và lên đến trái tim lõi đô thị. Lưu ý, địch tuần tra ở những khu vực này không phải đám côn đồ Reunion thông thường. Chúng ta sẽ gặp những ‘người lính’ được đội du kích huấn luyện theo chiến thuật của chính quân đội Ursus. Đội trinh sát phát hiện mạng lưới liên lạc trong lõi đô thị đã bị cắt bỏ. Hoặc Reunion có cách liên lạc đặc biệt, hoặc chúng không hề chuẩn bị chiến đấu. Dựa trên những gì ta thấy ở Chernobog một tháng trước, đừng mong là khả năng thứ hai. Nhưng nếu liên lạc bị cắt, thành viên cấp thấp của Reunion sẽ không nhận được lệnh trực tiếp. Phần lớn thời gian, chúng sẽ tự hành động.” Bà nhìn lên trần thép. “Một cơn bão khủng khiếp đang hình thành trong thành phố này. Hỗn loạn, dù vô tình hay cố ý, sẽ lan khắp nơi như khói đặc. Chúng đi trước ta một bước, và hạt giống của sự diệt vong đã được gieo rồi.”
+
+“Kết luận của bà là gì?”
+
+“Nội bộ Reunion đang có xung đột.”
+
+“Sao bà chắc chắn vậy?”
+
+“Ta đã thấy chuyện này lặp lại không biết bao nhiêu lần trên mảnh đất này.” Kal’tsit đưa cho Doctor một chiếc hộp. “Nhờ ngài báo cho thành viên Đội R-4, bảo họ mang những thiết bị này.”
+
+“Khoan… Chẳng phải đây là đồ của Rosmontis sao?”
+
+“Đúng. Có vẻ ngài biết về Rosmontis nhiều hơn những gì cuộc trò chuyện ở đơn vị xử lý sinh học cho thấy.” Kal’tsit nói. “Mỗi elite operator đều có sức mạnh đáng kể. Nhưng có những thứ họ không nên một mình gánh vác. Là chỉ huy chiến trường, giúp giảm áp lực cho họ là một phần công việc của ngài. Trong trận chiến sắp tới, ngài có thể sẽ phát hiện ra vài điều gây sốc. Rất ít người không bị sốc sau khi xem Rosmontis chiến đấu. Hãy chuẩn bị tinh thần.”
+
+***
+
+“Dr. {@nickname}, ngài đến rồi! Chúng tôi chặn được một đội tuần tra của địch, đang xử lý dần,” một operator nói. “Doctor, vị trí của ngài hơi nguy hiểm đấy… Ngay đó… Sau lưng ngài… Đứng cạnh cô bé nguy hiểm lắm!”
+
+“…Kẻ thù.”
+
+Doctor quay lại. Rosmontis đứng đó, đôi mắt mở to, những khối kim loại khổng lồ lơ lửng sau lưng.
+
+“Rosmontis?”
+
+“Kẻ thù. Doctor, chúng là những kẻ đã giết gia đình em… Kẻ thù!”
+
+“Rosmontis, chuyện gì thế…”
+
+“Doctor, tránh ra. Tránh đường cho em. Em không giống Amiya. Arts của Amiya có thể vòng qua bạn bè để đánh vào kẻ thù… Nhưng em thì không. Em không làm được. Nên đừng đứng giữa em và trận chiến của em.”
+
+“Áaaa!!” Một thành viên Reunion gào lên. “Con bé đó, con bé mang cái hộp… C-chuyện gì thế này… Mắt tôi sao vậy? Tôi không thấy gì cả! Mắt tôi! Mặt tôi! Đau quá! Đau quá!!! Có thứ gì đang nghiền nát đầu tôi!”
+
+“Không,” Rosmontis nói khẽ. “Lâu lắm rồi em mới nghiền chết ai đó.”
+
+“Những thanh kiếm đó… Những thanh kiếm đó!”
+
+“Rosmontis?!”
+
+“…Reunion. Em không muốn các người ở trong ký ức của em. Không một ai.”
+
+***
+
+*Máu me. Rách nát. Xuyên thủng.*
+
+*Chúng ta. Kẻ thù. Con người.*
+
+*Gào khóc, la hét, rên rỉ.*
+
+“Thế này không đúng,” Doctor nói. “Thế này không đúng!”
+
+“Ngài có câu hỏi. Hỏi đi,” Kal’tsit nói, rồi quay sang một operator. “Để ta lo. Cậu đi chăm sóc những kẻ địch bị thương không còn chiến đấu được. Trong số chúng có người truyền tin. Nếu để chúng trốn thoát, cả chiến dịch sẽ gặp nguy.”
+
+“…Rõ.”
+
+“Con bé bao nhiêu tuổi?” Doctor hỏi.
+
+“Mười bốn.”
+
+“Vậy mà bà để con bé…?!”
+
+“Mọi người, làm ơn… cho em qua!” Amiya chen vào. “Chuyện gì xảy ra ở đây vậy? Em vừa xử lý xong… Doctor?”
+
+“Ai cử em ra chiến trường?” Doctor hỏi Rosmontis. “Ai cử em đến đây?! Thế này quá tàn nhẫn! Sao họ lại để em làm chuyện này? Kal’tsit!”
+
+“Là em,” Rosmontis nói. “Em chọn chiến đấu. Em muốn chiến đấu. Có những cảm giác em chỉ trải qua được trên chiến trường. Bảo vệ bạn bè và gia đình là cách duy nhất để em thấy mình trọn vẹn. Rhodes Island cần em. Thế giới đang gọi tên em, để ngăn thêm những người như em ra đời.”
+
+“Dù vậy, em không thể…”
+
+“…Cái chết có quan tâm em là trẻ con không?” Rosmontis hỏi. “Chiến tranh hay bệnh tật có tha cho ai vì họ là trẻ con không? Khi Amiya hay em đứng trên chiến trường… ai nhìn chúng em mà nghĩ ‘trẻ con’? Chúng em là ‘quái vật’, đúng không, Doctor?”
+
+“Không! Đó chỉ là cách em nhìn bản thân thôi.”
+
+“Không đâu, Dr. {@nickname}. Em là gì không quan trọng. Em chỉ muốn tạo ra khác biệt, cùng gia đình em.” Cô bé ngẩng lên. “Ngài có biết Scout không? …Ngài có biết Ace không?”
+
+“Có.”
+
+“Đã mấy ngày rồi em không xem lại tư liệu về họ. Em quên nhiều lắm. Nhưng em chỉ quên thôi. Em không giống ngài, Doctor, người đã vứt bỏ tất cả.”
+
+“Rosmontis,” Amiya nói khẽ.
+
+“Không, em không có ý đó. Nhưng chị hiểu mà, Amiya.”
+
+“…Chị hiểu. Nhưng đừng… nói như thế.”
+
+“Ưm… Vâng.” Rosmontis nhìn xuống đôi tay mình. “Em đã đánh mất từng mảnh. Rất nhiều hình ảnh và lời nói. Những cảm xúc… những cảm xúc em không nói ra được, chỉ Amiya hiểu… Nhưng chúng chưa bao giờ thật sự rời bỏ em. Doctor… em thấy ngài phức tạp lắm. Còn phức tạp hơn những gì họ nói. Họ cũng bảo em phức tạp. Có người sợ em. Có người bảo em không nên như thế này. Nhưng họ không biết vì sao em như thế này. Họ không biết em đã trải qua những gì.”
+
+“Sao tim em bỗng nhói đau? Sao em lại muốn khóc, ngay lúc này? Dù em chẳng nhớ gì… sao mắt em vẫn cay? Sao môi em khô khốc? Ai để lại vết bẩn trong hành lang, sao nó vẫn chưa được lau? Sao em thấy lo khi làm vỡ một chiếc bình, mà cũng thấy vui lạ lùng? Sao em thấy ghê sợ khi nhìn hoa, mà lại thấy kỳ diệu khi nhìn côn trùng? Chuyện gì đã xảy ra trong quãng thời gian em không còn nhớ? Sao những cảm xúc này cứ trào lên trong em? Mỗi operator em cảm nhận đều có điểm khác biệt riêng. Và khi em mất họ, những cảm xúc ấy cũng biến mất. Nhưng tại sao…? Tại sao chúng ta lại có cảm xúc? Sao nước mắt em vẫn chảy dù em không còn cảm thấy gì? Chẳng phải em đã quên hết rồi sao?”
+
+“Rosmontis chưa bao giờ muốn em lấy đi cảm xúc của em ấy,” Amiya nói. “Những cơn xúc động đột ngột đó là của em ấy, dù chúng là gì. Chỉ thuộc về Rosmontis. Em không thể can thiệp. Chừng nào Rosmontis vẫn còn hy vọng ở đâu đó bên trong… em sẽ không làm vậy. Vì chọn làm gì là quyền của em ấy. Em ấy cũng có thể chọn quên. Quên thật sự.”
+
+“Chuyện gì đã xảy ra với Rosmontis?”
+
+“Dr. {@nickname}… Rhodes Island có quy trình sàng lọc operator rất nghiêm ngặt. Rất nhiều người xin vào vị trí chiến đấu, và chúng em từ chối phần lớn. Năng lực chiến đấu, khả năng chiến thuật, kỷ luật, thể lực… chỉ là bề nổi. Rosmontis ở đây vì em ấy tin vào mệnh lệnh và mục tiêu của chúng ta, và chúng ta tin vào năng lực và phán đoán của em ấy. Xin hãy tin em, Doctor. Không, hãy tin chúng em… Dần dần ngài sẽ thấy… màu sắc cảm xúc của em ấy.”
+
+Rosmontis bước lại gần. “Doctor. Cảm ơn ngài đã chiến đấu cùng Blaze. Blaze cần thêm người chiến đấu bên chị ấy. Và em muốn thấy chị ấy cười. Em cũng muốn gặp ngài. Em muốn gặp người mà Ace và Scout luôn nhắc đến.”
+
+***
+
+“Ngài đây rồi,” Kal’tsit nói. “Rosmontis dùng máy móc hạng nặng để tiêu diệt kẻ thù nhanh và hiệu quả, đồng thời thể hiện khả năng tự chủ và thích ứng đáng kinh ngạc. Em ấy là một trong những chuyên gia hủy diệt giỏi nhất của Rhodes Island. Cách em ấy đối xử với người khác, cách em ấy nói chuyện, có thể khiến ngài lo lắng. Cách em ấy chiến đấu, đặt cạnh vẻ ngoài của em ấy, quả thật rất tàn nhẫn. Nếu điều này giúp ngài ngủ ngon hơn, ta có thể hứa với ngài: Rosmontis gần như không bao giờ giết người. Dù chiến thuật của em ấy có vẻ chỉ nhắm đến điều đó, nhưng thật ra em ấy tập trung vào việc vô hiệu hóa khả năng chiến đấu của địch. Trận vừa rồi, tất cả kẻ địch đều bị tước vũ khí, không một ai chết dưới đòn tấn công của Rosmontis.”
+
+“Tôi không chấp nhận được chuyện này.”
+
+“Có lẽ ngài cũng không chấp nhận được sự thật. Originium Arts đáng sợ và khả năng cảm nhận phi thường không phải lý do duy nhất khiến Rosmontis trở thành elite operator. Mà ngược lại, Rosmontis thể hiện những phẩm chất đó vì em ấy đã trở thành elite operator. Chúng ta không phán xét có nên đưa em ấy ra chiến trường hay không, mà là hậu quả sẽ thảm khốc thế nào nếu chúng ta không để em ấy trở thành một chiến binh như vậy.”
+
+“Hậu quả kiểu gì?”
+
+“Tệ nhất, Arts của em ấy rò rỉ khỏi cơ thể và đẩy em ấy đi giết người, dù có ý thức hay không,” Kal’tsit nói. “‘Khi tước đi tri giác của một con người, còn lại gì? Thứ gì được tạo ra? Khi thứ được tạo ra ấy tước đi mạng sống của chúng ta, ai có lỗi? Kẻ tạo ra vũ khí, kẻ dùng vũ khí, hay kẻ bị chúng ta đối xử như vũ khí?’ Về chuyện tuổi tác… Amiya khoác lên mình vẻ trưởng thành có thể khiến ngài lầm tưởng. Một sinh vật nhỏ bé được biết đến như vũ khí chết người sẽ không được coi là đứa trẻ bình thường chỉ vì trông còn nhỏ. —Chưa kể tất cả những gì chúng đã trải qua.”
+
+“Còn Amiya? Con bé cũng là vũ khí sao?”
+
+“Ngài có thể tự hỏi em ấy. Đây là điều ngài nên nghe từ chính em ấy.”
+
+***
+
+“Kal’tsit! Đứng lại đó!”
+
+Warfarin chặn đường, đôi mắt đỏ nhíu lại.
+
+“Warfarin, ta đang đi. Có gì thì nói nhanh.”
+
+“Cô biết lời tiên tri, đúng không? Phải rồi, chẳng có gì cô không biết. Chẳng phải vì thế cô mới để Amiya đi sao? Amiya còn nhỏ như thế, làm sao chỉ huy—”
+
+“Warfarin, chúng ta rời Kazdel bao lâu rồi?”
+
+“…Hai tháng?”
+
+“Đừng đùa nữa.”
+
+“Tôi hiểu ý cô. Con bé đã lớn rồi.”
+
+“Phải, Warfarin. Thời gian trôi nhanh lắm. Tốc độ lớn lên của Cautus và Vampire khác nhau hoàn toàn. Đã ba năm kể từ khi chúng ta rời Kazdel. Với cô có thể ngắn, nhưng Amiya đã trưởng thành rất nhiều.”
+
+“Trả lời câu hỏi đầu tiên của tôi đi. Lời tiên tri.”
+
+“…‘Wendigo cuối cùng sẽ chết dưới tay Chúa tể của Quỷ’?” Kal’tsit nói. “Nguyên văn lời tiên tri là ‘Con trai của Hor-Tekrz, kẻ phản bội Sarkaz và kẻ cuối cùng tai tiếng của dòng máu, sẽ bị Chúa tể Sarkaz xử tử.’ Tiên tri gì chứ. Dù dòng máu của họ có còn tiếp nối hay không, vẫn còn nhiều Wendigo sống ở Columbia và Ursus. Nếu vài chục người có thể gọi là ‘nhiều’. Xét bối cảnh thời đó, cô nên coi nó là một lời đe dọa. Rất nhiều người không muốn thấy người Wendigo rời Kazdel. Cô già rồi sao? Từ khi nào cô tin vào ‘tiên tri’ và bùa phép Sarkaz?”
+
+“—Già? T-tôi á?!”
+
+“Ta nhiễm Oripathy. Cái chết luôn ở bên ta, chờ đúng lúc ra tay. Warfarin, mạng sống của ta chắc chắn ngắn hơn cô nghĩ nhiều.”
+
+“Này! Có cần u ám thế không? Tôi không phải cô bé Closure của cô. Tôi không để cô lảng tránh mãi đâu.” Warfarin hạ giọng. “Nghe này, Kal’tsit, người khác có thể không nói với cô, nhưng tôi sẽ nói. Ông ấy là một trong số rất ít người còn lại của chúng ta. Tôi không phải người mềm lòng hay hay xen vào chuyện người khác, nhưng… chúng ta là Sarkaz. Tôi là Vampire, ông già là Wendigo, nhưng chúng ta như nhau. Thế giới này khắc nghiệt với người Sarkaz. Tôi mong ông ấy có thể về Kazdel, nếu được. Hoặc đi cùng chúng ta.”
+
+“Ta không phải, Warfarin. Ta không phải Sarkaz.”
+
+“Vậy là cô từ chối?”
+
+“Không… Ta sẽ làm những gì có thể.” Kal’tsit ngừng lại. “…Ngay cả ta cũng nhớ ông ấy, Warfarin. Nhưng đừng hy vọng chuyện này sẽ dễ dàng. Có lẽ cô chưa nghe, nhưng đề nghị của cô đến quá muộn. Có những chuyện đã xảy ra rồi, khá đáng tiếc. Cách đây ít lâu, một phòng khám Infected ở Chernobog tên ‘Azazel’ đã trao đổi thông tin với chúng ta. Ta biết thêm về người Wendigo phục vụ Reunion. Và cô hẳn biết rõ, bất kỳ ai chống lại lưỡi dao tàn bạo nhất của Ursus sẽ sớm biết nó có vị muối hay vị gỉ sắt. Không ai được cố tình đẩy operator của chúng ta vào nguy hiểm.”
+
+“Có những bệnh nhân chỉ còn đếm ngày, nhưng con số đó phụ thuộc vào bác sĩ điều trị. Tất cả tùy vào chúng ta.”
+
+“…Tất cả tùy vào chúng ta.” Kal’tsit bước đi, rồi dừng lại. “Và ta đã nói với cô rồi… có lẽ cô quên. Cô không được nói ta đáng sợ, Warfarin. Chúng ta đã bàn chuyện này rồi. Không được, dưới bất kỳ hoàn cảnh nào, kể cả ở Rhodes Island, nhắc đến ‘Chúa tể của Quỷ’. Không bao giờ.”
+
+***
+
+“Khoan đã. Tất cả, nghỉ!” Amiya giơ tay. “Rosmontis… em cảm nhận đúng chứ?”
+
+“Ừm. Vâng. Em cũng cảm thấy.”
+
+“Dr. {@nickname}, có chuyện ngoài dự tính.”
+
+“Chuyện gì?”
+
+“Em không chắc lắm, nhưng…” Amiya nhìn lên trần thép đang rung khe khẽ. “Lõi đô thị có thể đang… giảm tốc?”
+
+## 7-7 | Hai mươi sáu giờ
+
+*Không rõ thời gian. Văn phòng của Wei Yenwu.*
+
+“Anh không kéo rèm sao?” Fumizuki hỏi.
+
+“Kính đã vỡ rồi. Kéo rèm chỉ là tự lừa mình thôi.”
+
+“Kính không quan trọng. Ch’en có an toàn không… mới quan trọng.”
+
+“Con bé giỏi. Không giống cha nó, cũng không giống mẹ nó.”
+
+“Phải, chẳng giống chút nào.”
+
+Wei Yenwu nhìn xuống. “Dưới chân ta lại là một dòng sông ánh sáng. Lungmen đã trở lại bình thường, nhưng họ vẫn chưa biết chuyện gì sẽ xảy ra. Một mình, Ch’en Hui-chieh không thể ngăn thảm họa này.”
+
+“Rhodes Island ở cùng con bé. Họ sẽ tìm thấy nó.” Fumizuki thở dài. “Witte không còn kìm được phe bảo thủ nữa. Bao năm nay ông ấy cố đè nén các đại quý tộc, nhưng chỉ làm họ yếu đi chứ chưa đánh bại hoàn toàn.”
+
+“Nhưng ta sợ rằng… nếu Witte nói dối thì sao? Nếu toàn bộ chuyện này do Witte và Hoàng đế bày ra? Nếu chính vị hoàng đế trẻ lên kế hoạch tất cả? Kẻ thù của chúng ta luôn ẩn trong bóng tối. Còn chúng ta luôn phải đứng dưới ánh đèn chói lóa nhất.”
+
+“Anh đã ở sâu trong bóng tối hơn phần lớn người khác rồi.”
+
+“…Chưa đủ. Như hồi đó. Nếu là Kashchey… nếu hắn ở trong tình cảnh này, hắn sẽ đào sâu hơn nữa.”
+
+“Nhưng anh không phải Kashchey. Kashchey không thể biến Lungmen thành như hôm nay.” Fumizuki cúi đầu. “Chỉ là… nếu Tal… nếu Tal thật sự được Kashchey dạy dỗ… Vị bác sĩ Rhodes Island đó, anh nghĩ bà ta có nói dối không?”
+
+“Ta không chắc. Rhodes Island giỏi che giấu bản thân. Họ giả vờ yếu đuối trước chúng ta và không để lộ bí mật nào. Nhưng ta thà tin rằng Kashchey đã nhào nặn nên Talulah hiện tại. Chúng ta không thể gánh nổi hậu quả của việc đánh giá thấp kẻ thù. Vì vậy, ta không thể để Ch’en Hui-chieh làm việc này một mình. Kashchey… nắm hết quân bài trong tay. Dù hắn đã chết, tầm nhìn của hắn vẫn có thể thành hiện thực qua người kế thừa.” Ông ngừng lại. “Đội trinh sát báo một số người Infected rời Lungmen đang di chuyển về phía lõi đô thị. Lõi đô thị phải dừng lại một thời gian để đón những người tị nạn Infected đó. Dù Talulah có nhe nanh với Ursus, cô ta cũng không phản bội Reunion trước mặt tất cả mọi người. Đây là cơ hội tốt nhất. Ta sẽ dẫn Ảnh vệ đi.”
+
+“Anh?!”
+
+“Họ đã làm quá nhiều cho ta. Ta từng hứa sẽ không bao giờ bắt họ nhúng tay vào việc bẩn, rồi lại thất hứa hết lần này đến lần khác. Giờ ta lại bảo họ chết vì Lungmen sao? …Nếu vậy, ta sẽ đi cùng họ.”
+
+“Em không cho phép,” Fumizuki nói. “Anh làm vậy là rơi đúng vào tay Kashchey. Đó chẳng phải chiến thắng gì cả. Nói rằng mọi điều chúng ta làm từ khi giành lại Lungmen đều nằm trong tay Kashchey, có phải là quá lời không?”
+
+“Chúng ta đã từng thắng,” Wei Yenwu nói. “Lúc đầu đó là chiến thắng của chúng ta. Dù đau đớn, em và ta, Edward, và Kojui… Không có chúng ta, hắn đã xóa sổ thành phố này. Ta sẽ không coi cái chết của Edward là do tay Kashchey. Cơn ác mộng lẽ ra đã kết thúc khi Kashchey chết.”
+
+“Hắn thật sự đã chết chưa?”
+
+“Có lẽ hắn sống tiếp trong Talulah. Một người kế thừa xứng đáng sẽ giúp hắn tiếp tục cuộc đời hỗn loạn của mình. Talulah giống hắn quá. Với một kẻ không con cái, Kashchey đã nhận được hạt giống phù hợp nhất. Dù ta có thể coi lời của Kal’tsit là bịa đặt, ta không thể phủ nhận sự thật. Có một âm mưu nhắm vào Lungmen, và nó mang quá nhiều nét chữ của Kashchey.”
+
+“Em không tin. Tal chưa bao giờ là người như thế. Sao con bé lại làm vậy?”
+
+“Chúng ta không còn cách nào khác ngoài tin. Talulah đã lên kế hoạch tất cả. Nhưng nếu cô ta nghĩ Lungmen sẽ ngoan ngoãn nằm xuống chịu chết, cô ta sẽ phải thất vọng. Lungmen sẽ không sụp đổ.”
+
+“Nhưng anh cũng không ngăn được cuộc chiến này.” Fumizuki nhìn ông. “…Anh muốn em chết cùng anh sao?”
+
+“Fumizuki?! …Em đang đe dọa ta sao?”
+
+“A, không. Em không có ý đó. Chỉ là…”
+
+“Không! Em không được!” Wei Yenwu nói. “Chỉ kẻ hèn nhát mới đứng trên xác người khác để nâng mình lên. Mà không có em… ta sẽ không thể…! Có lẽ trước kia ta từng hèn nhát, nhưng giờ thì không, Fumizuki. Ta sẽ không để ai động vào em. Ta sẽ tìm chỗ cho em trốn. Leithanien, Sargon, hay Sami… Em không thể về Higashi. Ta sẽ gửi em đến một đất nước xa xôi, một thị trấn nhỏ yên bình không ai biết. Anh trai ta… dù hận ta đến đâu, cũng sẽ không đuổi theo em đến tận cùng trời đất… Ta biết anh ấy sẽ không làm vậy.”
+
+“Nhưng em không thể sống như thế,” Fumizuki nói. “Anh muốn em sống cả đời một mình sao, Yenwu? Anh muốn dùng cái chết của anh để hành hạ em suốt phần đời còn lại sao? Anh không nhớ vì sao em gái anh chết sao?”
+
+“Không, không… Fumizuki, ta muốn em sống. Ta…”
+
+“Wei Yenwu, em đã nói rồi… em không sao. Được chết cùng anh đã là kết cục tồi tệ tốt đẹp nhất mà em có thể tưởng tượng. Hay đúng hơn, dù tồi tệ đến đâu, với em đó vẫn là một cái kết tốt.” Bà mỉm cười buồn bã. “Nhưng anh biết đấy, anh không cản được em. Anh chưa bao giờ cản được em làm điều em muốn. Yenwu, anh luôn thẳng thắn với em. Có lúc anh không nói gì cả, nhưng khi anh nói ra, em luôn biết đó là sự thật. Em không muốn anh chết. Nhưng em cũng không muốn Tal chết. Em không muốn ai trong chúng ta chết cả.”
+
+“Em nhớ Tal. Em luôn nhớ con bé giống em gái anh đến thế nào. Nhưng nó có đôi mắt của Edward, còn cái tính nóng nảy hồi nhỏ thì em chẳng biết nó thừa hưởng từ ai. Đã bao nhiêu năm rồi em không gặp con bé. Chúng ta nợ con bé tất cả những điều này.”
+
+“…Và Hui-chieh.”
+
+“Phải, cả Ch’en bé nhỏ nữa. Ch’en bé nhỏ đã đi rồi, em sẽ không bao giờ gặp lại con bé… Em sẽ không bao giờ được mua cho nó những bộ đồ đẹp và chải tóc nó thành một tác phẩm nghệ thuật nữa.”
+
+“Con bé… không thích trang phục truyền thống lắm.”
+
+“Nhưng em thích. Con bé sẽ đẹp biết bao.” Fumizuki lau khóe mắt. “Dù vậy, dù chúng ta đã nói lời từ biệt cuối cùng, em vẫn mong Ch’en bé nhỏ tìm được một nơi khác để yên ổn. Em biết anh không muốn dựa vào Rhodes Island, và anh sẽ không đặt hết cược vào họ. Nhưng em muốn anh đợi một thời gian. Hãy để họ làm, Yenwu. Nếu họ thất bại, chúng ta sẽ cùng đi. Anh không muốn tay mình lại nhuốm máu người thân, đúng không? Nếu chuyện đó xảy ra, em sẽ giúp anh lấy mạng Tal. Rồi chúng ta sẽ chết cùng nhau.”
+
+“Fumizuki…!”
+
+“Anh cũng muốn con bé sống, phải không? Lungmen này là nơi muốn tất cả chúng ta phải chết sao? Em thà không bao giờ gặp lại chúng nữa… thà không bao giờ gặp lại Ch’en bé nhỏ và Tal rồi quên chúng đi… nhưng em cũng muốn chúng sống tiếp. Giống như anh. Giống như anh muốn em đưa ra quyết định này.”
+
+“Fumizuki. Nếu mọi chuyện vượt quá giới hạn, em phải nghe theo sắp xếp của ta. Mạng sống của chúng ta… không phải là không thể tách rời.”
+
+“Tất nhiên rồi, Yenwu. Em không chỉ tồn tại vì anh. Mọi điều em làm, từ đầu đến cuối, không chỉ vì anh. Anh phải thấy em đang chiến đấu vì điều gì. Đừng né tránh nữa. Nhìn em đi.” Bà nghiêng đầu. “Anh muốn khóc sao? Khóc cũng không sao đâu, Yenwu.”
+
+“Không, Fumizuki. Không… Ta ổn.”
+
+“Thành thật đi.”
+
+Wei Yenwu không trả lời.
+
+*Có những người chỉ muốn được nghỉ ngơi, được tìm chốn nương thân trong một thành phố. Sao họ phải chịu những cái chết vô nghĩa? Chẳng phải chúng ta chỉ muốn cho họ một mái nhà sao? Chẳng phải chúng ta muốn mọi người như chúng ta, những người không còn nơi nào để đi, đều có một chỗ ấm áp để nghỉ ngơi sao? Chẳng phải ta chỉ muốn xây một thành phố nhỏ nơi mọi người được sống yên lòng sao?*
+
+*Lungmen như bây giờ, rốt cuộc được xây cho ai?*
+
+“Ta không phải nhà đạo đức, Fumizuki,” Wei Yenwu nói. “Nhưng càng nhìn kỹ, ta càng nhận ra chỉ cần một cái chết. …Của chính ta.”
+
+“…Đừng như vậy! Anh không được!”
+
+“Ta sẽ bảo Ảnh vệ hộ tống em đến Sargon.”
+
+*Lungmen đã trở thành thế này từ bao giờ?*
+
+*Và… ta đã trở thành thế này từ bao giờ?*
