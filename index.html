@@ -533,9 +533,59 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 .stfs{display:flex;gap:4px;align-items:center;margin-top:14px;font:600 0.6875rem var(--mono);letter-spacing:.1em;color:var(--mute);text-transform:uppercase}
 .stfs button{all:unset;cursor:pointer;min-width:32px;height:28px;display:grid;place-items:center;border:1px solid var(--line);font:700 0.8125rem var(--mono);color:var(--text)}.stfs button:hover{border-color:var(--ink)}
 .stbody{max-width:66ch;margin:0 auto;font-size:var(--sfs);line-height:1.85}
-.stbody h3{margin:2.4em 0 1em;font:700 1.125rem/1.3 "Be Vietnam Pro";scroll-margin-top:72px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
-.stbody h3:first-child{margin-top:0}
-.stbody h3 span{font:700 0.6875rem var(--mono);letter-spacing:.12em;padding:3px 7px;background:var(--ink);color:var(--accent);text-transform:uppercase}
+/* Cốt truyện: banner cảnh, CG, nhân vật, tuỳ chỉnh đọc */
+.sread[data-ff=serif] .stbody{font-family:"Noto Serif",Georgia,"Times New Roman",serif}
+.sread[data-lh=s] .stbody{line-height:1.6}.sread[data-lh=l] .stbody{line-height:2.1}
+.sread[data-pp=paper]{--panel:#f3ead6;--panel2:#ebe0c8;--line:#dccfb0;--text:#3a2e1f;--mute:#76664d;--ink:#3a2e1f;color:var(--text)}
+.sread[data-pp=night]{--panel:#101010;--panel2:#1b1b1b;--line:#2a2a2a;--text:#cdc8bc;--mute:#8b877d;--ink:#e2ddd1;color:var(--text)}
+.sthead{position:relative}
+.sthero{margin:-40px calc(-1*clamp(18px,5vw,64px)) 22px;aspect-ratio:16/5;overflow:hidden;background:var(--ink);position:relative}
+.sthero img{width:100%;height:100%;object-fit:cover;display:block;opacity:.9}
+.sthero:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,var(--panel))}
+.sthero.noimg{display:none}
+.stmeta{margin-top:10px;font:600 0.75rem var(--mono);letter-spacing:.06em;color:var(--mute)}
+.sttools{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.sttools button,.stopt button{all:unset;cursor:pointer;padding:6px 11px;border:1px solid var(--line);font:600 0.8125rem/1.2 "Be Vietnam Pro";color:var(--text)}
+.sttools button:hover,.stopt button:hover{border-color:var(--ink)}
+.sttools .go{background:var(--ink);color:var(--panel);border-color:var(--ink)}
+.sttools button:focus-visible,.stopt button:focus-visible,.stcg button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.stjump{display:none;font:600 0.8125rem "Be Vietnam Pro";padding:6px 8px;border:1px solid var(--line);background:var(--panel);color:var(--text);max-width:100%}
+.stopt{margin-top:12px;padding:12px;border:1px solid var(--line);background:var(--panel2);display:grid;gap:8px}
+.stopt div{display:flex;flex-wrap:wrap;align-items:center;gap:5px}
+.stopt span{width:96px;font:600 0.6875rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.stopt button{padding:5px 10px;font-size:0.75rem}.stopt button[aria-pressed=true]{background:var(--ink);color:var(--panel);border-color:var(--ink)}
+.stsec{margin-top:2.6em}.stsec:first-child{margin-top:0}
+.stbn{position:relative;aspect-ratio:21/8;overflow:hidden;background:var(--ink);display:flex;align-items:flex-end;margin:0 0 1em;scroll-margin-top:72px}
+.stbn img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.stbn:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,rgba(0,0,0,.78))}
+.stbn h3{position:relative;z-index:1;margin:0;padding:14px 16px;color:#fff;font:700 clamp(1rem,2.4vw,1.25rem)/1.3 "Be Vietnam Pro";display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.stbn h3 span{font:700 0.6875rem var(--mono);letter-spacing:.12em;padding:3px 7px;background:var(--accent);color:#000;text-transform:uppercase;text-shadow:none}
+.stbn.noimg{aspect-ratio:auto;background:none}.stbn.noimg:after{display:none}
+.stbn.noimg h3{padding:0;color:var(--text);text-shadow:none}.stbn.noimg h3 span{background:var(--ink);color:var(--accent)}
+.stcast{list-style:none;display:flex;flex-wrap:wrap;gap:6px 14px;margin:0 0 1.5em;padding:0;font-size:0.8125rem}
+.stcast li{display:flex;align-items:center;gap:7px}.stcast b{font-weight:600}
+.stav{width:34px;height:34px;border-radius:50%;overflow:hidden;background:var(--panel2);border:1px solid var(--line);display:grid;place-items:center;font:700 0.625rem var(--mono);color:var(--mute);position:relative;flex:none}
+.stav img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.stav img.npc{inset:auto;width:400%;height:auto;max-width:none;left:-150%;top:-8%}
+.stcg{margin:1.6em 0;padding:0}
+.stcg button{all:unset;cursor:zoom-in;display:block;width:100%;border:1px solid var(--line);background:var(--panel2);aspect-ratio:16/9;overflow:hidden}
+.stcg img{width:100%;height:100%;object-fit:cover;display:block}
+.stcg.noimg,.stcg button.noimg{display:none}
+.stbg{position:relative;margin:2em 0;height:110px;overflow:hidden;background:var(--ink)}
+.stbg img{width:100%;height:100%;object-fit:cover;opacity:.75;display:block}
+.stbg:after{content:"◆   ◆   ◆";white-space:pre;position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:0.625rem;letter-spacing:.3em;background:linear-gradient(90deg,var(--panel),transparent 25%,transparent 75%,var(--panel))}
+.stbg.noimg{height:auto;background:none;margin:1.8em 0;text-align:center}.stbg.noimg:after{position:static;color:var(--mute);background:none}
+.stoc .stc b em{font-style:normal;float:right;color:var(--accent);letter-spacing:.04em;text-transform:none}
+.stoc ol button.rd span:after{content:" ✓";color:var(--accent)}
+.stoc ol button.cur{color:var(--ink);box-shadow:inset 2px 0 var(--accent)}
+.stprog{position:fixed;left:0;right:0;top:0;height:3px;z-index:60;pointer-events:none}.stprog i{display:block;height:100%;width:0;background:var(--accent);transition:width .15s}
+.stlb{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.94);display:grid;place-items:center;padding:16px;cursor:zoom-out}
+.stlb img{max-width:100%;max-height:100%;object-fit:contain}
+.stlb[hidden],#stfx[hidden],.stprog[hidden]{display:none}
+#stfx{all:unset;position:fixed;left:16px;bottom:16px;z-index:70;cursor:pointer;padding:8px 12px;background:var(--ink);color:var(--panel);font:600 0.8125rem "Be Vietnam Pro"}
+body.stfocus header,body.stfocus .stoc,body.stfocus .stnote,body.stfocus .hero{display:none}
+body.stfocus .stwrap{grid-template-columns:minmax(0,1fr)}
+@media (max-width:760px){.stjump{display:block;width:100%}.sthero{margin:-24px -16px 18px}.stbn{aspect-ratio:16/8}.stopt span{width:100%}.stbg{height:80px}}
 .stbody p{margin:0 0 .95em;max-width:none}
 .stbody hr{border:0;margin:1.8em 0;text-align:center;color:var(--mute)}.stbody hr:after{content:"◆   ◆   ◆";white-space:pre;font-size:0.625rem;letter-spacing:.3em}
 .stnav{max-width:66ch;margin:36px auto 0;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:10px}
@@ -675,7 +725,7 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 <script src="subclass.js?v=20261018n"></script>
 <script src="details_x.js?v=20261018n"></script>
 <script src="gacha.js?v=20261018n"></script>
-<script>const KITV='20261018n'</script>
+<script>const KITV='20261019a'</script>
 <script>
 const {ops:OPS, general:GENERAL} = window.AK;
 const TIERS=['EX','S+','S','S-','A+','A','A-','B+','B','B-','C+','C','C-','D','F'];
@@ -1256,26 +1306,79 @@ fab.onclick=()=>sheet(!ctl.classList.contains('sheet'));scrim.onclick=()=>sheet(
 addEventListener('keydown',e=>{if(e.key==='Escape'&&ctl.classList.contains('sheet'))sheet(false)});
 // thanh tab trên điện thoại: mờ dần ở mép phải khi còn tab bị khuất
 {const nv=$('#nav'),f=()=>nv.classList.toggle('more',nv.scrollLeft+nv.clientWidth<nv.scrollWidth-2);nv.addEventListener('scroll',f,{passive:true});addEventListener('resize',f);f()}
-// tab Cốt truyện: truyện chữ (story.js, ~250KB) chỉ tải khi mở tab lần đầu; nhớ chương và cỡ chữ đang đọc
-let STP,SCH=0,SFS=0;try{SCH=+localStorage.getItem('ak-story')||0;SFS=+localStorage.getItem('ak-story-fs')||0}catch(e){}
+// tab Cốt truyện: truyện chữ (story.js) chỉ tải khi mở tab lần đầu; nhớ chương, vị trí đọc, cảnh đã đọc và tuỳ chỉnh hiển thị
+// ảnh minh hoạ (nền cảnh, CG, sprite NPC) từ Aceship/Arknight-Images, avatar operator dùng chung IMG
+const AVG='https://raw.githubusercontent.com/Aceship/Arknight-Images/main/avg/';
+const sget=(k,d)=>{try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}};
+const sset=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+let STP,SCH=+sget('ak-story',0)||0;
+const SOPT=Object.assign({fs:+sget('ak-story-fs',0)||0,ff:'sans',lh:'n',pp:'auto',img:1},sget('ak-story-opt',{}));
+const SPOS=sget('ak-story-pos',{}),SRD=sget('ak-story-read',{});
 const needStory=()=>STP||=new Promise((ok,no)=>{const sc=document.createElement('script');sc.src='story.js?v='+KITV;sc.onload=()=>ok(window.AKS);sc.onerror=()=>{STP=null;no()};document.head.append(sc)});
+const stImg=(dir,n,cls='')=>`<img${cls?` class="${cls}"`:''} src="${AVG}${dir}/${encodeURIComponent(n)}.png" alt="" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('noimg');this.remove()">`;
+const stFace=(n,p)=>`<span class="stav">${esc(initials(n)||n[0])}${!p?'':p.startsWith('op:')?`<img src="${IMG}${p.slice(3)}.png" alt="" loading="lazy" onerror="this.remove()">`:`<img class="npc" src="${AVG}characters/${encodeURIComponent(p.slice(4))}.png" alt="" loading="lazy" onerror="this.remove()">`}</span>`;
+const stPara=p=>!p?'<hr>':p.startsWith('@bg:')?(SOPT.img?`<div class="stbg" aria-hidden="true">${stImg('backgrounds',p.slice(4))}</div>`:'<hr>')
+  :p.startsWith('@cg:')?(SOPT.img?`<figure class="stcg"><button data-zoom="${esc(p.slice(4))}" aria-label="Phóng to ảnh minh hoạ">${stImg('images',p.slice(4))}</button></figure>`:''):`<p>${p}</p>`;
+const stWords=c=>c.secs.reduce((a,s)=>a+s.p.reduce((b,p)=>b+(p&&p[0]!=='@'?p.split(' ').length:0),0),0);
+const stOpt=(k,v,t)=>`<button data-opt="${k}" data-v="${v}" aria-pressed="${String(SOPT[k])===String(v)}">${t}</button>`;
+let SFONT;
+function stApply(){const r=$('#sread');if(!r)return;r.style.setProperty('--sfs',SOPT.fs?SOPT.fs+'rem':'');r.dataset.ff=SOPT.ff;r.dataset.lh=SOPT.lh;r.dataset.pp=SOPT.pp;
+  // phông có chân chỉ tải khi được chọn
+  if(SOPT.ff==='serif'&&!SFONT){SFONT=document.createElement('link');SFONT.rel='stylesheet';SFONT.href='https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap';document.head.append(SFONT)}}
 function drawStory(){needStory().then(S=>{
-  SCH=Math.min(Math.max(SCH,0),S.length-1);const c=S[SCH],pv=S[SCH-1],nx=S[SCH+1];
-  $('#stoc').innerHTML=S.map((x,i)=>`<button class="stc${i===SCH?' on':''}" data-ch="${i}" aria-current="${i===SCH}"><b>${x.no}</b>${x.title}</button>`+(i===SCH?`<ol>${x.secs.map((s,j)=>`<li><button data-sec="${j}"><span>${s.c}</span>${s.t}</button></li>`).join('')}</ol>`:'')).join('');
-  const r=$('#sread');r.style.setProperty('--sfs',SFS?`${SFS}rem`:'');
-  r.innerHTML=`<div class="sthead"><div class="no">${c.no}</div><h2>${c.title}</h2><div class="en">${c.en}</div><p class="sum">${c.sum}</p>
-    <div class="stfs">Cỡ chữ <button data-fs="-1" aria-label="Chữ nhỏ hơn">A−</button><button data-fs="1" aria-label="Chữ lớn hơn">A+</button></div></div>
-    <div class="stbody">${c.secs.map((s,j)=>`<h3 id="st-${j}"><span>${s.c}</span>${s.t}</h3>`+s.p.map(p=>p?`<p>${p}</p>`:'<hr>').join('')).join('')}</div>
+  SCH=Math.min(Math.max(SCH,0),S.length-1);const c=S[SCH],pv=S[SCH-1],nx=S[SCH+1],rd=new Set(SRD[c.id]||[]),pos=SPOS[c.id];
+  $('#stoc').innerHTML=S.map((x,i)=>{const n=(SRD[x.id]||[]).length;return `<button class="stc${i===SCH?' on':''}" data-ch="${i}" aria-current="${i===SCH}"><b>${x.no}${n?`<em>${n===x.secs.length?'✓ Đã đọc':n+'/'+x.secs.length}</em>`:''}</b>${x.title}</button>`
+    +(i===SCH?`<ol>${x.secs.map((s,j)=>`<li><button data-sec="${j}" class="${rd.has(j)?'rd':''}"><span>${s.c}</span>${s.t}</button></li>`).join('')}</ol>`:'')}).join('');
+  const w=stWords(c),r=$('#sread');
+  r.innerHTML=`<div class="sthead">${SOPT.img&&c.secs[0].bg?`<div class="sthero" aria-hidden="true">${stImg('backgrounds',c.secs[0].bg)}</div>`:''}<div class="no">${c.no}</div><h2>${c.title}</h2><div class="en">${c.en}</div><p class="sum">${c.sum}</p>
+    <div class="stmeta">${c.secs.length} cảnh · khoảng ${Math.max(1,Math.round(w/300))} phút đọc${rd.size?` · đã đọc ${rd.size}/${c.secs.length}`:''}</div>
+    <div class="sttools">${pos&&pos.s>0?`<button class="go" data-sec="${pos.s}">▶ Đọc tiếp: ${esc(c.secs[pos.s].c)} · ${esc(c.secs[pos.s].t)}</button>`:''}<select class="stjump" aria-label="Chuyển đến cảnh"><option value="">Chọn cảnh…</option>${c.secs.map((s,j)=>`<option value="${j}">${rd.has(j)?'✓ ':''}${esc(s.c)} · ${esc(s.t)}</option>`).join('')}</select><button data-tool="opt" aria-expanded="false">Aa Tuỳ chỉnh</button><button data-tool="focus">Chế độ tập trung</button></div>
+    <div class="stopt" hidden>
+      <div><span>Cỡ chữ</span><button data-fs="-1" aria-label="Chữ nhỏ hơn">A−</button><button data-fs="1" aria-label="Chữ lớn hơn">A+</button></div>
+      <div><span>Phông</span>${stOpt('ff','sans','Không chân')}${stOpt('ff','serif','Có chân')}</div>
+      <div><span>Giãn dòng</span>${stOpt('lh','s','Gọn')}${stOpt('lh','n','Vừa')}${stOpt('lh','l','Thoáng')}</div>
+      <div><span>Nền đọc</span>${stOpt('pp','auto','Theo trang')}${stOpt('pp','paper','Giấy cũ')}${stOpt('pp','night','Ban đêm')}</div>
+      <div><span>Ảnh minh hoạ</span>${stOpt('img',1,'Hiện')}${stOpt('img',0,'Ẩn')}</div>
+    </div></div>
+    <div class="stbody">${c.secs.map((s,j)=>`<section class="stsec" data-j="${j}"><div class="stbn${SOPT.img&&s.bg?'':' noimg'}" id="st-${j}">${SOPT.img&&s.bg?stImg('backgrounds',s.bg):''}<h3><span>${s.c}</span>${s.t}</h3></div>
+      ${s.cast?`<ul class="stcast" aria-label="Nhân vật trong cảnh">${s.cast.map(([n,p])=>`<li>${stFace(n,p)}<b>${esc(n)}</b></li>`).join('')}</ul>`:''}${s.p.map(stPara).join('')}</section>`).join('')}</div>
     ${nx?'':'<p class="stend">— Hết phần đã viết. Các chương tiếp theo sẽ được bổ sung dần. —</p>'}
     <div class="stnav">${pv?`<button data-ch="${SCH-1}"><small>‹ Chương trước</small>${pv.no} · ${pv.title}</button>`:''}${nx?`<button class="nx" data-ch="${SCH+1}"><small>Chương sau ›</small>${nx.no} · ${nx.title}</button>`:''}</div>`;
+  stApply();stScroll();
 }).catch(()=>{$('#sread').innerHTML='<p>Không tải được truyện. Hãy tải lại trang.</p>'})}
-$('#story').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
-  if(b.dataset.ch!=null){SCH=+b.dataset.ch;try{localStorage.setItem('ak-story',SCH)}catch(e){}drawStory();scrollTo({top:0})}
+// thanh tiến độ + lưu vị trí + đánh dấu cảnh đã đọc (cảnh được tính là đã đọc khi cuộn qua hết)
+const stBar=document.createElement('div');stBar.className='stprog';stBar.hidden=true;stBar.innerHTML='<i></i>';document.body.append(stBar);
+let stTick=0;
+function stScroll(){if($('#story').hidden){stBar.hidden=true;return}stBar.hidden=false;
+  const b=$('#sread .stbody'),c=window.AKS?.[SCH];if(!b||!c)return;const R=b.getBoundingClientRect(),h=innerHeight;
+  stBar.firstChild.style.width=Math.min(100,Math.max(0,(h*.5-R.top)/R.height*100))+'%';
+  let cur=0,ch=false;const rd=new Set(SRD[c.id]||[]);
+  b.querySelectorAll('.stsec').forEach(s=>{const q=s.getBoundingClientRect(),j=+s.dataset.j;if(q.top<h*.4)cur=j;if(q.bottom<h&&!rd.has(j)){rd.add(j);ch=true}});
+  const toc=$('#stoc');toc.querySelectorAll('ol button').forEach(x=>{const j=+x.dataset.sec;x.classList.toggle('cur',j===cur);x.classList.toggle('rd',rd.has(j))});
+  clearTimeout(stTick);stTick=setTimeout(()=>{SPOS[c.id]={s:cur};sset('ak-story-pos',SPOS);if(ch){SRD[c.id]=[...rd].sort((a,b)=>a-b);sset('ak-story-read',SRD)}},300)}
+addEventListener('scroll',()=>requestAnimationFrame(stScroll),{passive:true});addEventListener('popstate',()=>setTimeout(stScroll));
+const stLb=document.createElement('div');stLb.className='stlb';stLb.hidden=true;stLb.setAttribute('role','dialog');stLb.setAttribute('aria-label','Ảnh minh hoạ');stLb.innerHTML='<img alt="">';document.body.append(stLb);
+stLb.onclick=()=>{stLb.hidden=true};
+const stFocus=on=>{document.body.classList.toggle('stfocus',on);$('#stfx').hidden=!on};
+{const x=document.createElement('button');x.id='stfx';x.hidden=true;x.textContent='✕ Thoát tập trung';x.onclick=()=>stFocus(false);document.body.append(x)}
+const stGo=i=>{SCH=i;sset('ak-story',SCH);drawStory();scrollTo({top:0})};
+$('#story').addEventListener('click',e=>{const z=e.target.closest('[data-zoom]');if(z){stLb.firstChild.src=`${AVG}images/${encodeURIComponent(z.dataset.zoom)}.png`;stLb.hidden=false;return}
+  const b=e.target.closest('button');if(!b)return;
+  if(b.dataset.ch!=null)stGo(+b.dataset.ch);
   else if(b.dataset.sec!=null)$('#st-'+b.dataset.sec)?.scrollIntoView({behavior:'smooth'});
+  else if(b.dataset.tool==='opt'){const p=$('#sread .stopt');p.hidden=!p.hidden;b.setAttribute('aria-expanded',!p.hidden)}
+  else if(b.dataset.tool==='focus')stFocus(!document.body.classList.contains('stfocus'));
+  else if(b.dataset.opt){const k=b.dataset.opt;SOPT[k]=k==='img'?+b.dataset.v:b.dataset.v;sset('ak-story-opt',SOPT);
+    if(k==='img'){const y=scrollY;drawStory();needStory().then(()=>{$('#sread .stopt').hidden=false;scrollTo({top:y})})}
+    else{stApply();b.parentNode.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b))}}
   else if(b.dataset.fs){const rem=n=>parseFloat(getComputedStyle(n).fontSize),cur=rem($('.stbody'))/rem(document.documentElement);
-    SFS=Math.round(Math.min(1.375,Math.max(.875,cur+.0625*b.dataset.fs))*16)/16;
-    $('#sread').style.setProperty('--sfs',SFS+'rem');try{localStorage.setItem('ak-story-fs',SFS)}catch(e){}}});
-$('#nav').addEventListener('click',e=>{if(e.target.closest('[data-tab=story]'))drawStory()});
+    SOPT.fs=Math.round(Math.min(1.5,Math.max(.875,cur+.0625*b.dataset.fs))*16)/16;sset('ak-story-opt',SOPT);stApply()}});
+$('#story').addEventListener('change',e=>{if(e.target.matches('.stjump')&&e.target.value!==''){$('#st-'+e.target.value)?.scrollIntoView({behavior:'smooth'});e.target.value=''}});
+// phím tắt khi đang ở tab Cốt truyện: ← → đổi chương, Esc đóng ảnh / thoát tập trung
+addEventListener('keydown',e=>{if($('#story').hidden||e.altKey||e.ctrlKey||e.metaKey||/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))return;
+  if(e.key==='Escape'){stLb.hidden=true;stFocus(false)}
+  else if((e.key==='ArrowRight'||e.key==='ArrowLeft')&&window.AKS){const i=SCH+(e.key==='ArrowRight'?1:-1);if(i>=0&&i<AKS.length){e.preventDefault();stGo(i)}}});
+$('#nav').addEventListener('click',e=>{const t=e.target.closest('[data-tab]');if(!t)return;if(t.dataset.tab==='story')drawStory();else{stFocus(false);stScroll()}});
 // 12: lên đầu trang
 // giải thích class/subclass: rê chuột hoặc giữ ngón tay trên nút; subclass lấy Trait từ details.js
 const CLSDESC={Vanguards:'Tiên phong: Cost thấp, hồi DP đầu trận để deploy đội hình nhanh, thường block 1–2 địch.',Guards:'Cận chiến chủ lực: gây sát thương vật lý mạnh, block địch, nhiều nhánh đánh diện rộng hoặc tầm xa.',Defenders:'Hộ vệ: HP và DEF cao, block nhiều địch để giữ đường, một số nhánh hồi máu hoặc gây sát thương.',Snipers:'Xạ thủ tầm xa: đặt ô cao, ưu tiên bắn địch bay hoặc gây sát thương vật lý từ xa.',Casters:'Pháp sư tầm xa: đặt ô cao, gây sát thương Arts, mạnh với địch DEF cao.',Medics:'Y sĩ: hồi HP cho đồng minh, đặt ô cao.',Supporters:'Hỗ trợ: làm chậm, debuff địch, buff đồng minh hoặc triệu hồi, đặt ô cao.',Specialists:'Đặc vụ: cơ chế đặc biệt như dịch chuyển địch, deploy lại nhanh, bẫy hoặc ẩn thân.'};

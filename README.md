@@ -36,8 +36,11 @@ python _build/extract.py && python _build/build_details.py
 Truyện chữ viết ở `i18n/story/main_XX.txt` (mỗi file một chương; định dạng ghi ở đầu `_build/build_story.py`), rồi chạy:
 
 ```bash
+python _build/build_story_media.py   # khi thêm chương mới: lấy ảnh nền, CG, nhân vật từ kịch bản gốc -> i18n/story/media.json
 python _build/build_story.py
 ```
+
+Ảnh minh hoạ (nền cảnh, CG, sprite NPC) tải trực tiếp từ `Aceship/Arknight-Images`; avatar operator dùng chung nguồn với các tab khác. `build_story_media.py` tự chèn CG vào đoạn văn ở vị trí tương ứng với kịch bản gốc và đổi ngắt cảnh `***` thành dải ảnh nền khi bối cảnh thay đổi.
 
 Đây là bản phóng tác văn xuôi của fan dựa trên kịch bản chính tuyến bản Global; cốt truyện, nhân vật và lời thoại gốc thuộc quyền sở hữu trí tuệ của Hypergryph / Yostar.
 

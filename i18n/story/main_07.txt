@@ -208,7 +208,7 @@ Im lặng. Rồi một giọng hỏi:
 
 *6:30 tối. Rhodes Island.*
 
-“Số hiệu 00000-00002, cấp độ truy cập 8,” PRTS nói. “Dr. {@nickname}, cảm ơn đã ghé thăm Đơn vị Xử lý Sinh học Tích hợp của Rhodes Island. Hệ thống phát hiện tâm trạng của bạn đang tệ.”
+“Số hiệu 00000-00002, cấp độ truy cập 8,” PRTS nói. “Doctor, cảm ơn đã ghé thăm Đơn vị Xử lý Sinh học Tích hợp của Rhodes Island. Hệ thống phát hiện tâm trạng của bạn đang tệ.”
 
 “Để tôi yên.”
 
@@ -218,7 +218,7 @@ Im lặng. Rồi một giọng hỏi:
 
 Doctor đứng giữa căn phòng trắng toát lạnh lẽo, trên tay là thi thể FrostNova. Cô gái tóc trắng giờ nhẹ bẫng, như thể cái lạnh đã mang đi mọi sức nặng của cô.
 
-“Ngài là Dr. {@nickname} phải không?”
+“Ngài là Doctor phải không?”
 
 Một cô bé đứng ở cửa. Nhỏ nhắn, đôi tai mèo hơi cụp xuống, giọng nói nhẹ đến mức gần như tan vào tiếng máy chạy.
 
@@ -800,7 +800,7 @@ Cô bé tắt micro, thở ra một hơi dài.
 
 “Tôi nghe nói cô Ch’en đã rời Lungmen.”
 
-“…Đúng vậy. Em nghĩ cô Ch’en có lẽ sẽ một mình lẻn vào lõi đô thị. Lungmen, người Infected, dòng máu của cô ấy… Cô Ch’en là người phức tạp, mang trong mình rất nhiều mâu thuẫn. Nhưng dù vậy, cô ấy không bỏ cuộc, không bỏ chạy. Cô ấy không sợ bị phản bội, bị lưu đày hay cái chết.” Amiya nhìn lên. “Dr. {@nickname}, cô Ch’en là người Infected.”
+“…Đúng vậy. Em nghĩ cô Ch’en có lẽ sẽ một mình lẻn vào lõi đô thị. Lungmen, người Infected, dòng máu của cô ấy… Cô Ch’en là người phức tạp, mang trong mình rất nhiều mâu thuẫn. Nhưng dù vậy, cô ấy không bỏ cuộc, không bỏ chạy. Cô ấy không sợ bị phản bội, bị lưu đày hay cái chết.” Amiya nhìn lên. “Doctor, cô Ch’en là người Infected.”
 
 “Tôi đoán được từ lâu rồi.”
 
@@ -816,11 +816,11 @@ Cô bé tắt micro, thở ra một hơi dài.
 
 “Ngài có thể ở lại đây. Tùy ngài. Ta không ép được.”
 
-“…Bác sĩ Kal’tsit,” Amiya nói. “Em mong bác sĩ gác lại mọi định kiến về Dr. {@nickname}. Và Doctor, em mong ngài gác lại mọi thành kiến với bác sĩ Kal’tsit, từ những điều bác sĩ từng nói. Ít nhất là trong lúc này. Doctor bị mất trí nhớ. Rhodes Island không có cách điều trị đáng tin cậy nào để khôi phục trí nhớ chỉ trong hai tuần. Nên mọi thứ Doctor bây giờ đều là sản phẩm của hiểu biết mới. Bác sĩ Kal’tsit, em mong bác sĩ nhìn Doctor này bằng con mắt mới. Còn Doctor, em không muốn ngài nghi ngờ ý định của bác sĩ Kal’tsit chỉ vì những gì bác sĩ đã nói. Bác sĩ là người… ngài có thể dựa vào nhất. Dù ngài có tin bác sĩ hay không. Xin cả hai người hãy hứa với em.”
+“…Bác sĩ Kal’tsit,” Amiya nói. “Em mong bác sĩ gác lại mọi định kiến về Doctor. Và Doctor, em mong ngài gác lại mọi thành kiến với bác sĩ Kal’tsit, từ những điều bác sĩ từng nói. Ít nhất là trong lúc này. Doctor bị mất trí nhớ. Rhodes Island không có cách điều trị đáng tin cậy nào để khôi phục trí nhớ chỉ trong hai tuần. Nên mọi thứ Doctor bây giờ đều là sản phẩm của hiểu biết mới. Bác sĩ Kal’tsit, em mong bác sĩ nhìn Doctor này bằng con mắt mới. Còn Doctor, em không muốn ngài nghi ngờ ý định của bác sĩ Kal’tsit chỉ vì những gì bác sĩ đã nói. Bác sĩ là người… ngài có thể dựa vào nhất. Dù ngài có tin bác sĩ hay không. Xin cả hai người hãy hứa với em.”
 
 “Tôi còn làm gì khác được đâu,” Doctor nói.
 
-“Dr. {@nickname},” Kal’tsit nói. “Chuyện cũ không thể cho qua. Đạo đức sẽ không biến chúng ta thành người tốt hơn. Ta không từ chối đề nghị của em, Amiya. Chỉ là, tha thứ như một hình thức tử tế, như từ bỏ quyền được giận dữ, sẽ chỉ khiến chúng ta yếu đi vô cùng. Ta sẽ không từ bỏ quyền đó. Nhưng lúc này, ta sẽ cất định kiến đi. Giải quyết lõi đô thị trước đã.”
+“Doctor,” Kal’tsit nói. “Chuyện cũ không thể cho qua. Đạo đức sẽ không biến chúng ta thành người tốt hơn. Ta không từ chối đề nghị của em, Amiya. Chỉ là, tha thứ như một hình thức tử tế, như từ bỏ quyền được giận dữ, sẽ chỉ khiến chúng ta yếu đi vô cùng. Ta sẽ không từ bỏ quyền đó. Nhưng lúc này, ta sẽ cất định kiến đi. Giải quyết lõi đô thị trước đã.”
 
 “Amiya, tôi đang đứng cạnh em,” Doctor nói.
 
@@ -834,7 +834,7 @@ Không ai nói gì.
 
 “Tôi phát hiện một sự im lặng lạnh lẽo,” PRTS nói. “Bạn có muốn tăng nhiệt độ phòng điều khiển lên một chút không?”
 
-Kal’tsit nhìn Doctor. “Ta đã không nghĩ chuyện này lại dễ đến thế. Thành thật mà nói, ta còn chờ ngài cài vài cái bẫy giữa những lời nói của mình. …Nhưng thì đã sao? Rất mong được hợp tác với ngài, Dr. {@nickname}.”
+Kal’tsit nhìn Doctor. “Ta đã không nghĩ chuyện này lại dễ đến thế. Thành thật mà nói, ta còn chờ ngài cài vài cái bẫy giữa những lời nói của mình. …Nhưng thì đã sao? Rất mong được hợp tác với ngài, Doctor.”
 
 “Kế hoạch là gì?”
 
@@ -1044,7 +1044,7 @@ Kal’tsit xuất hiện từ trong bão cát.
 
 Bà ta vòng một tay ôm ngang eo Doctor, tay kia kéo cả hai lên dây cáp.
 
-“Lần sau hãy tự nắm lấy số phận của mình, Dr. {@nickname}.”
+“Lần sau hãy tự nắm lấy số phận của mình, Doctor.”
 
 Bão cát dữ dội, và “cánh tay” đang giữ chặt Doctor cứng đến lạ. Doctor không chắc nó có thật sự thuộc về Kal’tsit hay không.
 
@@ -1082,7 +1082,7 @@ Bão cát dữ dội, và “cánh tay” đang giữ chặt Doctor cứng đế
 
 “Tôi không coi cô ấy là kẻ thù.”
 
-“Dr. {@nickname}, ‘phân biệt bạn và thù’.” Kal’tsit ngừng lại. “…Không. Ngài có thể hiểu lầm, nhưng hãy nghe ta nói. Ta không trách ngài. Chỉ những người có mặt lúc đó mới có đủ thông tin để quyết định. Ngài đã cố hiểu động cơ của người Infected đó. Ngài sẵn sàng gánh hậu quả cho những gì FrostNova đã làm. Nếu ngài định dùng cách này để hiểu nỗi khổ của thế gian, ta không có lý do gì để trách ngài. Ta thậm chí sẵn sàng bảo lãnh cho ngài trước các operator. Hãy tự đưa ra quyết định, ta sẽ cố không can thiệp. ‘Phân biệt bạn và thù.’ Đó là lời của ngài, không phải của ta.”
+“Doctor, ‘phân biệt bạn và thù’.” Kal’tsit ngừng lại. “…Không. Ngài có thể hiểu lầm, nhưng hãy nghe ta nói. Ta không trách ngài. Chỉ những người có mặt lúc đó mới có đủ thông tin để quyết định. Ngài đã cố hiểu động cơ của người Infected đó. Ngài sẵn sàng gánh hậu quả cho những gì FrostNova đã làm. Nếu ngài định dùng cách này để hiểu nỗi khổ của thế gian, ta không có lý do gì để trách ngài. Ta thậm chí sẵn sàng bảo lãnh cho ngài trước các operator. Hãy tự đưa ra quyết định, ta sẽ cố không can thiệp. ‘Phân biệt bạn và thù.’ Đó là lời của ngài, không phải của ta.”
 
 Rồi bà ta thì thầm, khẽ đến mức gần như không nghe thấy: “Nếu ngài thật sự muốn cùng chung một hơi thở…”
 
@@ -1116,7 +1116,7 @@ Rồi bà ta thì thầm, khẽ đến mức gần như không nghe thấy: “N
 
 ***
 
-“Dr. {@nickname}, ngài đến rồi! Chúng tôi chặn được một đội tuần tra của địch, đang xử lý dần,” một operator nói. “Doctor, vị trí của ngài hơi nguy hiểm đấy… Ngay đó… Sau lưng ngài… Đứng cạnh cô bé nguy hiểm lắm!”
+“Doctor, ngài đến rồi! Chúng tôi chặn được một đội tuần tra của địch, đang xử lý dần,” một operator nói. “Doctor, vị trí của ngài hơi nguy hiểm đấy… Ngay đó… Sau lưng ngài… Đứng cạnh cô bé nguy hiểm lắm!”
 
 “…Kẻ thù.”
 
@@ -1172,7 +1172,7 @@ Doctor quay lại. Rosmontis đứng đó, đôi mắt mở to, những khối k
 
 “Không! Đó chỉ là cách em nhìn bản thân thôi.”
 
-“Không đâu, Dr. {@nickname}. Em là gì không quan trọng. Em chỉ muốn tạo ra khác biệt, cùng gia đình em.” Cô bé ngẩng lên. “Ngài có biết Scout không? …Ngài có biết Ace không?”
+“Không đâu, Doctor. Em là gì không quan trọng. Em chỉ muốn tạo ra khác biệt, cùng gia đình em.” Cô bé ngẩng lên. “Ngài có biết Scout không? …Ngài có biết Ace không?”
 
 “Có.”
 
@@ -1192,7 +1192,7 @@ Doctor quay lại. Rosmontis đứng đó, đôi mắt mở to, những khối k
 
 “Chuyện gì đã xảy ra với Rosmontis?”
 
-“Dr. {@nickname}… Rhodes Island có quy trình sàng lọc operator rất nghiêm ngặt. Rất nhiều người xin vào vị trí chiến đấu, và chúng em từ chối phần lớn. Năng lực chiến đấu, khả năng chiến thuật, kỷ luật, thể lực… chỉ là bề nổi. Rosmontis ở đây vì em ấy tin vào mệnh lệnh và mục tiêu của chúng ta, và chúng ta tin vào năng lực và phán đoán của em ấy. Xin hãy tin em, Doctor. Không, hãy tin chúng em… Dần dần ngài sẽ thấy… màu sắc cảm xúc của em ấy.”
+“Doctor… Rhodes Island có quy trình sàng lọc operator rất nghiêm ngặt. Rất nhiều người xin vào vị trí chiến đấu, và chúng em từ chối phần lớn. Năng lực chiến đấu, khả năng chiến thuật, kỷ luật, thể lực… chỉ là bề nổi. Rosmontis ở đây vì em ấy tin vào mệnh lệnh và mục tiêu của chúng ta, và chúng ta tin vào năng lực và phán đoán của em ấy. Xin hãy tin em, Doctor. Không, hãy tin chúng em… Dần dần ngài sẽ thấy… màu sắc cảm xúc của em ấy.”
 
 Rosmontis bước lại gần. “Doctor. Cảm ơn ngài đã chiến đấu cùng Blaze. Blaze cần thêm người chiến đấu bên chị ấy. Và em muốn thấy chị ấy cười. Em cũng muốn gặp ngài. Em muốn gặp người mà Ace và Scout luôn nhắc đến.”
 
@@ -1258,7 +1258,7 @@ Warfarin chặn đường, đôi mắt đỏ nhíu lại.
 
 “Ừm. Vâng. Em cũng cảm thấy.”
 
-“Dr. {@nickname}, có chuyện ngoài dự tính.”
+“Doctor, có chuyện ngoài dự tính.”
 
 “Chuyện gì?”
 
@@ -1454,23 +1454,23 @@ Khi những người tị nạn đã được dẫn đi, Talulah quay sang nhữ
 
 “Phải. Nhưng lịch sử Sarkaz không chỉ là ẩn dụ.”
 
-Amiya suy nghĩ một lúc. “Dr. {@nickname}, bác sĩ Kal’tsit. Những nơi địch thực hiện nghi lễ Sarkaz chắc chắn là vị trí quan trọng, hoặc nút giao thông then chốt. Chúng thông thuộc địa hình hơn chúng ta nhiều. Lợi thế duy nhất của chúng ta là thông tin. Chúng ta biết chúng bố trí thế nào, còn chúng chẳng biết gì về chúng ta. Nên chúng ta phải nhanh chóng quét sạch địch canh giữ khu này. Càng nhanh càng an toàn. Đừng để chúng báo động những lính gác khác.”
+Amiya suy nghĩ một lúc. “Doctor, bác sĩ Kal’tsit. Những nơi địch thực hiện nghi lễ Sarkaz chắc chắn là vị trí quan trọng, hoặc nút giao thông then chốt. Chúng thông thuộc địa hình hơn chúng ta nhiều. Lợi thế duy nhất của chúng ta là thông tin. Chúng ta biết chúng bố trí thế nào, còn chúng chẳng biết gì về chúng ta. Nên chúng ta phải nhanh chóng quét sạch địch canh giữ khu này. Càng nhanh càng an toàn. Đừng để chúng báo động những lính gác khác.”
 
 “Được. Ta sẽ hỗ trợ tấn công.”
 
 “Ừm, vâng… em nghĩ… bác sĩ Kal’tsit, em nghĩ, nếu…”
 
-“—Được thôi,” Kal’tsit nói. “Nếu ngài không cần ta giúp, Dr. {@nickname}. Hãy giúp Amiya chỉ huy chiến dịch.”
+“—Được thôi,” Kal’tsit nói. “Nếu ngài không cần ta giúp, Doctor. Hãy giúp Amiya chỉ huy chiến dịch.”
 
 “Rõ! Rosmontis, xuất phát thôi! Đánh xong trận này chúng ta sẽ lên bề mặt lõi đô thị. Rosmontis… ít nhất ở đó sẽ có nắng.”
 
 “Nắng~”
 
-*(Hừ. Nhìn chúng kìa.)* Kal’tsit nghĩ. *(Phần còn lại là ở ngài, Dr. {@nickname}. Ta biết ngài sẽ không làm chúng ta thất vọng.)*
+*(Hừ. Nhìn chúng kìa.)* Kal’tsit nghĩ. *(Phần còn lại là ở ngài, Doctor. Ta biết ngài sẽ không làm chúng ta thất vọng.)*
 
 *Kal’tsit, chúng ta sẽ không thấy lại nỗi thất vọng ấy nữa đâu. Không ai tắm hai lần trên cùng một dòng sông. Sẽ không có lần thứ hai. Dù cùng một người, cùng một chuyện… ở một thời điểm khác, kết quả sẽ khác. Thế giới này… sẽ thay đổi. Cô tin điều đó mà, phải không? Phải rồi… Cô không tin cũng là điều dễ hiểu. Nhưng tôi tin. Kal’tsit… Kal’tsit. Nếu… chúng ta có thêm chút thời gian… cô và tôi…*
 
-*(Ngài có thể chứng minh ngài không phải Dr. {@nickname} mắc kẹt trong quá khứ,)* Kal’tsit nghĩ. *(Ở thời điểm này… Dù bằng cách nào, Dr. {@nickname}, ngài phải làm được.)*
+*(Ngài có thể chứng minh ngài không phải Doctor mắc kẹt trong quá khứ,)* Kal’tsit nghĩ. *(Ở thời điểm này… Dù bằng cách nào, Doctor, ngài phải làm được.)*
 
 ***
 
@@ -1512,7 +1512,7 @@ Một giọng nam vang lên từ sau đống thùng. Một người đàn ông m
 
 “Amiya, quét mã nhận dạng của cậu ta,” Kal’tsit nói lạnh lùng. “Guard, giải thích đi.”
 
-“Lâu rồi không gặp, Amiya, bác sĩ Kal’tsit.” Người đàn ông nhìn sang. “Và, Dr. {@nickname}.”
+“Lâu rồi không gặp, Amiya, bác sĩ Kal’tsit.” Người đàn ông nhìn sang. “Và, Doctor.”
 
 ## 7-10 | Ngọn lửa của kẻ yếu ớt
 
@@ -1548,7 +1548,7 @@ Tatiana không trả lời.
 
 “Kal’tsit? Chúng ta nên đi tiếp,” Rosmontis nói.
 
-Guard quay phắt lại, mặt tái đi. “…Cô… Sao cô lại ở đây…?! Lại là cô! Các người… định diệt sạch Reunion sao?! Rhodes Island, các người thật sự chẳng khá hơn…” Anh ta lắc đầu. “…Gác chuyện đó lại! Đội tuần tra lính đánh thuê Sarkaz sắp đi qua nhà kho này! Nếu không xử lý chúng, hay ít nhất là trốn đi, chúng sẽ tìm thấy và bắt chúng ta đi… Đó là lý do nhiều người chết đói, thiếu thuốc. Amiya, bác sĩ Kal’tsit! Và… Dr. {@nickname}, tôi thật sự mong các người tin tôi. Hoặc ít nhất tìm chỗ trốn đi!”
+Guard quay phắt lại, mặt tái đi. “…Cô… Sao cô lại ở đây…?! Lại là cô! Các người… định diệt sạch Reunion sao?! Rhodes Island, các người thật sự chẳng khá hơn…” Anh ta lắc đầu. “…Gác chuyện đó lại! Đội tuần tra lính đánh thuê Sarkaz sắp đi qua nhà kho này! Nếu không xử lý chúng, hay ít nhất là trốn đi, chúng sẽ tìm thấy và bắt chúng ta đi… Đó là lý do nhiều người chết đói, thiếu thuốc. Amiya, bác sĩ Kal’tsit! Và… Doctor, tôi thật sự mong các người tin tôi. Hoặc ít nhất tìm chỗ trốn đi!”
 
 “Người phụ nữ Ursus nhiễm bệnh,” Kal’tsit nói. “Ta có vài câu hỏi thành thật.”
 
@@ -1698,7 +1698,7 @@ Rosmontis khóc nấc.
 
 “Rosmontis…” Amiya nắm lấy tay cô bé. “Đưa tay cho chị. Nhắm mắt lại, Rosmontis…”
 
-“Hóa ra elite operator… cũng không khác gì… đồng đội của tôi,” Guard nói khẽ. Rồi anh ta quay sang Doctor. “Dr. {@nickname}, tôi có điều muốn nói. Trong chiến dịch giải cứu ngài, Scout dẫn đội trinh sát. Anh ấy chưa từng biết ngài như bây giờ… Nhưng anh ấy nói anh ấy từng biết ngài trước kia, giống Ace. Anh ấy chặn đám lính đánh thuê Sarkaz để cứu mạng tôi. Với Scout, nếu muốn, anh ấy hoàn toàn có thể thoát ra. Anh ấy dặn tôi nhắn với ngài một điều… Phải, tôi nhớ rồi. Anh ấy nói anh ấy sẽ không bao giờ quên những ngày chiến đấu bên ngài.”
+“Hóa ra elite operator… cũng không khác gì… đồng đội của tôi,” Guard nói khẽ. Rồi anh ta quay sang Doctor. “Doctor, tôi có điều muốn nói. Trong chiến dịch giải cứu ngài, Scout dẫn đội trinh sát. Anh ấy chưa từng biết ngài như bây giờ… Nhưng anh ấy nói anh ấy từng biết ngài trước kia, giống Ace. Anh ấy chặn đám lính đánh thuê Sarkaz để cứu mạng tôi. Với Scout, nếu muốn, anh ấy hoàn toàn có thể thoát ra. Anh ấy dặn tôi nhắn với ngài một điều… Phải, tôi nhớ rồi. Anh ấy nói anh ấy sẽ không bao giờ quên những ngày chiến đấu bên ngài.”
 
 Doctor im lặng.
 
@@ -1778,15 +1778,15 @@ Anh ta chạy biến vào bóng tối.
 
 “Có vẻ chúng ta đã xâm nhập lõi đô thị thành công,” Doctor nói.
 
-“Vì những gì chúng ta làm tiếp theo khó mà gọi là xâm nhập được nữa, Dr. {@nickname}. Như ta nói từ đầu, xâm nhập chỉ chiếm khoảng hai mươi phần trăm kế hoạch. Để đến tháp chỉ huy và khu máy phát điện mà dừng Chernobog lại, chúng ta phải đi qua khu trung tâm. Những kẻ thù trên đường không phải đám Reunion tầm thường, cũng không phải lính đánh thuê Sarkaz thô bạo. Đội du kích Infected Bình nguyên phương Bắc, cái gai trong vùng hậu phương của Tập đoàn quân số Bốn Ursus ở tây bắc… Từ khi thành lập, nó chỉ có một người lãnh đạo. Những người kháng chiến bình thường bị tàn sát, nhưng đội du kích này lại khiến đồ tể trở thành con mồi. Cuộc chiến kéo dài đến mức những người Infected trốn trong tuyết gọi đội du kích là ‘Lá chắn’ của họ. Lá chắn của người Infected. Đội Yeti là một nhánh của nó, và thành viên không chỉ có người Infected. Kẻ lưu đày, kẻ cuồng tín, người tàn phế, Elf, Durin, Sarkaz. Đội du kích không chỉ chiến đấu vì người Infected.”
+“Vì những gì chúng ta làm tiếp theo khó mà gọi là xâm nhập được nữa, Doctor. Như ta nói từ đầu, xâm nhập chỉ chiếm khoảng hai mươi phần trăm kế hoạch. Để đến tháp chỉ huy và khu máy phát điện mà dừng Chernobog lại, chúng ta phải đi qua khu trung tâm. Những kẻ thù trên đường không phải đám Reunion tầm thường, cũng không phải lính đánh thuê Sarkaz thô bạo. Đội du kích Infected Bình nguyên phương Bắc, cái gai trong vùng hậu phương của Tập đoàn quân số Bốn Ursus ở tây bắc… Từ khi thành lập, nó chỉ có một người lãnh đạo. Những người kháng chiến bình thường bị tàn sát, nhưng đội du kích này lại khiến đồ tể trở thành con mồi. Cuộc chiến kéo dài đến mức những người Infected trốn trong tuyết gọi đội du kích là ‘Lá chắn’ của họ. Lá chắn của người Infected. Đội Yeti là một nhánh của nó, và thành viên không chỉ có người Infected. Kẻ lưu đày, kẻ cuồng tín, người tàn phế, Elf, Durin, Sarkaz. Đội du kích không chỉ chiến đấu vì người Infected.”
 
 “—Nghe quen quá.”
 
-“Giống hệt Rhodes Island, phải không?” Kal’tsit nói. “Như trước kia, Rhodes Island sẽ được lợi từ trực giác của ngài, Dr. {@nickname}.”
+“Giống hệt Rhodes Island, phải không?” Kal’tsit nói. “Như trước kia, Rhodes Island sẽ được lợi từ trực giác của ngài, Doctor.”
 
 “Bà không giận sao?”
 
-“Sao ngài nhìn vào mắt ta khi nói điều đó? Đôi mắt này chẳng có gì để nhìn đâu. Không, ta không nghĩ những gì ngài nói có gì sai. Đội du kích cũng chỉ tin một chỉ huy duy nhất, và chỉ đi theo một chỉ huy duy nhất. Phải, Doctor, đội du kích này là một kiểu ‘Rhodes Island’ khác. Nhưng người lãnh đạo của họ? Không.” Giọng bà trầm xuống. “Dr. {@nickname}, hãy chuẩn bị kỹ. Nếu không ngài sẽ hối hận. Vì an toàn của ngài, ta vẫn mong ngài và Amiya sẽ không phải đối mặt với ông ấy. Nhưng nếu mọi chuyện là không tránh khỏi, ta chỉ có thể nhắc lại. Hãy chuẩn bị kỹ. Và trước khi đối mặt với ông ấy, ngài phải chuẩn bị đối mặt với đội du kích của ông ấy. Ta hiếm khi khuyên ai, Doctor. Nhưng đó là ‘Patriot’, Buldrokkas’tee.”
+“Sao ngài nhìn vào mắt ta khi nói điều đó? Đôi mắt này chẳng có gì để nhìn đâu. Không, ta không nghĩ những gì ngài nói có gì sai. Đội du kích cũng chỉ tin một chỉ huy duy nhất, và chỉ đi theo một chỉ huy duy nhất. Phải, Doctor, đội du kích này là một kiểu ‘Rhodes Island’ khác. Nhưng người lãnh đạo của họ? Không.” Giọng bà trầm xuống. “Doctor, hãy chuẩn bị kỹ. Nếu không ngài sẽ hối hận. Vì an toàn của ngài, ta vẫn mong ngài và Amiya sẽ không phải đối mặt với ông ấy. Nhưng nếu mọi chuyện là không tránh khỏi, ta chỉ có thể nhắc lại. Hãy chuẩn bị kỹ. Và trước khi đối mặt với ông ấy, ngài phải chuẩn bị đối mặt với đội du kích của ông ấy. Ta hiếm khi khuyên ai, Doctor. Nhưng đó là ‘Patriot’, Buldrokkas’tee.”
 
 ***
 
@@ -1824,7 +1824,7 @@ Một bóng người to lớn chặn đường.
 
 “Giống quân đội?” Doctor gợi ý.
 
-“Vâng! Như Doctor nói, Raidian, Reunion có pha trộn một chút, nhưng vẫn thấy bóng dáng quân đội Ursus. Mạng lưới nòng cốt của Reunion có thể là những người Infected đã được huấn luyện quân sự Ursus. Rõ ràng trận này sẽ không dễ dàng. Hử? Không, em ổn. Em, Rosmontis, tất cả operator Rhodes Island… đều muốn có mặt ở đây. Vâng, không sao đâu Raidian, em có Dr. {@nickname} và bác sĩ Kal’tsit bên cạnh.”
+“Vâng! Như Doctor nói, Raidian, Reunion có pha trộn một chút, nhưng vẫn thấy bóng dáng quân đội Ursus. Mạng lưới nòng cốt của Reunion có thể là những người Infected đã được huấn luyện quân sự Ursus. Rõ ràng trận này sẽ không dễ dàng. Hử? Không, em ổn. Em, Rosmontis, tất cả operator Rhodes Island… đều muốn có mặt ở đây. Vâng, không sao đâu Raidian, em có Doctor và bác sĩ Kal’tsit bên cạnh.”
 
 “Được rồi, Amiya, đến lúc bắt đầu,” Kal’tsit nói. “Đội R-4, kích hoạt thiết bị. Raidian, Rosmontis cần mười phút để thi triển Arts. Trong thời gian đó, chúng ta không được mất liên lạc dù chỉ một khắc. Dùng Originium Arts liên tục sẽ khiến cô khó chịu. Nếu buồn nôn không chịu nổi, lập tức uống chất bổ sung ta pha cho cô. Đừng quá liều. Chúng ta đang đòi hỏi cô rất nhiều, Raidian. Rosmontis, mọi tín hiệu của địch sẽ được Raidian gửi đến thiết bị cầm tay của em. Cảm nhận chúng, và ghi lại. Nếu vị trí của chúng thay đổi, em không được để mất dấu. Hãy vươn ra bằng cơ thể mình, Rosmontis, và tưởng tượng em đang dạo khắp thành phố.”
 
@@ -1844,15 +1844,15 @@ Một bóng người to lớn chặn đường.
 
 Hai cô bé chạm trán vào nhau.
 
-“Amiya đang ổn định cảm xúc của Rosmontis,” Kal’tsit nói. “Ngài có lẽ không nên nhìn thẳng vào họ, Dr. {@nickname}. Ngoài những chiến binh bất hạnh nhất, nhìn thẳng vào sự bành trướng bản chất Arts của Rosmontis là không khôn ngoan.”
+“Amiya đang ổn định cảm xúc của Rosmontis,” Kal’tsit nói. “Ngài có lẽ không nên nhìn thẳng vào họ, Doctor. Ngoài những chiến binh bất hạnh nhất, nhìn thẳng vào sự bành trướng bản chất Arts của Rosmontis là không khôn ngoan.”
 
 “Ý bà là… cô thỏ nhỏ của chúng ta…?”
 
-“Ta tưởng ngài sẽ nhận ra sớm hơn. Hoặc ngài đã biết nhưng chưa thể hiện ra với ta. Nhưng đúng vậy, Dr. {@nickname}. Những trận chiến của Amiya, cả thể xác lẫn tinh thần, đã vượt xa những gì một con người nên phải chịu đựng. Nếu ngài muốn, ngài có thể nắm tay Amiya để chia sẻ gánh nặng đó.”
+“Ta tưởng ngài sẽ nhận ra sớm hơn. Hoặc ngài đã biết nhưng chưa thể hiện ra với ta. Nhưng đúng vậy, Doctor. Những trận chiến của Amiya, cả thể xác lẫn tinh thần, đã vượt xa những gì một con người nên phải chịu đựng. Nếu ngài muốn, ngài có thể nắm tay Amiya để chia sẻ gánh nặng đó.”
 
 Doctor đưa tay ra.
 
-“Không, ít nhất không phải hôm nay. Ngài và ta có một việc gấp khác. Chúng ta cần mua cho chúng thời gian quý giá.” Kal’tsit nói. “Một công ty dược điều tra nguyên nhân gốc rễ của vấn đề, thích nghi với môi trường, phân bổ chức năng hợp lý, và tìm điểm đột phá. Mục tiêu của chúng ta nhỏ và chính xác hơn một trận đánh thông thường. Công việc của một đội tấn công chiến thuật nhỏ giống một ca phẫu thuật hơn là một trận đọ súng. Nhưng dù cắt bỏ được khối u, nếu nguyên nhân vẫn chưa rõ, vấn đề sẽ không được giải quyết tận gốc. Dr. {@nickname}, ta mong ngài cân nhắc kỹ. —Ai là bệnh nhân của chúng ta? Người Infected bình thường? Người Ursus bị nhiễm bệnh? Reunion? Hay thành phố này? Và nguyên nhân căn bệnh nằm ở đâu?”
+“Không, ít nhất không phải hôm nay. Ngài và ta có một việc gấp khác. Chúng ta cần mua cho chúng thời gian quý giá.” Kal’tsit nói. “Một công ty dược điều tra nguyên nhân gốc rễ của vấn đề, thích nghi với môi trường, phân bổ chức năng hợp lý, và tìm điểm đột phá. Mục tiêu của chúng ta nhỏ và chính xác hơn một trận đánh thông thường. Công việc của một đội tấn công chiến thuật nhỏ giống một ca phẫu thuật hơn là một trận đọ súng. Nhưng dù cắt bỏ được khối u, nếu nguyên nhân vẫn chưa rõ, vấn đề sẽ không được giải quyết tận gốc. Doctor, ta mong ngài cân nhắc kỹ. —Ai là bệnh nhân của chúng ta? Người Infected bình thường? Người Ursus bị nhiễm bệnh? Reunion? Hay thành phố này? Và nguyên nhân căn bệnh nằm ở đâu?”
 
 Bà tiếp tục. “Rõ ràng Talulah cố tình giữ các cụm Originium từ Catastrophe trong thành phố để duy trì sự hỗn loạn. Nó làm nhiễu loạn liên lạc nghiêm trọng. Nhưng nhờ Raidian, chúng ta tận dụng được sóng vô tuyến hỗn loạn ấy. Đó là lợi thế chiến thuật thứ nhất. Ngài đã thấy những người đưa tin cầm loa. Đội du kích dùng cách cổ lỗ này để truyền tình báo và mệnh lệnh mã hóa. Đó là cách ổn định và kỷ luật nhất trong môi trường thù địch. Ngài đoán xem cách này có vấn đề gì?”
 
@@ -1866,7 +1866,7 @@ Bà tiếp tục. “Rõ ràng Talulah cố tình giữ các cụm Originium t�
 
 “Có thành công không?”
 
-“—Ta sẽ không phóng đại. Dr. {@nickname}, dù có ba lợi thế chiến thuật, khả năng thất bại của chúng ta vẫn cao hơn thành công.”
+“—Ta sẽ không phóng đại. Doctor, dù có ba lợi thế chiến thuật, khả năng thất bại của chúng ta vẫn cao hơn thành công.”
 
 “Vậy sao lại làm thế?”
 
@@ -1900,7 +1900,7 @@ Kal’tsit lắc đầu. “Đây không giống Raidian dùng chất bổ sung 
 
 “Tệ thật,” Doctor nói.
 
-“Tệ không phải là cớ để ta dung túng sự bất tài của mình,” Kal’tsit nói. “Dr. {@nickname}, ta sẽ không dùng biện pháp khẩn cấp gây tổn hại vĩnh viễn cho cơ thể… dù chúng hiệu quả đến đâu. Vấn đề của Rosmontis không phải sinh học. Chỉ em ấy mới giải quyết được.” Bà quỳ xuống. “Rosmontis. Rosmontis, nhìn tay ta.”
+“Tệ không phải là cớ để ta dung túng sự bất tài của mình,” Kal’tsit nói. “Doctor, ta sẽ không dùng biện pháp khẩn cấp gây tổn hại vĩnh viễn cho cơ thể… dù chúng hiệu quả đến đâu. Vấn đề của Rosmontis không phải sinh học. Chỉ em ấy mới giải quyết được.” Bà quỳ xuống. “Rosmontis. Rosmontis, nhìn tay ta.”
 
 “Bác… sĩ… Kal… tsit…”
 
@@ -1922,7 +1922,7 @@ Kal’tsit lắc đầu. “Đây không giống Raidian dùng chất bổ sung 
 
 “Giỏ bông mềm… mèo con à?” Doctor nói. “Hợp với em đấy.”
 
-“Phì,” Rosmontis bật cười. “Amiya đỏ mặt rồi kìa, Dr. {@nickname}.”
+“Phì,” Rosmontis bật cười. “Amiya đỏ mặt rồi kìa, Doctor.”
 
 “…Chị không muốn em thấy đâu!”
 
@@ -1954,7 +1954,7 @@ Kal’tsit lắc đầu. “Đây không giống Raidian dùng chất bổ sung 
 
 “Rõ! Em sẽ đến tòa thị chính!” Amiya nói.
 
-“Vậy chúng ta đến Trường Trung học số 4, Doctor. Đi,” Kal’tsit nói. “Rosmontis, Amiya và ta sẽ lo người đưa tin. Còn ngài, Dr. {@nickname}, sẽ chỉ huy các đơn vị tự do làm chậm chiến binh du kích. Nhớ rằng, chúng ta chỉ nhắm vào những kẻ thù có thể nhắm. Khi đội du kích tập hợp lại, chúng ta rút. Đây sẽ là một trận kéo dài. Chúng ta có thể chịu thương vong, thậm chí thua hoàn toàn. Nếu chuyện đó xảy ra, người Infected có thể phải đối mặt với một thời kỳ đen tối mới. Kết quả tốt nhất là đội chỉ huy không xuất hiện. Nhưng ông ấy sẽ không như vậy, vị chỉ huy du kích này. Ông ấy sẽ không mất kiểm soát trận đánh và nhìn đội mình tan rã. Không chỉ niềm tin giữ người của ông ấy lại với nhau. Ông ấy có sức mạnh xứng với danh tiếng của mình. Sau trận này, nếu mọi chuyện thuận lợi… chúng ta sẽ dốc toàn lực vào cuộc đối đầu với đội chỉ huy của họ. Chúng ta sẽ đối mặt với Buldrokkas’tee.”
+“Vậy chúng ta đến Trường Trung học số 4, Doctor. Đi,” Kal’tsit nói. “Rosmontis, Amiya và ta sẽ lo người đưa tin. Còn ngài, Doctor, sẽ chỉ huy các đơn vị tự do làm chậm chiến binh du kích. Nhớ rằng, chúng ta chỉ nhắm vào những kẻ thù có thể nhắm. Khi đội du kích tập hợp lại, chúng ta rút. Đây sẽ là một trận kéo dài. Chúng ta có thể chịu thương vong, thậm chí thua hoàn toàn. Nếu chuyện đó xảy ra, người Infected có thể phải đối mặt với một thời kỳ đen tối mới. Kết quả tốt nhất là đội chỉ huy không xuất hiện. Nhưng ông ấy sẽ không như vậy, vị chỉ huy du kích này. Ông ấy sẽ không mất kiểm soát trận đánh và nhìn đội mình tan rã. Không chỉ niềm tin giữ người của ông ấy lại với nhau. Ông ấy có sức mạnh xứng với danh tiếng của mình. Sau trận này, nếu mọi chuyện thuận lợi… chúng ta sẽ dốc toàn lực vào cuộc đối đầu với đội chỉ huy của họ. Chúng ta sẽ đối mặt với Buldrokkas’tee.”
 
 ***
 
@@ -2384,7 +2384,7 @@ Một luồng sáng đen đánh trúng ông.
 
 *Rhodes Island, đơn vị xử lý sinh học.*
 
-“…Chuyện gì xảy ra vậy?!” một operator kêu. “Closure, tôi cần sơ đồ Đơn vị Xử lý Sinh học số Mười ba! Nhiệt độ cabin đang tăng nhanh! Rò rỉ năng lượng! Khoan, nó đang biến đổi hình dạng! Sao sau mười bốn tiếng mà nó vẫn tiến triển thế này? PRTS, ai vào cabin này cuối cùng? Dr. {@nickname}? Chúng ta mất ai trong trận Lungmen sao? Ai đang được xử lý? …Cái gì? Khoan, chậm lại. Cậu nói Dr. {@nickname} đặt ai vào đó?”
+“…Chuyện gì xảy ra vậy?!” một operator kêu. “Closure, tôi cần sơ đồ Đơn vị Xử lý Sinh học số Mười ba! Nhiệt độ cabin đang tăng nhanh! Rò rỉ năng lượng! Khoan, nó đang biến đổi hình dạng! Sao sau mười bốn tiếng mà nó vẫn tiến triển thế này? PRTS, ai vào cabin này cuối cùng? Doctor? Chúng ta mất ai trong trận Lungmen sao? Ai đang được xử lý? …Cái gì? Khoan, chậm lại. Cậu nói Doctor đặt ai vào đó?”
 
 ***
 
@@ -2784,7 +2784,7 @@ Người hộ vệ im lặng rất lâu.
 
 “…Ông ấy đã chiến thắng nỗi khổ cả đời, hệ tư tưởng hàng thế kỷ, và tình yêu của mình với cả thế giới này,” Kal’tsit nói. “Ông ấy không còn tuân theo những nguyên tắc đã giữ suốt bao năm. Ông ấy… khuất phục trước số phận. Không, nói thế là làm ô danh ông ấy. Đúng hơn, ông ấy chọn gạt bỏ mọi thứ mình đã chống lại, và vượt qua chướng ngại cuối cùng trong lòng mình. Ông ấy giao phó tương lai cho em. Lần này, ông ấy vui lòng chọn làm điều mình cho là đúng, thay vì tự hành hạ mình để giữ một lý tưởng nào đó. Tất nhiên, sâu trong lòng ông ấy, phần này đúng như em mô tả… Nó từng thuộc về Talulah, và giờ thuộc về em. Nhưng nó luôn thuộc về FrostNova.”
 
-“Patriot… FrostNova…” Amiya nói. “Bác sĩ Kal’tsit. Rosmontis… và Dr. {@nickname}. Em sẽ chấm dứt cuộc chiến này. Ngay tại đây. Ngay bây giờ.”
+“Patriot… FrostNova…” Amiya nói. “Bác sĩ Kal’tsit. Rosmontis… và Doctor. Em sẽ chấm dứt cuộc chiến này. Ngay tại đây. Ngay bây giờ.”
 
 “Vâng,” Rosmontis nói. “Em sẽ ở bên chị, Amiya. Mãi mãi.”
 
@@ -2894,11 +2894,11 @@ Kal’tsit im lặng.
 
 ***
 
-“Dr. {@nickname}. Phần tiếp theo chúng ta sẽ tách ra,” Amiya nói. “Em và Rosmontis sẽ đến tháp chỉ huy. Bác sĩ Kal’tsit sẽ đưa ngài đến khu máy phát điện.”
+“Doctor. Phần tiếp theo chúng ta sẽ tách ra,” Amiya nói. “Em và Rosmontis sẽ đến tháp chỉ huy. Bác sĩ Kal’tsit sẽ đưa ngài đến khu máy phát điện.”
 
 “Một thời gian tôi sẽ không gặp em sao?”
 
-“Chỉ vài tiếng thôi mà, đúng không?” Amiya mỉm cười. “Mà Doctor này… Dù không ở bên ngài, em sẽ luôn biết rằng Dr. {@nickname} ở ngoài kia… đang chiến đấu cùng em. Dù không nhìn thấy nhau, chúng ta vẫn chiến đấu vì cùng một mục tiêu. Em thấy thế là vui lắm rồi.”
+“Chỉ vài tiếng thôi mà, đúng không?” Amiya mỉm cười. “Mà Doctor này… Dù không ở bên ngài, em sẽ luôn biết rằng Doctor ở ngoài kia… đang chiến đấu cùng em. Dù không nhìn thấy nhau, chúng ta vẫn chiến đấu vì cùng một mục tiêu. Em thấy thế là vui lắm rồi.”
 
 “Hẹn gặp sau nhiệm vụ!”
 
@@ -2942,7 +2942,7 @@ W quay phắt lại. Đôi mắt cô ta nhìn Doctor theo cách chưa từng th�
 
 “Ta có gì phải kể với cô?”
 
-“Bà hỏi tôi? Đùa à? Sao bà có thể đứng đó bình thản như chưa từng có chuyện gì?” Dù nói với Kal’tsit, mắt W vẫn dán chặt vào Doctor. “Kal’tsit, bà đang làm việc với Dr. {@nickname}? Bà? Làm việc cùng Dr. {@nickname}?”
+“Bà hỏi tôi? Đùa à? Sao bà có thể đứng đó bình thản như chưa từng có chuyện gì?” Dù nói với Kal’tsit, mắt W vẫn dán chặt vào Doctor. “Kal’tsit, bà đang làm việc với Doctor? Bà? Làm việc cùng Doctor?”
 
 “Có vấn đề gì sao, W?”
 
@@ -2980,15 +2980,15 @@ Kal’tsit im lặng một lúc. “W, cô từng nói… ‘Chúng ta là cùng
 
 “Kế hoạch dài hơi đấy.”
 
-“Sau đó, thứ ba tôi muốn giết đang đứng ngay cạnh bà: Dr. {@nickname}.”
+“Sau đó, thứ ba tôi muốn giết đang đứng ngay cạnh bà: Doctor.”
 
 “Ngài chỉ đứng thứ ba thôi à?” Kal’tsit liếc Doctor.
 
 “Tôi chỉ đứng thứ ba?”
 
-“Ha. Đó là vì tôi có chuyện muốn hỏi ngươi trước, Dr. {@nickname}. Tôi có mấy lời giải thích dài dòng, kỹ lưỡng cần moi ra từ ngươi…”
+“Ha. Đó là vì tôi có chuyện muốn hỏi ngươi trước, Doctor. Tôi có mấy lời giải thích dài dòng, kỹ lưỡng cần moi ra từ ngươi…”
 
-“Ở giai đoạn này, chúng ta có chung mục tiêu,” Kal’tsit nói. “Nhân tiện, về những gì cô đã làm với nhân viên của chúng ta ở Chernobog… Trước hết, cảm ơn cô vì cuộc mặc cả đã cứu mạng Dr. {@nickname} và đội cứu hộ. ‘Cuộc mặc cả’ đó đã khiến chúng ta mất mười ba operator. Cân bằng hai chuyện này, vì tình xưa nghĩa cũ, ta sẵn lòng cho cô quá giang. Ta sẽ đưa cô đến tháp chỉ huy.”
+“Ở giai đoạn này, chúng ta có chung mục tiêu,” Kal’tsit nói. “Nhân tiện, về những gì cô đã làm với nhân viên của chúng ta ở Chernobog… Trước hết, cảm ơn cô vì cuộc mặc cả đã cứu mạng Doctor và đội cứu hộ. ‘Cuộc mặc cả’ đó đã khiến chúng ta mất mười ba operator. Cân bằng hai chuyện này, vì tình xưa nghĩa cũ, ta sẵn lòng cho cô quá giang. Ta sẽ đưa cô đến tháp chỉ huy.”
 
 “Kal’tsit… Bà đúng là biết cách làm người ta buồn nôn,” W nói. “Tôi luôn thấy bà ghê tởm. Phải sắp xếp lại khuôn mặt bà một chút trước đã, xem ai trong hai ta mới là kẻ thắng…”
 
