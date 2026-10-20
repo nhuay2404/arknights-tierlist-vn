@@ -1,6 +1,7 @@
 # Changelog
 
 ## 2026-10-20
+- Cốt truyện: thêm **Chương 9 · Canh chừng bão tố** (Stormwatch), 17 màn: Victoria, County Hillock – Horn và Tempest Platoon, Bagpipe và cô bé Janie, Outcast giữa người Tara, “lực lượng bóng ma” Dublinn và đêm Hillock bốc cháy. Mật danh các thủ lĩnh Dublinn (The Bandit, The Immolator…) giữ tiếng Anh.
 - Cốt truyện: thêm **Chương 8 · Ngọn lửa gào thét** (Roaring Flare), trọn 25 màn từ R8-1 đến 5 màn kết EG-1…EG-5: lá thư của Talulah và ký ức ngôi làng tuyết cùng Alina, Rosmontis và đội hộ vệ khiên, Patriot – FrostNova, Ch’en đối mặt “Talulah” trên tháp chỉ huy, Kashchey – Hắc Xà Bất Tử lộ diện, lõi Chernobog dừng lại trước Lungmen, và các phần kết. 55 CG, 126 ảnh nền tự chèn đúng vị trí; ~350 phút đọc.
 - Bỏ mục "Ghi chú từ nhóm tác giả" ở tab Giới thiệu cùng dữ liệu `general` trong `data.js` (39 KB → 30 KB).
 - Mở hoặc tải lại trang luôn vào **Trang chủ** (trước đây tải lại có thể giữ trạng thái tab cũ). Link chia sẻ có bộ lọc tier list vẫn mở thẳng tab Xếp hạng.
