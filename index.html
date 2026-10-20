@@ -772,7 +772,6 @@ body.stfocus .stwrap{grid-template-columns:minmax(0,1fr)}
         <li>Phần giữa và dưới được nén lại: khác biệt giữa Degenbrecher và Irene quan trọng hơn nhiều so với giữa Bibeak và Cutter.</li>
       </ul>
     </div>
-    <div class="card" id="general"></div>
     <div class="card">
       <h2>Nguồn &amp; tác giả</h2>
       <p>Dữ liệu từ <a href="https://docs.google.com/spreadsheets/d/1E7HmgKWiV8pKpJpvpVzziYxnaQTP01Vtw_PXEdL7XPA/" target="_blank" rel="noopener">An Arknights Operator Tier List</a>. Theo dõi: <a href="https://x.com/AKTierList" target="_blank" rel="noopener">X/Twitter</a> · <a href="https://bsky.app/profile/aktierlist.bsky.social" target="_blank" rel="noopener">Bluesky</a>.</p>
@@ -789,20 +788,20 @@ body.stfocus .stwrap{grid-template-columns:minmax(0,1fr)}
 <dialog id="dlg"></dialog>
 
 <!-- ?v=: đổi mỗi lần cập nhật data để trình duyệt/CDN không dùng file .js cũ lệch với index.html -->
-<script src="data.js?v=20261020b"></script>
-<script src="details.js?v=20261020b"></script>
-<script src="glossary.js?v=20261020b"></script>
-<script src="factions.js?v=20261020b"></script>
-<script src="roster.js?v=20261020b"></script>
-<script src="skins.js?v=20261020b"></script>
-<script src="mats.js?v=20261020b"></script>
-<script src="subclass.js?v=20261020b"></script>
-<script src="details_x.js?v=20261020b"></script>
-<script src="gacha.js?v=20261020b"></script>
-<script src="story_toc.js?v=20261020b"></script>
+<script src="data.js?v=20261020c"></script>
+<script src="details.js?v=20261020c"></script>
+<script src="glossary.js?v=20261020c"></script>
+<script src="factions.js?v=20261020c"></script>
+<script src="roster.js?v=20261020c"></script>
+<script src="skins.js?v=20261020c"></script>
+<script src="mats.js?v=20261020c"></script>
+<script src="subclass.js?v=20261020c"></script>
+<script src="details_x.js?v=20261020c"></script>
+<script src="gacha.js?v=20261020c"></script>
+<script src="story_toc.js?v=20261020c"></script>
 <script>const KITV='20261020b'</script>
 <script>
-const {ops:OPS, general:GENERAL} = window.AK;
+const {ops:OPS} = window.AK;
 const TIERS=['EX','S+','S','S-','A+','A','A-','B+','B','B-','C+','C','C-','D','F'];
 const TC={EX:'linear-gradient(135deg,#ffe066,#ff3d6e)','S+':'#ff4d6d','S':'#ff7a45','S-':'#ffa94d','A+':'#ffd43b','A':'#e3e86a','A-':'#b5e36a','B+':'#69db7c','B':'#38d9a9','B-':'#3bc9db','C+':'#4dabf7','C':'#748ffc','C-':'#9775fa','D':'#da77f2','F':'#868e96'};
 const CLS=[['Vanguards','Vanguard'],['Guards','Guard'],['Defenders','Defender'],['Snipers','Sniper'],['Casters','Caster'],['Medics','Medic'],['Supporters','Supporter'],['Specialists','Specialist']];
@@ -839,15 +838,14 @@ const fIco=f=>facLogo(f)?`<i class="ico fac" style="--ico:url(${ICO}factions/log
 const facA=(f,inner)=>`<a href="#phe-${facId(f)}" data-fac="${esc(f)}">${inner??esc(f)}</a>`;
 const sIco=s=>SUBID[s]?ico(`ui/subclass/sub_${SUBID[s]}_icon.png`):'';
 let S={q:'',cls:new Set(),sub:new Set(),rar:new Set(),view:'tier'};
-try{const v=localStorage.getItem('ak-view');if(v)S.view=v}catch(e){}
-// đọc bộ lọc từ URL (?q=&cls=&r=&view=) để link chia sẻ giữ đúng trạng thái
+// đọc bộ lọc từ URL (?q=&cls=&sub=&r=) để link chia sẻ giữ đúng trạng thái
 {const p=new URLSearchParams(location.search);
   if(p.get('q'))S.q=p.get('q');
   (p.get('cls')||'').split(',').map(c=>c.endsWith('s')?c:c+'s').filter(c=>CLSVI[c]).forEach(c=>S.cls.add(c));
   (p.get('sub')||'').split(',').filter(Boolean).forEach(x=>S.sub.add(x));
   (p.get('r')||'').split(',').map(Number).filter(r=>[4,5,6].includes(r)).forEach(r=>S.rar.add(r));
-  if(['tier','matrix'].includes(p.get('view')))S.view=p.get('view');}
-function saveURL(){const p=new URLSearchParams();if(S.q.trim())p.set('q',S.q.trim());if(S.cls.size)p.set('cls',[...S.cls].map(c=>c.slice(0,-1)).join(','));if(S.sub.size)p.set('sub',[...S.sub].join(','));if(S.rar.size)p.set('r',[...S.rar].join(','));if(S.view!=='tier')p.set('view',S.view);
+}
+function saveURL(){const p=new URLSearchParams();if(S.q.trim())p.set('q',S.q.trim());if(S.cls.size)p.set('cls',[...S.cls].map(c=>c.slice(0,-1)).join(','));if(S.sub.size)p.set('sub',[...S.sub].join(','));if(S.rar.size)p.set('r',[...S.rar].join(','));
   history.replaceState(history.state,'',(p.toString()?'?'+p:location.pathname)+location.hash)}
 
 function opBtn(o,i){
@@ -906,7 +904,7 @@ function buildSub(){
 chips($('#cls'),[['all','Tất cả'],...CLS.map(([k,l])=>[k,cIco(k)+l])],k=>k==='all'?!S.cls.size:S.cls.has(k),k=>{k==='all'?S.cls.clear():tog(S.cls,k);buildSub()});
 buildSub();
 chips($('#rar'),[['6','6★'],['5','5★'],['4','4★']],k=>S.rar.has(+k),k=>tog(S.rar,+k));
-chips($('#view'),[['tier','Theo tier'],['matrix','Theo class']],k=>S.view===k,k=>{S.view=k;try{localStorage.setItem('ak-view',k)}catch(e){}});
+chips($('#view'),[['tier','Theo tier'],['matrix','Theo class']],k=>S.view===k,k=>{S.view=k});
 $('#q').value=S.q;
 $('#q').oninput=e=>{S.q=e.target.value;render()};
 // giữ chuột và kéo để di chuyển bảng "Theo class" (cảm ứng đã tự cuộn được)
@@ -1134,7 +1132,6 @@ dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
 // đóng hồ sơ bằng ✕, Esc hay bấm nền thì lùi một bước để nút back của trình duyệt khớp
 dlg.addEventListener('close',()=>{backY();if(!NAV&&!SILENT&&(history.state?.op!=null||history.state?.cn))history.back()});
 
-$('#general').innerHTML='<h2>Ghi chú từ nhóm tác giả</h2>'+GENERAL.map(g=>`<div class="note"><small>${esc(g.u)}</small><p>${esc(g.vi||g.x)}</p></div>`).join('');
 
 // tab Phe phái: operator gom theo "fac" trong details.js (mỗi operator một lần, bỏ bản IS trùng), mô tả từ factions.js
 {const mem={},seen=new Set();
@@ -1301,7 +1298,8 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if
 $('#nav').onclick=e=>{const b=e.target.closest('button[data-tab]');if(!b)return;navOpen(false);$('#navcur').textContent=b.textContent;
   document.querySelectorAll('#nav button').forEach(x=>x.classList.toggle('on',x===b));
   document.querySelectorAll('main > section').forEach(s=>s.hidden=s.id!==b.dataset.tab);setHero(b.dataset.tab);window.scrollTo({top:0});
-  if(!NAV)history.pushState({tab:b.dataset.tab},'',location.pathname+location.search);if(b.dataset.tab!=='fac')setBack(null)};
+  // bộ lọc tier list (?q=&cls=…) chỉ giữ trên URL khi đang ở tab Xếp hạng, để tải lại ở tab khác không bị kéo về Xếp hạng
+  if(!NAV)history.pushState({tab:b.dataset.tab},'',location.pathname+(b.dataset.tab==='list'?location.search:''));if(b.dataset.tab!=='fac')setBack(null)};
 // lịch sử trình duyệt: mỗi tab, hồ sơ operator và phe phái là một bước; NAV = đang dựng lại từ lịch sử nên không đẩy bước mới
 let NAV=false,SILENT=false;
 const curTab=()=>$('#nav button.on')?.dataset.tab||'home';
@@ -1314,7 +1312,8 @@ addEventListener('popstate',e=>{const st=e.state||{tab:'home'};NAV=true;
   else if(st.cn)openCN(st.cn);
   else{if(dlg.open)dlg.close();if(st.fac)showFac(st.fac);else setBack(null)}
   NAV=false});
-history.replaceState(history.state||{tab:'home'},'');
+// mở/tải lại trang luôn bắt đầu ở Trang chủ (link chia sẻ có bộ lọc vẫn mở thẳng tab Xếp hạng, xem cuối file)
+history.replaceState({tab:'home'},'');
 // tiêu đề và chữ nền khổng lồ đổi theo tab đang mở
 const HERO={home:['HOME','Arknights','Tier List VN'],ops:['OPS','Danh sách','Operator'],gacha:['HH','Giả lập','Headhunting'],plan:['PLAN','Operator','Planner'],list:['TIER','Bảng xếp hạng','Operator'],fac:['FAC','Phe phái','& vùng đất'],story:['LORE','Cốt truyện','chính tuyến'],about:['INFO','Giới thiệu','& nguồn']};
 function setHero(k){const [g,a,b]=HERO[k]||HERO.ops,h=$('.hero');h.hidden=k==='home';h.dataset.g=g;h.querySelector('h1').innerHTML=`${a}<br><span>${b}</span>`;typeHero();document.title=k==='home'?'Arknights Tier List VN':`${a} ${b} · Arknights Tier List VN`}
@@ -1476,7 +1475,7 @@ const toTop=$('#totop');addEventListener('scroll',()=>{toTop.hidden=scrollY<800}
 $('#nav').addEventListener('click',()=>{fab.hidden=$('#list').hidden;sheet(false)});
 fab.hidden=$('#list').hidden;
 // link chia sẻ có bộ lọc tier list (?q=, ?view=…) thì mở thẳng tab Xếp hạng
-if(/[?&](q|cls|sub|r|view)=/.test(location.search)&&!history.state?.op){NAV=true;goTab('list');NAV=false;history.replaceState({tab:'list'},'')}
+if(/[?&](q|cls|sub|r)=/.test(location.search)&&!history.state?.op){NAV=true;goTab('list');NAV=false;history.replaceState({tab:'list'},'')}
 // 8: đổi sáng/tối
 const isDark=()=>{const t=document.documentElement.dataset.theme;return t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches};
 const applyDk=()=>document.documentElement.classList.toggle('dk',isDark());applyDk();

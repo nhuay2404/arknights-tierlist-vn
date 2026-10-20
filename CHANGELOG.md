@@ -1,6 +1,9 @@
 # Changelog
 
 ## 2026-10-20
+- Bỏ mục "Ghi chú từ nhóm tác giả" ở tab Giới thiệu cùng dữ liệu `general` trong `data.js` (39 KB → 30 KB).
+- Mở hoặc tải lại trang luôn vào **Trang chủ** (trước đây tải lại có thể giữ trạng thái tab cũ). Link chia sẻ có bộ lọc tier list vẫn mở thẳng tab Xếp hạng.
+- Tab Xếp hạng luôn mở ở kiểu **Theo tier** (bảng chia theo tier); không còn nhớ kiểu "Theo class" từ lần trước (kể cả qua URL). Bộ lọc tier list chỉ nằm trên URL khi đang ở tab Xếp hạng, rời tab là gỡ, nên tải lại không bị kéo về Xếp hạng.
 - Bỏ hẳn tab "Mới" và "Lịch sử" cùng dữ liệu đi kèm: ghi chú cập nhật từng operator trong `data.js` (giữ lại loại operator như Gacha/Limited để hiện trong hồ sơ), bản dịch `i18n/notes.vi.*.json`, danh sách mốc thay đổi, CSS liên quan; gỡ khỏi menu (nhóm Xếp hạng chỉ còn Xếp hạng, nhóm Khác chỉ còn Giới thiệu). `data.js` giảm từ 176 KB xuống 39 KB. Trên Trang chủ, khối "Vừa cập nhật" đổi thành **Mới ra Global** (10 operator ra gần nhất theo thứ tự ra mắt), ô lối tắt Mới/Lịch sử thay bằng Gacha. Mục "Ghi chú từ nhóm tác giả" ở tab Giới thiệu giữ nguyên.
 - **Trang chủ làm lại dạng bento**: banner Headhunting đang mở với key art của banner, đếm ngược thời gian còn lại và các operator rate-up; dải số liệu chạy (operator trong game, mục được xếp hạng, số chương truyện, số ảnh minh hoạ); thẻ Cốt truyện lớn có ảnh CG làm bìa và nút đọc tiếp; khối **Đỉnh meta** (operator EX/S+ kèm nhãn hạng, bấm mở hồ sơ); khối **Vừa cập nhật** theo đợt mới nhất; hàng lối tắt có ảnh/biểu tượng cho các mục còn lại. Trên Trang chủ, banner thay cho tiêu đề chữ lớn. Thêm `story_toc.js` (mục lục gọn, ảnh bìa đặt bằng `@cover` trong file truyện) để Trang chủ không phải tải cả truyện.
 - Menu điện thoại **gọn lại**: mỗi nhóm là một hàng chip nằm ngang (`// DỮ LIỆU  Operator · Phe phái · Cốt truyện`), chỉ chiếm khoảng 1/3 màn hình thay vì gần cả màn hình.
