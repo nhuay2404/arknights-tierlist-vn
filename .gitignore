@@ -7,3 +7,4 @@ _build/tx2/
 deploy/
 .claude/
 _build/story_raw/
+_build/__pycache__/

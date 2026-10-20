@@ -1,6 +1,7 @@
 # Changelog
 
 ## 2026-10-20
+- Cốt truyện: thêm **Chương 8 · Ngọn lửa gào thét** (Roaring Flare), trọn 25 màn từ R8-1 đến 5 màn kết EG-1…EG-5: lá thư của Talulah và ký ức ngôi làng tuyết cùng Alina, Rosmontis và đội hộ vệ khiên, Patriot – FrostNova, Ch’en đối mặt “Talulah” trên tháp chỉ huy, Kashchey – Hắc Xà Bất Tử lộ diện, lõi Chernobog dừng lại trước Lungmen, và các phần kết. 55 CG, 126 ảnh nền tự chèn đúng vị trí; ~350 phút đọc.
 - Bỏ mục "Ghi chú từ nhóm tác giả" ở tab Giới thiệu cùng dữ liệu `general` trong `data.js` (39 KB → 30 KB).
 - Mở hoặc tải lại trang luôn vào **Trang chủ** (trước đây tải lại có thể giữ trạng thái tab cũ). Link chia sẻ có bộ lọc tier list vẫn mở thẳng tab Xếp hạng.
 - Tab Xếp hạng luôn mở ở kiểu **Theo tier** (bảng chia theo tier); không còn nhớ kiểu "Theo class" từ lần trước (kể cả qua URL). Bộ lọc tier list chỉ nằm trên URL khi đang ở tab Xếp hạng, rời tab là gỡ, nên tải lại không bị kéo về Xếp hạng.
