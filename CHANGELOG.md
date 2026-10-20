@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-20
+- Bỏ hẳn tab "Mới" và "Lịch sử" cùng dữ liệu đi kèm: ghi chú cập nhật từng operator trong `data.js` (giữ lại loại operator như Gacha/Limited để hiện trong hồ sơ), bản dịch `i18n/notes.vi.*.json`, danh sách mốc thay đổi, CSS liên quan. `data.js` giảm từ 176 KB xuống 39 KB. Mục "Ghi chú từ nhóm tác giả" ở tab Giới thiệu giữ nguyên.
+- Thanh tab dọc trên máy tính: màn thấp (≤ 860px) thì thu gọn khoảng cách, vẫn thiếu chỗ thì cuộn được — trước đây tab cuối (Giới thiệu) bị khuất trên màn 720px.
+- Sửa tiêu đề lớn khi mới vào trang ghi "Bảng xếp hạng" dù đang ở tab Operator; giờ là "Danh sách Operator".
+
 ## 2026-10-18
 - Popup Archetype trình bày lại: tên + class ở đầu, dòng vai trò ngắn in đậm màu nhấn (vd. Hexer — "Gắn debuff, nhân sát thương"), đoạn cách dùng/điểm mạnh, rồi khối TRAIT gốc tách riêng bằng đường kẻ. Viết lại văn phong cả 73 archetype: câu ngắn, gọn, giọng hướng dẫn người chơi. Dưới tên Archetype trong hồ sơ chỉ còn dòng vai trò ngắn. Áp dụng cho popup trong hồ sơ và tooltip chip Subclass ở tier list.
 - Hồ sơ operator: chỉ số theo level — chọn Elite (E0/E1/E2), kéo Level, Trust 0–100% và Potential 1–6, bảng HP/ATK/DEF/RES/Cost/Block/Redeploy/ATK Interval cập nhật ngay (nội suy theo data game, mặc định E2 max như trước). Skill theo level — mỗi skill có nút Lv1…Lv7, M1, M2, M3: SP, SP ban đầu, thời gian và các con số trong mô tả tiếng Việt đổi theo level (khớp 918/919 skill). Tiêu đề "Skill (M3)" đổi thành "Skill".

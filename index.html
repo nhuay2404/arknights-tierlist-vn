@@ -38,6 +38,9 @@ header:after{content:"";position:absolute;right:-1px;top:0;width:3px;height:120p
 .logo i{width:40px;height:40px;display:grid;place-items:center;background:var(--ink);color:var(--accent);font:700 0.9375rem var(--mono);font-style:normal;clip-path:polygon(0 0,100% 0,100% 72%,72% 100%,0 100%)}
 .logo span{writing-mode:vertical-rl;transform:rotate(180deg);margin-top:8px;color:var(--mute)}
 nav{display:flex;flex-direction:column;gap:6px;width:100%}
+/* thanh tab dọc trên máy tính: màn thấp thì gọn lại, vẫn thiếu chỗ thì cuộn */
+@media (min-width:761px){nav{flex:1;min-height:0;overflow-y:auto;scrollbar-width:none}nav::-webkit-scrollbar{display:none}}
+@media (min-width:761px) and (max-height:860px){.bar{gap:14px}.logo span{display:none}nav button{padding:10px 0}}
 nav button{all:unset;cursor:pointer;writing-mode:vertical-rl;transform:rotate(180deg);padding:14px 0;text-align:center;font:600 0.75rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);position:relative}
 nav button:hover{color:var(--ink)}
 nav button.on{color:#111;background:var(--accent)}
@@ -125,24 +128,12 @@ section[hidden]{display:none}
 .card :is(h2,h3){margin:0 0 10px;font:700 1.25rem var(--mono);text-transform:uppercase;letter-spacing:.04em}
 .card :is(h2,h3):before{content:"[ "}.card :is(h2,h3):after{content:" ]"}
 .card p{margin:.5em 0}
-.card :is(p,li),.clamp,.ev p,.note p,.sk p,.tal p{max-width:75ch}
+.card :is(p,li),.note p,.sk p,.tal p{max-width:75ch}
 .card ul{margin:0;padding-left:20px}
 .card li{margin:6px 0}
 .grid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
-.upd{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:10px}
-.upd .av{width:56px;height:56px}
-.upd h3{margin:2px 0;font:800 1.0625rem/1.3 "Be Vietnam Pro",system-ui,sans-serif;text-transform:none;letter-spacing:0}.upd h3:before,.upd h3:after{content:none}
-.ngrp+.ngrp{margin-top:36px}
-.nh{margin:0 0 14px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;font:700 1.5rem var(--mono);text-transform:uppercase;letter-spacing:.04em}
-.nh small{font:600 0.8125rem var(--mono);letter-spacing:.12em;color:var(--mute)}
 .badge{font:700 0.8125rem var(--mono);padding:4px 10px;color:#000;border:1px solid var(--ink);white-space:nowrap}
 .badge.nt{background:#111;color:var(--accent);border-color:#111}
-.timeline{border-left:2px solid var(--ink);margin-left:6px;padding-left:24px}
-.ev{position:relative;margin-bottom:20px}
-.ev:before{content:"";position:absolute;left:-32px;top:5px;width:12px;height:12px;background:var(--accent);border:2px solid var(--ink);transform:rotate(45deg)}
-.ev time{font:700 0.75rem var(--mono);letter-spacing:.1em;background:var(--ink);color:var(--accent);padding:2px 8px}
-.ev p{margin:6px 0 0}
-.clamp{color:var(--text);font-size:0.875rem}
 /* modal */
 /* hồ sơ operator mở toàn màn hình; nội dung giữ khổ đọc 1040px ở giữa */
 dialog{border:0;background:var(--panel);color:var(--text);border-radius:0;padding:0;margin:0;width:100vw;height:100dvh;max-width:none;max-height:none;overscroll-behavior:contain}
@@ -472,7 +463,7 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 /* dark mode: theo hệ thống, hoặc chọn tay qua nút ◐ ở rail (lưu localStorage) */
 @media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1013;--panel:#17181c;--panel2:#1f2126;--line:#2e3138;--text:#ecebe4;--mute:#a6a59d;--ink:#ecebe4;--bg-a:rgba(15,16,19,.92);--grid:rgba(255,255,255,.04);--stripe:#262830;--link:#7cc4ff;--r6:#ff8a3d;--r5:#f0c419;--r4:#c084fc;--r3:#5ab8f5;--r2:#b5e23a;--r1:#b9b9b4;--b6:linear-gradient(120deg,#f2cf63,#d9a521 55%,#e8bb3c);--b5:linear-gradient(120deg,#efe6bf,#ddd09a);--b4:linear-gradient(120deg,#dcc6ff,#b994f5);--b3:linear-gradient(120deg,#c4e8ff,#8fcff5);--b2:linear-gradient(120deg,#ecff9a,#c3ec2a);--b1:linear-gradient(120deg,#d9d9d5,#b9b9b4)}}
 :root[data-theme=dark]{--bg:#0f1013;--panel:#17181c;--panel2:#1f2126;--line:#2e3138;--text:#ecebe4;--mute:#a6a59d;--ink:#ecebe4;--bg-a:rgba(15,16,19,.92);--grid:rgba(255,255,255,.04);--stripe:#262830;--link:#7cc4ff;--r6:#ff8a3d;--r5:#f0c419;--r4:#c084fc;--r3:#5ab8f5;--r2:#b5e23a;--r1:#b9b9b4;--b6:linear-gradient(120deg,#f2cf63,#d9a521 55%,#e8bb3c);--b5:linear-gradient(120deg,#efe6bf,#ddd09a);--b4:linear-gradient(120deg,#dcc6ff,#b994f5);--b3:linear-gradient(120deg,#c4e8ff,#8fcff5);--b2:linear-gradient(120deg,#ecff9a,#c3ec2a);--b1:linear-gradient(120deg,#d9d9d5,#b9b9b4)}
-.dk :is(.tag:not(.gen),.matrix th,.ev time,.mh .x,.logo i,.trait,#totop){background:#000;color:var(--accent)}
+.dk :is(.tag:not(.gen),.matrix th,.mh .x,.logo i,.trait,#totop){background:#000;color:var(--accent)}
 .dk .trait{color:#ecebe4}
 .dk .ptabs button[aria-selected=true],.dk .afile[open] .ai{background:#000;color:var(--accent);border-color:#000}
 .trait b,.sk p b,.tal b{color:#111!important}
@@ -521,17 +512,15 @@ dialog[open]::backdrop{animation:fade .3s ease both}
     <button data-tab="list">Xếp hạng</button>
     <button data-tab="gacha">Gacha</button>
     <button data-tab="plan">Planner</button>
-    <button data-tab="new">Mới</button>
     <button data-tab="fac">Phe phái</button>
-    <button data-tab="log">Lịch sử</button>
     <button data-tab="about">Giới thiệu</button>
   </nav>
   <button id="theme" aria-label="Đổi giao diện sáng/tối" title="Đổi giao diện sáng/tối">◐</button>
 </div></header>
 
 <main class="wrap">
-  <div class="hero" data-g="TIER">
-    <h1>Bảng xếp hạng<br><span>Operator</span></h1>
+  <div class="hero" data-g="OPS">
+    <h1>Danh sách<br><span>Operator</span></h1>
     <p class="stamp">Cập nhật 12/10/2026 · Server Global</p>
   </div>
 
@@ -575,9 +564,7 @@ dialog[open]::backdrop{animation:fade .3s ease both}
     <div class="pgrid"><div id="plist"></div><aside class="ptot card" id="ptot" aria-live="polite"></aside></div>
   </section>
 
-  <section id="new" hidden><div id="newGrid"></div></section>
   <section id="fac" hidden><div id="backbar" hidden><button class="back" onclick="history.back()"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><path d="M15 5l-7 7 7 7"/></svg>Quay lại hồ sơ <span></span></button></div><div id="facBody"></div></section>
-  <section id="log" hidden><div class="card"><div class="timeline" id="timeline"></div></div></section>
   <section id="about" hidden>
     <div class="card">
       <h2>Giả định chung</h2>
@@ -620,17 +607,17 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 <dialog id="dlg"></dialog>
 
 <!-- ?v=: đổi mỗi lần cập nhật data để trình duyệt/CDN không dùng file .js cũ lệch với index.html -->
-<script src="data.js?v=20261018n"></script>
-<script src="details.js?v=20261018n"></script>
-<script src="glossary.js?v=20261018n"></script>
-<script src="factions.js?v=20261018n"></script>
-<script src="roster.js?v=20261018n"></script>
-<script src="skins.js?v=20261018n"></script>
-<script src="mats.js?v=20261018n"></script>
-<script src="subclass.js?v=20261018n"></script>
-<script src="details_x.js?v=20261018n"></script>
-<script src="gacha.js?v=20261018n"></script>
-<script>const KITV='20261018n'</script>
+<script src="data.js?v=20261020a"></script>
+<script src="details.js?v=20261020a"></script>
+<script src="glossary.js?v=20261020a"></script>
+<script src="factions.js?v=20261020a"></script>
+<script src="roster.js?v=20261020a"></script>
+<script src="skins.js?v=20261020a"></script>
+<script src="mats.js?v=20261020a"></script>
+<script src="subclass.js?v=20261020a"></script>
+<script src="details_x.js?v=20261020a"></script>
+<script src="gacha.js?v=20261020a"></script>
+<script>const KITV='20261020a'</script>
 <script>
 const {ops:OPS, general:GENERAL} = window.AK;
 const TIERS=['EX','S+','S','S-','A+','A','A-','B+','B','B-','C+','C','C-','D','F'];
@@ -639,50 +626,6 @@ const CLS=[['Vanguards','Vanguard'],['Guards','Guard'],['Defenders','Defender'],
 const CLSVI=Object.fromEntries(CLS);
 const RC={6:'var(--r6)',5:'var(--r5)',4:'var(--r4)'};
 // Lịch sử thay đổi (dịch từ tab Revisions)
-const LOG=[
-['12/10/2026','Thêm Kal\'tsit·Esperanta, Closure, Crackborne và Viy. Rosmontis (IS), Nymph, Raidian và Texas the Omertosa hạ xuống S-. Mantra lên S.'],
-['14/09/2026','Thêm Zima the Raging Tide, Ukusik và Botani. Elysium hạ một tier xuống A, Matsukiri lên một tier thành A.'],
-['12/08/2026','Thêm Bellone và Ripresa.'],
-['23/07/2026','Sửa lỗi chính tả trong phần cập nhật của Irene.'],
-['13/07/2026','Thêm Wang, Ch\'en the Dawnstreak, Ju, Taraxacum. Młynar và Sakiko xuống S. Entelechia lên A. Shu xuống S+. Yu xuống S. Silence lên B. Papyrus lên C.'],
-['01/06/2026','Thêm Titi, Perfumer the Distilled và Varkáris. Reed the Flame Shadow xuống S-, Eyjafjalla the Hvít Aska xuống A+. Amiya (Guard) lên B-.'],
-['01/05/2026','Thêm Nasti, Cairn và Skybox. Philae xuống B-. Suzuran xuống S-. Bassline và Nearl lên B. Gummy lên B-. Vulcan xuống C. Lutonada xuống C-.'],
-['21/04/2026','Sửa nhãn Supporters bị mất ở lần cập nhật trước.'],
-['13/04/2026','Thêm SilverAsh the Reignfrost, Pramanix the Prerita, Astgenne the Lightchaser, Snow Hunter, Hadiya, Akkord và Gnosis (IS). Ines xuống S+, Hoshiguma the Breacher lên EX, Ho\'olheyak giữ nguyên ở IS, Lappland the Decadenza xuống S, Gitano xuống D.'],
-['06/04/2026','Sửa một số liên kết hỏng trong phần ghi công.'],
-['17/03/2026','Thêm Mantra, Vetochki và Snegurochka.'],
-['06/02/2026','Thêm Sakiko, Mutsumi, Uika, Nyamu và Umiri. Lumen xuống B+, Shining xuống B.'],
-['04/02/2026','Sửa lỗi chính tả tên Waai Fu và mốc thời gian của tháng 1.'],
-['15/01/2026','Sửa năm trong tab Mới cập nhật vẫn ghi 2025.'],
-['14/01/2026','Virtuosa xuống A+ (từ S-).'],
-['14/01/2026','Thêm Hoshiguma the Breacher, Haruka, Matsukiri, Kichisei và Swire the Elegant Wit (IS). Bỏ hàng/cột thừa, làm trang chính rộng hơn.'],
-['08/01/2026','Sửa nhãn thiếu cho Archetto và Mizuki bản không-IS.'],
-['08/12/2025','Thêm Leizi the Thunderbringer, Record Keeper và Raidian. Thêm tier D mới; mọi operator mặc định xuống một tier. Ines, Shu, Wiš\'adel, Exusiai the New Covenant và Tragodia giữ EX. Ulpianus, Yu, Lappland the Decadenza, Mon3tr và Mizuki (IS) giữ S+. Lemuen lên S+. Degenbrecher, Nymph, Reed the Flame Shadow, Suzuran và Ascalon giữ S. Saria giữ S-.'],
-['11/11/2025','Thêm Tragodia, Tippi và Miss.Christine. Yu lên S+.'],
-['10/10/2025','Thêm Exusiai the New Covenant, Lemuen, Sankta Miksaparato, Gracebearer, Archetto (IS) và Mizuki (IS). Crownslayer lên A+.'],
-['07/10/2025','Gravel lên B+, Waai Fu lên B-, Tuye xuống C+.'],
-['15/09/2025','Thêm Mon3tr, Alanna và Windscoot. Đại tu các operator cũ — mặc định thay đổi một tier trừ khi ghi chú. Hạ: Angelina (IS), Texas the Omertosa, Zuo Le, Degenbrecher (2 tier, EX → S), Nymph, Reed the Flame Shadow, Kal\'tsit, Eyjafjalla the Hvít Aska, Virtuosa, Ascalon, Bagpipe, Surtr (2 tier, S+ → S-), Horn, Pozëmka, Typhon, Ch\'en the Holungday, Eyjafjalla, Skadi the Corrupting Heart (2 tier, S+ → S-), Ling (2 tier, S+ → S-), Gladiia, Thorns the Lodestar, Vulpisfoglia, Mountain, Chongyue (2 tier, S → A+), Qiubai (2 tier, S → A+), Nearl the Radiant Knight, Executor the Ex Foedere, Pepe, Penance, Mudrock, Jessica the Liberated, Schwarz, Rosa, Gnosis, Civilight Eterna, Specter the Unchained (2 tier, S → A+), Gavial the Invincible (2 tier, S- → A), Exusiai, Fiammetta, Passenger, Lumen, Stainless, Mizuki, Lee, Blemishine, Ebenholz, Magallan, Lappland, Tequila, La Pluma, Tin Man, Perfumer, Bobbing, Fang the Fire-sharpened, Amiya (Guard), Лето. Lên: Hoederer (S-), Marcille, Greyy the Lightningbearer, Kroos the Keen Glint, Ethan, Amiya (Medic), Sussurro, Purestream, Heidi. Catherine xuống C+ cho đồng bộ với Alanna.'],
-['02/09/2025','Sửa lỗi chính tả tên Sussurro.'],
-['25/08/2025','Thêm Necrass, Wulfenite và Brigid.'],
-['06/08/2025','Thêm Entelechia và Nowell. Executor the Ex Foedere xuống S-, Whisperain xuống B-.'],
-['13/07/2025','Thêm Yu, Blaze the Igniting Spark, Surfer và Xingzhu.'],
-['02/06/2025','Thêm Thorns the Lodestar, Tecno và Rose Salt. Nâng Viviana nhờ Module Delta mới.'],
-['19/05/2025','Vermeil xuống C-, Mr. Nothing lên B+.'],
-['19/05/2025','Cân bằng lại nhóm Sniper 4-5★ vốn thấp hơn các class khác: April, Kroos the Keen Glint và Greyy the Lightningbearer lên A; Firewatch lên A-; Blue Poison và Totter lên B+.'],
-['15/05/2025','Warmy lên C+ vì nay đã có đồng đội Burn.'],
-['14/05/2025','Siege xuống B. Sắp xếp lại cột Vanguard.'],
-['13/05/2025','Hoederer lên A+, Blaze và Thorns xuống A để phản ánh khác biệt về ceiling.'],
-['11/05/2025','Tsukinogi và Verdant lên C- thay vì F: tuy yếu nhưng vẫn có chút công dụng.'],
-['19/04/2025','Thêm Lappland the Decadenza, Vulpisfoglia, Figurino, Crownslayer, Philae, Contrail, Angelina (IS) và Rosmontis (IS).'],
-['14/04/2025','Nymph lên S+ từ S.'],
-['10/04/2025','Cập nhật trang chủ vì Gamepress đã ngừng hoạt động. RIP.'],
-['10/04/2025','Surtr và Ling từ EX xuống S+. Utage lên B-.'],
-['06/04/2025','Thêm Vina Victoria, Bobbing và Catherine.'],
-['05/03/2025','Thêm Marcille, Chilchuck, Laios và Senshi.'],
-['02/02/2025','Ethan lên A+. Thêm Nymph, Mitm và Tin Man.'],
-['14/01/2025','Thêm Firewatch và Qanipalaat bị bỏ sót ở bản đầu.'],
-['09/01/2025','Phiên bản đầu tiên.'],
-];
 
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -892,14 +835,14 @@ function openOp(i){profile(OPS[i],i)}
 // operator ngoài tier list (3★ trở xuống, robot, bản CN…): cùng kiểu hồ sơ, dữ liệu từ details_x.js
 function openCN(id){const a=(window.AKR||[]).find(x=>x[0]===id);if(!a)return;const [,n,r,c,,gl,bn]=a;
   if(!AKD[n]&&window.AKX?.[id])AKD[n]=AKX[id];
-  profile({n,r,c,t:'',img:id,notes:[],x:{gl,bn,id}},-1)}
+  profile({n,r,c,t:'',img:id,x:{gl,bn,id}},-1)}
 let CURO=null;
 function profile(o,i){CUR=i;CURO=o;const rc=`var(--r${o.r})`,d=AKD[o.n];
   // mở hồ sơ là một bước trong lịch sử (nút back đóng lại); ←/→ trong hồ sơ chỉ thay bước hiện tại
   if(!NAV){const st=i>=0?{tab:curTab(),op:i}:{tab:curTab(),cn:o.x.id};if(dlg.open)history.replaceState(st,'');else history.pushState(st,'',location.pathname+location.search)}
   const arch=o.r>=5&&!(o.x&&!o.x.gl),src=o.x&&d?(d.src==='zh'?'CN (tiếng Trung)':'Global (tiếng Anh)'):'';
   dlg.innerHTML=`<div class="mh" style="--rc:${rc}">${av(o,initials(o.n.replace(/\(.*?\)/g,'')))}
-    <div><h2>${esc(o.n.replace(/\s*\(General\)/,''))}</h2><div style="color:var(--mute);font-size:0.875rem;margin-top:4px">${o.t?badge(o.t)+' &nbsp;':''}<span style="color:${rc}">${'★'.repeat(o.r)}</span> · ${cIco(o.c)} ${esc(CLSVI[o.c])}${o.notes[0]?.ty?' · '+esc(tv(o.notes[0].ty)):''}${o.x&&!o.x.gl?` · chưa ra Global · banner CN thứ ${o.x.bn}`:''}</div></div>
+    <div><h2>${esc(o.n.replace(/\s*\(General\)/,''))}</h2><div style="color:var(--mute);font-size:0.875rem;margin-top:4px">${o.t?badge(o.t)+' &nbsp;':''}<span style="color:${rc}">${'★'.repeat(o.r)}</span> · ${cIco(o.c)} ${esc(CLSVI[o.c])}${o.ty?' · '+esc(tv(o.ty)):''}${o.x&&!o.x.gl?` · chưa ra Global · banner CN thứ ${o.x.bn}`:''}</div></div>
     <button class="x" aria-label="Đóng" onclick="dlg.close()">✕</button>
     ${arch?`<div class="ptabs" role="tablist" aria-label="Nội dung hồ sơ">${[['kit','Chỉ số & Skill'],['arch','Hồ sơ lưu trữ']].map(([k,l])=>`<button role="tab" id="t-${k}" data-pt="${k}" aria-controls="p-${k}" aria-selected="${PTAB===k}">${l}</button>`).join('')}</div>`:''}</div><div id="tip" role="tooltip" hidden></div>
     <div class="mb" id="p-kit" role="tabpanel" aria-labelledby="t-kit">${src?`<p class="mnone" style="margin:0 0 14px">Operator ngoài tier list, chưa có bản dịch tiếng Việt: mô tả giữ nguyên bản ${src}.</p>`:''}${d?detail(o):`<h3 class="sec">Nguyên liệu nâng cấp</h3>${matHTML(o.img)}`}</div>${arch?`<div class="mb arch" id="p-arch" role="tabpanel" aria-labelledby="t-arch" hidden></div>`:''}`;
@@ -1008,16 +951,6 @@ dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
 // đóng hồ sơ bằng ✕, Esc hay bấm nền thì lùi một bước để nút back của trình duyệt khớp
 dlg.addEventListener('close',()=>{backY();if(!NAV&&!SILENT&&(history.state?.op!=null||history.state?.cn))history.back()});
 
-// newest additions
-const newest=[];OPS.forEach((o,i)=>o.notes.forEach(n=>newest.push({o,i,n})));
-// mỗi đợt cập nhật một nhóm, mới nhất lên đầu ("2026/10 - Episode 17 ..." → tháng 10/2026 + tên sự kiện)
-const months=[...new Set(newest.map(x=>x.n.u))].sort((a,b)=>b.slice(0,7).localeCompare(a.slice(0,7)));
-const mHead=m=>{const [,y,mo,ev]=m.match(/^(\d{4})\/(\d{2})\s*-?\s*(.*)$/)||[,'','',m];return y?`<span>Tháng ${+mo}/${y}</span><small>${esc(ev)}</small>`:esc(m)};
-$('#newGrid').innerHTML=months.map(m=>`<section class="ngrp"><h2 class="nh">${mHead(m)}</h2><div class="grid2">`+newest.filter(x=>x.n.u===m).map(({o,i,n})=>`<div class="card" style="margin:0">
-  <div class="upd" style="--rc:${RC[o.r]}"><div style="display:flex;gap:14px;align-items:center">${av(o,initials(o.n.replace(/\(.*?\)/g,'')))}<div><h3>${esc(o.n.replace(/\s*\(General\)/,''))}</h3><small style="color:${RC[o.r]}">${'★'.repeat(o.r)}</small> <small style="color:var(--mute)">· ${esc(CLSVI[o.c])}</small></div></div>${badge(gv(n.g))}</div>
-  ${n.vi||n.x?`<div class="clamp">${esc(n.vi||n.x)}</div>`:''}<button class="chip" style="margin-top:12px" onclick="openOp(${i})">Xem hồ sơ operator</button></div>`).join('')+'</div></section>').join('');
-
-$('#timeline').innerHTML=LOG.map(([d,t])=>`<div class="ev"><time>${d}</time><p>${esc(t)}</p></div>`).join('');
 $('#general').innerHTML='<h2>Ghi chú từ nhóm tác giả</h2>'+GENERAL.map(g=>`<div class="note"><small>${esc(g.u)}</small><p>${esc(g.vi||g.x)}</p></div>`).join('');
 
 // tab Phe phái: operator gom theo "fac" trong details.js (mỗi operator một lần, bỏ bản IS trùng), mô tả từ factions.js
@@ -1200,7 +1133,7 @@ addEventListener('popstate',e=>{const st=e.state||{tab:'ops'};NAV=true;
   NAV=false});
 history.replaceState(history.state||{tab:'ops'},'');
 // tiêu đề và chữ nền khổng lồ đổi theo tab đang mở
-const HERO={ops:['OPS','Danh sách','Operator'],gacha:['HH','Giả lập','Headhunting'],plan:['PLAN','Operator','Planner'],list:['TIER','Bảng xếp hạng','Operator'],new:['NEW','Operator','mới về'],fac:['FAC','Phe phái','& vùng đất'],log:['LOG','Lịch sử','thay đổi'],about:['INFO','Giới thiệu','& nguồn']};
+const HERO={ops:['OPS','Danh sách','Operator'],gacha:['HH','Giả lập','Headhunting'],plan:['PLAN','Operator','Planner'],list:['TIER','Bảng xếp hạng','Operator'],fac:['FAC','Phe phái','& vùng đất'],about:['INFO','Giới thiệu','& nguồn']};
 function setHero(k){const [g,a,b]=HERO[k]||HERO.ops,h=$('.hero');h.dataset.g=g;h.querySelector('h1').innerHTML=`${a}<br><span>${b}</span>`;typeHero();document.title=k==='ops'?'Arknights Tier List VN':`${a} ${b} · Arknights Tier List VN`}
 render();
 // 4: bảng lọc nổi trên mobile
