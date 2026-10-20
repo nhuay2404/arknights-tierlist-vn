@@ -3,6 +3,7 @@
 @title Chạy giữa lửa cháy
 @en Burning Run
 @sum Một nomadic city bỏ hoang xuất hiện gần Lungmen. Đội trinh sát của Rhodes Island lạc vào lãnh địa của Mephisto và Biệt đội Yeti, còn Amiya phải học cách bước tiếp với nỗi day dứt sau cái chết của Misha.
+@cover avg_40_2
 
 ## 4-1 | An ủi
 

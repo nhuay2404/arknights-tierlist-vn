@@ -3,6 +3,7 @@
 @title Hoại tử cục bộ
 @en Partial Necrosis
 @sum Trận quyết chiến ở Lungmen. Mephisto biến đồng đội thành bầy quái vật, những bóng áo mưa đen của Lungmen lặng lẽ thanh trừng khu ổ chuột, Faust chọn con đường cuối cùng, còn Doctor rơi xuống tầng sâu nhất của thành phố cùng FrostNova.
+@cover avg_6_10_2
 
 ## 6-1 | Bế tắc
 

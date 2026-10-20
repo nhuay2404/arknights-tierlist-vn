@@ -3,6 +3,7 @@
 @title Những trái tim chia lìa
 @en Separated Hearts
 @sum Rhodes Island đến Lungmen, ký một thỏa thuận đầy toan tính với Wei Yenwu. Nhiệm vụ đầu tiên: tìm một cô gái Ursus tên Misha giữa khu ổ chuột, trước khi Reunion tìm thấy cô ấy.
+@cover bg_1_firstcontact
 
 ## 2-1 | Hướng về Lungmen
 

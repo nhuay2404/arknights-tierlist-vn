@@ -3,6 +3,7 @@
 @title Cú sốc buốt nhói
 @en Stinging Shock
 @sum Misha bị Reunion bắt đi. Rhodes Island và L.G.D. truy đuổi đến một khu mỏ bỏ hoang, nơi Amiya phải đối diện với câu hỏi đau đớn nhất: người Infected có buộc phải giết lẫn nhau không?
+@cover bg_1_lastattack
 
 ## 3-1 | Gặp gỡ
 

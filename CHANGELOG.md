@@ -1,6 +1,8 @@
 # Changelog
 
 ## 2026-10-20
+- **Trang chủ làm lại dạng bento**: banner Headhunting đang mở với key art của banner, đếm ngược thời gian còn lại và các operator rate-up; dải số liệu chạy (operator trong game, mục được xếp hạng, số chương truyện, số ảnh minh hoạ); thẻ Cốt truyện lớn có ảnh CG làm bìa và nút đọc tiếp; khối **Đỉnh meta** (operator EX/S+ kèm nhãn hạng, bấm mở hồ sơ); khối **Vừa cập nhật** theo đợt mới nhất; hàng lối tắt có ảnh/biểu tượng cho các mục còn lại. Trên Trang chủ, banner thay cho tiêu đề chữ lớn. Thêm `story_toc.js` (mục lục gọn, ảnh bìa đặt bằng `@cover` trong file truyện) để Trang chủ không phải tải cả truyện.
+- Menu điện thoại **gọn lại**: mỗi nhóm là một hàng chip nằm ngang (`// DỮ LIỆU  Operator · Phe phái · Cốt truyện`), chỉ chiếm khoảng 1/3 màn hình thay vì gần cả màn hình.
 - **Điều hướng mới**: thêm tab **Trang chủ** làm trang mặc định, có thẻ lối vào từng mục kèm mô tả ngắn và nút “Đọc tiếp” cốt truyện nếu đang đọc dở. Các tab còn lại gom thành 4 nhóm: **Dữ liệu** (Operator, Phe phái, Cốt truyện) · **Xếp hạng** (Xếp hạng, Mới) · **Công cụ** (Gacha, Planner) · **Khác** (Lịch sử, Giới thiệu).
 - Điện thoại: bỏ thanh tab kéo ngang, thay bằng nút **☰ + tên tab đang mở**. Menu là **bảng ô lưới thả xuống ngay dưới thanh đầu trang** theo phong cách riêng của trang (nền kẻ ô, ô đánh số 01–10, nhãn nhóm `// DỮ LIỆU`, ô đang mở tô màu nhấn kèm bóng khối, nút ☰ chuyển thành ✕), không dùng kiểu ngăn kéo danh sách trượt từ cạnh trái. Đóng bằng chạm ra ngoài hoặc Esc.
 - Máy tính: rail dọc dùng nhãn ngang 2 dòng và vạch ngăn giữa các nhóm nên không còn bị tràn ở màn thấp; bấm logo **AK** để về Trang chủ.

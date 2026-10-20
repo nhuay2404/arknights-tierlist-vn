@@ -1,7 +1,7 @@
 """Truyện chữ cốt truyện chính (i18n/story/main_XX.txt) -> story.js cho tab Cốt truyện.
 Dùng: python _build/build_story.py
 Định dạng nguồn:
-  @id / @no / @title / @en / @sum   thông tin chương (đầu file)
+  @id / @no / @title / @en / @sum   thông tin chương (đầu file); @cover avg_X_Y = ảnh bìa ở Trang chủ
   ## <mã màn> | <tên cảnh>           mở một cảnh mới
   đoạn văn cách nhau bằng dòng trống; *** = ngắt cảnh; *chữ* = in nghiêng
   [cg:avg_X_Y] / [bg:bg_xxx]        (một dòng riêng) đặt tay ảnh CG / dải ảnh nền tại đúng chỗ đó;
@@ -97,5 +97,9 @@ if __name__ == '__main__':
 
     words = sum(len(p.split()) for c in chapters for s in c['secs'] for p in s['p'] if not p.startswith('@'))
     imgs = sum(p.startswith('@') for c in chapters for s in c['secs'] for p in s['p'])
+    # mục lục gọn cho Trang chủ (không phải tải cả story.js): số chương, tên, ảnh bìa = CG đầu tiên của chương
+    toc = [{'no': c['no'], 'title': c['title'], 'n': len(c['secs']),
+            'cover': c.get('cover') or next((p[4:] for s in c['secs'] for p in s['p'] if p.startswith('@cg:')), None)} for c in chapters]
+    open('story_toc.js', 'w', encoding='utf-8').write('window.AKST=' + json.dumps({'ch': toc, 'img': imgs}, ensure_ascii=False, separators=(',', ':')) + ';\n')
     open('story.js', 'w', encoding='utf-8').write('window.AKS=' + json.dumps(chapters, ensure_ascii=False, separators=(',', ':')) + ';\n')
     print('story.js:', len(chapters), 'chương,', sum(len(c['secs']) for c in chapters), 'cảnh,', words, 'chữ,', imgs, 'ảnh chèn')

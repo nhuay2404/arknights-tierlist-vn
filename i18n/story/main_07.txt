@@ -3,6 +3,7 @@
 @title Sự ra đời của bi kịch
 @en The Birth of Tragedy
 @sum Lõi đô thị Chernobog lao về phía Lungmen. W phản bội Talulah, Ch’en cắt đứt với Wei Yenwu để một mình lên đường, còn Rhodes Island lặng lẽ xâm nhập lõi đô thị, nơi Patriot và những bí mật của Talulah đang chờ.
+@cover avg_7_16
 
 ## 7-1 | Ba mươi hai giờ
 
