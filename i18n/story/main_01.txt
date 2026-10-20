@@ -10,6 +10,8 @@
 
 “…Giá mà chỉ mình cậu thấy,” Dobermann đáp. “Chúng ta vốn chẳng có nhiều thời gian.”
 
+[cg:avg_9_2]
+
 Đám mây trên đầu không còn là một vệt sương đen mơ hồ như trước nữa. Nó đã có hình hài, những đường viền sắc lẹm như vết dao trên nền trời. Dobermann nhìn nó, cau mày như nhìn một kẻ thù không thể với tới.
 
 “Tôi không thích cảm giác nhìn nó thành hình trên đầu mình. Điềm gở. Tệ hơn nữa, đám Reunion có thể đang rình rập ở mọi ngóc ngách. Mà nói thế có khi còn là dè dặt.”
@@ -63,6 +65,8 @@ Dobermann lắc đầu, nhưng khóe môi cô dịu đi một chút. “Dù sao 
 “Không thể trách họ được,” Ace nói.
 
 “Đội trưởng…”
+
+[cg:bg_0_ori]
 
 “Người Infected rất khó tin ai. Đã chịu đựng bao nhiêu khổ cực, ai có thể trách họ trở nên chai sạn và cố chấp?”
 
@@ -546,6 +550,8 @@ Rồi dừng lại.
 
 Amiya đứng giữa ngọn lửa và mọi người, hai tay dang rộng. Quanh cô bé, một thứ ánh sáng đen sẫm như mực trào dâng, cuộn lại thành một bức tường, chặn đứng biển lửa.
 
+[cg:bg_1_reflect]
+
 “Ngươi sẽ không làm hại họ,” Amiya nói. “Ta sẽ không bao giờ… cho phép ngươi làm điều đó!”
 
 Talulah nhướng mày. “—Ồ?”
@@ -623,6 +629,8 @@ Ace không đáp lời cô bé. Ông ta quay sang Doctor, ánh mắt bình thả
 “Ta đã phá được vòng vây của Reunion!”
 
 “Nhưng… họ…” Nearl ngoái lại nhìn quảng trường đỏ rực sau lưng, giọng vỡ vụn. “…Tôi… Aaaagh…”
+
+[cg:avg_11_2]
 
 “Suỵt…” Dobermann giữ chặt vai cô. “…Đừng để Amiya nghe thấy.”
 

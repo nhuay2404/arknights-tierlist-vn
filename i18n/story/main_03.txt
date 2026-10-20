@@ -98,6 +98,8 @@ Amiya cắn môi. “…Rõ.”
 
 Trong phòng thẩm vấn, một người Infected đeo mặt nạ ngồi im như tượng.
 
+[cg:avg_21_1]
+
 “Cái nỏ này trông quen không?”
 
 Im lặng.
@@ -588,11 +590,15 @@ Hoshiguma lao tới, chiếc khiên khổng lồ cắm phập xuống cát. Từ
 
 “Không… Khôôông—!” Amiya hét lên. “Không được—— Ta sẽ không để ngươi làm hại Doctor——!!”
 
+[cg:bg_1_reflect]
+
 Một luồng sáng đen bùng lên.
 
 Rồi tất cả im lặng.
 
 Khi cát bụi lắng xuống, Skullshatterer đang quỳ giữa một hố sâu, máu chảy ra từ dưới lớp mặt nạ đã nứt. Amiya đứng trước mặt hắn, bàn tay vẫn còn giơ lên, những sợi sáng đen còn quấn quanh ngón tay như khói.
+
+[cg:bg_1_lastbreath]
 
 “Khụ khụ…” Hắn ngẩng lên. “Ngươi… mạnh thật… Nhưng… nhìn ngươi xem… Ngươi mạnh như vậy… Khụ… Đau quá… Dù có sức mạnh như thế… ngươi vẫn… máu lạnh… nhìn đồng loại Infected của mình… Ta không thể… tha thứ… Ta không thể tha thứ cho loại người như ngươi…”
 
@@ -731,6 +737,8 @@ Một tia sáng trắng nổ tung. Khi mắt mọi người hồi lại, W đã 
 “…A lô?”
 
 ***
+
+[cg:bg_1_call]
 
 “Có phải là…” Một giọng nói quen thuộc, nhưng khàn đặc, như đã khóc rất lâu. “Amiya…?”
 
@@ -1153,6 +1161,8 @@ Khi tất cả đã kết thúc, đường hầm chìm vào một sự im lặng
 “Amiya.” Ch’en đứng trước mặt cô bé, trên tay là một chiếc mặt nạ trắng nứt vỡ. “…Kết thúc rồi.”
 
 Amiya không trả lời.
+
+[cg:bg_0_coma]
 
 “Con người luôn có cách vượt quá sự mong đợi của em,” Ch’en nói. “Nhất là khi nói đến người Infected. Quyền lực sinh ra điên loạn, dục vọng sinh ra trụy lạc. Chúng là những khối u, gặm mòn mọi điều tốt đẹp trên thế giới này.”
 

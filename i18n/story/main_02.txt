@@ -619,6 +619,8 @@ Giữa đám Reunion, một người đàn ông cao lớn bước ra. Mặt nạ
 
 Misha đứng sững. Người đàn ông tên Skullshatterer đang nhìn cô. Chỉ nhìn cô thôi, như thể giữa trận chiến hỗn loạn này, ngoài cô ra chẳng có ai khác tồn tại.
 
+[cg:bg_1_firstcontact]
+
 “Aa… Ai… ai vậy…”
 
 “…Cuối cùng…” Skullshatterer nói, giọng khàn đặc sau lớp mặt nạ. “Tôi… Cuối cùng tôi… đã tìm thấy cô.”

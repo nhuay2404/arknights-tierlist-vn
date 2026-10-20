@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-10-20
+- Cốt truyện: **sửa vị trí ảnh minh hoạ** bị lệch so với diễn biến. Thay cách chia theo tỉ lệ bằng thuật toán khớp từng dòng kịch bản gốc với từng đoạn văn tiếng Việt (theo tên nhân vật, con số, người nói); toàn bộ 104 CG được rà lại bằng tay, 54 ảnh lệch được ghim đúng chỗ bằng dấu `[cg:…]` trong file truyện (vd. tấm ảnh hai chị em ở 5-4, khoảnh khắc Patriot dừng tay ở 7-18). Dải ảnh bối cảnh ở chỗ ngắt cảnh cũng đổi theo vị trí đã khớp.
+
 ## 2026-10-19
 - Cốt truyện có **ảnh minh hoạ**: mỗi cảnh mở bằng banner ảnh nền trong game, 188 ảnh CG và dải bối cảnh được chèn đúng vị trí tương ứng với kịch bản gốc (bấm CG để phóng to), kèm hàng chân dung nhân vật xuất hiện trong cảnh (avatar operator / sprite NPC). Script mới `_build/build_story_media.py` sinh `i18n/story/media.json`.
 - Cốt truyện có thêm **công cụ đọc**: thanh tiến độ trên đầu trang, nhớ vị trí và nút “Đọc tiếp”, đánh dấu ✓ cảnh/chương đã đọc trong mục lục, thời gian đọc ước tính, bảng **Aa Tuỳ chỉnh** (cỡ chữ, phông có chân / không chân, giãn dòng, nền Giấy cũ / Ban đêm, bật/tắt ảnh để tiết kiệm dữ liệu), **Chế độ tập trung**, ô chọn cảnh trên điện thoại, phím ← → đổi chương.

@@ -20,7 +20,11 @@
 
 Người phụ nữ tóc trắng đứng giữa bóng tối, hơi thở bốc thành khói. Sau lưng cô ta là những cột thép khổng lồ đỡ lấy cả một thành phố.
 
+[cg:avg_6_1]
+
 “Giờ thì, chúng ta phải chiến đấu,” FrostNova nói. “Nếu ngươi đánh bại được ta, nghĩa là sẽ có vài người được sống sót—”
+
+[cg:avg_6_2]
 
 “Ta sẵn sàng gia nhập Rhodes Island. Ta sẵn sàng cùng các ngươi chiến đấu chống lại kẻ thù của người Infected, theo cách của các ngươi.”
 
@@ -527,6 +531,8 @@ Bầy quái vật rú lên, những tiếng gào hỗn loạn chói tai.
 “Cả Lungmen là khu vườn của các ngươi! Đi đi, ngay, truyền sự sống trong các ngươi cho mọi người! Đi, đi, đi!”
 
 Và bầy quái vật lao đi. Không phải về phía L.G.D.
+
+[cg:avg_6_7]
 
 “Hả? Cái gì?! Chuyện gì vậy?”
 
@@ -1822,6 +1828,8 @@ Anh ngắm, lần cuối cùng.
 
 ***
 
+[cg:avg_6_13]
+
 “…Anh ta ngừng khóc rồi,” một Nỏ Thủ Bóng Ma nói khẽ.
 
 Mephisto ngồi bất động giữa họ, đôi mắt trống rỗng nhìn vào khoảng không.
@@ -2097,6 +2105,8 @@ Amiya im lặng.
 “Em không nghe được gì vì tiếng gió cả. Tắt bộ đàm đi!” Amiya quay sang mọi người. “Mọi người… di chuyển hỗ trợ Blaze.” Rồi cô bé quay sang Doctor, hạ giọng. “Doctor, dù chị ấy nói gì… cứ gật đầu là được.”
 
 ***
+
+[cg:avg_6_11]
 
 “Nó thả thứ gì đó xuống…”
 
@@ -3339,6 +3349,8 @@ Một quãng lặng dài. Rồi FrostNova lên tiếng, như đang nói với b�
 
 “Một đội du kích đến.”
 
+[cg:avg_6_20]
+
 “Đó là đội của Buldrokkas’tee. Mọi tên lính Ursus canh giữ người Infected trên lãnh nguyên phía bắc đều có những giấc mơ, và đội này là cơn ác mộng tồi tệ nhất của chúng.”
 
 “Cô có vẻ… tự hào về họ.”
@@ -4400,7 +4412,11 @@ Amiya nhìn sang Doctor.
 
 “Doctor…” Amiya lau nước mắt. “…Vâng.” Cô bé quay lại, và giọng cô bé không còn run nữa. “‘Nếu phải chiến đấu, thì chiến đấu đến cùng.’ Doctor, chúng ta sẽ chiến đấu với FrostNova. Chỉ một bên bước ra khỏi đây.”
 
+[cg:avg_6_1]
+
 “Đúng vậy,” FrostNova nói. “Giờ ngươi sẽ… chiến đấu với ta. Chỉ một trong hai ta rời đi. Nếu ngươi đánh bại được ta, nghĩa là sẽ có vài người được sống sót— Ta sẵn sàng gia nhập Rhodes Island. Ta sẵn sàng cùng các ngươi chiến đấu chống lại kẻ thù của người Infected, theo cách của các ngươi. Đây là gánh nặng ta phải mang.”
+
+[cg:avg_6_2]
 
 “Tôi mong cô giữ lời,” Doctor nói.
 
@@ -4462,6 +4478,8 @@ Amiya im lặng. Rồi cô bé quay sang. “Doctor…”
 
 Khi tiếng bước chân của Amiya đã xa, FrostNova khẽ cười.
 
+[cg:avg_6_10]
+
 “Một con thỏ… ngây thơ thật. Giống Talulah hồi đó. Rất giống. Được thấy một người như thế trước khi chết, một người quyết tâm thực hiện lý tưởng của mình đến thế…”
 
 “Còn gánh nặng cô phải mang thì sao?” Doctor hỏi. “Chẳng phải cô đã hứa sẽ gia nhập Rhodes Island sao?”
@@ -4511,6 +4529,8 @@ Doctor khựng lại. “Ngón tay cô… ấm?”
 “Ta có thật sự xứng đáng không?”
 
 “Nếu cô cứ thế chết đi, ở đây và bây giờ, cô sẽ không có cơ hội sửa chữa những sai lầm của mình.”
+
+[cg:avg_6_10_2]
 
 “…Thật bất lịch sự nếu không trả lời.” FrostNova mỉm cười. “Nói với Amiya, Doctor… Trên thế giới này, một người đơn độc chẳng có giá trị gì. Nhưng cô ấy tuyệt đối không đơn độc. Từ giờ trở đi, ta ở bên các ngươi. Cả hai người.”
 
@@ -4879,6 +4899,8 @@ Kal’tsit đứng ở cửa, mặt không biểu cảm.
 Wei Yenwu im lặng một lúc. “Được rồi, bác sĩ Kal’tsit. Mời cô.”
 
 “Chỉ huy tối cao của địch không có mặt khi chúng ta quét sạch Reunion ở Lungmen,” Kal’tsit nói. “Đơn giản là vì cô ta đang ở Chernobog. Cô ta đã theo dõi chúng ta, hoặc bình thản, hoặc vô cùng lo lắng… Nhưng chúng ta chẳng hề để ý đến cô ta. Và giờ, một phần của Chernobog, chính xác là phần lõi của nó… đang tiến về phía Lungmen. Ba mươi sáu giờ nữa, lõi đô thị của Chernobog sẽ va chạm với Lungmen.”
+
+[cg:avg_6_12]
 
 “Chuyện vặt thôi,” Wei Yenwu nói. “Lungmen có cách phòng thủ trước nomadic city và chiến hạm. Một cái lõi đô thị cỏn con chẳng có gì đáng lo. Thậm chí chúng ta còn không cần phải…”
 

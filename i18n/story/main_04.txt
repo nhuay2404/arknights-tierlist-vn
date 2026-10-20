@@ -403,6 +403,8 @@ Giọng nói tắt lịm. Chỉ còn tiếng mưa.
 
 “…Hả?”
 
+[cg:avg_31_1]
+
 Ở cuối con hẻm, dưới một mái hiên tôn thủng lỗ chỗ, có một bé gái đang đứng trước một người phụ nữ cao lớn, chìa ra một vật nhỏ.
 
 “Có một chị từng nói với em là những con búp bê này sẽ không linh nghiệm nếu không tự tay làm. Nên em tặng chị cái này!”
@@ -424,6 +426,8 @@ Ch’en không nói gì. Amiya cũng không nói gì. Mưa rơi giữa hai ngư�
 “Không phải việc của cô.” Ch’en nhét con búp bê vào túi áo, quay lưng. “Đây là chuyện của Lungmen. Tôi sẽ tự lo.”
 
 Amiya đứng nhìn theo bóng lưng ấy biến mất vào màn mưa.
+
+[cg:avg_31_3]
 
 *Cô Ch’en… Đây là lần đầu tiên… em thấy ánh mắt đó của cô.*
 
@@ -1089,6 +1093,8 @@ Giọng cậu ta trở nên mơ màng, như một diễn viên đang đọc đ�
 
 “Giờ nhìn lại… Ngay từ đầu chúng ta đã định chiếm Chernobog… Chúng ta đã chờ lâu lắm, lâu lắm… và cuối cùng thời khắc của chúng ta đã đến… Khoảnh khắc chúng ta trả thù Ursus! Trả thù những kẻ đã ngược đãi người Infected chúng ta!”
 
+[cg:bg_0_guard]
+
 “Nhưng còn những kẻ ở thành phố phụ này thì sao? Chúng bỏ chạy. Phản ứng khá nhanh đấy. Chạy trước khi chúng ta kịp ra tay. Tự tách mình ra, rồi chạy nhanh nhất có thể— Nhưng chúng mong chạy đến đâu? Đồng chí của chúng ta đã thâm nhập mọi quận từ lâu, chờ đợi cơ hội. Cuối cùng, chúng ta đuổi kịp chúng, và ban cho chúng hình phạt xứng đáng.”
 
 “Những kẻ hèn nhát, những kẻ gây tội ác ấy, chúng ta nên làm gì với chúng? Đơn giản thôi — chúng ta biến chúng thành tấm gương! Một lời tuyên bố rằng mọi bất công với người Infected sẽ bị thanh trừng… Phải, đó là biểu tượng của Reunion Movement… Hãy để chúng biến thành những hình nộm kinh hoàng, từng kẻ một!”
@@ -1487,6 +1493,8 @@ Từ bóng tối sau lưng cô ta, một giọng nói trầm và nặng như đ�
 
 “Chậc.”
 
+[cg:avg_40_3]
+
 “Cẩn thận. Cơ thể cô không được tốt lắm.”
 
 “…Ta không cần ông nhắc.” FrostNova quay lưng. “Ông cứ làm việc của ông đi, lão già. Ta sẽ đuổi theo Rhodes Island. Phải loại bỏ chúng trước. Chỉ khi đó, chúng ta mới có thể… tiến đến Lungmen.”
@@ -1509,6 +1517,8 @@ Bóng người khổng lồ phía sau không đáp.
 
 “…Chuyện gì vậy?!”
 
+[cg:avg_40_4]
+
 “…Tôi đã an toàn. Nhưng…” Một quãng lặng dài. “…Reunion đã chiếm một cơ sở quan trọng của chúng tôi, và đang cưỡng ép mở một lối đi giữa khu ổ chuột và nội thành.”
 
 “Amiya…”
@@ -1516,6 +1526,8 @@ Bóng người khổng lồ phía sau không đáp.
 “Lungmen… đang gặp nguy.”
 
 ***
+
+[cg:item_tll]
 
 Ở một nơi rất xa, Mephisto đang nói vào thiết bị liên lạc, giọng ngọt như mật.
 

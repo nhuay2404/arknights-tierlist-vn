@@ -438,6 +438,8 @@ Từ thiết bị liên lạc, một giọng nói yếu ớt vang lên. “Cô C
 
 Ch’en tìm thấy anh ta sau một đống thùng gỗ. Một người đàn ông trung niên, quần áo đẫm máu, ba mũi tên còn cắm trên người. Đôi mắt anh ta bị băng một mảnh vải bẩn.
 
+[cg:bg_5_3end1]
+
 “Vết thương đó… mắt anh bị sao vậy?”
 
 “Tôi không cẩn thận, trúng Arts. Đừng bận tâm, giờ chẳng còn quan trọng nữa. Cái này… khụ… cho cô.”
@@ -503,6 +505,8 @@ Ch’en tìm thấy anh ta sau một đống thùng gỗ. Một người đàn �
 “Cô Ch’en, lẽ ra cô phải nói với tôi sớm hơn chứ.”
 
 “Cô ấy chọn không lên tiếng,” Ch’en nói.
+
+[cg:bg_5_3end2]
 
 “Đại ca, tôi làm tốt chứ?”
 
@@ -592,6 +596,8 @@ Họ nằm trên một mái nhà, nhìn xuống một dãy biệt thự sang tr�
 
 “Đã bắt hết thành viên Reunion. Không ai biết gì về chỉ thị cụ thể…” Hoshiguma ngừng lại. “Ch’en? Cô đang nhìn gì mà say sưa thế?”
 
+[cg:avg_5_4_door]
+
 Ch’en đứng trước cánh cổng sắt của một tòa biệt thự lớn, mắt nhìn lên tấm biển tên phố đã bạc màu.
 
 “Đây chẳng phải từng là đường Đại Học sao?”
@@ -666,6 +672,8 @@ Có những câu nói vọng về từ rất xa, từ những năm tháng cô ta
 *Một ngày nào đó, tất cả các người sẽ hiểu. Nếu các người ghét ta, thì cứ việc. Vì ta cũng ghét các người. Và đó là điều nên thế.*
 
 “Đây rồi.”
+
+[cg:avg_5_photo]
 
 Một tấm ảnh nhỏ, mép đã quăn, màu đã phai. Hai cô bé đứng cạnh nhau, nắm tay nhau cười rạng rỡ trước ống kính.
 
@@ -806,6 +814,8 @@ Một nhân viên L.G.D. chạy tới. “Thưa thanh tra Hoshiguma! Đây là s
 “…!”
 
 “Ch’en! Lại đây! Nấp sau khiên của tôi!!”
+
+[cg:avg_5_5_fall_front]
 
 “Hả? Dưới chân tôi?”
 
@@ -1047,6 +1057,8 @@ Ch’en im lặng một lúc.
 
 “Rõ, thưa cô!”
 
+[cg:avg_5_7_1]
+
 “Đi đường thoát hiểm này. Dù ít dùng, giờ nó sẽ có ích. Cầu thang này dẫn thẳng lên sân thượng. Các cậu kiểm soát tầng trên cùng, dùng lợi thế tầm nhìn yểm trợ tôi. Tôi sẽ lên thẳng sân thượng, ổn định tình hình rồi hội quân với các cậu.”
 
 “Cô Ch’en, cô thật sự đi một mình sao? Dù tình hình thế nào, tôi chắc bọn tôi giúp được.”
@@ -1091,6 +1103,8 @@ Gió đêm thổi lồng lộng trên sân thượng. Giữa những ăng-ten v�
 
 Một mũi nỏ nổ tung ngay sau lưng cô ta. Một nhân viên L.G.D. hét lên, ngã lăn.
 
+[cg:avg_5_shot]
+
 “Sniper của Reunion…” *Mình đã chuẩn bị cả cho đòn tầm xa, vậy mà sao hắn mang được hỏa lực lớn đến thế…?* “Từng đó không cứu được mạng ngươi đâu. Ngươi sẽ chết trước khi sniper của ngươi bắn trúng ta.” Rồi cô ta khựng lại, nhìn kỹ bóng người mang nỏ khổng lồ trên một bệ cao. “…Khoan. Ngươi từng bị L.G.D. bắt phải không?”
 
 Faust không trả lời.
@@ -1132,6 +1146,8 @@ Những thân thể Reunion nằm la liệt trên sân thượng bắt đầu co
 “GRAAAAAAGHHH!!”
 
 “Hãy nhận lấy tất cả, đàn chiên của ta, các đồng chí của ta…” Mephisto thổi nhẹ vào lòng bàn tay. Một làn bụi lấp lánh bay ra, rải xuống khắp sân thượng.
+
+[cg:avg_5_7_shining]
 
 “Bột…?”
 
@@ -1432,6 +1448,8 @@ Ch’en nhổ một ngụm máu xuống sàn.
 “Cô không cần làm đến mức đó đâu, cô Ch’en!”
 
 Một giọng nói vang lên từ trên trời.
+
+[cg:avg_5_8_sky]
 
 “…?”
 

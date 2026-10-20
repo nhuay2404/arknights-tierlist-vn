@@ -392,6 +392,8 @@ Ch’en im lặng.
 
 “Không,” Wei Yenwu nói. “Nếu hôm nay cô bước ra khỏi văn phòng này, Ch’en Hui-chieh… cô sẽ là kẻ thù của Lungmen. Cô sẽ không bao giờ được đặt chân vào thành phố này nữa. Và mọi thứ chúng ta cùng gây dựng suốt mười năm qua… sẽ thành hư không.”
 
+[cg:avg_7_2]
+
 “Mọi thứ tôi gây dựng đã thành hư không ngay khi ông làm điều ông đã làm,” Ch’en nói. “Khác biệt duy nhất là tôi không giống ông. Tôi không nghĩ có ai là ‘sai lầm’.”
 
 “Quyền lực rốt cuộc chỉ là công cụ. Nếu muốn dùng nó để sửa đổi thế giới, cô phải tuân theo những kỳ vọng của thế giới. Đừng tự biến mình thành trò cười, Thanh tra Ch’en. Ta nuôi dạy cô để thay đổi điều đó. Ta mong cô sẽ khiến thế giới này muốn nhiều hơn là sự thịnh vượng và phát triển.”
@@ -554,6 +556,8 @@ Ch’en đang đẩy chiếc xe địa hình thì khựng lại. Hoshiguma tựa
 
 “Cô muốn nói gì?”
 
+[cg:avg_7_3]
+
 “Trông cô tệ lắm, Ch’en. Cô định đi đâu?”
 
 “Sao cô biết tôi ở đây…?”
@@ -655,6 +659,8 @@ Ch’en thở dốc, mũi kiếm chống xuống nền.
 “Chúng ta… chưa bao giờ… thoát được… quá khứ của mình,” Ch’en nói. “Hoshiguma, cô luôn là một phần của thành phố này. Nhưng tôi thì không. Tôi luôn chạy trốn. Tôi nghĩ tôi sẽ không bao giờ chịu nổi nơi này.”
 
 “Rốt cuộc lại thành ra thế này.” Hoshiguma hạ khiên. “Tôi không cản được cô. Đi đi.”
+
+[cg:avg_7_6]
 
 “Xin lỗi, Hoshiguma. Sau khi tôi đi, xin cô đến khu ổ chuột giúp tôi. Người dân ở đó đang hoảng loạn. L.G.D. phải có người bảo vệ họ.” Ch’en ngừng lại. “Nếu có mấy đứa trẻ Infected tặng cô một con gấu bông… hãy giữ lấy. Một cô bé Ursus tên Misha đã dạy chúng làm những con gấu đó. Cô bé chết rồi, vì chúng ta đã phụ cô bé.”
 
@@ -1020,6 +1026,8 @@ Trên trời, chiếc trực thăng lắc lư. “Đưa chúng ta lên cao! Có 
 
 “Cát sẽ xóa dấu vết của chúng ta. Nhớ đồ bảo hộ, đừng để cát lọt vào thiết bị nhạy cảm!” Amiya nói. “Nhưng… em thấy mặt trời. Sao ánh nắng lại xuyên qua được bão cát? Mặt dưới lõi đô thị rõ như ban ngày, như thể… Arts vậy. Đây đâu có trong kế hoạch. Đó là ánh sáng tự nhiên sao?”
 
+[cg:avg_7_9]
+
 “…Đừng bận tâm!” Nearl đáp. *(Mình làm hơi quá tay nên phải chĩa xuống đất, nhưng đừng nói với con bé phần đó…)*
 
 “Rõ! Móc leo, chuẩn bị bắn! Đảm bảo cáp được cố định chắc vào mặt dưới thành phố!” Amiya nói. “Khi tất cả operator đã lên, xe sẽ rời đi ngay! Bình thường em không hay nói thế này, nhưng em khá chắc ánh sáng vừa rồi là điềm lành cho chúng ta!”
@@ -1300,6 +1308,8 @@ Wei Yenwu nhìn xuống. “Dưới chân ta lại là một dòng sông ánh s�
 
 “Chúng ta đã từng thắng,” Wei Yenwu nói. “Lúc đầu đó là chiến thắng của chúng ta. Dù đau đớn, em và ta, Edward, và Kojui… Không có chúng ta, hắn đã xóa sổ thành phố này. Ta sẽ không coi cái chết của Edward là do tay Kashchey. Cơn ác mộng lẽ ra đã kết thúc khi Kashchey chết.”
 
+[cg:avg_7_10]
+
 “Hắn thật sự đã chết chưa?”
 
 “Có lẽ hắn sống tiếp trong Talulah. Một người kế thừa xứng đáng sẽ giúp hắn tiếp tục cuộc đời hỗn loạn của mình. Talulah giống hắn quá. Với một kẻ không con cái, Kashchey đã nhận được hạt giống phù hợp nhất. Dù ta có thể coi lời của Kal’tsit là bịa đặt, ta không thể phủ nhận sự thật. Có một âm mưu nhắm vào Lungmen, và nó mang quá nhiều nét chữ của Kashchey.”
@@ -1509,6 +1519,8 @@ Một người phụ nữ gầy gò đứng giữa lối đi, tay cầm một th
 Một giọng nam vang lên từ sau đống thùng. Một người đàn ông mặc đồ Reunion bước ra.
 
 “Là anh…!” Amiya thốt lên.
+
+[cg:avg_7_12]
 
 “Amiya, quét mã nhận dạng của cậu ta,” Kal’tsit nói lạnh lùng. “Guard, giải thích đi.”
 
@@ -2578,7 +2590,11 @@ Cô bé Cautus không hề nao núng. Bóng tối của cái chết phủ lên k
 
 Như thể nhìn thẳng vào linh hồn ông.
 
+[cg:avg_7_14]
+
 Cùng lúc đó, những lưỡi kiếm đen nặng trịch và những tia năng lượng chói lòa đầy điềm gở xuyên nhanh vào cơ thể bất tử của người khổng lồ. Ông vẫn không lay động.
+
+[cg:avg_7_15]
 
 Ngay khi Patriot sắp bóp nát hộp sọ của cô bé áo đen…
 
@@ -2591,6 +2607,8 @@ Có thứ gì đó dường như đang nhỏ xuống buồn bã từ trong chi�
 Một phút trôi qua.
 
 Trong một phút dài như vĩnh cửu ấy, không còn âm thanh nào khác ngoài tiếng gầm trầm của thành phố đang di chuyển.
+
+[cg:avg_7_17]
 
 Rồi, mọi người nhận ra. Con quái vật đứng trước mặt họ đã chết.
 

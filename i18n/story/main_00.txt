@@ -14,6 +14,8 @@ Nó không vang lên từ đâu cả. Nó chỉ ở đó, như thể đã chờ 
 
 “Đã lâu lắm rồi chúng ta mới gặp lại nhau. Suốt quãng thời gian ấy, ngươi cứ chênh vênh bên mép vực.”
 
+[cg:bg_0_babel]
+
 “Ngươi có thể quên mình là ai. Chỉ cần nhớ được tên mình thôi, thế là đủ.”
 
 Một quãng lặng. Rồi giọng nói lại tiếp, lần này gấp gáp hơn, như người tiễn khách đã đến giờ phải đóng cửa.
@@ -30,6 +32,8 @@ Một quãng lặng. Rồi giọng nói lại tiếp, lần này gấp gáp hơn
 
 Những âm thanh khác tràn vào, vỡ vụn như sóng radio chập chờn.
 
+[cg:bg_0_am]
+
 “…ý thức…”
 
 “Tuần hoàn đã phục hồi… sinh hiệu ổn định… đã bơm dung dịch liệt tim…”
@@ -44,9 +48,13 @@ Và giữa những mệnh lệnh khô khốc ấy, có một tiếng thì thầm
 
 “…Xin lỗi. Vì lại bắt người phải chịu khổ thêm lần nữa.”
 
+[cg:avg_0_2]
+
 Rồi một giọng khác, trong trẻo và run rẩy, gọi mãi một cái tên.
 
 “Doctor… Đưa tay đây! Nắm lấy tay em…! Nắm lấy tay em đi!!”
+
+[cg:avg_0_1]
 
 Trong bóng tối, có ai đó đã nắm lấy.
 
@@ -140,6 +148,8 @@ Amiya mỉm cười. Lần đầu tiên kể từ lúc Doctor mở mắt, nụ c
 
 “Em không muốn kéo Doctor vào chuyện này. Nhưng ngay lúc này, bọn em cần trí tuệ của Doctor hơn bao giờ hết. Em hy vọng giữa trận chiến, một phần nào đó trong Doctor sẽ thức tỉnh.” Cô bé hít một hơi. “Dù Doctor có nghi ngờ chính mình… em vẫn tin Doctor.”
 
+[cg:avg_0_3]
+
 “Xin hãy chỉ huy… Rhodes Island!”
 
 ## Mở đầu | Chào mừng trở về
@@ -228,6 +238,8 @@ Ngoài kia, những bóng mặt nạ trắng đang lùng sục từng căn nhà.
 
 “Lục soát hết! Tao muốn từng phòng một bị lật tung lên!”
 
+[cg:avg_2_2]
+
 “Buông tôi ra…! Không! Các người không được…”
 
 “Giờ mới chống cự à? Muộn rồi, lũ Cherno bẩn thỉu!”
@@ -285,6 +297,8 @@ Dobermann nhìn cô bé rất lâu. Rồi gật đầu.
 Dobermann bật ra một tiếng cười ngắn, khô khốc. “Hah. Amiya, trông cả vào cô đấy.”
 
 “Rõ.” Amiya bước lên, và đọc to câu nói mà ai trong Rhodes Island cũng thuộc lòng:
+
+[cg:avg_1_3]
 
 “‘Lặng im khi xung đột có thể tránh, nhưng chiến đấu đến cùng khi không còn lối thoát!’ Tín điều của Rhodes Island… chưa bao giờ thay đổi!”
 
@@ -376,6 +390,8 @@ Những vụ nổ, bạo loạn, hỏa hoạn, giao tranh trên từng con phố
 
 Trên một màn hình lớn còn sót lại ở góc quảng trường, một người dẫn chương trình mặc vest chỉnh tề đang mỉm cười.
 
+[cg:bg_0_tv]
+
 “…Nhờ phản ứng nhanh chóng và sự phối hợp nhịp nhàng của Quân cảnh Chernobog, tình hình về cơ bản đã được kiểm soát. Hiện Quân cảnh đã bao vây những kẻ côn đồ chiếm giữ Đại lộ Vaschuk. Như quý vị có thể thấy, bạo lực vô nghĩa này sắp chấm dứt. Xin đừng hoảng loạn. Hãy ở yên trong nhà, và chờ đón thêm một chiến thắng nữa của Chernobog… Nguyện vinh quang Ursus phù hộ Hoàng đế và thần dân của Người!”
 
 Cách màn hình chưa đầy hai dãy phố, phòng tuyến Ursus đang vỡ vụn.
@@ -431,6 +447,8 @@ Một làn khói mỏng bắt đầu len lỏi giữa các dãy nhà. Dobermann 
 Và từ trong màn sương ấy, một bóng người bước ra.
 
 Cô ta đeo mặt nạ, khoác áo choàng đen của Reunion, bước đi nhẹ như không chạm đất. Không cần nhìn rõ, ai cũng cảm thấy cô ta hoàn toàn khác với lũ côn đồ ban nãy.
+
+[cg:avg_1_1]
 
 “Hừ. Định chạy à? Các người nghĩ mình đi đâu được?” Giọng cô ta lạnh tanh. “Đi. Xé xác chúng.”
 
