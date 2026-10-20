@@ -38,13 +38,74 @@ header:after{content:"";position:absolute;right:-1px;top:0;width:3px;height:120p
 .logo i{width:40px;height:40px;display:grid;place-items:center;background:var(--ink);color:var(--accent);font:700 0.9375rem var(--mono);font-style:normal;clip-path:polygon(0 0,100% 0,100% 72%,72% 100%,0 100%)}
 .logo span{writing-mode:vertical-rl;transform:rotate(180deg);margin-top:8px;color:var(--mute)}
 nav{display:flex;flex-direction:column;gap:6px;width:100%}
-/* thanh tab dọc trên máy tính: màn thấp thì gọn lại, vẫn thiếu chỗ thì cuộn */
-@media (min-width:761px){nav{flex:1;min-height:0;overflow-y:auto;scrollbar-width:none}nav::-webkit-scrollbar{display:none}}
-@media (min-width:761px) and (max-height:860px){.bar{gap:14px}.logo span{display:none}nav button{padding:10px 0}}
 nav button{all:unset;cursor:pointer;writing-mode:vertical-rl;transform:rotate(180deg);padding:14px 0;text-align:center;font:600 0.75rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);position:relative}
 nav button:hover{color:var(--ink)}
 nav button.on{color:#111;background:var(--accent)}
 nav button.on:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--ink)}
+/* nhóm tab: rail dọc trên máy tính chỉ hiện vạch ngăn; menu trượt trên điện thoại hiện tên nhóm */
+#navbtn,#navscrim,.nhead{display:none}
+nav{flex:1;min-height:0;overflow-y:auto}
+/* nhãn tab nằm ngang, tối đa 2 dòng, để rail vừa cả màn hình thấp */
+nav button{flex:none;writing-mode:horizontal-tb;transform:none;padding:11px 0;letter-spacing:0;line-height:1.25;font-size:0.75rem}
+nav{scrollbar-width:thin}
+@media (min-width:761px) and (max-height:820px){.logo span{display:none}.bar{gap:16px}}
+/* máy tính: logo là nút về Trang chủ, rail chỉ còn các tab con */
+nav button[data-tab=home]{display:none}.logo{text-decoration:none;color:inherit;cursor:pointer}.logo:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+nav .ng{font-size:0;height:1px;background:var(--line);margin:6px 14px;flex:none}
+nav .grp{display:contents}
+/* máy tính: nhóm đầu (Trang chủ) không cần vạch ngăn */
+nav .ng0{display:none}
+/* trang chủ (bento) */
+.hm{margin-bottom:32px}
+.hx{display:grid;gap:14px;padding-top:24px}.hxst{margin:0}
+:where(.hx) button{all:unset;cursor:pointer;box-sizing:border-box}
+:where(.hx) button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.hxban{position:relative;display:block;min-height:clamp(300px,38vw,440px);overflow:hidden;background:#0b0c10 radial-gradient(120% 90% at 85% 40%,#3a1220 0,#0b0c10 60%);color:#fff;border:1px solid var(--ink)}
+.hxart{position:absolute;inset:0 0 0 auto;width:min(72%,820px);display:flex}
+.hxart img{width:50%;height:100%;object-fit:cover;object-position:50% 22%;animation:gslide .9s var(--ease,ease) both}
+.hxart img+img{animation-name:gslide2}
+.hxart:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0b0c10 0,rgba(11,12,16,.75) 22%,transparent 55%),linear-gradient(0deg,rgba(11,12,16,.85),transparent 45%)}
+.hxbt{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;gap:10px;max-width:520px;padding:clamp(20px,4vw,40px)}
+.hxbt small{font:700 0.75rem var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#ffb347}
+.hxbt b{font:900 clamp(2rem,5vw,3.75rem)/.95 "Be Vietnam Pro";letter-spacing:-.03em;text-transform:uppercase;text-shadow:0 2px 18px rgba(0,0,0,.6)}
+.hxcd{font-style:normal;font:600 0.875rem var(--mono);color:#ddd}.hxcd strong{color:#fff;font-size:1.25rem;margin:0 2px}
+.hxup{display:flex;flex-wrap:wrap;gap:6px}.hxup span{display:inline-flex;align-items:center;gap:6px;padding:3px 10px 3px 3px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);font-size:0.8125rem;font-weight:600}
+.hxup img{width:28px;height:28px;object-fit:cover;background:var(--b6)}
+.hxcta{margin-top:6px;padding:10px 16px;background:var(--accent);color:#111;font:800 0.875rem "Be Vietnam Pro";box-shadow:4px 4px 0 #fff;transition:transform .15s}
+.hxban:hover .hxcta{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #fff}
+.hxstat{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--ink);background:var(--panel)}
+.hxstat div{padding:14px 16px;border-left:1px solid var(--line)}.hxstat div:first-child{border-left:0}
+.hxstat b{display:block;font:900 clamp(1.5rem,3.4vw,2.25rem)/1 "Be Vietnam Pro";letter-spacing:-.02em}
+.hxstat span{display:block;margin-top:4px;font:600 0.75rem var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.hxbento{display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:auto auto;gap:14px}
+.hxstory{grid-row:1/span 2;position:relative;display:flex;align-items:flex-end;min-height:320px;overflow:hidden;background:var(--ink);color:#fff;border:1px solid var(--ink)}
+.hxstory img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.hxstory:hover img{transform:scale(1.04)}
+.hxstory:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.88),rgba(0,0,0,.15) 60%,transparent)}
+.hxstory>span{position:relative;z-index:1;display:flex;flex-direction:column;gap:6px;padding:20px 22px}
+.hxstory small{font:700 0.75rem var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.hxstory b{font:900 clamp(1.375rem,2.6vw,2rem)/1.1 "Be Vietnam Pro";letter-spacing:-.01em}
+.hxstory em{font-style:normal;font-size:0.8125rem;opacity:.8}
+.hxbox{background:var(--panel);border:1px solid var(--line);padding:14px 16px}
+.hxh{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:10px}
+.hxh span{font:700 0.75rem var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.hxh button{font:700 0.8125rem "Be Vietnam Pro";color:var(--ink);border-bottom:2px solid var(--accent)}
+.hxnew p{margin:-4px 0 10px;font-size:0.8125rem;color:var(--mute)}
+.hxfaces{display:grid;grid-template-columns:repeat(auto-fill,minmax(44px,1fr));gap:6px}
+.hx .hxf{position:relative;display:block;padding:0;background:none;border:0;min-width:0;width:auto;height:auto}.hx .hxf .av{width:100%;height:auto;aspect-ratio:1;display:grid}
+.hx .hxf i{position:absolute;z-index:2;right:-2px;bottom:-2px;font:800 0.5625rem/1 var(--mono);font-style:normal;padding:2px 3px;color:#111}
+.hx .hxf:hover .av{outline:2px solid var(--accent)}
+.hxtiles{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.hxtile{position:relative;display:flex;flex-direction:column;gap:2px;padding:12px;background:var(--panel);border:1px solid var(--line);min-height:112px;justify-content:flex-end;overflow:hidden;transition:transform .15s,box-shadow .15s,border-color .15s}
+.hxtile:hover{border-color:var(--ink);box-shadow:4px 4px 0 var(--accent);transform:translate(-2px,-2px)}
+.hxtile b{font:800 1rem "Be Vietnam Pro"}.hxtile small{font-size:0.75rem;color:var(--mute);line-height:1.3}
+.hxv{position:absolute;top:10px;right:10px;display:flex}.hxv img{width:30px;height:30px;object-fit:cover;border:2px solid var(--panel);margin-left:-8px;background:var(--panel2)}
+.hxv .fac{width:28px;height:28px;margin-left:4px;color:var(--ink)}
+.hxv .gl{font:900 1.125rem var(--mono);color:var(--accent)}
+@media (max-width:1000px){.hxtiles{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:760px){.hx{padding-top:14px}.hxart{width:100%;height:62%;inset:0 0 auto 0}.hxart:after{background:linear-gradient(0deg,#0b0c10 2%,rgba(11,12,16,.35) 45%,transparent)}
+  .hxban{min-height:480px;display:flex;align-items:flex-end}.hxbt{gap:8px;padding:18px}.hxstat{grid-template-columns:repeat(2,1fr)}.hxstat div:nth-child(3){border-left:0}.hxstat div:nth-child(n+3){border-top:1px solid var(--line)}
+  .hxbento{grid-template-columns:1fr}.hxstory{grid-row:auto;min-height:240px}.hxtiles{grid-template-columns:repeat(2,1fr)}.hxtile{min-height:96px}}
 /* hero */
 .hero{position:relative;padding:40px 0 24px;isolation:isolate}
 .hero:before{content:attr(data-g);position:absolute;right:0;top:0;font:900 clamp(7.5rem,22vw,22.5rem)/.85 "Be Vietnam Pro";letter-spacing:-.04em;color:transparent;
@@ -429,10 +490,32 @@ dialog[open]::backdrop{animation:fade .3s ease both}
   header:after{display:none}
   .bar{flex-direction:row;gap:12px;padding:0 12px}
   .logo span{display:none}
-  nav{flex-direction:row;overflow-x:auto;scrollbar-width:none}
-  nav.more{-webkit-mask:linear-gradient(90deg,#000 calc(100% - 36px),transparent);mask:linear-gradient(90deg,#000 calc(100% - 36px),transparent)}
-  nav button{writing-mode:horizontal-tb;transform:none;padding:8px 10px;white-space:nowrap}
-  nav button.on:before{left:0;right:0;top:auto;bottom:0;width:auto;height:3px}
+  #navbtn{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;flex:1;min-width:0;height:44px;padding:0 6px;font:700 0.8125rem var(--mono);letter-spacing:.1em;text-transform:uppercase}
+  #navbtn b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #navbtn .hb{display:grid;gap:4px;width:20px}#navbtn .hb i{display:block;height:2px;background:var(--ink)}
+  #navbtn:focus-visible{outline:2px solid var(--accent)}
+  #navbtn .hb i{transition:transform .18s,opacity .18s}
+  #navbtn[aria-expanded=true] .hb i:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  #navbtn[aria-expanded=true] .hb i:nth-child(2){opacity:0}
+  #navbtn[aria-expanded=true] .hb i:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  /* menu gọn thả xuống dưới thanh đầu trang: mỗi nhóm một hàng, tab là chip; chip đang mở tô màu nhấn + bóng khối */
+  #navscrim{display:block;position:fixed;inset:56px 0 0;background:rgba(0,0,0,.4);z-index:40}#navscrim[hidden]{display:none}
+  nav{position:fixed;top:56px;left:0;right:0;z-index:41;display:grid;grid-template-columns:auto 1fr;gap:8px 12px;align-items:center;max-height:calc(100dvh - 56px);overflow-y:auto;box-sizing:border-box;padding:12px 16px 14px;
+    background:var(--panel);border-bottom:2px solid var(--ink);box-shadow:0 10px 24px rgba(0,0,0,.18);
+    opacity:0;transform:translateY(-8px);visibility:hidden;transition:opacity .16s,transform .16s,visibility 0s .16s}
+  nav.open{opacity:1;transform:none;visibility:visible;transition:opacity .16s,transform .16s}
+  .nhead{display:none}
+  nav .ng{grid-column:1;height:auto;background:none;margin:0;font:700 0.6875rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);white-space:nowrap}
+  nav .ng:before{content:"// ";color:var(--accent)}
+  nav .grp{grid-column:2;display:flex;flex-wrap:wrap;gap:6px}
+  nav button{writing-mode:horizontal-tb;transform:none;box-sizing:border-box;min-height:38px;padding:0 12px;display:inline-flex;align-items:center;
+    background:var(--panel);border:1px solid var(--line);color:var(--text);font:700 0.875rem "Be Vietnam Pro";letter-spacing:0;text-transform:none}
+  nav button[data-tab=home]{display:inline-flex}
+  nav .ng0{display:block}
+  nav button.on{background:var(--accent);border-color:var(--ink);color:#111;box-shadow:3px 3px 0 var(--ink)}
+  nav button.on:before{display:none}
+  nav button:active{transform:translate(1px,1px)}
+  body.navlock{overflow:hidden}
   .controls{top:56px}
   .wrap{padding:0 16px}
   .matrix{max-height:calc(100dvh - 96px)}
@@ -445,7 +528,6 @@ dialog[open]::backdrop{animation:fade .3s ease both}
   .controls:not(.sheet) .row+.row{display:none}
   .hero{padding:20px 0 12px}
 
-  nav button{padding:8px 7px;letter-spacing:.05em;font-size:0.6875rem}
 }
 .kw:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 /* UX fixes: touch target ≥44px, chữ ≥12px */
@@ -501,30 +583,126 @@ dialog[open]::backdrop{animation:fade .3s ease both}
   #theme{margin:0 0 0 auto}
   .controls.sheet{background:var(--panel);position:fixed;left:0;right:0;bottom:0;top:auto;z-index:45;max-height:75vh;overflow:auto;padding:16px 16px 80px;border-top:2px solid var(--ink);border-bottom:0;box-shadow:0 -12px 40px rgba(0,0,0,.25);margin:0}
 }
+/* tab Cốt truyện: mục lục trái + cột đọc kiểu light novel */
+.stnote{font-size:0.8125rem;color:var(--mute);border-left:3px solid var(--accent);padding:8px 12px;background:var(--panel);margin:0 0 16px;max-width:none}
+.stnote b{color:var(--text)}.stnote a{color:var(--link)}
+.stwrap{display:grid;grid-template-columns:250px minmax(0,1fr);gap:28px;align-items:start}
+.stoc{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto;background:var(--panel);border:1px solid var(--line);padding:8px}
+.stoc .stc{all:unset;cursor:pointer;display:block;width:100%;box-sizing:border-box;padding:10px 10px;font-size:0.875rem;font-weight:600;line-height:1.3;border-left:3px solid transparent}
+.stoc .stc b{display:block;font:600 0.6875rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-bottom:2px}
+.stoc .stc:hover{background:var(--panel2)}.stoc .stc.on{border-left-color:var(--accent);background:var(--panel2)}.stoc .stc.on b{color:var(--accent)}
+.stoc .stc:focus-visible,.stoc ol button:focus-visible,.stnav button:focus-visible,.stfs button:focus-visible{outline:2px solid var(--ink);outline-offset:1px}
+.stoc ol{list-style:none;margin:0 0 6px;padding:0 0 0 13px}
+.stoc ol button{all:unset;cursor:pointer;display:block;padding:5px 8px;font-size:0.8125rem;line-height:1.35;color:var(--mute)}
+.stoc ol button span{font:600 0.6875rem var(--mono);color:var(--text);margin-right:6px}
+.stoc ol button:hover{color:var(--ink)}
+.sread{--sfs:1.0625rem;background:var(--panel);border:1px solid var(--line);padding:40px clamp(18px,5vw,64px) 32px;position:relative}
+.sread:before{content:"";position:absolute;left:-1px;top:-1px;width:24px;height:24px;border-left:3px solid var(--ink);border-top:3px solid var(--ink)}
+.sthead{max-width:66ch;margin:0 auto 28px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.sthead .no{font:700 0.75rem var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.sthead h2{margin:6px 0 2px;font:900 clamp(1.75rem,4vw,2.625rem)/1.1 "Be Vietnam Pro";letter-spacing:-.02em}
+.sthead .en{font:600 0.8125rem var(--mono);letter-spacing:.08em;color:var(--mute)}
+.sthead .sum{margin:14px 0 0;color:var(--mute);font-size:0.9375rem;font-style:italic}
+.stfs{display:flex;gap:4px;align-items:center;margin-top:14px;font:600 0.6875rem var(--mono);letter-spacing:.1em;color:var(--mute);text-transform:uppercase}
+.stfs button{all:unset;cursor:pointer;min-width:32px;height:28px;display:grid;place-items:center;border:1px solid var(--line);font:700 0.8125rem var(--mono);color:var(--text)}.stfs button:hover{border-color:var(--ink)}
+.stbody{max-width:66ch;margin:0 auto;font-size:var(--sfs);line-height:1.85}
+/* Cốt truyện: banner cảnh, CG, nhân vật, tuỳ chỉnh đọc */
+.sread[data-ff=serif] .stbody{font-family:"Noto Serif",Georgia,"Times New Roman",serif}
+.sread[data-lh=s] .stbody{line-height:1.6}.sread[data-lh=l] .stbody{line-height:2.1}
+.sread[data-pp=paper]{--panel:#f3ead6;--panel2:#ebe0c8;--line:#dccfb0;--text:#3a2e1f;--mute:#76664d;--ink:#3a2e1f;color:var(--text)}
+.sread[data-pp=night]{--panel:#101010;--panel2:#1b1b1b;--line:#2a2a2a;--text:#cdc8bc;--mute:#8b877d;--ink:#e2ddd1;color:var(--text)}
+.sthead{position:relative}
+.sthero{margin:-40px calc(-1*clamp(18px,5vw,64px)) 22px;aspect-ratio:16/5;overflow:hidden;background:var(--ink);position:relative}
+.sthero img{width:100%;height:100%;object-fit:cover;display:block;opacity:.9}
+.sthero:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,var(--panel))}
+.sthero.noimg{display:none}
+.stmeta{margin-top:10px;font:600 0.75rem var(--mono);letter-spacing:.06em;color:var(--mute)}
+.sttools{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.sttools button,.stopt button{all:unset;cursor:pointer;padding:6px 11px;border:1px solid var(--line);font:600 0.8125rem/1.2 "Be Vietnam Pro";color:var(--text)}
+.sttools button:hover,.stopt button:hover{border-color:var(--ink)}
+.sttools .go{background:var(--ink);color:var(--panel);border-color:var(--ink)}
+.sttools button:focus-visible,.stopt button:focus-visible,.stcg button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.stjump{display:none;font:600 0.8125rem "Be Vietnam Pro";padding:6px 8px;border:1px solid var(--line);background:var(--panel);color:var(--text);max-width:100%}
+.stopt{margin-top:12px;padding:12px;border:1px solid var(--line);background:var(--panel2);display:grid;gap:8px}
+.stopt div{display:flex;flex-wrap:wrap;align-items:center;gap:5px}
+.stopt span{width:96px;font:600 0.6875rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.stopt button{padding:5px 10px;font-size:0.75rem}.stopt button[aria-pressed=true]{background:var(--ink);color:var(--panel);border-color:var(--ink)}
+.stsec{margin-top:2.6em}.stsec:first-child{margin-top:0}
+.stbn{position:relative;aspect-ratio:21/8;overflow:hidden;background:var(--ink);display:flex;align-items:flex-end;margin:0 0 1em;scroll-margin-top:72px}
+.stbn img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.stbn:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 35%,rgba(0,0,0,.78))}
+.stbn h3{position:relative;z-index:1;margin:0;padding:14px 16px;color:#fff;font:700 clamp(1rem,2.4vw,1.25rem)/1.3 "Be Vietnam Pro";display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.stbn h3 span{font:700 0.6875rem var(--mono);letter-spacing:.12em;padding:3px 7px;background:var(--accent);color:#000;text-transform:uppercase;text-shadow:none}
+.stbn.noimg{aspect-ratio:auto;background:none}.stbn.noimg:after{display:none}
+.stbn.noimg h3{padding:0;color:var(--text);text-shadow:none}.stbn.noimg h3 span{background:var(--ink);color:var(--accent)}
+.stcast{list-style:none;display:flex;flex-wrap:wrap;gap:6px 14px;margin:0 0 1.5em;padding:0;font-size:0.8125rem}
+.stcast li{display:flex;align-items:center;gap:7px}.stcast b{font-weight:600}
+.stav{width:34px;height:34px;border-radius:50%;overflow:hidden;background:var(--panel2);border:1px solid var(--line);display:grid;place-items:center;font:700 0.625rem var(--mono);color:var(--mute);position:relative;flex:none}
+.stav img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.stav img.npc{inset:auto;width:400%;height:auto;max-width:none;left:-150%;top:-8%}
+.stcg{margin:1.6em 0;padding:0}
+.stcg button{all:unset;cursor:zoom-in;display:block;width:100%;border:1px solid var(--line);background:var(--panel2);aspect-ratio:16/9;overflow:hidden}
+.stcg img{width:100%;height:100%;object-fit:cover;display:block}
+.stcg.noimg,.stcg button.noimg{display:none}
+.stbg{position:relative;margin:2em 0;height:110px;overflow:hidden;background:var(--ink)}
+.stbg img{width:100%;height:100%;object-fit:cover;opacity:.75;display:block}
+.stbg:after{content:"◆   ◆   ◆";white-space:pre;position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:0.625rem;letter-spacing:.3em;background:linear-gradient(90deg,var(--panel),transparent 25%,transparent 75%,var(--panel))}
+.stbg.noimg{height:auto;background:none;margin:1.8em 0;text-align:center}.stbg.noimg:after{position:static;color:var(--mute);background:none}
+.stoc .stc b em{font-style:normal;float:right;color:var(--accent);letter-spacing:.04em;text-transform:none}
+.stoc ol button.rd span:after{content:" ✓";color:var(--accent)}
+.stoc ol button.cur{color:var(--ink);box-shadow:inset 2px 0 var(--accent)}
+.stprog{position:fixed;left:0;right:0;top:0;height:3px;z-index:60;pointer-events:none}.stprog i{display:block;height:100%;width:0;background:var(--accent);transition:width .15s}
+.stlb{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.94);display:grid;place-items:center;padding:16px;cursor:zoom-out}
+.stlb img{max-width:100%;max-height:100%;object-fit:contain}
+.stlb[hidden],#stfx[hidden],.stprog[hidden]{display:none}
+#stfx{all:unset;position:fixed;left:16px;bottom:16px;z-index:70;cursor:pointer;padding:8px 12px;background:var(--ink);color:var(--panel);font:600 0.8125rem "Be Vietnam Pro"}
+body.stfocus header,body.stfocus .stoc,body.stfocus .stnote,body.stfocus .hero{display:none}
+body.stfocus .stwrap{grid-template-columns:minmax(0,1fr)}
+@media (max-width:760px){.stjump{display:block;width:100%}.sthero{margin:-24px -16px 18px}.stbn{aspect-ratio:16/8}.stopt span{width:100%}.stbg{height:80px}}
+.stbody p{margin:0 0 .95em;max-width:none}
+.stbody hr{border:0;margin:1.8em 0;text-align:center;color:var(--mute)}.stbody hr:after{content:"◆   ◆   ◆";white-space:pre;font-size:0.625rem;letter-spacing:.3em}
+.stnav{max-width:66ch;margin:36px auto 0;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:10px}
+.stnav button{all:unset;cursor:pointer;padding:10px 14px;border:1px solid var(--line);font-size:0.875rem;line-height:1.3;max-width:48%}
+.stnav button small{display:block;font:600 0.6875rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.stnav button:hover{border-color:var(--ink)}.stnav .nx{margin-left:auto;text-align:right}
+.stend{max-width:66ch;margin:28px auto 0;text-align:center;color:var(--mute);font-size:0.8125rem}
+@media (max-width:760px){
+  .stwrap{grid-template-columns:1fr;gap:12px}
+  .stoc{position:static;max-height:none;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:6px}.stoc::-webkit-scrollbar{display:none}
+  .stoc .stc{width:auto;flex:none;max-width:200px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-left:0;border-bottom:3px solid transparent;padding:8px 10px}
+  .stoc .stc.on{border-bottom-color:var(--accent)}.stoc ol{display:none}
+  .sread{padding:24px 16px 20px}.sread{--sfs:1rem}.stbody{line-height:1.8}
+}
 </style>
 <script>try{const t=localStorage.getItem('ak-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
 <header><div class="bar">
-  <div class="logo"><i>AK</i><span>TIER LIST // VN</span></div>
-  <nav id="nav">
-    <button data-tab="ops" class="on">Operator</button>
-    <button data-tab="list">Xếp hạng</button>
-    <button data-tab="gacha">Gacha</button>
-    <button data-tab="plan">Planner</button>
-    <button data-tab="fac">Phe phái</button>
-    <button data-tab="about">Giới thiệu</button>
+  <a class="logo" href="./" aria-label="Trang chủ"><i>AK</i><span>TIER LIST // VN</span></a>
+  <button id="navbtn" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="nav"><span class="hb" aria-hidden="true"><i></i><i></i><i></i></span><b id="navcur">Trang chủ</b></button>
+  <div id="navscrim" hidden></div>
+  <nav id="nav" aria-label="Điều hướng">
+    <div class="nhead"><b>AK</b> TIER LIST // VN</div>
+    <div class="ng ng0">Chính</div><div class="grp"><button data-tab="home" class="on">Trang chủ</button></div>
+    <div class="ng">Dữ liệu</div><div class="grp"><button data-tab="ops">Operator</button><button data-tab="fac">Phe phái</button><button data-tab="story">Cốt truyện</button></div>
+    <div class="ng">Xếp hạng</div><div class="grp"><button data-tab="list">Xếp hạng</button></div>
+    <div class="ng">Công cụ</div><div class="grp"><button data-tab="gacha">Gacha</button><button data-tab="plan">Planner</button></div>
+    <div class="ng">Khác</div><div class="grp"><button data-tab="about">Giới thiệu</button></div>
   </nav>
   <button id="theme" aria-label="Đổi giao diện sáng/tối" title="Đổi giao diện sáng/tối">◐</button>
 </div></header>
 
 <main class="wrap">
-  <div class="hero" data-g="OPS">
-    <h1>Danh sách<br><span>Operator</span></h1>
+  <div class="hero" data-g="HOME" hidden>
+    <h1>Arknights<br><span>Tier List VN</span></h1>
     <p class="stamp">Cập nhật 12/10/2026 · Server Global</p>
   </div>
 
-  <section id="ops">
+  <section id="home">
+    <div class="hm" id="hm"></div>
+  </section>
+
+  <section id="ops" hidden>
     <div class="rctl" id="rctl">
       <label class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
         <input id="rq" type="search" placeholder="Tìm operator… (vd: Clementia, Mon3tr)" aria-label="Tìm operator trong danh sách"></label>
@@ -565,6 +743,10 @@ dialog[open]::backdrop{animation:fade .3s ease both}
   </section>
 
   <section id="fac" hidden><div id="backbar" hidden><button class="back" onclick="history.back()"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="square"><path d="M15 5l-7 7 7 7"/></svg>Quay lại hồ sơ <span></span></button></div><div id="facBody"></div></section>
+  <section id="story" hidden>
+    <p class="stnote"><b>Truyện chữ không chính thức.</b> Cốt truyện, nhân vật, thế giới và lời thoại gốc của Arknights thuộc quyền sở hữu trí tuệ của <b>Hypergryph</b> (bản Global: <b>Yostar</b>). Đây là bản phóng tác văn xuôi tiếng Việt do fan viết lại từ kịch bản chính tuyến bản Global, phi thương mại, không phải bản dịch chính thức; tình tiết và lời thoại bám theo game, câu chữ được diễn đạt lại theo lối light novel. Tham khảo: <a href="https://akgcc.github.io/story/#main&amp;main_0&amp;0" target="_blank" rel="noopener">akgcc story reader</a> · <a href="https://arknights.wiki.gg/wiki/Story" target="_blank" rel="noopener">Arknights Wiki</a>.</p>
+    <div class="stwrap"><aside class="stoc" id="stoc" aria-label="Mục lục cốt truyện"></aside><article class="sread" id="sread" aria-live="polite"><p>Đang tải…</p></article></div>
+  </section>
   <section id="about" hidden>
     <div class="card">
       <h2>Giả định chung</h2>
@@ -607,17 +789,18 @@ dialog[open]::backdrop{animation:fade .3s ease both}
 <dialog id="dlg"></dialog>
 
 <!-- ?v=: đổi mỗi lần cập nhật data để trình duyệt/CDN không dùng file .js cũ lệch với index.html -->
-<script src="data.js?v=20261020a"></script>
-<script src="details.js?v=20261020a"></script>
-<script src="glossary.js?v=20261020a"></script>
-<script src="factions.js?v=20261020a"></script>
-<script src="roster.js?v=20261020a"></script>
-<script src="skins.js?v=20261020a"></script>
-<script src="mats.js?v=20261020a"></script>
-<script src="subclass.js?v=20261020a"></script>
-<script src="details_x.js?v=20261020a"></script>
-<script src="gacha.js?v=20261020a"></script>
-<script>const KITV='20261020a'</script>
+<script src="data.js?v=20261020b"></script>
+<script src="details.js?v=20261020b"></script>
+<script src="glossary.js?v=20261020b"></script>
+<script src="factions.js?v=20261020b"></script>
+<script src="roster.js?v=20261020b"></script>
+<script src="skins.js?v=20261020b"></script>
+<script src="mats.js?v=20261020b"></script>
+<script src="subclass.js?v=20261020b"></script>
+<script src="details_x.js?v=20261020b"></script>
+<script src="gacha.js?v=20261020b"></script>
+<script src="story_toc.js?v=20261020b"></script>
+<script>const KITV='20261020b'</script>
 <script>
 const {ops:OPS, general:GENERAL} = window.AK;
 const TIERS=['EX','S+','S','S-','A+','A','A-','B+','B','B-','C+','C','C-','D','F'];
@@ -1115,26 +1298,26 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if
   $('#nav').addEventListener('click',e=>{if(e.target.closest('[data-tab=plan]'))draw()});
   if(!$('#plan').hidden)draw()}
 // tabs
-$('#nav').onclick=e=>{const b=e.target.closest('button');if(!b)return;
+$('#nav').onclick=e=>{const b=e.target.closest('button[data-tab]');if(!b)return;navOpen(false);$('#navcur').textContent=b.textContent;
   document.querySelectorAll('#nav button').forEach(x=>x.classList.toggle('on',x===b));
   document.querySelectorAll('main > section').forEach(s=>s.hidden=s.id!==b.dataset.tab);setHero(b.dataset.tab);window.scrollTo({top:0});
   if(!NAV)history.pushState({tab:b.dataset.tab},'',location.pathname+location.search);if(b.dataset.tab!=='fac')setBack(null)};
 // lịch sử trình duyệt: mỗi tab, hồ sơ operator và phe phái là một bước; NAV = đang dựng lại từ lịch sử nên không đẩy bước mới
 let NAV=false,SILENT=false;
-const curTab=()=>$('#nav button.on')?.dataset.tab||'ops';
+const curTab=()=>$('#nav button.on')?.dataset.tab||'home';
 function goTab(k){const n=NAV;NAV=true;$(`#nav [data-tab=${k}]`).click();NAV=n}
 function setBack(i){const b=$('#backbar');if(i==null||!OPS[i]){b.hidden=true;return}
   b.hidden=false;b.querySelector('span').textContent=OPS[i].n.replace(/\s*\(General\)/,'')}
-addEventListener('popstate',e=>{const st=e.state||{tab:'ops'};NAV=true;
+addEventListener('popstate',e=>{const st=e.state||{tab:'home'};NAV=true;
   if(st.tab&&st.tab!==curTab())goTab(st.tab);
   if(st.op!=null)openOp(st.op);
   else if(st.cn)openCN(st.cn);
   else{if(dlg.open)dlg.close();if(st.fac)showFac(st.fac);else setBack(null)}
   NAV=false});
-history.replaceState(history.state||{tab:'ops'},'');
+history.replaceState(history.state||{tab:'home'},'');
 // tiêu đề và chữ nền khổng lồ đổi theo tab đang mở
-const HERO={ops:['OPS','Danh sách','Operator'],gacha:['HH','Giả lập','Headhunting'],plan:['PLAN','Operator','Planner'],list:['TIER','Bảng xếp hạng','Operator'],fac:['FAC','Phe phái','& vùng đất'],about:['INFO','Giới thiệu','& nguồn']};
-function setHero(k){const [g,a,b]=HERO[k]||HERO.ops,h=$('.hero');h.dataset.g=g;h.querySelector('h1').innerHTML=`${a}<br><span>${b}</span>`;typeHero();document.title=k==='ops'?'Arknights Tier List VN':`${a} ${b} · Arknights Tier List VN`}
+const HERO={home:['HOME','Arknights','Tier List VN'],ops:['OPS','Danh sách','Operator'],gacha:['HH','Giả lập','Headhunting'],plan:['PLAN','Operator','Planner'],list:['TIER','Bảng xếp hạng','Operator'],fac:['FAC','Phe phái','& vùng đất'],story:['LORE','Cốt truyện','chính tuyến'],about:['INFO','Giới thiệu','& nguồn']};
+function setHero(k){const [g,a,b]=HERO[k]||HERO.ops,h=$('.hero');h.hidden=k==='home';h.dataset.g=g;h.querySelector('h1').innerHTML=`${a}<br><span>${b}</span>`;typeHero();document.title=k==='home'?'Arknights Tier List VN':`${a} ${b} · Arknights Tier List VN`}
 render();
 // 4: bảng lọc nổi trên mobile
 const fab=$('#fab'),ctl=$('#ctl');
@@ -1142,8 +1325,122 @@ const scrim=$('#scrim');
 const sheet=o=>{ctl.classList.toggle('sheet',o);scrim.hidden=!o;fab.setAttribute('aria-expanded',o);setFab()};
 fab.onclick=()=>sheet(!ctl.classList.contains('sheet'));scrim.onclick=()=>sheet(false);setFab();
 addEventListener('keydown',e=>{if(e.key==='Escape'&&ctl.classList.contains('sheet'))sheet(false)});
-// thanh tab trên điện thoại: mờ dần ở mép phải khi còn tab bị khuất
-{const nv=$('#nav'),f=()=>nv.classList.toggle('more',nv.scrollLeft+nv.clientWidth<nv.scrollWidth-2);nv.addEventListener('scroll',f,{passive:true});addEventListener('resize',f);f()}
+const AVG='https://raw.githubusercontent.com/Aceship/Arknight-Images/main/avg/';
+// menu trên điện thoại (nút ☰): các tab gom theo nhóm; trên máy tính vẫn là rail dọc
+function navOpen(o){const n=$('#nav');if(!n)return;n.classList.toggle('open',o);$('#navscrim').hidden=!o;$('#navbtn').setAttribute('aria-expanded',o);document.body.classList.toggle('navlock',o);if(o)n.querySelector('button.on')?.focus()}
+$('.logo').onclick=e=>{e.preventDefault();$('#nav [data-tab=home]').click()};
+$('#navbtn').onclick=()=>navOpen(!$('#nav').classList.contains('open'));$('#navscrim').onclick=()=>navOpen(false);
+addEventListener('keydown',e=>{if(e.key==='Escape'&&$('#nav').classList.contains('open')){navOpen(false);$('#navbtn').focus()}});
+// trang chủ dạng bento: banner headhunting đang mở, số liệu, đọc tiếp truyện, đỉnh meta, vừa cập nhật, lối tắt
+const hxLS=(k,d)=>{try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}};
+function hxCount(){const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;$('#hm').querySelectorAll('[data-n]').forEach(el=>{const n=+el.dataset.n;if(rm){el.textContent=n.toLocaleString('vi');return}
+  const t0=performance.now(),f=t=>{const k=Math.min(1,(t-t0)/900);el.textContent=Math.round(n*(1-Math.pow(1-k,3))).toLocaleString('vi');if(k<1)requestAnimationFrame(f)};requestAnimationFrame(f)})}
+function drawHome(){const B=window.AKG?.banner,R=new Map((window.AKR||[]).map(x=>[x[0],x[1]])),ST=window.AKST||{ch:[],img:0};
+  const nm=id=>(R.get(id)||OPS.find(o=>o.img===id)?.n||id).replace(/\s*\(.*?\)/g,'');
+  const left=B?B.end*1000-Date.now():0,dd=Math.floor(left/864e5),hh=Math.floor(left%864e5/36e5);
+  const ban=B?`<button class="hxban" data-go="gacha" aria-label="Headhunting ${esc(B.name)}">
+    ${B.art?`<span class="hxart" aria-hidden="true"><img src="img/gacha/${B.id.toLowerCase()}/char1.webp" alt=""><img src="img/gacha/${B.id.toLowerCase()}/char2.webp" alt=""></span>`:''}
+    <span class="hxbt"><small>${B.limited?'Headhunting giới hạn':'Headhunting'} · ${left>0?'đang mở':'đã kết thúc'}</small><b>${esc(B.name)}</b>
+    ${left>0?`<em class="hxcd">Còn <strong>${dd}</strong> ngày <strong>${hh}</strong> giờ</em>`:''}
+    <span class="hxup">${[...(B.up6||[]),...(B.up5||[])].map(id=>`<span><img src="${IMG}${id}.png" alt="" loading="lazy">${esc(nm(id))}</span>`).join('')}</span>
+    <span class="hxcta">Thử vận may ›</span></span></button>`:'';
+  const st=[[(window.AKR||[]).length,'operator trong game'],[OPS.length,'mục được xếp hạng'],[ST.ch.length,'chương truyện chữ'],[ST.img,'ảnh minh hoạ truyện']];
+  const SCH=+hxLS('ak-story',0)||0,pos=hxLS('ak-story-pos',{}),c=ST.ch[Math.min(SCH,ST.ch.length-1)]||ST.ch[0],reading=Object.keys(pos).length>0;
+  const story=c?`<button class="hxstory" data-go="story"${reading?' data-resume':''}><img src="${AVG}images/${encodeURIComponent(c.cover)}.png" alt="" loading="lazy" onerror="this.remove()">
+    <span><small>${reading?'Đọc tiếp':'Truyện chữ · Light novel'}</small><b>${esc(c.no)} · ${esc(c.title)}</b><em>${ST.ch.length} chương · ${ST.img} ảnh minh hoạ · ${reading?'mở lại đúng cảnh đang đọc':'bắt đầu từ Chương 0'} ›</em></span></button>`:'';
+  const top=OPS.map((o,i)=>[o,i]).filter(([o])=>o.t==='EX'||o.t==='S+').sort((x,y)=>(y[0].t==='EX')-(x[0].t==='EX')).slice(0,16);
+  const face=([o,i])=>`<button class="fop hxf" data-i="${i}" title="${esc(o.n)} · ${esc(o.t)}">${av(o,initials(o.n))}<i style="background:${TC[o.t]}">${esc(o.t)}</i></button>`;
+  // mới ra Global: theo thứ tự ra mắt trong roster.js (cột cuối), chỉ lấy operator có trong tier list để mở hồ sơ
+  const oid=Object.fromEntries(OPS.map((o,i)=>[AKD[o.n]?.id||o.img,i]).reverse());
+  const fresh=(window.AKR||[]).filter(x=>x[5]&&oid[x[0]]!=null).sort((a,b)=>b.at(-1)-a.at(-1)).slice(0,10).map(x=>[OPS[oid[x[0]]],oid[x[0]]]);
+  const tiles=[['ops','Operator','Chỉ số, kỹ năng, module, skin',(window.AKR||[]).slice(0,3).map(x=>`<img src="${IMG}${x[0]}.png" alt="" loading="lazy">`).join('')],
+    ['fac','Phe phái','Quốc gia & tổ chức của Terra',Object.values(window.AKFAC||{}).filter(f=>f.g==='nation').slice(0,3).map(f=>`<i class="ico fac" style="--ico:url(${ICO}factions/logo_${f.id}.png)"></i>`).join('')],
+    ['plan','Planner','Tính nguyên liệu nâng cấp','<b class="gl">∑</b>'],['gacha','Gacha','Giả lập banner đang mở','<b class="gl">HH</b>'],
+    ['about','Giới thiệu','Cách xếp hạng & nguồn','<b class="gl">i</b>']];
+  $('#hm').innerHTML=`<div class="hx"><p class="stamp hxst">${esc($('.hero .stamp')?.textContent||'')}</p>${ban}
+    <div class="hxstat">${st.map(([n,t])=>`<div><b data-n="${n}">0</b><span>${t}</span></div>`).join('')}</div>
+    <div class="hxbento">${story}
+      <div class="hxbox hxtop"><div class="hxh"><span>// Đỉnh meta</span><button data-go="list">Bảng xếp hạng ›</button></div><div class="hxfaces">${top.map(face).join('')}</div></div>
+      <div class="hxbox hxnew"><div class="hxh"><span>// Mới ra Global</span><button data-go="ops">Danh sách ›</button></div><div class="hxfaces">${fresh.map(face).join('')}</div></div>
+    </div>
+    <div class="hxtiles">${tiles.map(([k,t,d,v])=>`<button class="hxtile" data-go="${k}"><span class="hxv" aria-hidden="true">${v}</span><b>${t}</b><small>${d}</small></button>`).join('')}</div></div>`;
+  hxCount()}
+drawHome();
+$('#hm').addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(!b)return;$(`#nav [data-tab=${b.dataset.go}]`).click();
+  if(b.hasAttribute('data-resume'))setTimeout(()=>{const s=$('#sread .sttools .go');s&&s.click()},500)});
+$('#nav').addEventListener('click',e=>{if(e.target.closest('[data-tab=home]'))drawHome()});
+// tab Cốt truyện: truyện chữ (story.js) chỉ tải khi mở tab lần đầu; nhớ chương, vị trí đọc, cảnh đã đọc và tuỳ chỉnh hiển thị
+// ảnh minh hoạ (nền cảnh, CG, sprite NPC) từ Aceship/Arknight-Images, avatar operator dùng chung IMG
+const sget=(k,d)=>{try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}};
+const sset=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+let STP,SCH=+sget('ak-story',0)||0;
+const SOPT=Object.assign({fs:+sget('ak-story-fs',0)||0,ff:'sans',lh:'n',pp:'auto',img:1},sget('ak-story-opt',{}));
+const SPOS=sget('ak-story-pos',{}),SRD=sget('ak-story-read',{});
+const needStory=()=>STP||=new Promise((ok,no)=>{const sc=document.createElement('script');sc.src='story.js?v='+KITV;sc.onload=()=>ok(window.AKS);sc.onerror=()=>{STP=null;no()};document.head.append(sc)});
+const stImg=(dir,n,cls='')=>`<img${cls?` class="${cls}"`:''} src="${AVG}${dir}/${encodeURIComponent(n)}.png" alt="" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('noimg');this.remove()">`;
+const stFace=(n,p)=>`<span class="stav">${esc(initials(n)||n[0])}${!p?'':p.startsWith('op:')?`<img src="${IMG}${p.slice(3)}.png" alt="" loading="lazy" onerror="this.remove()">`:`<img class="npc" src="${AVG}characters/${encodeURIComponent(p.slice(4))}.png" alt="" loading="lazy" onerror="this.remove()">`}</span>`;
+const stPara=p=>!p?'<hr>':p.startsWith('@bg:')?(SOPT.img?`<div class="stbg" aria-hidden="true">${stImg('backgrounds',p.slice(4))}</div>`:'<hr>')
+  :p.startsWith('@cg:')?(SOPT.img?`<figure class="stcg"><button data-zoom="${esc(p.slice(4))}" aria-label="Phóng to ảnh minh hoạ">${stImg('images',p.slice(4))}</button></figure>`:''):`<p>${p}</p>`;
+const stWords=c=>c.secs.reduce((a,s)=>a+s.p.reduce((b,p)=>b+(p&&p[0]!=='@'?p.split(' ').length:0),0),0);
+const stOpt=(k,v,t)=>`<button data-opt="${k}" data-v="${v}" aria-pressed="${String(SOPT[k])===String(v)}">${t}</button>`;
+let SFONT;
+function stApply(){const r=$('#sread');if(!r)return;r.style.setProperty('--sfs',SOPT.fs?SOPT.fs+'rem':'');r.dataset.ff=SOPT.ff;r.dataset.lh=SOPT.lh;r.dataset.pp=SOPT.pp;
+  // phông có chân chỉ tải khi được chọn
+  if(SOPT.ff==='serif'&&!SFONT){SFONT=document.createElement('link');SFONT.rel='stylesheet';SFONT.href='https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap';document.head.append(SFONT)}}
+function drawStory(){needStory().then(S=>{
+  SCH=Math.min(Math.max(SCH,0),S.length-1);const c=S[SCH],pv=S[SCH-1],nx=S[SCH+1],rd=new Set(SRD[c.id]||[]),pos=SPOS[c.id];
+  $('#stoc').innerHTML=S.map((x,i)=>{const n=(SRD[x.id]||[]).length;return `<button class="stc${i===SCH?' on':''}" data-ch="${i}" aria-current="${i===SCH}"><b>${x.no}${n?`<em>${n===x.secs.length?'✓ Đã đọc':n+'/'+x.secs.length}</em>`:''}</b>${x.title}</button>`
+    +(i===SCH?`<ol>${x.secs.map((s,j)=>`<li><button data-sec="${j}" class="${rd.has(j)?'rd':''}"><span>${s.c}</span>${s.t}</button></li>`).join('')}</ol>`:'')}).join('');
+  const w=stWords(c),r=$('#sread');
+  r.innerHTML=`<div class="sthead">${SOPT.img&&c.secs[0].bg?`<div class="sthero" aria-hidden="true">${stImg('backgrounds',c.secs[0].bg)}</div>`:''}<div class="no">${c.no}</div><h2>${c.title}</h2><div class="en">${c.en}</div><p class="sum">${c.sum}</p>
+    <div class="stmeta">${c.secs.length} cảnh · khoảng ${Math.max(1,Math.round(w/300))} phút đọc${rd.size?` · đã đọc ${rd.size}/${c.secs.length}`:''}</div>
+    <div class="sttools">${pos&&pos.s>0?`<button class="go" data-sec="${pos.s}">▶ Đọc tiếp: ${esc(c.secs[pos.s].c)} · ${esc(c.secs[pos.s].t)}</button>`:''}<select class="stjump" aria-label="Chuyển đến cảnh"><option value="">Chọn cảnh…</option>${c.secs.map((s,j)=>`<option value="${j}">${rd.has(j)?'✓ ':''}${esc(s.c)} · ${esc(s.t)}</option>`).join('')}</select><button data-tool="opt" aria-expanded="false">Aa Tuỳ chỉnh</button><button data-tool="focus">Chế độ tập trung</button></div>
+    <div class="stopt" hidden>
+      <div><span>Cỡ chữ</span><button data-fs="-1" aria-label="Chữ nhỏ hơn">A−</button><button data-fs="1" aria-label="Chữ lớn hơn">A+</button></div>
+      <div><span>Phông</span>${stOpt('ff','sans','Không chân')}${stOpt('ff','serif','Có chân')}</div>
+      <div><span>Giãn dòng</span>${stOpt('lh','s','Gọn')}${stOpt('lh','n','Vừa')}${stOpt('lh','l','Thoáng')}</div>
+      <div><span>Nền đọc</span>${stOpt('pp','auto','Theo trang')}${stOpt('pp','paper','Giấy cũ')}${stOpt('pp','night','Ban đêm')}</div>
+      <div><span>Ảnh minh hoạ</span>${stOpt('img',1,'Hiện')}${stOpt('img',0,'Ẩn')}</div>
+    </div></div>
+    <div class="stbody">${c.secs.map((s,j)=>`<section class="stsec" data-j="${j}"><div class="stbn${SOPT.img&&s.bg?'':' noimg'}" id="st-${j}">${SOPT.img&&s.bg?stImg('backgrounds',s.bg):''}<h3><span>${s.c}</span>${s.t}</h3></div>
+      ${s.cast?`<ul class="stcast" aria-label="Nhân vật trong cảnh">${s.cast.map(([n,p])=>`<li>${stFace(n,p)}<b>${esc(n)}</b></li>`).join('')}</ul>`:''}${s.p.map(stPara).join('')}</section>`).join('')}</div>
+    ${nx?'':'<p class="stend">— Hết phần đã viết. Các chương tiếp theo sẽ được bổ sung dần. —</p>'}
+    <div class="stnav">${pv?`<button data-ch="${SCH-1}"><small>‹ Chương trước</small>${pv.no} · ${pv.title}</button>`:''}${nx?`<button class="nx" data-ch="${SCH+1}"><small>Chương sau ›</small>${nx.no} · ${nx.title}</button>`:''}</div>`;
+  stApply();stScroll();
+}).catch(()=>{$('#sread').innerHTML='<p>Không tải được truyện. Hãy tải lại trang.</p>'})}
+// thanh tiến độ + lưu vị trí + đánh dấu cảnh đã đọc (cảnh được tính là đã đọc khi cuộn qua hết)
+const stBar=document.createElement('div');stBar.className='stprog';stBar.hidden=true;stBar.innerHTML='<i></i>';document.body.append(stBar);
+let stTick=0;
+function stScroll(){if($('#story').hidden){stBar.hidden=true;return}stBar.hidden=false;
+  const b=$('#sread .stbody'),c=window.AKS?.[SCH];if(!b||!c)return;const R=b.getBoundingClientRect(),h=innerHeight;
+  stBar.firstChild.style.width=Math.min(100,Math.max(0,(h*.5-R.top)/R.height*100))+'%';
+  let cur=0,ch=false;const rd=new Set(SRD[c.id]||[]);
+  b.querySelectorAll('.stsec').forEach(s=>{const q=s.getBoundingClientRect(),j=+s.dataset.j;if(q.top<h*.4)cur=j;if(q.bottom<h&&!rd.has(j)){rd.add(j);ch=true}});
+  const toc=$('#stoc');toc.querySelectorAll('ol button').forEach(x=>{const j=+x.dataset.sec;x.classList.toggle('cur',j===cur);x.classList.toggle('rd',rd.has(j))});
+  clearTimeout(stTick);stTick=setTimeout(()=>{SPOS[c.id]={s:cur};sset('ak-story-pos',SPOS);if(ch){SRD[c.id]=[...rd].sort((a,b)=>a-b);sset('ak-story-read',SRD)}},300)}
+addEventListener('scroll',()=>requestAnimationFrame(stScroll),{passive:true});addEventListener('popstate',()=>setTimeout(stScroll));
+const stLb=document.createElement('div');stLb.className='stlb';stLb.hidden=true;stLb.setAttribute('role','dialog');stLb.setAttribute('aria-label','Ảnh minh hoạ');stLb.innerHTML='<img alt="">';document.body.append(stLb);
+stLb.onclick=()=>{stLb.hidden=true};
+const stFocus=on=>{document.body.classList.toggle('stfocus',on);$('#stfx').hidden=!on};
+{const x=document.createElement('button');x.id='stfx';x.hidden=true;x.textContent='✕ Thoát tập trung';x.onclick=()=>stFocus(false);document.body.append(x)}
+const stGo=i=>{SCH=i;sset('ak-story',SCH);drawStory();scrollTo({top:0})};
+$('#story').addEventListener('click',e=>{const z=e.target.closest('[data-zoom]');if(z){stLb.firstChild.src=`${AVG}images/${encodeURIComponent(z.dataset.zoom)}.png`;stLb.hidden=false;return}
+  const b=e.target.closest('button');if(!b)return;
+  if(b.dataset.ch!=null)stGo(+b.dataset.ch);
+  else if(b.dataset.sec!=null)$('#st-'+b.dataset.sec)?.scrollIntoView({behavior:'smooth'});
+  else if(b.dataset.tool==='opt'){const p=$('#sread .stopt');p.hidden=!p.hidden;b.setAttribute('aria-expanded',!p.hidden)}
+  else if(b.dataset.tool==='focus')stFocus(!document.body.classList.contains('stfocus'));
+  else if(b.dataset.opt){const k=b.dataset.opt;SOPT[k]=k==='img'?+b.dataset.v:b.dataset.v;sset('ak-story-opt',SOPT);
+    if(k==='img'){const y=scrollY;drawStory();needStory().then(()=>{$('#sread .stopt').hidden=false;scrollTo({top:y})})}
+    else{stApply();b.parentNode.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b))}}
+  else if(b.dataset.fs){const rem=n=>parseFloat(getComputedStyle(n).fontSize),cur=rem($('.stbody'))/rem(document.documentElement);
+    SOPT.fs=Math.round(Math.min(1.5,Math.max(.875,cur+.0625*b.dataset.fs))*16)/16;sset('ak-story-opt',SOPT);stApply()}});
+$('#story').addEventListener('change',e=>{if(e.target.matches('.stjump')&&e.target.value!==''){$('#st-'+e.target.value)?.scrollIntoView({behavior:'smooth'});e.target.value=''}});
+// phím tắt khi đang ở tab Cốt truyện: ← → đổi chương, Esc đóng ảnh / thoát tập trung
+addEventListener('keydown',e=>{if($('#story').hidden||e.altKey||e.ctrlKey||e.metaKey||/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))return;
+  if(e.key==='Escape'){stLb.hidden=true;stFocus(false)}
+  else if((e.key==='ArrowRight'||e.key==='ArrowLeft')&&window.AKS){const i=SCH+(e.key==='ArrowRight'?1:-1);if(i>=0&&i<AKS.length){e.preventDefault();stGo(i)}}});
+$('#nav').addEventListener('click',e=>{const t=e.target.closest('[data-tab]');if(!t)return;if(t.dataset.tab==='story')drawStory();else{stFocus(false);stScroll()}});
 // 12: lên đầu trang
 // giải thích class/subclass: rê chuột hoặc giữ ngón tay trên nút; subclass lấy Trait từ details.js
 const CLSDESC={Vanguards:'Tiên phong: Cost thấp, hồi DP đầu trận để deploy đội hình nhanh, thường block 1–2 địch.',Guards:'Cận chiến chủ lực: gây sát thương vật lý mạnh, block địch, nhiều nhánh đánh diện rộng hoặc tầm xa.',Defenders:'Hộ vệ: HP và DEF cao, block nhiều địch để giữ đường, một số nhánh hồi máu hoặc gây sát thương.',Snipers:'Xạ thủ tầm xa: đặt ô cao, ưu tiên bắn địch bay hoặc gây sát thương vật lý từ xa.',Casters:'Pháp sư tầm xa: đặt ô cao, gây sát thương Arts, mạnh với địch DEF cao.',Medics:'Y sĩ: hồi HP cho đồng minh, đặt ô cao.',Supporters:'Hỗ trợ: làm chậm, debuff địch, buff đồng minh hoặc triệu hồi, đặt ô cao.',Specialists:'Đặc vụ: cơ chế đặc biệt như dịch chuyển địch, deploy lại nhanh, bẫy hoặc ẩn thân.'};

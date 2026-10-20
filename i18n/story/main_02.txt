@@ -1,0 +1,1223 @@
+@id main_2
+@no Chương 2
+@title Những trái tim chia lìa
+@en Separated Hearts
+@sum Rhodes Island đến Lungmen, ký một thỏa thuận đầy toan tính với Wei Yenwu. Nhiệm vụ đầu tiên: tìm một cô gái Ursus tên Misha giữa khu ổ chuột, trước khi Reunion tìm thấy cô ấy.
+@cover bg_1_firstcontact
+
+## 2-1 | Hướng về Lungmen
+
+*5:57 sáng. Nhiều mây. Tầm nhìn 17 km.*
+*Sa mạc, cách ngoại ô Lungmen 4 km.*
+*4 ngày sau chiến dịch giải cứu ở Chernobog.*
+
+“Chào buổi sáng, Doctor. Người đã ngủ được 99999—”
+
+“—9999 giờ.”
+
+Giọng PRTS đều đều vang lên trong căn phòng nhỏ trên con tàu Rhodes Island, không chút cảm xúc, nhưng Doctor ngờ rằng có một chút gì đó giống như trêu chọc trong cách nó ngắt câu.
+
+“Dù việc người ngại rời giường không phải là không có lý do, sự hiện diện của người đang được cần gấp tại phòng chỉ huy tác chiến. Ngoài ra, đây là lời khuyên y tế từ bác sĩ Kal’tsit: Xin hãy mở cửa sổ để duy trì nguồn không khí trong lành, và dành thời gian lên boong tàu để duy trì mức Vitamin D khỏe mạnh.”
+
+Phòng chỉ huy tác chiến sáng đèn từ sớm. Amiya quay lại khi nghe tiếng cửa mở, đôi tai thỏ vểnh lên.
+
+“A, Doctor! Chào buổi sáng ạ.”
+
+“Doctor đến rồi,” Dobermann gật đầu.
+
+“Doctor thấy đỡ hơn chưa ạ? Hôm qua trông Doctor vẫn còn đau, đi lại cũng khó khăn.”
+
+“Tôi khỏe hẳn rồi. Còn em?”
+
+“Hôm nay em hoàn toàn ổn, tràn đầy năng lượng luôn!” Amiya cười, nụ cười tươi tắn như chưa từng có Chernobog. Nhưng Doctor đã học được cách nhìn kỹ hơn: quầng thâm dưới mắt cô bé, những ngón tay vô thức xoay chiếc nhẫn trên tay. “Dù sao, chúng ta vẫn còn những nhiệm vụ khác phải lo. Chuẩn bị càng sớm càng tốt. Doctor nên làm quen với việc phải chuyển trạng thái thật nhanh ở đây.”
+
+“Doctor,” Dobermann nói. “Dù chúng ta tổn thất nặng nề ở Chernobog, chúng ta đã thu được nhiều thông tin về Reunion, và quan trọng hơn, đưa được người ra an toàn. Dựa trên cuộc đàm phán hôm qua, nomadic city gần nhất là Lungmen đã đề nghị một hiệp ước hợp tác và đồng ý trao đổi thông tin. Chúng tôi có vài bằng chứng cho thấy Reunion có thể đang nhắm đến Lungmen tiếp theo. Phải chờ bác sĩ Kal’tsit cho phép mới lấy được phần còn lại của thông tin. Cô ấy vẫn đang ở trong Lungmen.”
+
+“Lungmen cho phép chúng ta tạm thời đóng trại gần thành phố,” Amiya nói tiếp. “Họ cũng đồng ý bồi thường một phần tổn thất và chi phí trong chiến dịch. Đổi lại, Rhodes Island phải giúp phòng thủ vùng ngoại ô. Nhưng lý do em gọi Doctor sớm thế này là vì…”
+
+“Để tôi giải thích, Amiya.” Dobermann gõ lên bản đồ. “Đêm qua, chúng tôi phát hiện thêm một đợt người sống sót từ Chernobog đang tiến về Lungmen. Dự kiến họ sẽ đến vào buổi chiều. Ta sẽ bảo vệ ngoại ô Quận 5 như mấy ngày qua. Chỉ là lần này, có thể có nhiều thành viên Reunion trà trộn trong đoàn. Tình hình khác đi, nên trước khi bắt đầu chiến dịch, cần bàn với người vài chiến thuật mới.”
+
+“Dù sao, Doctor, hôm nay có nhiều việc lắm, nên…” Amiya nắm chặt tay. “Cùng cố gắng nhé!”
+
+“Cả hai hoàn tất chuẩn bị chiến đấu đi,” Dobermann nói. “Doctor, khi đã phân xong đội hình, hãy báo cho các operator để họ có thời gian chuẩn bị. Mười lăm phút sau khi diễn tập xong, ta xuất phát.” Cô ngừng lại. “À, lần này nhớ đừng đến muộn.”
+
+***
+
+*10:14 tối. Trời quang. Tầm nhìn 19 km.*
+*Lungmen, Quận 5. Khu kiểm dịch.*
+
+“Thưa sếp. Họ đến rồi.”
+
+Loa phát thanh vang vọng khắp khu kiểm dịch, giọng nữ đều đặn lặp đi lặp lại.
+
+“Xin chú ý… Do ảnh hưởng của Catastrophe, mọi chuyến bay tại Lungmen đã bị tạm dừng. Tất cả lối vào Quận 5 sẽ đóng cửa sau hai giờ nữa. Cảm ơn quý vị đã hợp tác trong quá trình kiểm tra Oripathy. Nếu phát hiện bất kỳ người Infected chưa đăng ký nào, xin báo ngay cho cảnh sát gần nhất. L.G.D. sẽ tạm giữ họ theo ‘Luật Xử lý Khẩn cấp’. Xin chú ý…”
+
+“Đúng như lời đồn…” Amiya lẩm bẩm. Cô bé kéo mũ áo khoác thấp xuống một chút, che đôi tai. “Đi thôi, Doctor.”
+
+Ở cuối hàng rào kiểm dịch, một người phụ nữ đang đứng chờ. Mái tóc xanh lam buộc gọn, đôi sừng rồng nhỏ, đồng phục L.G.D. phẳng phiu không một nếp nhăn. Thanh kiếm đeo bên hông cô ta trông như chưa từng rời khỏi vị trí ấy.
+
+“Rhodes Island hẹn gặp L.G.D. lúc mười giờ,” cô ta nói, không cần chào. “Giờ là mười giờ mười bốn. Các người đến muộn mười bốn phút, nghĩa là các người đã lãng phí mười bốn phút của tôi.”
+
+“…Em xin lỗi, cô Ch’en. Bọn em vừa phát hiện Reunion có mặt ở đây…”
+
+“Không sao, tôi biết rồi. Nhưng đó không phải điều quan trọng lúc này.” Ánh mắt Ch’en lướt qua Doctor, sắc như lưỡi dao. “…Còn đây là ai?”
+
+“Doctor là cố vấn của Rhodes Island. Bác sĩ Kal’tsit chắc đã báo với cô rồi.”
+
+“Hừm…” Ch’en quan sát Doctor thêm một nhịp, như đang ghi nhớ một hồ sơ. “Mọi người đã đến đủ, giờ tôi cần các người đi theo tôi đến…”
+
+“Cô Ch’en! Khẩn cấp! Mấy người Infected đó… họ không…”
+
+“Đừng hoảng!” Ch’en quay phắt lại. “Đội Một, chờ lệnh! Sniper, vào vị trí!”
+
+Ở hàng rào kiểm dịch, một nhóm người đang giằng co với các nhân viên L.G.D.
+
+“Buông tôi ra!! Sao các người bắt tôi?! Chúng tôi không làm gì sai cả!!!”
+
+“Vài người Infected… không chịu bị đưa đi… Chúng tôi…”
+
+“Tôi thấy rồi.” Ch’en nhìn cảnh ấy, gương mặt không đổi. “Thôi. Bắt hết.”
+
+Amiya khẽ giật mình.
+
+“Giải tán đám đông ngay. Mở cổng sau ba mươi phút, khi xong quy trình xét duyệt. Ngoài ra, đẩy tuyến kiểm dịch lên thêm bốn mươi mét.” Ch’en quay lại. “Ngoài cô và Doctor, những người còn lại của Rhodes Island ở lại đây hỗ trợ an ninh biên giới. Hai người đi với tôi. Nếu nhóm các người không xử lý nổi việc vặt này, tôi sẽ không giao nhiệm vụ nào cho các người. PC94172, sắp xếp việc cho những người này. Tôi không muốn thấy thêm rắc rối nào tối nay.”
+
+“Rõ, thưa sếp!”
+
+Amiya nhìn Doctor, khẽ thì thầm: “Cô Ch’en đúng là khó tính thật… còn nghiêm hơn em tưởng…”
+
+Doctor chỉ gật đầu.
+
+***
+
+Tòa nhà mà Ch’en dẫn họ đến cao vút lên nền trời đêm, kính và thép lấp lánh ánh đèn như một ngọn tháp bằng pha lê.
+
+“Ô-cao quá!” Amiya ngửa cổ lên, rồi bắt gặp ánh mắt của Ch’en, vội cúi xuống. “X-xin lỗi…”
+
+“…Rhodes Island không nghi ngờ gì là có năng lực,” Ch’en nói.
+
+“Ồ… Cảm ơn cô đã khen.”
+
+“Tuy nhiên,” Ch’en tiếp, “sau sự kiện Chernobog, một làn sóng người tị nạn khổng lồ đã đổ về Lungmen. Người Infected hẳn đã biết bước vào Lungmen sẽ có hậu quả gì.”
+
+“Tôi xin nhắc lại một lần nữa.”
+
+Một giọng nói khác vang lên từ cửa thang máy, điềm tĩnh và lạnh như mặt hồ mùa đông.
+
+“Lungmen chính là Chernobog tiếp theo.”
+
+“Bác sĩ Kal’tsit…!”
+
+Người phụ nữ ấy đứng ở cuối hành lang, áo choàng trắng và mái tóc xám nhạt, đôi tai dài của giống Feline. Đôi mắt màu lục nhạt của cô ta nhìn Amiya một thoáng, rồi lướt qua Doctor, nhanh đến mức không ai kịp đọc được biểu cảm trong đó.
+
+“Đại diện của Rhodes Island đã gặp Trưởng quan Wei,” Ch’en nói. “Xin chờ ở đây. Tôi sẽ báo sau.”
+
+Khi Ch’en đi khuất, Amiya thở hắt ra. “Phù… cô ấy khó nói chuyện thật đấy. Doctor, từ đây trở đi, bác sĩ Kal’tsit sẽ lo phần đàm phán. Xin Doctor hãy tin tưởng cô ấy.”
+
+## 2-2 | Khẩu chiến
+
+“Mời vào.”
+
+Căn phòng rộng, ốp gỗ tối màu, cửa kính nhìn xuống cả thành phố lấp lánh. Sau bàn làm việc là một người đàn ông trung niên, râu cắt tỉa gọn gàng, đôi mắt hiền hòa của người quen mỉm cười trong những cuộc thương lượng mà người khác không bao giờ thắng. Wei Yenwu, Trưởng quan của Lungmen.
+
+“Bác sĩ Kal’tsit!” Amiya gọi.
+
+Kal’tsit quay lại. “Amiya…” Rồi ánh mắt cô ta dừng lại trên Doctor. Một quãng lặng rất ngắn. “…Người đến rồi.”
+
+Doctor không biết phải đáp gì.
+
+“E hèm.” Ch’en lên tiếng. “Trưởng quan Wei, hai đại diện khác của Rhodes Island cũng đã đến.”
+
+“À, tuyệt lắm. Mời ngồi. Cô Kal’tsit đang trình bày tình hình cho tôi.”
+
+“Vậy cho phép tôi tiếp tục,” Kal’tsit nói. “Ông Wei, tôi tin ông đã nắm rõ tình hình. Hiện mạng lưới thông tin của Lungmen thu thập được nhiều thông tin về Reunion Movement. Thật tốt là ông nhận ra tầm quan trọng của chúng. Nhưng chừng đó chưa đủ. Lungmen vẫn thiếu những thông tin then chốt.”
+
+Ch’en im lặng, nhưng hai bàn tay cô ta siết lại sau lưng.
+
+“Tôi tin L.G.D. biết rất rõ rằng việc kiểm dịch đơn thuần này không đủ để ngăn Reunion. Reunion sẽ không ngoan ngoãn đi qua trạm kiểm tra, cũng không chờ chính quyền chủ động ra tay. Vì vậy… nếu không có sự hỗ trợ của Rhodes Island, Lungmen sẽ chịu tổn thất nặng nề trước Reunion, nếu các vị cứ tiếp tục áp dụng cùng một chiến lược với người Infected.”
+
+“Xin lỗi đã ngắt lời,” Ch’en nói. “L.G.D. hiểu hệ thống phòng thủ của Lungmen hơn Rhodes Island. Chúng tôi đã chuẩn bị để đối phó khả năng Reunion thâm nhập. Tuy nhiên, chúng tôi không có nghĩa vụ phải cung cấp cho các người thông tin mật về hoạt động của mình.”
+
+Wei Yenwu vẫn mỉm cười. “…Cô Kal’tsit, xin cứ tiếp tục.”
+
+“Đúng là đến nay Lungmen đã thành công trong việc đối phó với người Infected không vũ trang. Nhưng các vị chưa từng đối mặt với một cuộc bạo loạn có tổ chức ở quy mô này. Điều đó có thể dẫn đến những tổn thất không cần thiết.” Kal’tsit ngừng lại. “Theo kinh nghiệm của chúng tôi… chỉ có người Infected mới đối phó được người Infected.”
+
+“Theo tôi hiểu, Rhodes Island có chuyên môn đặc biệt trong việc đối phó Reunion?”
+
+“Chúng tôi có kinh nghiệm, nhưng tôi không gọi đó là chuyên môn.”
+
+“Ồ…? Tôi nghe nói Rhodes Island đã có mặt trong sự kiện Chernobog, và thu được nhiều tin tình báo về Reunion.”
+
+“Dù ông nghe điều đó từ đâu,” Kal’tsit đáp, không chút dao động, “ở giai đoạn này, thông tin đó không nằm trong danh mục trao đổi. Nó chỉ là một phần trong lý lịch của chúng tôi, một tư cách cho phép chúng tôi được nói chuyện với ông, ông Wei.”
+
+“Có trao đổi thông tin hay không là do Lungmen quyết định. Nếu Rhodes Island không cung cấp được ngay cả mức thông tin này…” Wei Yenwu khẽ cười. “Hah. Vậy thì chúng tôi chẳng có cơ sở nào để tin vào năng lực của các vị.”
+
+“Ông Wei, xin lỗi nếu lời tôi chưa đủ rõ. Điều tôi muốn nhấn mạnh là… lý do duy nhất Rhodes Island có được thông tin này, là vì chúng tôi đủ mạnh để giành lấy nó.”
+
+“Dù sao đi nữa,” Ch’en nói, “Lungmen không thể tùy tiện tin một nhóm người Infected khác.”
+
+Kal’tsit quay sang cô ta, và lần đầu tiên, giọng cô ta mang theo một tia mỉa mai lạnh lẽo.
+
+“Cô Ch’en, nếu cô tin rằng trừng phạt người Infected quan trọng hơn an ninh thực sự của Lungmen… thì tôi sẽ lập tức tự nộp mình theo luật địa phương của các vị. Rồi tôi sẽ ngồi trong ngục thở dài, nhìn Reunion thiêu rụi thành phố của các vị.”
+
+“Lần này, Lungmen không có lựa chọn.”
+
+“Thiện ý của cô không bị bỏ qua, dù cô thô lỗ,” Ch’en đáp, mắt không chớp. “Nhưng chúng tôi cũng không phải hội từ thiện cho những kẻ vận động hành lang vô dụng.”
+
+“Cô Ch’en,” Wei Yenwu gọi.
+
+“Trưởng quan Wei, tôi cho rằng để người ngoài can dự vào chuyện cơ mật của Lungmen là không thích hợp.”
+
+“Bình tĩnh, cô Ch’en. Họ vẫn là khách của chúng ta.” Ông ta ngừng lại. “…Khách của tôi.”
+
+Một quãng lặng nặng nề.
+
+“…Được thôi,” Ch’en nói. “Chừng nào họ chưa vi phạm luật, tôi sẽ dung thứ họ, thưa ông.”
+
+“À, xin lỗi, tôi vừa nhớ ra…” Wei Yenwu gõ nhẹ ngón tay lên bàn. “Phải rồi. Hừm… Có một điều tôi quan tâm. Năng lực của các vị. Theo tôi hiểu, Rhodes Island cũng đang hỗ trợ trấn áp người Infected quanh đây? Cô Ch’en, dựa trên thông tin tốt nhất của cô, cô đánh giá năng lực chiến đấu của Rhodes Island thế nào?”
+
+“…Cho phép tôi mô tả những gì tôi đã chứng kiến trong các chiến dịch của Rhodes Island,” Ch’en nói. “Chi tiết như sau…”
+
+***
+
+“…Báo cáo về các hoạt động tác chiến của Rhodes Island xin kết thúc tại đây.”
+
+“Và đánh giá của cô?”
+
+“Không có mấy lý do để nghi ngờ sức mạnh của họ. Tuy nhiên, Trưởng quan Wei, xét đến thân phận của họ, tôi cho rằng về mặt chiến lược… L.G.D. hoàn toàn đủ khả năng đảm đương công việc này.”
+
+“Về chống tội phạm và ngăn thâm nhập, L.G.D. là quá đủ,” Wei Yenwu gật gù. “Rhodes Island có thể mang đến nhiều hơn. Tuy nhiên… trong những thứ Rhodes Island yêu cầu, có một ‘món’ mà dựa trên những gì được đưa ra, chúng tôi không muốn trao đổi. Sự hợp tác phòng thủ tạm thời mà các vị cung cấp còn xa mới tương xứng. Như hiện tại, ‘giá chào’ của các vị hơi cao. Cô Kal’tsit, cô Amiya, mong hai vị hiểu cho.”
+
+“Ông Wei, phòng thủ tạm thời sẽ không đủ,” Kal’tsit nói. “Có rất nhiều điều về Reunion mà ông chưa biết. Dựa trên dữ liệu chúng tôi thu thập khi chiến đấu với chúng, nếu không có biện pháp chủ động, Reunion sẽ chiếm được Lungmen trong vòng hai tuần.”
+
+“…Vô lý. Không có bằng chứng nào cho—”
+
+“Cô Ch’en, cô có muốn biết lý do thật sự khiến Chernobog sụp đổ chỉ trong một đêm không?”
+
+Ch’en im bặt.
+
+“Xin hãy nói rõ,” Wei Yenwu nói.
+
+“Amiya.”
+
+“A… Vâng.” Amiya đứng thẳng lưng. “Rhodes Island không chỉ có mặt trong sự kiện Chernobog… Bọn em còn bị kẹt trong Catastrophe, và đã sống sót.”
+
+“Ấn tượng, ấn tượng. Không phải ngày nào tôi cũng gặp người đủ điên để sống sót ra khỏi một Catastrophe. Cô Amiya, xin cứ tiếp tục, tôi đang nghe.”
+
+“…Bọn em đã chiến đấu với thủ lĩnh của Reunion.”
+
+Ch’en không nhúc nhích. Nhưng Doctor, đứng ngay cạnh, thấy rõ những ngón tay cô ta vừa siết lại đến trắng bệch.
+
+“Hửm? Tên cô ta là gì nhỉ? Tôi không nhớ rõ lắm…”
+
+“Talulah,” Doctor nói.
+
+“À, phải rồi, Talulah.” Wei Yenwu quay sang. “Cô Ch’en, cô nghĩ sao?”
+
+Một quãng lặng dài.
+
+“…Tôi… Tôi biết,” Ch’en nói.
+
+“…Đó là những gì đã xảy ra với Rhodes Island ở Chernobog,” Amiya tiếp tục. “Dù Reunion đã giành được Chernobog từ tay Ursus, muốn bành trướng, chúng phải giải quyết tình trạng thiếu tài nguyên. Lungmen sẽ là bàn đạp tiếp theo của chúng. Các vị có thể đẩy lùi chúng một thời gian, nhưng nếu không chủ động xử lý tình hình, các đợt tấn công sẽ không dừng lại. Hơn nữa… còn một yếu tố chưa biết: chúng ta vẫn chưa rõ Ursus sẽ phản ứng thế nào sau khi mất Chernobog…”
+
+“Hahaha… Nói hay lắm, cô gái trẻ.” Wei Yenwu vỗ tay nhẹ. “Do mối đe dọa nghiêm trọng này và nhân lực có hạn của L.G.D., tôi không phản đối việc xem xét thỏa thuận tạm thời theo các điều khoản đã nêu. Nhưng điều tôi nói trước đó vẫn còn nguyên…”
+
+“…Giá chào của Rhodes Island vẫn quá cao?” Kal’tsit hỏi.
+
+“Đúng vậy. Để Lungmen được bồi đắp xứng đáng, tôi có hai điều kiện rất đơn giản. Thứ nhất, Rhodes Island sẽ giúp L.G.D. trấn áp mối đe dọa Reunion. Bao gồm xác định các mối đe dọa trong nội thành Lungmen cũng như những gì liên quan đến hậu quả từ Chernobog. Đồng thời đánh giá mức độ thâm nhập của người Infected vào Lungmen. Tôi mong các vị chia sẻ mọi thông tin có thể hữu ích.”
+
+“Còn điều kiện thứ hai?”
+
+“Tôi sẽ nói điều kiện thứ hai sau khi các vị đã đáp ứng điều kiện thứ nhất.” Ông ta mỉm cười. “Đương nhiên, tôi sẽ không đòi hỏi gì ngoài phạm vi chuyên môn của Rhodes Island.”
+
+“Tôi chưa hiểu lắm. Ông Wei có thể nói rõ hơn?”
+
+“Nói thế nào nhỉ… Nếu Reunion gây ra thiệt hại vượt quá ước tính của Rhodes Island… tôi mong các vị giúp L.G.D. xử lý tình hình, có thể bao gồm cả công tác hậu thảm họa. Đương nhiên, không có gì vượt quá khả năng của các vị. Đại khái là vậy.” Ông ta dang tay. “Tôi không thể nói nhiều hơn vào lúc này. Nhưng đừng quên, Rhodes Island không có lựa chọn. Nếu các vị không chấp nhận điều kiện của chúng tôi, mọi điều khoản đã bàn, cũng như các yêu cầu của các vị, sẽ…”
+
+Kal’tsit quay sang. “Amiya?”
+
+“Bác sĩ Kal’tsit…” Amiya hít một hơi, rồi bước lên. “Ông Wei, em muốn bổ sung một điều khoản vào thỏa thuận: ‘Mọi cách diễn giải các điều khoản phải được cả hai bên đồng thuận.’ Điều này có được chấp nhận không ạ?”
+
+Wei Yenwu nhìn cô bé, và lần đầu tiên, nụ cười của ông ta có chút thật lòng.
+
+“Ồ… Dĩ nhiên rồi. Tôi thấy được sự tôn trọng của cô dành cho Lungmen, cô Amiya. Cô Ch’en, cô có phản đối gì không?”
+
+“…Tôi chấp nhận chiến dịch này.”
+
+“Hah. Có vẻ cô Ch’en giờ cũng có mục tiêu riêng rồi.” Ông ta đứng dậy. “Dù sao, xin chúc mừng. Các vị đã giành được lòng tin của Lungmen. Cô Ch’en sẽ chịu trách nhiệm sắp xếp cho các vị. Tuy nhiên, xin lưu ý người Infected không được tự do đi lại trong thành phố, vì điều đó có thể gây hoảng loạn. Tôi mong các vị tuân theo mệnh lệnh của L.G.D. khi thi hành nhiệm vụ. Đặc biệt là mệnh lệnh của cô Ch’en. Lungmen sẽ mở cửa cho Rhodes Island, chừng nào hành động của các vị còn đồng nhất với chúng tôi.”
+
+***
+
+“Phù… Ugh…!” Ra khỏi phòng, Amiya gần như ngã dựa vào tường. “Người đàn ông đó khó đối phó quá… Ông ấy nói năng có bài bản quá, cảm giác như chẳng gì lay chuyển được ông ấy…”
+
+“Amiya, rồi em sẽ phải tự học cách đối phó với những người như vậy,” Kal’tsit nói. Rồi giọng cô ta dịu đi một chút, rất ít thôi. “Nhưng cuối cùng, em đã làm rất tốt.”
+
+“Ehehe…”
+
+“Nhân tiện…” Kal’tsit quay sang Doctor. Cô ta nhìn rất lâu. “…Người…”
+
+“Hân hạnh được gặp, bác sĩ Kal’tsit,” Doctor nói.
+
+Kal’tsit im lặng. Một sự im lặng có trọng lượng, như mặt nước trước khi vỡ.
+
+“Bác sĩ Kal’tsit, xin đừng làm khó Doctor…” Amiya khẽ nói.
+
+Kal’tsit hít vào một hơi thật sâu, sắc lẹm. Rồi thở ra, rất chậm.
+
+“Haah… Tôi mong những hy sinh của chúng ta… không phải là vô ích.”
+
+Cô ta nhìn Doctor thêm một lần nữa, và lần này, có thứ gì đó rất cũ, rất mệt mỏi, nằm sâu trong đôi mắt màu lục nhạt.
+
+“Chào Doctor. Mừng người trở về.”
+
+## 2-3 | Suy đoán vô tội
+
+Ở một góc khu ổ chuột Lungmen, nơi những mái tôn chồng lên nhau như vảy cá và ánh đèn neon không bao giờ chiếu tới, một cô gái tóc trắng đang quỳ trước một nhóm trẻ con.
+
+“Nhanh, trốn đi! Chị… chị phải đi rồi. Cầm lấy này… cái này cho các em. Đây là bùa hộ mệnh. Mẹ chị dạy chị làm nó… Còn đây là cái chị tự làm.” Cô gái đặt vào tay đứa bé nhất một con búp bê nhỏ bằng vải vụn. “Khi tự tay làm những con búp bê này, em có thể giữ cho những người mình thương được an toàn.”
+
+“Vâng, chị Misha, bọn em sẽ giữ gìn cẩn thận!”
+
+“Tốt, tốt. Giờ thì đi trốn đi! Đừng gây tiếng động nhé.”
+
+Bọn trẻ chạy biến vào những ngõ hẻm. Cô gái tên Misha đứng dậy, nhìn quanh, rồi cũng biến mất về phía ngược lại.
+
+Chỉ một lát sau, những tiếng bước chân nặng nề đã vang lên.
+
+“Chúng đi đâu rồi?! Đuổi theo! Xem lũ Infected đó chạy được bao xa! …Hửm? Ồ, xem chúng ta có gì đây?”
+
+***
+
+“Theo dữ liệu của Exusiai, mục tiêu nhiệm vụ của chúng ta hẳn đang ở đâu đó quanh đây…” Amiya nhìn bản đồ trên tay, rồi nhìn mê cung những mái nhà, cầu thang sắt, dây điện chằng chịt phía trước. “Argh, địa hình ở đây phức tạp thật. Nếu tự làm một mình, nhiệm vụ này hẳn sẽ phiền phức lắm. May mà em đã liên lạc với Penguin Logistics từ trước…”
+
+Cô bé khựng lại. “…Ai đó?”
+
+Ở đầu ngõ, vài tên du côn đang túm cổ một đứa trẻ.
+
+“Đồ xấu xa! Lũ người xấu! Buông tôi ra! Buông… ra…!”
+
+“Nói! Con bé đó chạy đi đâu?”
+
+“Đừng giả ngu!”
+
+“Chị ơi! Chị ơi! Chị ở đâu…! Cứu với… Chị Misha! Chị Misha, cứu em!!”
+
+Amiya bước ra khỏi bóng tối.
+
+“…Các anh nên đi ngay đi, nếu biết điều.”
+
+“…Hả?! Đứa quái nào đây…? Trông mày không phải dân ở đây! Mày không sợ bọn tao à…”
+
+“Nếu không thì…” Amiya giơ một tay lên.
+
+Một luồng sáng đen bùng lên. Tên du côn gần nhất bị hất văng vào tường.
+
+“Gaaah!! C-cái gì vậy? Arts! C-con nhỏ dùng Arts?! Aaaargh! Tránh xa tao ra!”
+
+“…Đừng bao giờ bắt nạt người không có khả năng tự vệ nữa.”
+
+“Aaaagh! Quái vật!”
+
+Đám du côn chạy tán loạn. Amiya đứng im, nhìn theo.
+
+“Heh… Quái vật, hả?”
+
+Rồi cô bé quay lại, giọng dịu hẳn, cúi xuống những đứa trẻ đang nấp sau thùng rác. “Không sao rồi. Các em ra đi. Ở đây nguy hiểm lắm. Mau tìm chỗ nào an toàn đi nhé.”
+
+“Cảm ơn chị!”
+
+“Giữ gìn nhé!”
+
+Một người phụ nữ tóc vàng, đôi tai cáo vểnh, thanh kiếm đeo hờ hững bên hông, bước tới. “Amiya, chuyện gì vậy?”
+
+“Hừm, vừa nãy em thấy một người Infected, có lẽ chưa đăng ký…”
+
+“Từ Ursus à?” Franka hỏi.
+
+“Vâng. Cô ấy đang chạy sâu vào khu ổ chuột. Franka, tập hợp các operator gần đây.”
+
+“Ok.”
+
+“Càng vào sâu khu ổ chuột, tình hình càng bất ổn…” Amiya nhìn quanh. “Dân thường, tội phạm, người tị nạn, tất cả lẫn lộn với nhau. Chúng ta phải chuẩn bị kỹ.”
+
+Một cô gái khác, đôi sừng nhỏ và chiếc đuôi dài của giống Vouivre, khiên lớn trên tay, chạm vào tai nghe. “Amiya, có liên lạc đến. Chờ một chút.” Liskarm lắng nghe. “…Đúng vậy. Amiya, là L.G.D.”
+
+“Cô Ch’en ạ?”
+
+“Phải.” Liskarm tiếp tục nghe máy. “…Đúng thế. Chúng tôi đã tìm thấy một số người Infected chưa đăng ký. …Vâng. …Cái gì? …Chúng tôi phải tìm một cô gái Ursus, tóc trắng ngắn, cao khoảng 145 cm, tên là Misha?”
+
+Amiya giật mình. “Đó là…?”
+
+“…Rõ.” Liskarm hạ máy. “Amiya, cô Ch’en muốn chúng ta lập tức tìm người Infected vừa mô tả. Khi tìm thấy, phải giao ngay cho L.G.D.”
+
+“Cho em nói chuyện với cô ấy được không?” Amiya cầm lấy máy. “A lô, a lô… Cô Ch’en, cô nghe em nói không?”
+
+“Tôi nghe.”
+
+“Em có thể xác nhận tính hiệu lực của mệnh lệnh đó không ạ?”
+
+“Hiệu lực một trăm phần trăm, áp dụng ngay lập tức.”
+
+Tút. Tút.
+
+“…Cô ấy cúp máy luôn rồi…”
+
+“Cô Ch’en đó, tính khí hơi nóng nảy nhỉ,” Franka nhún vai.
+
+“Vậy đây sẽ là nhiệm vụ của chúng ta lúc này…”
+
+“Amiya, tôi vừa nhận thêm tin từ mấy Defender,” Liskarm nói. “Họ gặp vài kẻ công khai thù địch với operator Rhodes Island. Và những kẻ tấn công đó không phải người thường, họ là… người Infected.”
+
+Amiya im lặng một nhịp. Rồi cô bé bắt đầu ra lệnh, giọng gọn gàng như một người chỉ huy thực thụ.
+
+“…Cho các Defender rút về phía chúng ta. Đội trinh sát! Mục tiêu là một cô gái Ursus tóc trắng ngắn, cao 145 cm. Nhớ ẩn nấp, và giữ an toàn! Các operator khác, theo trưởng nhóm, tản ra.”
+
+“Franka, tấn công trực diện,” Doctor nói.
+
+Franka nhướng mày, rồi cười. “Này… Không tệ đâu. Liskarm, người này khá lắm đấy.”
+
+“…Doctor là chỉ huy chiến thuật của chúng ta,” Liskarm đáp, giọng nghiêm khắc. “Cô nên nghiêm túc hơn.”
+
+“Bắt đầu thôi,” Amiya nói. Rồi cô bé khẽ thêm, như tự nói với mình: “Vậy là… Rhodes Island lại phải chiến đấu với người Infected nữa…”
+
+***
+
+Misha nép vào một góc tối giữa hai bức tường, ôm lấy đầu gối.
+
+“Phù… Trốn ở đây chắc sẽ không bị tìm thấy… Nhưng mình không thể quay về với lũ trẻ được nữa rồi. Mong là chúng không sao… Haizz… Tại sao chứ…”
+
+Một bóng người đổ xuống.
+
+“…! Ai đó?”
+
+“…Chị là chị Misha phải không ạ?”
+
+Misha bật dậy, lùi sát vào tường. Trước mặt cô là một cô bé có đôi tai thỏ, cùng hai người phụ nữ mang vũ khí.
+
+“Em xin lỗi, chị Misha. Mong là em không làm chị sợ… Đây là đồng nghiệp của em, Franka và Liskarm.”
+
+“Chào nhé,” Franka vẫy tay.
+
+“Chào cô,” Liskarm gật đầu.
+
+“Bọn em đến từ Rhodes Island Pharmaceuticals. Là một tổ chức được lập ra để phục vụ người Infected, ít nhất thì… bọn em mong có thể giúp được chị. Nên bọn em muốn nói chuyện với chị một chút.”
+
+“Nói chuyện?”
+
+“Vâng. Nhưng đây không phải chỗ thích hợp… Lúc này, ưu tiên hàng đầu của bọn em là giữ cho chị an toàn. Tạm thời bọn em sẽ bảo vệ chị, chị cứ yên tâm.”
+
+“Em… đang nói gì vậy…” Misha lùi thêm, móng tay giương lên. “Các người chỉ định bắt tôi rồi nhốt lại thôi, phải không?! Tránh xa tôi ra! Móng vuốt của tôi sắc lắm…! Nếu không muốn bị thương thì…”
+
+“…Phì,” Franka bật cười.
+
+“Cô cười gì chứ…”
+
+“Nếu bọn tôi định bắt cô thật, thì đã chẳng cho cô cơ hội chống cự đâu.”
+
+“Chị Misha, bọn em thật sự muốn giúp chị, nên…”
+
+“Tôi không tin các người…” Giọng Misha run lên. “Lungmen đối xử với người Infected còn tệ hơn với tội phạm! Tại sao… Tại sao các người lại cất công đi giúp người Infected?”
+
+Amiya im lặng. Rồi cô bé tháo găng tay, chìa bàn tay ra. Dưới ánh sáng lờ mờ, những tinh thể Originium đen bóng nhô lên trên mu bàn tay nhỏ.
+
+“—Chị Misha, nhìn này…”
+
+“Em… làm gì vậy… Tay của em… Em cũng là… người Infected?”
+
+“Đúng vậy. Em cũng giống chị.” Amiya đeo găng lại. “Khu ổ chuột này có rất nhiều người Infected. Những đứa trẻ chị bỏ lại lúc nãy… chúng đã tin chị. Chị Misha, chị đã khiến chúng gặp nguy hiểm rồi.”
+
+“…Em định dùng lũ trẻ để đe dọa tôi sao?”
+
+“Không, em sẽ không làm vậy. Nhưng đã có người bắt đầu làm đúng như thế rồi. Bọn em vừa đuổi đi một nhóm du côn đang tra hỏi lũ trẻ.”
+
+Misha sững người.
+
+“Lungmen cũng đang lùng sục người Infected. Nếu Lungmen tìm thấy chị trước, có lẽ đã quá muộn rồi. Bọn em muốn kéo đám bạo loạn ra khỏi lũ trẻ bằng cách khiến chúng chú ý đến chị… Nhìn từ góc độ khác, bọn em cũng có thể giữ cho chị khỏi bị hại.”
+
+“…Em có biết tại sao chúng đuổi theo tôi không? Em có lý do gì… để làm tất cả những chuyện này vì tôi?”
+
+“Thật ra bọn em cũng không biết vì sao có người Infected nhắm vào chị… Nhưng bọn em quan tâm đến sự an toàn của người vô tội, kể cả chị. Ít nhất, đây là cách tốt nhất lúc này. Em mong chị có thể tin bọn em.” Amiya đưa tay ra. “Chị có cho phép bọn em đưa chị rời khỏi đây trước không?”
+
+Misha nhìn bàn tay ấy rất lâu.
+
+“…Được rồi… Đi thôi. Dù sao thì tôi cũng chẳng có lựa chọn nào, phải không?”
+
+“Em không nói vậy đâu… Nhưng ít nhất, cảm ơn chị… chị Misha!”
+
+## 2-4 | Penguin Logistics
+
+“—Báo cáo xin kết thúc, cô Ch’en.”
+
+“Đã rõ. L.G.D. sẽ bảo vệ điểm hẹn và chờ các người hộ tống mục tiêu đến.”
+
+“Rõ.” Amiya trải tấm bản đồ đội trinh sát vừa vẽ. “Chúng ta sẽ rời khu ổ chuột bằng đường ngắn nhất.” Cô bé hạ giọng. “(Cô Ch’en còn chỉ thị gì khác không ạ?)”
+
+“Chỉ cần nhanh lên. Chúng tôi không có nhiều thời gian. Hết.” Ở đầu dây bên kia, tiếng Ch’en quát vọng lại: “Vào đội hình! Đừng lề mề!!”
+
+Tút.
+
+“…Phù, cô ấy lại cúp máy rồi…”
+
+“Nói cách khác,” Franka nói, “giờ ta phải chạy việc vặt cho cô ta à?”
+
+“Dù sao bọn mình cũng là người tìm ra mục tiêu…”
+
+“L.G.D. chưa từng cung cấp thông tin chi tiết nào về mục tiêu,” Liskarm nói, nhíu mày. “Đáng lẽ ta đang hợp tác, vậy mà họ đột nhiên bảo người ta tìm thấy có công dụng quan trọng với họ. Có cả đống thông tin then chốt mà ta không được biết.”
+
+“(…Em không ngạc nhiên chuyện L.G.D. giữ bí mật với chúng ta.)”
+
+“Tại sao?”
+
+“Chẳng phải cô thông minh lắm sao?” Franka nói. “Rhodes Island biết quá nhiều thì có lợi gì?”
+
+“Tôi chỉ biết là biết quá ít thì không có lợi cho nhiệm vụ.” Liskarm thở ra. “Dù sao, phải hộ tống Misha đến điểm hẹn trước đã.”
+
+“Hừm, đi đường nào đây…” Amiya mỉm cười. “Lại phải nhờ họ một lần nữa rồi.”
+
+“Ai?”
+
+“Penguin Logistics.”
+
+“Yo, Rhodes Island~” Một giọng nói vui vẻ vang lên qua bộ đàm. “Nhiệm vụ sắp xong chưa? Thấy dịch vụ của bọn tôi thế nào?”
+
+“Biết ngay mà…” Franka thở dài.
+
+“Này, đừng thế chứ~ Có chuyện gì không vui à? Hay gặp ai mình không ưa?”
+
+“Ừ, cô đấy.”
+
+“Không cần như vậy,” Liskarm nói. “Không có tin tình báo của Penguin Logistics, ta đã không khoanh vùng được khu tìm kiếm… cũng không dễ dàng có được thông tin về dân số Infected ở Lungmen như vậy.”
+
+“Cảm ơn cô đã khen nhé! Cô rõ là có con mắt tinh tường đấy.”
+
+“Exusiai, bọn mình cần cậu tìm một lộ trình tương đối an toàn,” Amiya nói.
+
+“Vậy tôi vào thẳng vấn đề luôn. Hừm… Chẳng có đường nào tốt cả. A, chọn đường này! Ờ, nhìn bản đồ này nhé. Từ trung tâm khu ổ chuột, đi về phía bắc ba dãy nhà, rồi theo con đường này quay ngược về phía nam đến lối ra. Đây chắc là đường an toàn nhất. Có điều, dọc đường chắc vẫn đủ kẻ địch để tổ chức vài buổi karaoke đấy.”
+
+“Kẻ địch?”
+
+“Có vẻ Reunion đã thâm nhập Lungmen rồi,” Liskarm nói. “Cô Exusiai, tôi có thể giả định cô đã nắm được sự phân bố của địch?”
+
+“Ừm hửm!”
+
+“Vậy chúng đang di chuyển thế nào?”
+
+“Đang tiến thẳng về phía các cô đấy!”
+
+Một quãng lặng.
+
+“…Ta bị bao vây rồi,” Liskarm nói.
+
+“Ưu tiên hàng đầu là đưa Misha ra an toàn,” Amiya nói ngay. “Franka, trông cậy vào chị chặn đợt phục kích của địch.”
+
+“Dễ thôi.”
+
+“Liskarm, chia đội Defender, yểm trợ hai bên. Chị sẽ lo bảo vệ Misha.”
+
+“Không vấn đề.”
+
+“À phải rồi,” Exusiai nói thêm, như thể vừa nhớ ra, “các cô có biết là còn vài Caster địch nữa không?”
+
+“…Nghh…” Amiya day trán, rồi quay sang Doctor. “Doctor, xin hãy ở gần em. Doctor cứ tiếp tục chỉ huy các đội, em sẽ chuyển lệnh. …Vậy thử đi theo con đường an toàn nhất này xem.”
+
+***
+
+“Sạch rồi!” Franka rút kiếm ra khỏi một tên Reunion. “Cô nói đúng… Đám này có chuẩn bị đấy! Mọi người cũng nhanh chân lên!”
+
+Misha thở dốc chạy theo sau. “Hộc… Rốt cuộc các người là ai vậy… hộc…”
+
+“Mọi người, xin đi nhanh hơn!”
+
+“Amiya, ta đang bị truy đuổi từ phía sau,” Liskarm nói. “Có thời gian phản công không?”
+
+“Lúc này thì không… Tốt hơn là cắt đuôi chúng, tránh giao tranh không cần thiết…”
+
+“Bỏ qua chuyện an toàn đi,” Liskarm nói vào bộ đàm. “Tôi cần một con đường ra khỏi khu ổ chuột đến chỗ cô Ch’en nhanh nhất có thể. Reunion đã bám theo rồi. Càng phải đi xa, ta càng gặp nguy!”
+
+“Dễ thôi,” Exusiai đáp. “Tôi có một con đường mà địch không bao giờ nghĩ tới.”
+
+“Cô đã có sẵn trong đầu rồi à?”
+
+“Đương nhiên~ Nhưng tôi phải tự đi xem trước xem thông tin có đáng tin không đã.”
+
+“Cố nhanh lên.”
+
+“Rõ~ Tôi đi tí rồi về! Nếu cần gì, liên lạc với nhân viên Penguin Logistics khác nhé!”
+
+Trong lúc chờ, Misha bước chậm lại bên cạnh Amiya.
+
+“…Tôi hỏi được không… chúng ta đang đi đâu vậy?”
+
+“Bọn mình đi gặp L.G.D. Họ sẽ bảo vệ chị.”
+
+“…Hả? …L.G.D.?”
+
+“Nhiệm vụ hiện tại của bọn em là hộ tống chị an toàn đến L.G.D., và họ sẽ bảo vệ chị.”
+
+Misha dừng hẳn lại.
+
+“…Tôi suýt nữa đã tin… rằng các người thật sự đến để cứu tôi.”
+
+“Không, bọn em thật sự…” Amiya vội nói. “Kế hoạch ban đầu của bọn em là đề nghị Lungmen giao một số người Infected cho bọn em… Nhưng sau khi nghe báo cáo, L.G.D. đột nhiên yêu cầu bọn em chuyển giao chị cho họ. Hơn nữa… ở Lungmen, chị sẽ an toàn nhất dưới sự bảo vệ của họ. Nếu bọn em không hành động ngay, chị sẽ gặp nguy hiểm lớn. Nhiều người Infected truy đuổi chị đều đã đeo huy hiệu Reunion…”
+
+“Tôi không biết gì về cái ‘Reunion’ mà em nói, nhưng… tôi biết L.G.D. Tôi đã thấy cách họ đối xử với người Infected. Nếu ngay từ đầu các người muốn bắt tôi, thì cứ nói thẳng ra.”
+
+“Em xin lỗi… Nhưng đó thật sự không phải ý định của bọn em. Em biết vẫn còn những hiểu lầm cần giải quyết.” Amiya nhìn thẳng vào mắt Misha. “Nhưng dù chị nghĩ bọn em tệ đến đâu… xin chị, cố chịu đựng bọn em thêm một chút. Sự an toàn của chị quan trọng hơn cảm xúc của chị lúc này. Có cơ hội, em sẽ giải thích mọi chuyện. Dù sao… cũng còn những điều mà chính em cũng muốn biết…”
+
+Misha không nói gì nữa.
+
+## 2-5 | Vật rơi
+
+Ở một ngã tư vắng, một người phụ nữ tóc đen, đôi tai sói, ngậm một que kẹo Pocky, đang ngồi trên thùng hàng.
+
+“…Rhodes Island đúng là thong thả quá.” Texas nhìn về cuối phố. “Ồ…?”
+
+Một toán Reunion đang chạy tới. “Sắp đến điểm chặn rồi! Nhanh lên! Đằng sau theo sát vào!”
+
+“Chậc, cuối cùng cũng đến… Mình vừa mới dỡ đồ ra xong.” Texas đứng dậy, rút kiếm. “Phí thật.”
+
+“Này, mấy người đeo mặt nạ đằng kia.”
+
+“Ai đó?! Mày muốn gì?”
+
+“Tất cả các người, lên hết đi. Tôi đang vội.”
+
+***
+
+“Amiya, Texas của Penguin Logistics về rồi,” Franka báo.
+
+“A… may quá!”
+
+“Tôi có tin mới,” Texas nói ngắn gọn. “Tôi vừa xử lý vài gã tự gọi mình là ‘Reunion’. Nhưng còn nhiều tên nữa đang đến. Reunion đã thôi ẩn nấp, bắt đầu di chuyển theo nhóm.”
+
+“Đúng như em lo…” Amiya cắn môi. “Reunion đã thâm nhập Lungmen qua khu ổ chuột… Và mục tiêu của chúng… cũng giống chúng ta. Nếu không, chẳng có lý do gì để chúng truy đuổi Rhodes Island.”
+
+“Cô Misha đang mang những bí mật mà chỉ Lungmen và Reunion biết,” Liskarm nói. “Chúng ta đang ở thế bất lợi.”
+
+“Tình hình không ổn lắm,” Franka đồng ý. “Lát nữa tôi phải véo gương mặt xinh xắn của cô sĩ quan kia một cái để hỏi cho ra lẽ mới được.”
+
+“…Còn gì nữa không?” Texas hỏi. “Nếu không, tôi dẫn đường. Exusiai đã xác nhận lối thoát. Giờ tôi đưa các người đi.”
+
+“Franka, tập hợp các đội. Chúng ta—”
+
+“Chúng ta… nên tìm chỗ nấp trước đã,” Franka cắt ngang, tay đã đặt lên chuôi kiếm. “Reunion đến rồi.”
+
+“Đằng này! Đừng để chúng chạy!”
+
+“Chẳng có gì phiền hơn rắc rối cứ bám riết sau đuôi,” Franka lầm bầm.
+
+Amiya nhìn đội hình địch, và mắt cô bé mở to. “…Có gì đó không đúng. Không…! Chúng… có người chỉ huy!”
+
+Giữa đám Reunion, một người đàn ông cao lớn bước ra. Mặt nạ trắng che kín mặt, trên tay là một cây trượng phép kiêm súng phóng lựu khổng lồ.
+
+“Skullshatterer, chúng ở ngay đây. Phải, chính là cô ta!”
+
+“Caster, lên! Xé xác chúng!”
+
+“Chúng nghiêm túc thật…” Liskarm giương khiên. “Cẩn thận! Địch triển khai nhiều Caster! Chuẩn bị đối sách thích hợp!”
+
+“Thứ chúng muốn là…” Amiya quay phắt lại. “…Misha!”
+
+Misha đứng sững. Người đàn ông tên Skullshatterer đang nhìn cô. Chỉ nhìn cô thôi, như thể giữa trận chiến hỗn loạn này, ngoài cô ra chẳng có ai khác tồn tại.
+
+[cg:bg_1_firstcontact]
+
+“Aa… Ai… ai vậy…”
+
+“…Cuối cùng…” Skullshatterer nói, giọng khàn đặc sau lớp mặt nạ. “Tôi… Cuối cùng tôi… đã tìm thấy cô.”
+
+“Anh là ai…?!”
+
+***
+
+“Amiya! Nhanh lên!”
+
+“Chị Misha! Xin hãy đi theo bọn em!”
+
+“…Sao… có thể như vậy…” Misha vẫn ngoái lại.
+
+“Lối này, nhanh!” Texas dẫn đầu.
+
+“Khu này sạch rồi! Cẩn thận, chúng vẫn đuổi theo!”
+
+Misha chạy, nhưng mắt vẫn dán vào những bóng mặt nạ trắng phía sau. “…Họ cũng là…?”
+
+“Vâng…” Amiya nói. “Reunion… Họ cũng là… người Infected.”
+
+“…Tại sao? Tại sao người Infected lại đánh nhau…”
+
+***
+
+Phía sau, Skullshatterer đứng yên giữa đường.
+
+“Skullshatterer… Anh… để chúng đi sao?” một tên Reunion hỏi.
+
+“Đừng lo… Chúng không chạy được đâu.” Hắn nhìn về hướng bóng tóc trắng vừa biến mất. “Nhưng cuối cùng tôi đã tìm thấy cô ấy— Không, không… Cuối cùng cô ấy đã… đến với tôi…”
+
+***
+
+“Đến nơi rồi,” Texas nói.
+
+“…Cô nghiêm túc đấy à?” Franka nhìn lên.
+
+“Ký hiệu nói vậy.”
+
+“Nhưng… con đường này dẫn lên trên mà? Thế thì giúp gì được ta?”
+
+“Amiya, Amiya! Trên này, đúng rồi, lên đây!” Exusiai thò đầu ra từ một ban công tầng ba, vẫy tay. Mái tóc đỏ rực, vầng hào quang Sankta lơ lửng trên đầu.
+
+“—Exusiai! Cậu chắc chứ…?”
+
+“Tin tôi đi, tôi không làm hỏng đâu~ Tôi thuộc đường sá Lungmen như lòng bàn tay!”
+
+“Lên thôi,” Texas nói.
+
+“Thế chẳng phải… là ngồi chờ địch bao vây sao?” Franka hỏi.
+
+“Nếu các cô không nhanh lên mà để Reunion tìm thấy, thì có thể lắm!”
+
+“Chậc… Chờ đã, mọi người lên trước đi… Tôi đi hàn cửa lối vào để Reunion không vào được.”
+
+Trên cầu thang sắt, Amiya chỉ vào một hình vẽ nhỏ. “Có logo chim cánh cụt ở cầu thang này. Đây phải không?”
+
+“Đúng rồi. Đi thẳng, rẽ trái, rồi leo cầu thang lên.”
+
+“Vậy là sẽ vào trong tòa nhà… Chẳng phải chúng ta định đi xuống dưới lòng đất sao?”
+
+“Không, không, tôi chỉ nói là đi lên tầng thôi mà.”
+
+“…Lên tầng?” Liskarm nhíu mày. “Cô chắc… cô ta đáng tin chứ?”
+
+“‘Chỉ cần đến được đích, đường nào cũng đi được,’” Texas đáp. “Đó là một trong những phương châm của Penguin Logistics. Cứ thử dịch vụ của bọn tôi một lần. Cô sẽ thích thôi.”
+
+Họ leo. Và leo. Và leo.
+
+“Hộc… hộc…” Amiya thở không ra hơi. “Xin lỗi, chị Misha… Em không biết là…”
+
+Misha không đáp, chỉ bám chặt tay vịn.
+
+Texas dừng lại ở chiếu nghỉ, quay xuống nhìn người khoác áo trùm đầu đang lê bước phía sau.
+
+“Này, người kia. Người là Doctor của Rhodes Island à?” Cô ta nhai rôm rốp que Pocky. “Có vẻ người không thích leo cầu thang lắm.”
+
+## 2-6 | Bám chặt
+
+“Đến rồi.”
+
+“—?! Chúng ta phải lên tận sân thượng sao?” Amiya đẩy cánh cửa. “…Cửa này khóa rồi.”
+
+“Lùi lại, tôi sẽ phá nó—” Liskarm giơ tay, tia lửa điện lóe lên.
+
+“…Không cần,” Texas nói. “Đạp là được.”
+
+Rầm. Cánh cửa bật tung.
+
+Liskarm đứng im, tay vẫn giơ lên.
+
+“Liskarm, cô nên học hỏi cô ấy đấy,” Franka nói.
+
+“Tôi có cách làm của tôi. Có vấn đề gì à?!”
+
+Gió đêm Lungmen thổi tung mái tóc của Amiya. Trước mặt họ là một biển mái nhà, những tầng thượng nối tiếp nhau trải dài trong ánh đèn neon.
+
+“Phía trước có một sân thượng nữa…” Amiya lẩm bẩm. “Em nghĩ em bắt đầu hiểu rồi…”
+
+“Amiya, đằng kia! Từ chỗ đó các cô có thể nhảy sang!”
+
+“‘Đằng kia’ là đâu… Cậu bảo bọn mình— Nhảy từ mái nhà này sang mái nhà khác?”
+
+“Chuẩn rồi~! Ai mà ngờ được chứ? Thấy chưa, chắc ăn tuyệt đối! Lungmen là một nơi tuyệt vời với rất nhiều bí mật—”
+
+“Đừng hòng thoát!”
+
+Từ sân thượng bên cạnh, những bóng Reunion vụt lên, lưng đeo những bộ máy phản lực thô sơ khạc khói.
+
+“…Hả? Chuyện gì thế?!”
+
+“Exusiai, địch xuất hiện bất ngờ…” Amiya lùi lại.
+
+“Tôi đã chặn lối vào rồi mà, sao lại…” Franka nghiến răng.
+
+“Có lẽ chúng đến từ các tòa nhà lân cận… Trông như chúng mang một loại máy phản lực thô sơ, nhưng thế là đủ dùng. Nếu chúng lẻn được qua những chỗ ta không phòng thủ được, ta sẽ ở thế bất lợi…”
+
+“Chậc… Chờ tí, tôi đến giúp ngay.”
+
+“Đừng lâu quá đấy, thiên thần hộ mệnh bé nhỏ của tôi,” Franka nói.
+
+“Defender, vào đội hình! Nhanh!” Liskarm hô.
+
+“…Tôi vào đây,” Texas nói, và lao đi.
+
+“Mọi người, bảo vệ Vanguard!”
+
+***
+
+Khi tên Reunion cuối cùng rơi khỏi mép mái nhà, Exusiai mới đáp xuống, khẩu súng vẫn còn bốc khói.
+
+“…Tôi tưởng ta đã thống nhất là màn xuất hiện hoành tráng thuộc về tôi chứ.”
+
+“Cô chậm quá,” Texas nói.
+
+“Quan trọng là mọi người đều an toàn,” Amiya nói. “Chúng ta nên đi thôi. Từ tòa nhà này, ta sẽ đi xuống về phía đông. Reunion sẽ không biết ta ở đâu.”
+
+“Chúng ta… an toàn rồi sao?” Misha hỏi khẽ.
+
+“Vâng… Tạm thời.” Amiya nhìn kỹ cô gái. “Sắc mặt chị không tốt lắm…”
+
+“Tôi… hơi chóng mặt… Không sao đâu.”
+
+“Chị Misha, chị đến Lungmen bao lâu rồi?”
+
+“Khoảng… một tuần.”
+
+“Mới một tuần…?”
+
+“Ừm… Nhiều người lạ xuất hiện trong thành phố… rồi sau đó…” Misha nhắm mắt lại, như đang cố nhớ. “Tôi không rõ chuyện gì đã xảy ra… Mọi người bắt đầu bỏ chạy, nên tôi cũng…”
+
+“Là Reunion… Reunion đã tấn công Chernobog.”
+
+“Tôi không biết.”
+
+“Trước đó… chị đã bị nhiễm bệnh chưa?”
+
+“Tôi… tôi không biết… Nhưng mấy ngày gần đây, những thứ này… bắt đầu mọc trên chân tôi. Tôi…”
+
+Misha lảo đảo.
+
+“…Chị Misha? Chị Misha?!” Amiya đỡ lấy cô gái vừa ngã quỵ. “Y tế! Đội y tế đâu rồi?!”
+
+## 2-7 | Chuyện y tế công cộng
+
+“Nngh…” Misha rên khẽ, mồ hôi đầm đìa trên trán.
+
+“Cô ấy bị sao vậy…?” Exusiai lo lắng hỏi.
+
+“Đây là triệu chứng cấp tính của Oripathy!” Amiya nói, tay vẫn đặt trên trán Misha. “Nhưng mới chỉ có một tuần thôi mà…!”
+
+“Oripathy cũng có dạng cấp tính sao?” Liskarm hỏi, rồi quay sang. “Franka, cô thuộc loại nào?”
+
+“Gì, cô lo cho tôi à?”
+
+“Amiya, nếu Franka qua đời, tôi mong Rhodes Island sẽ hỏa táng cô ấy.”
+
+“Này! Ác quá đấy, Liskarm!”
+
+“Chính cô là người suốt ngày dọa lây bệnh sang tôi!”
+
+“A… Ahaha…!” Amiya bật cười dù đang lo, rồi nghiêm mặt lại. “Phân biệt dạng cấp tính và mãn tính là một chủ đề khá phức tạp. Nhưng tình trạng của chị Misha rất nguy hiểm. Nếu không làm gì, nó sẽ nhanh chóng đe dọa tính mạng. Chúng ta chỉ có thể sơ cứu khẩn cấp… nhưng phải kiểm soát triệu chứng của chị ấy càng sớm càng tốt. Phải nói rõ với Lungmen. Sau chuyện này, chúng ta phải đưa chị Misha về Rhodes Island. Đây là một phần trách nhiệm của chúng ta.”
+
+“Ừm…” Exusiai ngập ngừng. “Cô ấy… sắp nổ tung à?”
+
+Bốp.
+
+“Á! Đau! Sao lại đánh tôi…”
+
+“Cẩn thận lời nói,” Texas nói.
+
+“Nếu một ngày tôi sắp nổ tung,” Franka cười tươi, “tôi nhất định sẽ bò đến chỗ cô.”
+
+“Tôi xin lỗi! Cô Franka, xin tha thứ cho mọi lỗi lầm của tôi!”
+
+“Phì…”
+
+“Chuyển cô ấy đến chỗ an toàn trước đã,” Liskarm nói. “Mà, có vẻ phía sau đang có chuyện.”
+
+Ở con hẻm bên dưới, một nhóm người Infected đang bị Reunion dồn vào góc.
+
+“Các người làm gì vậy?! Cút ra!!”
+
+“Chúng ta đều là người Infected cả, đừng bắt bọn tao dùng bạo lực! Tránh đường!”
+
+“Các người đã phá nhà của bọn tôi, giờ còn định lôi L.G.D. đến đây?! Đừng hòng!!”
+
+“Mày…! Đồ ngu dốt, tránh ra!!”
+
+Một tiếng thét, rồi tiếng đổ vỡ.
+
+“(Ta có can thiệp không?)” Franka thì thầm. “(Có vẻ ta đã cắt đuôi được chúng. Nhưng nếu can thiệp bây giờ, ta sẽ bị lộ.)”
+
+“(Việc này có cản trở nhiệm vụ không? Nếu có, hậu quả nghiêm trọng đến mức nào?)” Liskarm hỏi.
+
+“(Đương nhiên là có cản trở, nhưng… sẽ không nghiêm trọng đến thế, đúng không?)”
+
+“Vậy thì làm thôi,” Amiya nói. “Sứ mệnh dứt khoát của Rhodes Island là cứu người Infected, chừng nào tình hình còn cho phép.”
+
+“Ừm, tốt lắm.” Franka cười. “Tôi biết đi theo cô là quyết định đúng mà.”
+
+“Ý chị là sao, chị Franka?”
+
+“Đừng lo, đừng lo! Tôi chỉ đang khen cô thôi!”
+
+“Chắc cô ấy nghĩ mình hợp với cô lắm,” Liskarm nói.
+
+“Sao cô hiểu tôi rõ thế?”
+
+“Chắc vì cô phiền quá?”
+
+“Ugh…” Amiya day trán.
+
+“Đến lúc dạy cho lũ côn đồ này một bài học rồi,” Franka nói.
+
+“Vâng. Cẩn thận những kẻ địch có thể nhảy giữa các tòa nhà. Ngoài ra, nhớ bảo vệ người dân Infected của Lungmen!”
+
+“Yêu cầu nhiều quá đấy,” Texas nói. “—Nhưng, để tôi lo.”
+
+“Được, đi thôi!” Exusiai nạp đạn. “Doctor, nhớ dẫn dắt tôi với Texas thật tốt nhé!”
+
+***
+
+“Cảm ơn… Cảm ơn các cô nhiều lắm…”
+
+“Ở đây không an toàn. Các vị nên nhanh chóng rời đi,” Amiya nói.
+
+“Rời đi…? Đi đâu được chứ… Nơi này từng là chỗ bọn tôi có thể gọi là nhà… Nhưng giờ nó tan nát cả rồi…”
+
+“Em xin lỗi…”
+
+“Không phải lỗi của cô… Không phải…”
+
+Exusiai nhìn theo những bóng người lặng lẽ thu dọn đống đổ nát. “Tôi không ngờ Reunion, kẻ tự xưng là cứu tinh của người Infected, lại đi tấn công người Infected khác. Đó mới gọi là truyền thông tệ hại.”
+
+“Đợt thâm nhập của Reunion không tự nhiên mà có,” Texas nói. “Tôi chắc có nhiều người Infected ở đây đã chọn đi theo Reunion.”
+
+“Ugh… Họ thà tin Reunion hơn Rhodes Island—”
+
+“Rhodes Island không đưa ra những lời hứa suông,” Franka nói, giọng hiếm hoi trở nên nghiêm túc. “Có rất nhiều người Infected sẵn sàng chấp nhận bất cứ thứ gì Reunion đưa ra, kể cả khi đó chỉ là ảo ảnh. Ít người nhìn thấu được ảo ảnh. Và trong số những người nhìn thấu, phần lớn vẫn sẵn sàng đánh đổi mọi thứ chỉ để lấy tia hy vọng mờ nhạt ấy. Ai lại chọn tin cô thỏ con của chúng ta, người quá tốt bụng để lừa dối người khác chứ?”
+
+Amiya cúi đầu.
+
+“Tôi tin cô ấy.”
+
+“…Chị Misha?”
+
+Misha đang cố ngồi dậy, một tay bám vào tường. “Nnh…”
+
+“Cẩn thận! Chị chưa được cử động đâu!”
+
+“Tôi chỉ hơi chóng mặt thôi… Đừng lo.” Misha nhìn quanh. “Reunion… vẫn còn đuổi theo chúng ta sao? Tôi không biết họ muốn gì ở tôi… Nhưng… Đi thôi…” Cô ngẩng lên. “Amiya.”
+
+Amiya nhìn cô gái thật lâu. Rồi gật đầu.
+
+“Em hiểu rồi. Chúng ta đi ngay. Sắp ra khỏi khu ổ chuột và gặp L.G.D. rồi. Cảm ơn chị, chị Misha.”
+
+“Không… Tôi… mới là người nên cảm ơn em.”
+
+## 2-8 | Không hứa hẹn
+
+“Franka, Liskarm, để ý xung quanh. Em sẽ đưa chị Misha đến chỗ cô Ch’en.”
+
+Ch’en đứng chờ ở điểm hẹn, tay khoanh trước ngực.
+
+“Lại muộn nữa. Lungmen không muốn thêm rủi ro an ninh nào.”
+
+“Cô Ch’en, đội hộ tống của bọn em bị Reunion tấn công nhiều lần. Thực ra, lúc này chúng vẫn còn quanh đây. Ở đây không an toàn. Xin hãy đưa chị Misha đi càng sớm càng tốt.”
+
+Ch’en nhìn Misha. “Cô là Misha?”
+
+“Là tôi…”
+
+“Từ giờ, cô sẽ tuân theo sự sắp xếp của L.G.D. PC94172, cậu phụ trách cô gái này.”
+
+“Đi với tôi.”
+
+“Amiya…” Misha ngoái lại.
+
+“Không sao đâu.” Amiya mỉm cười, rồi quay sang Ch’en. “Cô Ch’en, em không biết Lungmen cần chị ấy để làm gì… Nhưng em mong cô có thể đảm bảo an toàn cho chị ấy.”
+
+“Chúng tôi vẫn đối xử với người Infected rất tử tế.”
+
+“Em hiểu… Nhưng sức khỏe chị Misha không tốt. Bọn em mong sau chuyện này, Lungmen sẽ cho phép chị ấy đến sống ở Rhodes Island.”
+
+Ch’en im lặng một lúc. “…Tôi sẽ gửi đơn lên Trưởng quan Wei. Lungmen sẽ chuyển cô ấy sang Rhodes Island nếu cô ấy vượt qua kiểm tra mà không có vấn đề gì khác. …Nếu không có vấn đề gì. Sẽ không mất nhiều thời gian đâu.”
+
+“Em hiểu rồi.” Amiya quay sang Misha. “…Chúng ta tạm chia tay nhé, chị Misha. Rhodes Island chào đón chị.”
+
+Misha nhìn cô bé. “Amiya, trong lúc tôi đi, xin hãy bảo vệ lũ trẻ trong khu ổ chuột.”
+
+“Hả? …À, đúng rồi. Không vấn đề gì, em hứa!” Amiya ngập ngừng, rồi thêm: “Còn nữa, chị Misha…”
+
+“Hửm?”
+
+“Lần sau, chị dạy em… làm búp bê được không?”
+
+Misha nhìn cô bé thỏ, và lần đầu tiên kể từ khi họ gặp nhau, cô bật cười, một tiếng cười rất khẽ.
+
+“…Hehe. Ừm, được chứ.”
+
+***
+
+“Vậy là nhiệm vụ xong rồi à?” Franka hỏi khi bóng xe L.G.D. đã khuất.
+
+“Rhodes Island càng bị lôi vào chuyện này, càng bị trói tay,” Texas nói.
+
+“Nhưng Lungmen vẫn giữ rất nhiều bí mật với chúng ta,” Franka nói.
+
+“Lungmen có vẻ chẳng bận tâm đến chúng ta lắm…” Liskarm nói, mắt nhìn về phía những mái nhà xa. “Nhưng với Reunion thì ngược lại.” Cô ta khựng lại. “…Amiya. Địch muốn tấn công khu vực chúng ta đang đứng.”
+
+“Dù đã nghe nói rồi, nhưng kiến trúc Lungmen đúng là phức tạp thật!” Franka nhìn quanh. “Cả con phố này thực ra được xây trên các mái nhà… và điều đó đang cho kẻ địch một lợi thế khổng lồ!”
+
+“Reunion lại tấn công nữa…!” Amiya nắm chặt tay. “Chúng đuổi theo ta tận đến đây sao?! Tại sao chúng… lại muốn chị Misha đến thế?”
+
+***
+
+“Phù…” Franka tra kiếm vào vỏ. “Đội hộ tống của L.G.D. đã rời đi an toàn. Nhưng… có vẻ kẻ địch không có ý định để chúng ta đi.”
+
+“Chừng nào chúng chưa biết chị Misha đã đi cùng L.G.D., chúng sẽ tiếp tục dồn sức vào chúng ta,” Amiya nói. “Chị Misha sẽ an toàn hơn theo cách này.”
+
+“Giờ nghĩ lại, tại sao cả Reunion và Lungmen đều muốn con bé này?” Liskarm hỏi.
+
+“Em không dám chắc. Có nhiều khả năng lắm. Em đoán… hoặc chị ấy, hoặc điều gì đó chị ấy biết, đủ quan trọng để quyết định sự an nguy của Lungmen.”
+
+“Điều gì đó?”
+
+“Vâng, có lẽ là tin tình báo hay thông tin gì đó… Nên cả Lungmen và Reunion đều muốn có chị ấy.”
+
+“Một cuộc giành giật nguy hiểm…” Liskarm nói.
+
+“Và không ai trong chúng ta có thể đứng ngoài. Không phải chúng ta, không phải chị Misha, cũng không phải L.G.D.”
+
+“Mong là ta không bị kẹt giữa làn đạn,” Franka nói. “Chẳng biết gì cả, mà lại phải lo hết mọi thứ…”
+
+“Em… em cũng không chắc lắm…” Amiya nhìn về hướng xe L.G.D. đã đi. “Nhưng về phía cô Ch’en… Em có linh cảm… mọi chuyện sẽ không kết thúc suôn sẻ như vậy đâu.”
+
+“Amiya, còn việc gì cho bọn tôi không?” Exusiai hỏi. “Có cần hộ tống các cô về Rhodes Island không?”
+
+“Không cần đâu, cảm ơn cậu. Giờ không còn gì cản trở khi chiến đấu nữa, bọn mình sẽ ổn thôi.”
+
+“Vậy bọn tôi về chờ lệnh tiếp theo,” Texas nói.
+
+“Vâng. Sắp tới, mong mọi người tiếp tục theo dõi động tĩnh của Reunion trong Lungmen. Dù đã giao chị Misha cho L.G.D., việc Reunion có mặt ở đây… vẫn khiến em bất an.”
+
+“Dễ thôi~ Bọn tôi đi đây~”
+
+Amiya quay sang các operator. “Mọi người, chúng ta không biết còn bao nhiêu thành viên Reunion đang ẩn nấp. Luôn sẵn sàng và cảnh giác. Tiếp theo, ta sẽ tiếp tục di chuyển trong các tòa nhà cao tầng này. Nếu cần, có thể dùng cả sân thượng. Như vậy, ta sẽ có lợi thế địa hình thay vì phải đánh nhau ngoài đường. Nếu cần, ta sẽ dụ chúng vào khu vực ta kiểm soát!”
+
+“Rõ!”
+
+***
+
+Trên nóc một tòa nhà cao nhất khu, nơi gió thổi lồng lộng, Crownslayer quỳ một gối.
+
+“Talulah. Mọi chuẩn bị đã hoàn tất.”
+
+Talulah đứng ở mép mái, nhìn xuống thành phố lấp lánh như một tấm thảm sao.
+
+“…Đến lúc ra tay rồi.”
+
+Crownslayer ngập ngừng.
+
+“—Nói đi,” Talulah nói, không quay lại.
+
+“Tấn công Lungmen thực sự có mục đích chiến lược. Nếu ta kiểm soát được Lungmen, Reunion sẽ có lợi thế lớn. Đương nhiên, rủi ro cũng rất cao.” Crownslayer ngẩng lên. “…Tại sao cô lại bận tâm với ý tưởng này đến thế?”
+
+Talulah im lặng rất lâu.
+
+“Cô thấy công trình đằng kia không?”
+
+“Tôi thấy.”
+
+“Đó là biểu tượng của Lungmen… Nó cũng là…” Talulah ngừng lại. “Ta không trở lại đây chỉ để đòi lại mọi thứ đã bị cướp khỏi người Infected. Ta còn muốn… bắt hắn phải trả giá.”
+
+Gió thổi tung mái tóc cô ta. Và rồi cô ta mỉm cười, một nụ cười kỳ lạ, như không phải dành cho Crownslayer mà dành cho một ai đó khác, ở rất xa hoặc rất gần.
+
+“Trên hết… Cô không thấy rằng… mọi chuyện đang trở nên rất thú vị sao? Cô có đồng ý không… Talulah?”
+
+## 2-9 | Căn phòng tối
+
+“…Sao ở đây lại có nhiều Reunion thế này?!” Liskarm giương khiên đỡ một loạt tên.
+
+“Có mỗi tôi thấy chúng kéo đến mỗi lúc một đông sao?” Franka hỏi, hạ thêm một tên.
+
+“Không. Rõ ràng chúng còn viện binh nữa.”
+
+“Chết tiệt… Còn chưa kịp trả thù cho họ…!” Amiya nghiến răng.
+
+“Chúng tìm thấy ta trước rồi,” Liskarm nói. “Franka, nhìn kìa. Ở lối ra phía đông, tôi nghĩ là Caster của Reunion đang nấp đằng đó.”
+
+“Còn nhiều tên đang tiến từ lối giữa và từ các tòa nhà hai bên… Chúng định lẻn tới, giả vờ như chưa phát hiện ra ta. Nhưng chúng ta đang ở trên mái nhà. Dù chúng gửi bao nhiêu quân, chỉ cần bị hất xuống là xong đời. Một đợt tấn công lộ liễu thế này, tôi thấy như chúng đang xúc phạm trí thông minh của tôi vậy.”
+
+“Reunion đang mở cuộc tổng tấn công sao? Tất cả operator, tập hợp!”
+
+“Khoan, tôi nghĩ tôi vừa thấy…” Franka nheo mắt. “Chẳng phải đó là tên chỉ huy Reunion ta gặp lúc nãy sao?”
+
+Skullshatterer bước ra giữa mái nhà, cây trượng-súng trên vai.
+
+“…Rhodes Island. Các người đã giao cô ấy cho Lungmen rồi sao?”
+
+Amiya không trả lời ngay. Cô bé thì thầm với Franka: “(Phải cầm chân quân Reunion trước! Khi nào chúng sợ không dám tấn công nữa thì ta mới tìm đường xuống! Tạm thời phải dàn rộng chiến trường ra!)”
+
+“(Hiểu rồi. Đánh rồi chạy nhé!)”
+
+“Chuyện đó thì liên quan gì đến anh?” Amiya hỏi lại.
+
+“…Các người dám!” Skullshatterer gầm lên. Hắn im lặng một nhịp, rồi giơ cao vũ khí. “Các đồng chí, tấn côôông!”
+
+***
+
+“Đây là đợt truy đuổi cuối cùng!”
+
+“…Aaargh!”
+
+“Sạch rồi! Xác nhận bên này an toàn!” Liskarm báo.
+
+“Tên chỉ huy địch đâu?” Franka hỏi.
+
+“…Không có trong đội chủ lực.”
+
+“Kẻ địch đang ẩn nấp… Ta đang bị theo dõi.” Franka nhìn quanh. “Chúng định bào mòn ta đến khi có cơ hội hoàn hảo để ra đòn sao?”
+
+“Reunion chẳng xa lạ gì với đánh lén,” Amiya nói. “Bọn mình đã học được bài học cay đắng ấy ở Chernobog. Rút nhanh thôi…”
+
+“Tôi không đảm bảo được an toàn của đường thoát,” Liskarm nói. “Nếu chúng bắt đầu phá các tòa nhà xung quanh để chặn đường, ta sẽ gặp nguy.”
+
+“Nhanh, xem còn đường nào khác. Càng kín đáo càng tốt!”
+
+“Amiya, thử cầu thang ở hướng bốn giờ đi xuống?”
+
+“Đường đó khó đi đấy,” Franka nói.
+
+“Aaargh! Rhodes Island!”
+
+“Phục kích! Cẩn thận!”
+
+Từ một tầng thượng xa hơn, Skullshatterer nhìn xuống. “Tiếp tục truy đuổi. Đừng cho chúng một chút không gian để thở.”
+
+***
+
+Trong một căn phòng tối của L.G.D., Misha ngồi bên chiếc bàn sắt, hai tay đặt trên đầu gối. Ch’en đứng tựa vào tường đối diện.
+
+“Thưa cô…” Misha lên tiếng. “Vẫn còn vài đứa trẻ Infected… trong khu ổ chuột. Nếu có thể… tôi mong cô có thể chăm sóc chúng…”
+
+“Nhiệm vụ của chúng tôi là bảo vệ Lungmen,” Ch’en nói. “Người Infected không được coi là công dân Lungmen.”
+
+Misha cúi đầu.
+
+Ch’en im lặng một lúc. Rồi cô ta nói tiếp, giọng vẫn khô khốc, nhưng chậm hơn.
+
+“…Tuy nhiên, dù là công dân hay không, người Infected vẫn thuộc về Lungmen. Tôi không có nghĩa vụ phải hứa hẹn gì với cô, nhưng tôi sẽ làm tròn bổn phận của mình. Dù sao thì…”
+
+“Họ nói họ từng…”
+
+“Đó là việc chúng tôi vẫn luôn làm.”
+
+Misha ngẩng lên. Ch’en không nhìn cô.
+
+“…Cảm ơn cô…”
+
+“…Cô có biết tại sao chúng tôi tìm cô không?”
+
+“…Tôi không chắc. Tôi không nghĩ ra lý do nào khiến các người cần tôi. Nhưng tôi có cảm giác… chuyện này không phải vì tôi…” Misha nhìn xuống đôi tay mình. “…Mà là vì cha mẹ tôi.”
+
+“…Đúng vậy,” Ch’en nói. “Cha cô là nhà khoa học nổi tiếng nhất Chernobog. Đồng thời cũng là một trong những nhân vật chính trị quan trọng nhất ở đó. Có lẽ, có điều gì đó cô biết…” Cô ta ngừng lại. “Nhưng kể cả không phải vậy… chúng tôi cũng không thể để cô rơi vào tay Reunion.”
+
+***
+
+Bên ngoài, trên một cột ăng-ten cao chót vót, một bóng người tóc bạc đang ngồi vắt vẻo, đung đưa chân.
+
+“Hehe. Tìm thấy các người rồi, L.G.D.” W thì thầm, mắt dõi theo đoàn xe bên dưới. “Đừng để bụng nhé… Nhưng tôi đang có trong tay một kịch bản rất thú vị. Để mọi thứ hấp dẫn hơn, tôi cần tất cả các người cùng tham gia.”
+
+Cô ta đứng dậy, một khối thuốc nổ trong tay.
+
+“Giờ thì, bắt đầu thôi.”
+
+## 2-10 | Vô phương cứu chữa
+
+“Liskarm, cô giữ được phòng tuyến không?”
+
+“Bên này ổn! Franka, cẩn thận địch đánh vào sườn!”
+
+“Chúng cứ kéo đến mãi…!”
+
+“Các ngươi không có cửa phá được phòng tuyến của bọn ta đâu! Ta sẽ nghiền nát…” Tên Reunion khựng lại. “Gưh?! A-aaaagh! C-cái gì thế kia?!”
+
+“Kiếm thermite đấy,” Franka nói, lưỡi kiếm đỏ rực trong tay. “Chém thì có tính là nghiền nát không nhỉ? Phiền ghê… Y tế! Có người bị thương ở đây! Cẩn thận khi di chuyển họ!”
+
+“Tôi lo!”
+
+“Amiya! Bên đó thế nào rồi?”
+
+“Tôi nghĩ ta có chút vấn đề ở đây,” Liskarm nói.
+
+“Franka…” giọng Amiya vang qua bộ đàm. “Tên chỉ huy địch… vừa xuất hiện ngay trước mặt em và Liskarm!”
+
+Skullshatterer đứng chắn giữa con đường duy nhất.
+
+“…Các người còn định trốn đi đâu nữa? Các người không thoát được bọn ta đâu, Rhodes Island. Ta sẽ nghiền các người thành bụi… đến xương cũng không còn. Lũ phản bội các người… đã quay lưng với người Infected!”
+
+“Ồ~ Cuối cùng gã này cũng chịu lộ mặt,” Franka nói qua bộ đàm. “Nghe cũng chẳng ấn tượng lắm.”
+
+“Amiya, có vẻ ta—”
+
+“Á, ngõ cụt!” Franka hét lên ở đầu dây bên kia. “Mình chạy xa quá rồi à?!”
+
+“Franka cũng đang gặp vấn đề…” Liskarm thở ra. “Reunion đã dồn ta vào góc.”
+
+Amiya im lặng.
+
+“Ta phải đánh thôi,” Liskarm nói. “Tôi thấy… ta hoàn toàn đủ sức đối đầu với chúng. Chỉ cần nghiêm túc hơn một chút…”
+
+“Liskarm, cô chẳng hiểu gì cả,” Franka nói. “Dù ta thể hiện sức mạnh đến mức nào, ta cũng không thể để L.G.D. cảm thấy bị đe dọa.”
+
+“Nhưng ta không thể ngồi yên để chúng giẫm lên ta! Defender, giữ vững!”
+
+Skullshatterer chĩa vũ khí về phía Amiya.
+
+“Một thủ lĩnh của Rhodes Island, hả… Ngươi là người Infected, nhưng vẫn giúp Lungmen tàn sát người Infected khác! Trên tay ngươi dính máu của biết bao đồng chí của ta! Đứng lên đối mặt với ta!”
+
+Amiya ngẩng đầu. Đôi mắt xanh lục rực lên.
+
+“…Reunion… Chính các người là kẻ khơi mào thù hận, đau đớn và bạo lực… Chính các người đã bắt đầu tất cả ở Chernobog!!”
+
+***
+
+“Nngh…” Skullshatterer quỳ một gối, cây trượng cắm xuống mái tôn.
+
+“Ugh… Gahh…” Amiya cũng lảo đảo, thở dốc.
+
+“Skullshatterer, anh không sao chứ?!” Một tên Reunion chạy tới.
+
+“Chậc… Lũ phiền phức!”
+
+“Skullshatterer, W vừa báo là bên cô ấy xong việc rồi! Cô ấy đã đoạt được mục tiêu!”
+
+“W… thắng rồi?”
+
+“Đúng vậy, cuộc tập kích diễn ra rất suôn sẻ! Chúng ta cũng rút chứ?”
+
+Skullshatterer im lặng một lúc. “…Báo tín hiệu cho Talulah.”
+
+“Rõ!”
+
+“…Chúng ta rút.” Hắn đứng dậy, nhìn Amiya qua lớp mặt nạ. “Hừ. Lũ hèn nhát Rhodes Island… Lần sau gặp lại… sẽ là ngày hành quyết các người.”
+
+Đám Reunion rút đi nhanh như khi chúng đến.
+
+“Reunion… đang rút lui?” Amiya ngơ ngác.
+
+“Chúng rút rất nhanh,” Franka nói qua bộ đàm. “Kế hoạch của chúng hẳn đã thay đổi. Nói to thế mà chạy cũng nhanh ghê.”
+
+Amiya đứng im giữa mái nhà.
+
+“…Có gì đó… không đúng.”
+
+“Ý cô là…” Liskarm hỏi.
+
+“Ngay từ đầu, chúng ta không phải mục tiêu của chúng,” Doctor nói.
+
+Amiya quay phắt lại, mặt tái mét. “…! Chúng chỉ ở đây để cầm chân chúng ta…? Nếu vậy thì… Không xong rồi, L.G.D. gặp nguy rồi! …Chúng ta phải đi giúp cô Ch’en ngay! Franka, gọi đội trinh sát về ngay lập tức! Liskarm, thử liên lạc với cô Ch’en!”
+
+***
+
+Ở một ngã tư cách đó vài cây số, đoàn xe L.G.D. đang bốc cháy.
+
+“Đội Tác chiến Đặc biệt đâu? Viện binh của họ lẽ ra phải đến rồi chứ!” Ch’en quát vào bộ đàm, thanh kiếm đã rút khỏi vỏ.
+
+“Chúng tôi vừa được báo họ bị Reunion cầm chân…!”
+
+“Sao có thể? Reunion chỉ là một lũ côn đồ vô kỷ luật!”
+
+“…Và họ chỉ đối mặt với… một kẻ địch duy nhất…”
+
+Ch’en đứng im giữa khói lửa.
+
+“…Trừ khi…”

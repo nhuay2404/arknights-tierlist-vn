@@ -29,7 +29,7 @@ It is a faithful translation of an established community tier list, not an indep
 
 ## Capabilities and Constraints
 
-- Tabs: Xếp hạng (tier list), Mới, Lịch sử, Giới thiệu. Includes search, rarity, class and view filters, an operator detail dialog with a range grid, and glossary tooltips.
+- Tabs: Trang chủ (default landing page with entry cards), then grouped as Dữ liệu (Operator, Phe phái, Cốt truyện) · Xếp hạng (Xếp hạng, Mới) · Công cụ (Gacha, Planner) · Khác (Lịch sử, Giới thiệu); mobile uses a ☰ slide-out drawer. Tab details: Operator, Xếp hạng (tier list), Gacha, Planner, Mới, Phe phái, Cốt truyện (fan light-novel retelling of the main story in Vietnamese, with an IP notice crediting Hypergryph / Yostar), Lịch sử, Giới thiệu. Includes search, rarity, class and view filters, an operator detail dialog with a range grid, and glossary tooltips.
 - Explanations live in place: glossary terms in kit text are underlined and open a tooltip, and class/subclass filter chips explain themselves on mouse hover or a ~450ms touch hold (subclass text = the in-game Trait from `details.js`; class text is hand-written).
 - Some operators appear twice, as an IS (Integrated Strategies) and a general-mode entry. The data keeps `(IS)` / `(General)` in names; the UI tags only the IS entry (`IS` beside the name); the general-mode entry shows the plain name with no tag.
 - Light and dark themes are both required.
