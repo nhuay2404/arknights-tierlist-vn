@@ -466,16 +466,28 @@ dialog[open]::backdrop{animation:fade .3s ease both}
   #navbtn b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   #navbtn .hb{display:grid;gap:4px;width:20px}#navbtn .hb i{display:block;height:2px;background:var(--ink)}
   #navbtn:focus-visible{outline:2px solid var(--accent)}
-  #navscrim{display:block;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:40}#navscrim[hidden]{display:none}
-  nav{position:fixed;top:0;left:0;bottom:0;width:min(320px,86vw);z-index:41;flex-direction:column;gap:0;background:var(--panel);border-right:1px solid var(--line);padding:0 0 24px;transform:translateX(-102%);transition:transform .22s ease;visibility:hidden}
-  nav.open{transform:none;visibility:visible}
-  .nhead{display:block;padding:18px 20px;border-bottom:1px solid var(--line);font:700 0.75rem var(--mono);letter-spacing:.16em;color:var(--mute)}
-  .nhead b{display:inline-grid;place-items:center;width:30px;height:30px;margin-right:8px;background:var(--ink);color:var(--accent)}
-  nav .ng{font:700 0.6875rem var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--accent);height:auto;background:none;margin:18px 20px 4px}
-  nav button{writing-mode:horizontal-tb;transform:none;text-align:left;padding:13px 20px;font-size:0.875rem;letter-spacing:.06em;flex:none;min-height:20px}
-  nav button[data-tab=home]{display:block}
-  nav button.on{background:var(--panel2);color:var(--ink)}
-  nav button.on:before{left:0;top:0;bottom:0;width:4px;background:var(--accent)}
+  #navbtn .hb i{transition:transform .18s,opacity .18s}
+  #navbtn[aria-expanded=true] .hb i:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  #navbtn[aria-expanded=true] .hb i:nth-child(2){opacity:0}
+  #navbtn[aria-expanded=true] .hb i:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  /* bảng ô lưới thả xuống dưới thanh đầu trang: mỗi tab là một ô đánh số, ô đang mở tô màu nhấn + bóng khối */
+  #navscrim{display:block;position:fixed;inset:56px 0 0;background:rgba(0,0,0,.45);z-index:40}#navscrim[hidden]{display:none}
+  nav{position:fixed;top:56px;left:0;right:0;z-index:41;display:grid;grid-template-columns:1fr 1fr;gap:8px;align-content:start;max-height:calc(100dvh - 56px);overflow-y:auto;box-sizing:border-box;padding:12px 16px 20px;
+    background-color:var(--bg);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:24px 24px;border-bottom:2px solid var(--ink);
+    opacity:0;transform:translateY(-8px);visibility:hidden;transition:opacity .18s,transform .18s,visibility 0s .18s;counter-reset:nt}
+  nav.open{opacity:1;transform:none;visibility:visible;transition:opacity .18s,transform .18s}
+  .nhead{display:none}
+  nav .ng{grid-column:1/-1;display:flex;align-items:center;gap:8px;height:auto;background:none;margin:8px 0 0;font:700 0.6875rem var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+  nav .ng:before{content:"//";color:var(--accent);letter-spacing:0}
+  nav .ng:after{content:"";flex:1;height:1px;background:var(--line)}
+  nav button{counter-increment:nt;writing-mode:horizontal-tb;transform:none;box-sizing:border-box;min-height:66px;padding:10px 12px;display:flex;flex-direction:column;justify-content:space-between;gap:6px;text-align:left;
+    background:var(--panel);border:1px solid var(--ink);color:var(--text);font:800 0.9375rem/1.15 "Be Vietnam Pro";letter-spacing:0;text-transform:none}
+  nav button:after{content:counter(nt,decimal-leading-zero);order:-1;font:700 0.6875rem var(--mono);letter-spacing:.1em;color:var(--mute)}
+  nav button[data-tab=home]{display:flex;grid-column:1/-1;min-height:54px}
+  nav button.on{background:var(--accent);color:#111;box-shadow:4px 4px 0 var(--ink)}
+  nav button.on:after{color:#111}
+  nav button.on:before{display:none}
+  nav button:active{transform:translate(2px,2px)}
   body.navlock{overflow:hidden}
   .controls{top:56px}
   .wrap{padding:0 16px}

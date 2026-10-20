@@ -2,7 +2,7 @@
 
 ## 2026-10-20
 - **Điều hướng mới**: thêm tab **Trang chủ** làm trang mặc định, có thẻ lối vào từng mục kèm mô tả ngắn và nút “Đọc tiếp” cốt truyện nếu đang đọc dở. Các tab còn lại gom thành 4 nhóm: **Dữ liệu** (Operator, Phe phái, Cốt truyện) · **Xếp hạng** (Xếp hạng, Mới) · **Công cụ** (Gacha, Planner) · **Khác** (Lịch sử, Giới thiệu).
-- Điện thoại: bỏ thanh tab kéo ngang, thay bằng nút **☰ + tên tab đang mở** mở menu trượt từ trái, chia nhóm như trên (đóng bằng chạm ra ngoài hoặc Esc).
+- Điện thoại: bỏ thanh tab kéo ngang, thay bằng nút **☰ + tên tab đang mở**. Menu là **bảng ô lưới thả xuống ngay dưới thanh đầu trang** theo phong cách riêng của trang (nền kẻ ô, ô đánh số 01–10, nhãn nhóm `// DỮ LIỆU`, ô đang mở tô màu nhấn kèm bóng khối, nút ☰ chuyển thành ✕), không dùng kiểu ngăn kéo danh sách trượt từ cạnh trái. Đóng bằng chạm ra ngoài hoặc Esc.
 - Máy tính: rail dọc dùng nhãn ngang 2 dòng và vạch ngăn giữa các nhóm nên không còn bị tràn ở màn thấp; bấm logo **AK** để về Trang chủ.
 - Cốt truyện: **sửa vị trí ảnh minh hoạ** bị lệch so với diễn biến. Thay cách chia theo tỉ lệ bằng thuật toán khớp từng dòng kịch bản gốc với từng đoạn văn tiếng Việt (theo tên nhân vật, con số, người nói); toàn bộ 104 CG được rà lại bằng tay, 54 ảnh lệch được ghim đúng chỗ bằng dấu `[cg:…]` trong file truyện (vd. tấm ảnh hai chị em ở 5-4, khoảnh khắc Patriot dừng tay ở 7-18). Dải ảnh bối cảnh ở chỗ ngắt cảnh cũng đổi theo vị trí đã khớp.
 
