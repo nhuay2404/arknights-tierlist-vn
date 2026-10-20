@@ -42,6 +42,30 @@ nav button{all:unset;cursor:pointer;writing-mode:vertical-rl;transform:rotate(18
 nav button:hover{color:var(--ink)}
 nav button.on{color:#111;background:var(--accent)}
 nav button.on:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--ink)}
+/* nhóm tab: rail dọc trên máy tính chỉ hiện vạch ngăn; menu trượt trên điện thoại hiện tên nhóm */
+#navbtn,#navscrim,.nhead{display:none}
+nav{flex:1;min-height:0;overflow-y:auto}
+/* nhãn tab nằm ngang, tối đa 2 dòng, để rail vừa cả màn hình thấp */
+nav button{flex:none;writing-mode:horizontal-tb;transform:none;padding:11px 0;letter-spacing:0;line-height:1.25;font-size:0.75rem}
+nav{scrollbar-width:thin}
+@media (min-width:761px) and (max-height:820px){.logo span{display:none}.bar{gap:16px}}
+/* máy tính: logo là nút về Trang chủ, rail chỉ còn các tab con */
+nav button[data-tab=home]{display:none}.logo{text-decoration:none;color:inherit;cursor:pointer}.logo:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+nav .ng{font-size:0;height:1px;background:var(--line);margin:6px 14px;flex:none}
+/* trang chủ */
+.hm{display:grid;gap:22px;margin-bottom:28px}
+.hmg h2{margin:0 0 10px;font:700 0.75rem var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--mute);display:flex;align-items:center;gap:10px}
+.hmg h2:after{content:"";flex:1;height:1px;background:var(--line)}
+.hmc{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+.hmgo{all:unset;cursor:pointer;box-sizing:border-box;position:relative;display:block;padding:18px 40px 18px 18px;background:var(--panel);border:1px solid var(--line);min-height:96px}
+.hmgo b{display:block;font:800 1.125rem/1.2 "Be Vietnam Pro";margin-bottom:6px}
+.hmgo span{display:block;font-size:0.8125rem;line-height:1.45;color:var(--mute)}
+.hmgo i{position:absolute;right:16px;top:50%;transform:translateY(-50%);font:700 1.5rem var(--mono);font-style:normal;color:var(--mute)}
+.hmgo:hover{border-color:var(--ink);box-shadow:4px 4px 0 var(--accent)}.hmgo:hover i{color:var(--accent)}
+.hmgo:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.hmread{background:var(--ink);color:var(--panel);border-color:var(--ink);padding:18px 20px}
+.hmread small{display:block;font:700 0.6875rem var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.hmread span{color:inherit;opacity:.75}
 /* hero */
 .hero{position:relative;padding:40px 0 24px;isolation:isolate}
 .hero:before{content:attr(data-g);position:absolute;right:0;top:0;font:900 clamp(7.5rem,22vw,22.5rem)/.85 "Be Vietnam Pro";letter-spacing:-.04em;color:transparent;
@@ -438,10 +462,21 @@ dialog[open]::backdrop{animation:fade .3s ease both}
   header:after{display:none}
   .bar{flex-direction:row;gap:12px;padding:0 12px}
   .logo span{display:none}
-  nav{flex-direction:row;overflow-x:auto;scrollbar-width:none}
-  nav.more{-webkit-mask:linear-gradient(90deg,#000 calc(100% - 36px),transparent);mask:linear-gradient(90deg,#000 calc(100% - 36px),transparent)}
-  nav button{writing-mode:horizontal-tb;transform:none;padding:8px 10px;white-space:nowrap}
-  nav button.on:before{left:0;right:0;top:auto;bottom:0;width:auto;height:3px}
+  #navbtn{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;flex:1;min-width:0;height:44px;padding:0 6px;font:700 0.8125rem var(--mono);letter-spacing:.1em;text-transform:uppercase}
+  #navbtn b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #navbtn .hb{display:grid;gap:4px;width:20px}#navbtn .hb i{display:block;height:2px;background:var(--ink)}
+  #navbtn:focus-visible{outline:2px solid var(--accent)}
+  #navscrim{display:block;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:40}#navscrim[hidden]{display:none}
+  nav{position:fixed;top:0;left:0;bottom:0;width:min(320px,86vw);z-index:41;flex-direction:column;gap:0;background:var(--panel);border-right:1px solid var(--line);padding:0 0 24px;transform:translateX(-102%);transition:transform .22s ease;visibility:hidden}
+  nav.open{transform:none;visibility:visible}
+  .nhead{display:block;padding:18px 20px;border-bottom:1px solid var(--line);font:700 0.75rem var(--mono);letter-spacing:.16em;color:var(--mute)}
+  .nhead b{display:inline-grid;place-items:center;width:30px;height:30px;margin-right:8px;background:var(--ink);color:var(--accent)}
+  nav .ng{font:700 0.6875rem var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--accent);height:auto;background:none;margin:18px 20px 4px}
+  nav button{writing-mode:horizontal-tb;transform:none;text-align:left;padding:13px 20px;font-size:0.875rem;letter-spacing:.06em;flex:none;min-height:20px}
+  nav button[data-tab=home]{display:block}
+  nav button.on{background:var(--panel2);color:var(--ink)}
+  nav button.on:before{left:0;top:0;bottom:0;width:4px;background:var(--accent)}
+  body.navlock{overflow:hidden}
   .controls{top:56px}
   .wrap{padding:0 16px}
   .matrix{max-height:calc(100dvh - 96px)}
@@ -454,7 +489,6 @@ dialog[open]::backdrop{animation:fade .3s ease both}
   .controls:not(.sheet) .row+.row{display:none}
   .hero{padding:20px 0 12px}
 
-  nav button{padding:8px 7px;letter-spacing:.05em;font-size:0.6875rem}
 }
 .kw:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 /* UX fixes: touch target ≥44px, chữ ≥12px */
@@ -605,15 +639,23 @@ body.stfocus .stwrap{grid-template-columns:minmax(0,1fr)}
 </head>
 <body>
 <header><div class="bar">
-  <div class="logo"><i>AK</i><span>TIER LIST // VN</span></div>
-  <nav id="nav">
-    <button data-tab="ops" class="on">Operator</button>
-    <button data-tab="list">Xếp hạng</button>
-    <button data-tab="gacha">Gacha</button>
-    <button data-tab="plan">Planner</button>
-    <button data-tab="new">Mới</button>
+  <a class="logo" href="./" aria-label="Trang chủ"><i>AK</i><span>TIER LIST // VN</span></a>
+  <button id="navbtn" aria-label="Mở menu điều hướng" aria-expanded="false" aria-controls="nav"><span class="hb" aria-hidden="true"><i></i><i></i><i></i></span><b id="navcur">Trang chủ</b></button>
+  <div id="navscrim" hidden></div>
+  <nav id="nav" aria-label="Điều hướng">
+    <div class="nhead"><b>AK</b> TIER LIST // VN</div>
+    <button data-tab="home" class="on">Trang chủ</button>
+    <div class="ng">Dữ liệu</div>
+    <button data-tab="ops">Operator</button>
     <button data-tab="fac">Phe phái</button>
     <button data-tab="story">Cốt truyện</button>
+    <div class="ng">Xếp hạng</div>
+    <button data-tab="list">Xếp hạng</button>
+    <button data-tab="new">Mới</button>
+    <div class="ng">Công cụ</div>
+    <button data-tab="gacha">Gacha</button>
+    <button data-tab="plan">Planner</button>
+    <div class="ng">Khác</div>
     <button data-tab="log">Lịch sử</button>
     <button data-tab="about">Giới thiệu</button>
   </nav>
@@ -621,12 +663,16 @@ body.stfocus .stwrap{grid-template-columns:minmax(0,1fr)}
 </div></header>
 
 <main class="wrap">
-  <div class="hero" data-g="TIER">
-    <h1>Bảng xếp hạng<br><span>Operator</span></h1>
+  <div class="hero" data-g="HOME">
+    <h1>Arknights<br><span>Tier List VN</span></h1>
     <p class="stamp">Cập nhật 12/10/2026 · Server Global</p>
   </div>
 
-  <section id="ops">
+  <section id="home">
+    <div class="hm" id="hm"></div>
+  </section>
+
+  <section id="ops" hidden>
     <div class="rctl" id="rctl">
       <label class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
         <input id="rq" type="search" placeholder="Tìm operator… (vd: Clementia, Mon3tr)" aria-label="Tìm operator trong danh sách"></label>
@@ -1277,26 +1323,26 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if
   $('#nav').addEventListener('click',e=>{if(e.target.closest('[data-tab=plan]'))draw()});
   if(!$('#plan').hidden)draw()}
 // tabs
-$('#nav').onclick=e=>{const b=e.target.closest('button');if(!b)return;
+$('#nav').onclick=e=>{const b=e.target.closest('button[data-tab]');if(!b)return;navOpen(false);$('#navcur').textContent=b.textContent;
   document.querySelectorAll('#nav button').forEach(x=>x.classList.toggle('on',x===b));
   document.querySelectorAll('main > section').forEach(s=>s.hidden=s.id!==b.dataset.tab);setHero(b.dataset.tab);window.scrollTo({top:0});
   if(!NAV)history.pushState({tab:b.dataset.tab},'',location.pathname+location.search);if(b.dataset.tab!=='fac')setBack(null)};
 // lịch sử trình duyệt: mỗi tab, hồ sơ operator và phe phái là một bước; NAV = đang dựng lại từ lịch sử nên không đẩy bước mới
 let NAV=false,SILENT=false;
-const curTab=()=>$('#nav button.on')?.dataset.tab||'ops';
+const curTab=()=>$('#nav button.on')?.dataset.tab||'home';
 function goTab(k){const n=NAV;NAV=true;$(`#nav [data-tab=${k}]`).click();NAV=n}
 function setBack(i){const b=$('#backbar');if(i==null||!OPS[i]){b.hidden=true;return}
   b.hidden=false;b.querySelector('span').textContent=OPS[i].n.replace(/\s*\(General\)/,'')}
-addEventListener('popstate',e=>{const st=e.state||{tab:'ops'};NAV=true;
+addEventListener('popstate',e=>{const st=e.state||{tab:'home'};NAV=true;
   if(st.tab&&st.tab!==curTab())goTab(st.tab);
   if(st.op!=null)openOp(st.op);
   else if(st.cn)openCN(st.cn);
   else{if(dlg.open)dlg.close();if(st.fac)showFac(st.fac);else setBack(null)}
   NAV=false});
-history.replaceState(history.state||{tab:'ops'},'');
+history.replaceState(history.state||{tab:'home'},'');
 // tiêu đề và chữ nền khổng lồ đổi theo tab đang mở
-const HERO={ops:['OPS','Danh sách','Operator'],gacha:['HH','Giả lập','Headhunting'],plan:['PLAN','Operator','Planner'],list:['TIER','Bảng xếp hạng','Operator'],new:['NEW','Operator','mới về'],fac:['FAC','Phe phái','& vùng đất'],story:['LORE','Cốt truyện','chính tuyến'],log:['LOG','Lịch sử','thay đổi'],about:['INFO','Giới thiệu','& nguồn']};
-function setHero(k){const [g,a,b]=HERO[k]||HERO.ops,h=$('.hero');h.dataset.g=g;h.querySelector('h1').innerHTML=`${a}<br><span>${b}</span>`;typeHero();document.title=k==='ops'?'Arknights Tier List VN':`${a} ${b} · Arknights Tier List VN`}
+const HERO={home:['HOME','Arknights','Tier List VN'],ops:['OPS','Danh sách','Operator'],gacha:['HH','Giả lập','Headhunting'],plan:['PLAN','Operator','Planner'],list:['TIER','Bảng xếp hạng','Operator'],new:['NEW','Operator','mới về'],fac:['FAC','Phe phái','& vùng đất'],story:['LORE','Cốt truyện','chính tuyến'],log:['LOG','Lịch sử','thay đổi'],about:['INFO','Giới thiệu','& nguồn']};
+function setHero(k){const [g,a,b]=HERO[k]||HERO.ops,h=$('.hero');h.dataset.g=g;h.querySelector('h1').innerHTML=`${a}<br><span>${b}</span>`;typeHero();document.title=k==='home'?'Arknights Tier List VN':`${a} ${b} · Arknights Tier List VN`}
 render();
 // 4: bảng lọc nổi trên mobile
 const fab=$('#fab'),ctl=$('#ctl');
@@ -1304,8 +1350,23 @@ const scrim=$('#scrim');
 const sheet=o=>{ctl.classList.toggle('sheet',o);scrim.hidden=!o;fab.setAttribute('aria-expanded',o);setFab()};
 fab.onclick=()=>sheet(!ctl.classList.contains('sheet'));scrim.onclick=()=>sheet(false);setFab();
 addEventListener('keydown',e=>{if(e.key==='Escape'&&ctl.classList.contains('sheet'))sheet(false)});
-// thanh tab trên điện thoại: mờ dần ở mép phải khi còn tab bị khuất
-{const nv=$('#nav'),f=()=>nv.classList.toggle('more',nv.scrollLeft+nv.clientWidth<nv.scrollWidth-2);nv.addEventListener('scroll',f,{passive:true});addEventListener('resize',f);f()}
+// menu trượt trên điện thoại (nút ☰): các tab gom theo nhóm; trên máy tính vẫn là rail dọc
+function navOpen(o){const n=$('#nav');if(!n)return;n.classList.toggle('open',o);$('#navscrim').hidden=!o;$('#navbtn').setAttribute('aria-expanded',o);document.body.classList.toggle('navlock',o);if(o)n.querySelector('button.on')?.focus()}
+$('.logo').onclick=e=>{e.preventDefault();$('#nav [data-tab=home]').click()};
+$('#navbtn').onclick=()=>navOpen(!$('#nav').classList.contains('open'));$('#navscrim').onclick=()=>navOpen(false);
+addEventListener('keydown',e=>{if(e.key==='Escape'&&$('#nav').classList.contains('open')){navOpen(false);$('#navbtn').focus()}});
+// trang chủ: lối vào từng nhóm tab + đọc tiếp truyện
+const HOME=[['Dữ liệu',[['ops','Operator','Toàn bộ operator: chỉ số, kỹ năng, module, hồ sơ và skin.'],['fac','Phe phái','Các phe phái và vùng đất của Terra cùng operator thuộc về họ.'],['story','Cốt truyện','Truyện chữ tiếng Việt kể lại cốt truyện chính, có ảnh minh hoạ.']]],
+  ['Xếp hạng',[['list','Xếp hạng','Tier list operator theo bản Global, lọc theo class và độ hiếm.'],['new','Mới','Operator mới về và đánh giá ban đầu.']]],
+  ['Công cụ',[['gacha','Gacha','Giả lập headhunting với tỉ lệ và cơ chế bảo hiểm như trong game.'],['plan','Planner','Tính nguyên liệu cần để nâng cấp operator.']]],
+  ['Khác',[['log','Lịch sử','Nhật ký thay đổi xếp hạng qua các đợt cập nhật.'],['about','Giới thiệu','Cách xếp hạng, giả định chung và nguồn dữ liệu.']]]];
+function drawHome(){const ch=+(()=>{try{return localStorage.getItem('ak-story')}catch(e){}})()||0,pos=(()=>{try{return JSON.parse(localStorage.getItem('ak-story-pos')||'{}')}catch(e){return{}}})();
+  const reading=Object.keys(pos).length?`<button class="hmgo hmread" data-go="story"><small>Đọc tiếp</small><b>Cốt truyện · Chương ${ch}</b><span>Mở lại đúng cảnh bạn đang đọc dở ›</span></button>`:'';
+  $('#hm').innerHTML=reading+HOME.map(([g,it])=>`<div class="hmg"><h2>${g}</h2><div class="hmc">${it.map(([k,t,d])=>`<button class="hmgo" data-go="${k}"><b>${t}</b><span>${d}</span><i aria-hidden="true">›</i></button>`).join('')}</div></div>`).join('')}
+drawHome();
+$('#hm').addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(!b)return;$(`#nav [data-tab=${b.dataset.go}]`).click();
+  if(b.classList.contains('hmread'))setTimeout(()=>{const s=$('#sread .sttools .go');s&&s.click()},400)});
+$('#nav').addEventListener('click',e=>{if(e.target.closest('[data-tab=home]'))drawHome()});
 // tab Cốt truyện: truyện chữ (story.js) chỉ tải khi mở tab lần đầu; nhớ chương, vị trí đọc, cảnh đã đọc và tuỳ chỉnh hiển thị
 // ảnh minh hoạ (nền cảnh, CG, sprite NPC) từ Aceship/Arknight-Images, avatar operator dùng chung IMG
 const AVG='https://raw.githubusercontent.com/Aceship/Arknight-Images/main/avg/';
