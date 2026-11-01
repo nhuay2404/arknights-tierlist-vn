@@ -26,5 +26,5 @@ for c, l in out.items():
     l.sort(key=lambda s: (s[5] != 0, s[5], s[0]))
     for s in l:
         del s[5]
-open('skins.js', 'w', encoding='utf-8').write('window.AKS=' + json.dumps(out, ensure_ascii=False, separators=(',', ':')) + ';\n')
+open('skins.js', 'w', encoding='utf-8').write('window.AKSK=' + json.dumps(out, ensure_ascii=False, separators=(',', ':')) + ';\n')
 print(f'skins.js: {sum(map(len, out.values()))} trang phục cho {len(out)} operator')

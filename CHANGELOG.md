@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-01
+- Thêm **6 operator mới bên CN** chưa ra Global, từ banner Talulah (LIMITED_79_0_1 · 将雪投火, mở 31/10/2026): **Talulah** (6★ Guard, Primal Guard, phe Ursus), Тоска/Tocka (6★ Supporter), Территория/Dominion (6★ Specialist), Ольга/Olga (5★ Guard), Caleido (5★ Defender), Herdbells (4★ Specialist). Có đủ hồ sơ rút gọn (chỉ số E2, Trait, Skill, Talent, range), trang phục, Module/Base skill và nguyên liệu nâng cấp như các operator CN khác; văn bản giữ nguyên tiếng Trung (chưa dịch). Tổng operator trong `roster.js`: 432 → 438 (23 operator chưa ra Global). Thêm nhóm banner vào `BANNERS` trong `_build/build_roster.py`.
+- Sửa lỗi: `skins.js` dùng chung biến toàn cục `window.AKS` với `story.js`, nên mở tab Cốt truyện một lần là tab phục trong mọi hồ sơ operator biến mất cho đến khi tải lại trang (truyện ghi đè dữ liệu trang phục). Đổi biến của `skins.js` thành `window.AKSK`.
+
 ## 2026-10-20
 - Cốt truyện: thêm **Chương 9 · Canh chừng bão tố** (Stormwatch), 17 màn: Victoria, County Hillock – Horn và Tempest Platoon, Bagpipe và cô bé Janie, Outcast giữa người Tara, “lực lượng bóng ma” Dublinn và đêm Hillock bốc cháy. Mật danh các thủ lĩnh Dublinn (The Bandit, The Immolator…) giữ tiếng Anh.
 - Cốt truyện: thêm **Chương 8 · Ngọn lửa gào thét** (Roaring Flare), trọn 25 màn từ R8-1 đến 5 màn kết EG-1…EG-5: lá thư của Talulah và ký ức ngôi làng tuyết cùng Alina, Rosmontis và đội hộ vệ khiên, Patriot – FrostNova, Ch’en đối mặt “Talulah” trên tháp chỉ huy, Kashchey – Hắc Xà Bất Tử lộ diện, lõi Chernobog dừng lại trước Lungmen, và các phần kết. 55 CG, 126 ảnh nền tự chèn đúng vị trí; ~350 phút đọc.

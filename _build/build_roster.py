@@ -17,6 +17,7 @@ BANNERS = [
     ['char_1015_aglna2', 'char_4235_thumpy', 'char_4237_jcinta', 'char_4236_tmslot'],
     ['char_4217_makoto', 'char_4218_aigis', 'char_4219_yukari', 'char_4220_kormr'],  # collab Persona 3 Reload
     ['char_4231_clemnt', 'char_393_toledo', 'char_4232_hbound'],
+    ['char_4247_oxi', 'char_4244_tocka', 'char_4246_dminon', 'char_4245_alga', 'char_4169_caledo', 'char_4170_hdbell'],  # banner Talulah (LIMITED_79_0_1, 将雪投火)
 ]
 BORD = {c: (g, j) for g, b in enumerate(BANNERS) for j, c in enumerate(b)}
 items = json.load(open(sys.argv[1].replace('character_table', 'item_table'), encoding='utf-8'))['items']

@@ -788,18 +788,18 @@ body.stfocus .stwrap{grid-template-columns:minmax(0,1fr)}
 <dialog id="dlg"></dialog>
 
 <!-- ?v=: đổi mỗi lần cập nhật data để trình duyệt/CDN không dùng file .js cũ lệch với index.html -->
-<script src="data.js?v=20261020c"></script>
-<script src="details.js?v=20261020c"></script>
-<script src="glossary.js?v=20261020c"></script>
-<script src="factions.js?v=20261020c"></script>
-<script src="roster.js?v=20261020c"></script>
-<script src="skins.js?v=20261020c"></script>
-<script src="mats.js?v=20261020c"></script>
-<script src="subclass.js?v=20261020c"></script>
-<script src="details_x.js?v=20261020c"></script>
-<script src="gacha.js?v=20261020c"></script>
-<script src="story_toc.js?v=20261020c"></script>
-<script>const KITV='20261020b'</script>
+<script src="data.js?v=20261101a"></script>
+<script src="details.js?v=20261101a"></script>
+<script src="glossary.js?v=20261101a"></script>
+<script src="factions.js?v=20261101a"></script>
+<script src="roster.js?v=20261101a"></script>
+<script src="skins.js?v=20261101a"></script>
+<script src="mats.js?v=20261101a"></script>
+<script src="subclass.js?v=20261101a"></script>
+<script src="details_x.js?v=20261101a"></script>
+<script src="gacha.js?v=20261101a"></script>
+<script src="story_toc.js?v=20261101a"></script>
+<script>const KITV='20261101a'</script>
 <script>
 const {ops:OPS} = window.AK;
 const TIERS=['EX','S+','S','S-','A+','A','A-','B+','B','B-','C+','C','C-','D','F'];
@@ -954,7 +954,7 @@ function artErr(img,id){const n=+(img.dataset.retry||0);img.dataset.retry=n+1;
   else{img.onerror=null;img.src=`${RES}skin/${id}_1b.png`}}
 // khung art trong hồ sơ: vuốt ngang qua mọi trang phục (skins.js)
 // thứ tự: Mặc định, Elite 2, rồi các skin
-function artSlides(d,o){const all=(window.AKS||{})[d.id]||[],f=id=>all.find(s=>s[0]===id),
+function artSlides(d,o){const all=(window.AKSK||{})[d.id]||[],f=id=>all.find(s=>s[0]===id),
     l=[f(d.id+'_1')||[d.id+'_1','Mặc định'],f(d.id+'_2')||(all.length?null:[d.id+'_2','Elite 2']),...all.filter(s=>s[0]!==d.id+'_1'&&s[0]!==d.id+'_2')].filter(Boolean);
   const src=pid=>pid===d.id+'_2'?art2(d.id):`${RES}skin/${encodeURIComponent(pid)}b.png`;
   return `<div class="art" data-n="${esc(o.n)}"><div class="sl" tabindex="0" aria-label="Trang phục của ${esc(o.n)}, vuốt ngang để đổi">${l.map(([pid,sn,sg,sa],k)=>`<figure data-sn="${esc(sn)}" data-sm="${esc([sg,sa&&'Hoạ sĩ: '+sa].filter(Boolean).join(' · '))}"><img src="${src(pid)}" alt="${esc(o.n)} — ${esc(sn)}" loading="lazy"${pid===d.id+'_2'?` onerror="artErr(this,'${d.id}')"`:''}></figure>`).join('')}</div>
@@ -1189,7 +1189,7 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[data-fac]');if
   mk($('#rsort'),[['new','Mới nhất'],['rar','Độ hiếm'],['az','Tên A–Z']],k=>k===st.sort,k=>st.sort=k);
   $('#rq').oninput=e=>{st.q=norm(e.target.value);draw()};
   const card=([id,n,r,c,sub,gl,bn])=>{const i=idx[n];
-    const k=(window.AKS?.[id]||[]).length;
+    const k=(window.AKSK?.[id]||[]).length;
     return `<button class="rc go${gl?'':' cn-only'}" style="--rr:${RR[r]};--rbg:var(--b${r})" data-id="${id}" title="${esc(n)} · ${r}★ · ${esc(CLSVI[c])}${gl?'':` · chưa ra Global · banner CN thứ ${bn}`}${k>2?` · ${k} trang phục`:''}">
       <img src="${PORT}${id}_1.png" alt="" loading="lazy" decoding="async" onerror="this.src='${IMG}${id}.png'">
       <span class="nm">${esc(n)}</span>${gl?'':`<span class="cn">CN ${bn}</span>`}<span class="st">${'★'.repeat(r)}</span><span class="ci">${ico(`ui/subclass/sub_${sub}_icon.png`)}</span><span class="bt"></span></button>`};
